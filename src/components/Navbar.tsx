@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import logo from "../assets/images/avila_tek_logo.svg";
 
 interface NavItemProps {
   title: string;
@@ -30,7 +29,7 @@ export default function Navbar() {
       role="navigation"
     >
       <Link to="/" className="ml-auto">
-        <img src={logo} alt="Avila Tek logo" />
+        <h1>Logo</h1>
       </Link>
 
       <div className="ml-auto md:hidden pt-5">
