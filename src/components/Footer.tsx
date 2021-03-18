@@ -9,10 +9,10 @@ import LinkedIn from "./icons/LinkedIn";
 export default function Footer() {
   return (
     <footer className="bg-light-blue w-full px-6 md:px-10 lg:px-20 py-2">
-      <div className="flex flex-col sm:flex-row w-full py-6 gap-20">
+      <div className="flex flex-col sm:flex-row w-full py-6 gap-6 sm:gap-20">
         {/* Contact section */}
-        <div className="w-full sm:w-1/3 text-xs sm:text-sm">
-          <h2 className="text-primary-400 font-semibold text-sm sm:text-base">
+        <div className="w-full sm:w-1/3 text-xs md:text-sm">
+          <h2 className="text-primary-400 font-semibold text-sm md:text-base">
             Contacto
           </h2>
           <p className="mt-4">
@@ -56,8 +56,8 @@ export default function Footer() {
           </div>
         </div>
         {/* Join the team section */}
-        <div className="w-full sm:w-1/3 text-xs sm:text-sm">
-          <h2 className="text-primary-400 font-semibold text-sm sm:text-base">
+        <div className="w-full sm:w-1/3 text-xs md:text-sm">
+          <h2 className="text-primary-400 font-semibold text-sm md:text-base">
             Únete al equipo
           </h2>
           <p className="my-4">
@@ -68,7 +68,7 @@ export default function Footer() {
             <img src={Avila} alt="Avila logo" className="h-6 mt-2" />
           </div>
           <Button
-            className="text-sm font-medium"
+            className="text-xs md:text-sm font-medium"
             onClick={() => {
               console.log("Hola");
             }}
@@ -80,7 +80,8 @@ export default function Footer() {
       {/* Copyright info */}
       <div className="relative w-full">
         <svg
-          className="h-32 w-32 text-medium-blue absolute right-3 -top-28"
+          className="h-32 w-32 text-medium-blue absolute right-3"
+          style={{ top: "-7rem" }}
           viewBox="0 0 176 5"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
