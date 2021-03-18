@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
-import { motion } from "framer-motion";
 import logo from "../assets/images/logo_white.png";
 
 interface NavItemProps {
@@ -22,11 +21,6 @@ export default function Navbar() {
   const [isOpen, setOpen] = useState<boolean>(false);
   const [isFixed, setFixed] = useState<boolean>(false);
 
-  const variants = {
-    open: { height: "auto" },
-    closed: { height: 0 },
-  };
-
   const toggleNav = () => {
     setOpen((prev) => !prev);
   };
@@ -34,7 +28,7 @@ export default function Navbar() {
   useEffect(() => {
     // Set fixed true when the scroll height is greater than 550px
     const changeColor = () => {
-      let screenOffset = 550;
+      let screenOffset = 600;
       setFixed(window.scrollY >= screenOffset);
     };
 
@@ -52,6 +46,7 @@ export default function Navbar() {
         <img src={logo} alt="Avila Tek logo" className="h-8 sm:h-10 lg:h-12" />
       </Link>
 
+      {/* Hamburger button */}
       <div className="ml-auto md:hidden w-auto">
         <button
           className="text-font-black hover:text-primary-300 focus:outline-none"
@@ -73,10 +68,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* // variants={variants}
-        // initial="closed"
-        // animate={isOpen ? "open" : "closed"}
-        // transition={{ damping: 50, duration: 0.5 }} */}
       <div
         className={`md:flex w-full h-full md:h-auto md:w-auto items-center overflow-hidden ${
           isOpen ? "my-6 md:my-0" : "hidden"
