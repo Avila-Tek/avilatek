@@ -18,7 +18,7 @@ export default function Button({
   return (
     <button
       type={type}
-      className={`text-font-white bg-primary-400 hover:bg-primary-300 py-1 px-6 rounded-full ${className}`}
+      className={`text-font-white bg-primary-400 hover:bg-primary-300 py-2 px-6 rounded-full ${className}`}
       disabled={disabled}
       onClick={onClick}
     >

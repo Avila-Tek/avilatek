@@ -4,7 +4,7 @@ interface IconProps {
   className?: string;
 }
 
-export default function InstagramIcon({ className = "h-5 w-5" }: IconProps) {
+export default function InstagramIcon({ className = "h-4 w-4" }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
