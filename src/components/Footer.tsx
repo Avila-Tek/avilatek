@@ -68,6 +68,7 @@ export default function Footer() {
             <img src={Avila} alt="Avila logo" className="h-6 mt-2" />
           </div>
           <Button
+            type="button"
             className="text-xs md:text-sm font-medium"
             onClick={() => {
               console.log("Hola");

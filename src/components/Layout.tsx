@@ -4,10 +4,10 @@ import Navbar from "./Navbar";
 
 export default function Layout({ children }) {
   return (
-    <>
+    <div className="bg-light dark:bg-dark">
       <Navbar />
       {children}
       <Footer />
-    </>
+    </div>
   );
 }

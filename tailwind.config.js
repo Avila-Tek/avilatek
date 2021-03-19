@@ -1,27 +1,18 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
 
-// tailwind.config.js
 module.exports = {
-  plugins: [require("@tailwindcss/ui")],
   purge: {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     // defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media', // 'media' or 'class'
   theme: {
     screens: {
       sm: "640px",
       md: "768px",
       lg: "1024px",
       xl: "1280px",
-    },
-    borderWidth: {
-      default: "1px",
-      0: "0",
-      2: "2px",
-      4: "4px",
     },
     extend: {
       colors: {
@@ -62,12 +53,14 @@ module.exports = {
         "dark-gray": "#313131",
         "medium-gray": "#464646",
       },
-      height: {
-        quarter: "25vh",
-        half: "50vh",
-        "three-quarters": "75vh",
-      },
     },
   },
-  variants: ["responsive", "hover", "focus", "active", "disabled"],
+  variants: {
+    extend: {},
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 };

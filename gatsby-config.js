@@ -3,6 +3,7 @@ module.exports = {
     title: "Avila Tek",
   },
   plugins: [
+    "gatsby-plugin-postcss",
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     {
