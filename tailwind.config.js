@@ -48,14 +48,18 @@ module.exports = {
         },
         "light-blue": "#f9fbfe",
         "medium-blue": "#E5EEFD",
-        light: "#FDFDFD",
-        dark: "#222222",
+        'light': "#FDFDFD",
+        'dark': "#222222",
         "dark-gray": "#313131",
         "medium-gray": "#464646",
       },
       lineHeight: {
         0: "0rem",
       },
+      boxShadow: {
+        'blue': '3px 4px 12px rgba(45, 156, 219, 0.25)',
+        'dark-gray': '3px 4px 12px rgba(73, 73, 73, 0.25)',
+      }
     },
   },
   variants: {

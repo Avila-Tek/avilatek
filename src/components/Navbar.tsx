@@ -26,9 +26,9 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    // Set fixed true when the scroll height is greater than 550px
+    // Set fixed true when the scroll height is greater than 400px
     const changeColor = () => {
-      let screenOffset = 600;
+      let screenOffset = 280;
       setFixed(window.scrollY >= screenOffset);
     };
 
@@ -37,8 +37,8 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed z-50 bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-2 ${
-        isFixed ? "shadow-md" : ""
+      className={`fixed z-50 bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-2 transition duration-500 ease-in-out ${
+        isFixed ? "shadow-blue" : ""
       }`}
       role="navigation"
     >
