@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Button from "../components/ui/Button";
-import AtTheOffice from "../assets/illustrations/on-the-office-animate.svg";
-import Waves from "../assets/images/waves.svg";
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Button from '../components/ui/Button';
+import AtTheOffice from '../assets/illustrations/on-the-office-animate.svg';
+import Waves from '../assets/images/waves.svg';
 
 export default function Banner() {
   const [active, setActive] = useState<number>(0);
-  const words = ["adipiscing", "elit", "sit"];
+  const words = ['adipiscing', 'elit', 'sit'];
 
   const variants = {
     initial: { y: -30, opacity: 0 },
@@ -46,7 +46,7 @@ export default function Banner() {
             >
               [
             </motion.span>
-            Lorem ipsum dolor sit amet, consectetur{" "}
+            Lorem ipsum dolor sit amet, consectetur{' '}
             {/* Changing words animation */}
             <AnimatePresence exitBeforeEnter>
               {words.map((word, idx) => (
@@ -77,12 +77,12 @@ export default function Banner() {
           </h1>
           <p className="my-6 lg:my-7 text-sm md:text-base">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit
-            id hac.{" "}
+            id hac.{' '}
           </p>
           <Button
             type="button"
             onClick={() => {
-              console.log("conoci mas");
+              console.log('conoci mas');
             }}
             className="px-10 md:px-14 text-sm lg:text-base"
           >
