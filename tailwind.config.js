@@ -6,7 +6,7 @@ module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     // defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
   },
-  darkMode: "media", // 'media' or 'class'
+darkMode: "class", // 'media' or 'class'
   theme: {
     screens: {
       sm: "640px",
