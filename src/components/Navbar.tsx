@@ -37,7 +37,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-2 ${
+      className={`fixed z-50 bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-2 ${
         isFixed ? "shadow-md" : ""
       }`}
       role="navigation"

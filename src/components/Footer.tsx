@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
           <Button
             type="button"
-            className="text-xs md:text-sm font-medium"
+            className="text-xs md:text-sm"
             onClick={() => {
               console.log("Hola");
             }}
