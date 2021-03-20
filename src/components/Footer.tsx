@@ -1,10 +1,10 @@
-import React from "react";
-import Button from "../components/ui/Button";
-import Avila from "../assets/images/logo-avila-tek.png";
-import InstagramIcon from "./icons/InstagramIcon";
-import FacebookIcon from "./icons/FacebookIcon";
-import TwitterIcon from "./icons/TwitterIcon";
-import LinkedIn from "./icons/LinkedIn";
+import React from 'react';
+import Button from '../components/ui/Button';
+import Avila from '../assets/images/logo-avila-tek.png';
+import InstagramIcon from './icons/InstagramIcon';
+import FacebookIcon from './icons/FacebookIcon';
+import TwitterIcon from './icons/TwitterIcon';
+import LinkedIn from './icons/LinkedIn';
 
 export default function Footer() {
   return (
@@ -62,16 +62,16 @@ export default function Footer() {
           </h2>
           <p className="my-4">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit
-            id hac. Urna in sit id hac.{" "}
+            id hac. Urna in sit id hac.{' '}
           </p>
           <div className="w-40 flex justify-end">
             <img src={Avila} alt="Avila logo" className="h-6 mt-2" />
           </div>
           <Button
             type="button"
-            className="text-xs md:text-sm font-medium"
+            className="text-xs md:text-sm"
             onClick={() => {
-              console.log("Hola");
+              console.log('Hola');
             }}
           >
             Trabaja con nosotros
@@ -82,7 +82,7 @@ export default function Footer() {
       <div className="relative w-full">
         <svg
           className="h-32 w-32 text-medium-blue absolute right-3"
-          style={{ top: "-7rem" }}
+          style={{ top: '-7rem' }}
           viewBox="0 0 176 5"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"

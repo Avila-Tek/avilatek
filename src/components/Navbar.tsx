@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "gatsby";
-import logo from "../assets/images/logo_white.png";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'gatsby';
+import logo from '../assets/images/logo_white.png';
 
 interface NavItemProps {
   title: string;
@@ -26,19 +26,19 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    // Set fixed true when the scroll height is greater than 550px
+    // Set fixed true when the scroll height is greater than 400px
     const changeColor = () => {
-      let screenOffset = 600;
+      let screenOffset = 280;
       setFixed(window.scrollY >= screenOffset);
     };
 
-    window.addEventListener("scroll", changeColor);
+    window.addEventListener('scroll', changeColor);
   }, []);
 
   return (
     <nav
-      className={`fixed bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-2 ${
-        isFixed ? "shadow-md" : ""
+      className={`fixed z-50 bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-2 transition duration-500 ease-in-out ${
+        isFixed ? 'shadow-blue' : ''
       }`}
       role="navigation"
     >
@@ -70,7 +70,7 @@ export default function Navbar() {
 
       <div
         className={`md:flex w-full h-full md:h-auto md:w-auto items-center overflow-hidden ${
-          isOpen ? "my-6 md:my-0" : "hidden"
+          isOpen ? 'my-6 md:my-0' : 'hidden'
         }`}
       >
         <NavItem title="Inicio" href="/" />

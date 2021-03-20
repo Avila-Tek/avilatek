@@ -6,7 +6,7 @@ module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
     // defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
   },
-  darkMode: 'media', // 'media' or 'class'
+darkMode: "class", // 'media' or 'class'
   theme: {
     screens: {
       sm: "640px",
@@ -48,19 +48,28 @@ module.exports = {
         },
         "light-blue": "#f9fbfe",
         "medium-blue": "#E5EEFD",
-        light: "#FDFDFD",
-        dark: "#222222",
+        'light': "#FDFDFD",
+        'dark': "#222222",
         "dark-gray": "#313131",
         "medium-gray": "#464646",
       },
+      lineHeight: {
+        0: "0rem",
+      },
+      boxShadow: {
+        'blue': '3px 4px 12px rgba(45, 156, 219, 0.25)',
+        'dark-gray': '3px 4px 12px rgba(73, 73, 73, 0.25)',
+      }
     },
   },
   variants: {
+    opacity: ({ after }) => after(['disabled']),
+    backgroundColor: ({ after }) => after(['disabled']),
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
   ],
 };
