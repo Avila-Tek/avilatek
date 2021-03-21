@@ -34,7 +34,7 @@ export default function Banner() {
   }, [active]);
 
   return (
-    <div className="bg-light-blue mb-40">
+    <div className="bg-light-blue">
       <div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-start gap-2 md:gap-16 lg:gap-20 xl:gap-24 pt-14 md:pt-24 pb-12 px-10 md:px-12 lg:px-16 xl:px-20">
         {/* Banner details */}
         <div className="w-10/12 sm:w-8/12 md:w-4/12 pt-14 md:pt-16">
