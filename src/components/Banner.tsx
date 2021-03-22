@@ -42,7 +42,7 @@ export default function Banner() {
             <motion.span
               variants={bracketVariants}
               animate="animation"
-              className="text-primary-300 absolute -top-1 -left-7"
+              className="text-primary-400 absolute -top-1 -left-7"
             >
               [
             </motion.span>
@@ -59,7 +59,7 @@ export default function Banner() {
                       animate="animate"
                       exit="exit"
                       transition={{ duration: 0.5 }}
-                      className="inline-block bg-primary-300 bg-opacity-50 pb-3 leading-0"
+                      className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0"
                     >
                       {word}
                     </motion.mark>
@@ -70,7 +70,7 @@ export default function Banner() {
             <motion.span
               variants={bracketVariants}
               animate="animation"
-              className="text-primary-300 absolute bottom-0 -right-5"
+              className="text-primary-400 absolute bottom-0 -right-5"
             >
               ]
             </motion.span>

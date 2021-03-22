@@ -19,7 +19,7 @@ export default function AboutUs() {
         <div className="w-10/12 sm:w-8/12 md:w-5/12">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
             Te{' '}
-            <mark className="inline-block bg-primary-300 bg-opacity-50 pb-3 leading-0">
+            <mark className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0">
               contamos
             </mark>{' '}
             acerca de <span className="text-primary-500">Avila Tek</span>
