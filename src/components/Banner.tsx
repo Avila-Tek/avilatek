@@ -34,7 +34,7 @@ export default function Banner() {
   }, [active]);
 
   return (
-    <div className="bg-light-blue mb-40">
+    <div className="bg-light-blue">
       <div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-start gap-2 md:gap-16 lg:gap-20 xl:gap-24 pt-14 md:pt-24 pb-12 px-10 md:px-12 lg:px-16 xl:px-20">
         {/* Banner details */}
         <div className="w-10/12 sm:w-8/12 md:w-4/12 pt-14 md:pt-16">
@@ -42,7 +42,7 @@ export default function Banner() {
             <motion.span
               variants={bracketVariants}
               animate="animation"
-              className="text-primary-300 absolute -top-1 -left-7"
+              className="text-primary-400 absolute -top-1 -left-7"
             >
               [
             </motion.span>
@@ -59,7 +59,7 @@ export default function Banner() {
                       animate="animate"
                       exit="exit"
                       transition={{ duration: 0.5 }}
-                      className="inline-block bg-primary-300 bg-opacity-50 pb-3 leading-0"
+                      className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0"
                     >
                       {word}
                     </motion.mark>
@@ -70,12 +70,12 @@ export default function Banner() {
             <motion.span
               variants={bracketVariants}
               animate="animation"
-              className="text-primary-300 absolute bottom-0 -right-5"
+              className="text-primary-400 absolute bottom-0 -right-5"
             >
               ]
             </motion.span>
           </h1>
-          <p className="my-6 lg:my-7 text-sm md:text-base">
+          <p className="my-6 lg:my-7 text-sm lg:text-base">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit
             id hac.{' '}
           </p>
