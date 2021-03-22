@@ -20,6 +20,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
   @apply text-font-black;
+  @apply bg-light;
 }
 
 body {

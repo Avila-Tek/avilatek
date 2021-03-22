@@ -79,7 +79,7 @@ export default function Technologies() {
   }, [technologies]);
 
   return (
-    <section className="bg-light pb-40">
+    <section className="bg-light pt-24 md:pt-10 pb-28 lg:pb-40">
       <div className="w-full flex justify-center items-center text-medium-blue px-16 md:px-28">
         {/* Left arrow btn */}
         <button

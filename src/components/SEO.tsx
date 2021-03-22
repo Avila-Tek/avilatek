@@ -1,11 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-export default function SEO({ children, location, image }) {
+interface SEOProps {
+  children?: React.ReactChild | Array<React.ReactChild>;
+  title?: string;
+}
+
+export default function SEO({ children, title }: SEOProps) {
   return (
     <Helmet titleTemplate={`%s | Avila Tek`}>
       <html lang="en" />
-      <title>Avila Tek</title>
+      <title>{title}</title>
       {/* Fav Icons */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="alternate icon" href="/favicon.ico" />

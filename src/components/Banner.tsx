@@ -75,7 +75,7 @@ export default function Banner() {
               ]
             </motion.span>
           </h1>
-          <p className="my-6 lg:my-7 text-sm md:text-base">
+          <p className="my-6 lg:my-7 text-sm lg:text-base">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit
             id hac.{' '}
           </p>
