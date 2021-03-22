@@ -4,7 +4,7 @@ import BrickPattern from '../assets/images/brick-wall.svg';
 
 export default function AboutUs() {
   return (
-    <section className="mt-28 mb-40 w-full">
+    <section className="mt-24 mb-52 w-full">
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16 xl:gap-20 px-6 md:px-10 lg:px-20">
         {/* Coding illustation */}
         <div className="w-9/12 sm:w-6/12 md:w-5/12 lg:w-4/12">
@@ -35,12 +35,10 @@ export default function AboutUs() {
       </div>
 
       {/* The phrase */}
-      <div className="w-full mt-44 text-center px-10">
+      <div className="w-full mt-52 text-center px-10">
         <h2 className="text-lg lg:text-xl xl:text-2xl font-bold text-primary-500">
-          <em>
-            “Una frase cool que represente a Avila Tek pudiese ir aquí etc etc
-            etc”
-          </em>
+          “Una frase cool que represente a Avila Tek pudiese ir aquí etc etc
+          etc”
         </h2>
       </div>
     </section>

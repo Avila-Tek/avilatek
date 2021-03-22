@@ -53,7 +53,7 @@ function LogoItem({ src, name, className }: LogoItemProps) {
       alt={name}
       key={name}
       className={`duration-150 transition-all filter-grayscale hover:filter-none ease-in-out ${
-        name === 'Android' ? 'h-6 md:h-7 xl:h-8' : 'h-10 md:h-12'
+        name === 'Android' ? 'h-5 md:h-6 xl:h-7' : 'h-10 md:h-12'
       } ${className}`}
     />
   );
@@ -79,7 +79,7 @@ export default function Technologies() {
   }, [technologies]);
 
   return (
-    <section className="bg-light pt-24 md:pt-10 pb-28 lg:pb-40">
+    <section className="bg-light pt-28 md:pt-18 pb-28 lg:pb-40">
       <div className="w-full flex justify-center items-center text-medium-blue px-16 md:px-28">
         {/* Left arrow btn */}
         <button
