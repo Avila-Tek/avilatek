@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import LeftArrow from './icons/LeftArrow';
-import RightArrow from './icons/RightArroz';
+import RightArrow from './icons/RightArrow';
 import ReactLogo from '../assets/images/technologies/react.png';
 import NextJSLogo from '../assets/images/technologies/nextjs.png';
 import GatsbyLogo from '../assets/images/technologies/gatsby.png';
@@ -110,7 +110,7 @@ export default function Technologies() {
           </AnimatePresence>
         </ul>
 
-        {/* Left arrow btn */}
+        {/* Right arrow btn */}
         <button
           type="button"
           className="focus:ring-0 focus:outline-none hover:text-primary-300 duration-150 transition-all ease-in-out"

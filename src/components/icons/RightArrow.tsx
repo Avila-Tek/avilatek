@@ -4,7 +4,7 @@ interface IconProps {
   className?: string;
 }
 
-export default function RightArroz({ className }: IconProps) {
+export default function RightArrow({ className }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
