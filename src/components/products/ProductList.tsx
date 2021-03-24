@@ -13,19 +13,31 @@ export type Product = {
 interface ProductCardProps {
   product: Product;
   className?: string;
+  direction?: number;
 }
 
-function ProductCard({ product, className }: ProductCardProps) {
+function ProductCard({ product, className, direction }: ProductCardProps) {
+  const variants = {
+    initial: { opacity: 0.5, x: direction === 1 ? 6 : -6 },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0.5, x: direction === 1 ? -6 : 6 },
+  };
+
   return (
     <motion.li
+      variants={variants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      transition={{ duration: 0.5 }}
       key={product?.name}
-      className={`w-72 flex flex-col p-7 rounded-md bg-light-blue shadow-blue justify-between ${className}`}
+      className={`w-56 sm:w-60 lg:w-72 h-72 lg:h-80 flex flex-col p-7 rounded-md bg-light-blue shadow-blue justify-between ${className}`}
     >
-      <img src={product?.svg} alt={product?.name} className="w-3/5 md:w-2/5" />
-      <h1 className="text-primary-500 font-bold mt-3 mb-1 text-sm md:text-base">
+      <img src={product?.svg} alt={product?.name} className="w-2/5" />
+      <h1 className="text-primary-500 font-bold mt-3 mb-2 text-sm lg:text-base">
         {product?.name}
       </h1>
-      <p className="mb-4 leading-snug text-sm md:text-base">
+      <p className="mb-4 leading-snug text-sm lg:text-base">
         {product?.description}
       </p>
       <button
@@ -35,7 +47,7 @@ function ProductCard({ product, className }: ProductCardProps) {
           console.log('Oprimi un producto');
         }}
       >
-        <p className="text-sm mr-3">Solicitar</p>
+        <p className="text-xs md:text-sm mr-3">Solicitar</p>
         <LongArrow className="h-4" />
       </button>
     </motion.li>
@@ -48,13 +60,7 @@ interface ProductListProps {
 
 export default function ProductList({ products: _products }: ProductListProps) {
   const [products, setProducts] = useState(_products);
-  const direction = 1; // * 1. to the right | 2. to the left
-
-  const variants = {
-    initial: { opacity: 0.2 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0.2 },
-  };
+  const [direction, setDirection] = useState(1); // * 1. to the right | -1. to the left
 
   const rotate = (change: number) => {
     const { length } = products;
@@ -65,38 +71,44 @@ export default function ProductList({ products: _products }: ProductListProps) {
       }
       return prev.map((_, idx) => prev[(idx + change) % length]);
     });
+
+    setDirection(change);
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => rotate(1), 6000);
-  //   return () => clearInterval(interval);
-  // }, [products]);
-
   return (
-    <div className="w-full flex justify-center px-16 md:px-28">
+    <div className="w-full flex justify-center px-10 md:px-28">
       {/* Left arrow btn */}
       <button
         type="button"
-        className="block lg:hidden focus:ring-0 focus:outline-none text-medium-blue hover:text-primary-300 duration-150 transition-all ease-in-out"
+        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue hover:text-primary-300 duration-150 transition-all ease-in-out"
         onClick={() => rotate(-1)}
       >
         <LeftArrow className="h-6 w-6 md:h-8 md:w-8" />
       </button>
 
       {/* Cards carousel */}
-      <ul className="w-full flex gap-20 justify-center">
+      <ul className="w-full flex gap-12 lg:gap-20 justify-center mx-4">
         <AnimatePresence>
           {products.map((product, idx) => (
-            // <>
-            //   {idx === 0 && <ProductCard product={product} />}
-            //   {idx === 1 && (
-            //     <ProductCard product={product} className="hidden md:block" />
-            //   )}
-            //   {idx === 2 && (
-            //     <ProductCard product={product} className="hidden lg:block" />
-            //   )}
-            // </>
-            <ProductCard product={product} />
+            <>
+              {idx === 0 && (
+                <ProductCard product={product} direction={direction} />
+              )}
+              {idx === 1 && (
+                <ProductCard
+                  product={product}
+                  className="hidden md:block"
+                  direction={direction}
+                />
+              )}
+              {idx === 2 && (
+                <ProductCard
+                  product={product}
+                  className="hidden xl:block"
+                  direction={direction}
+                />
+              )}
+            </>
           ))}
         </AnimatePresence>
       </ul>
@@ -104,7 +116,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
       {/* Right arrow btn */}
       <button
         type="button"
-        className="block lg:hidden focus:ring-0 focus:outline-none text-medium-blue hover:text-primary-300 duration-150 transition-all ease-in-out"
+        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue hover:text-primary-300 duration-150 transition-all ease-in-out"
         onClick={() => rotate(1)}
       >
         <RightArrow className="h-6 w-6 md:h-8 md:w-8" />

@@ -27,16 +27,16 @@ export default function ProductsSection() {
   ];
 
   return (
-    <section className="mt-24 mb-52 w-full">
+    <section className="mt-40 mb-56 w-full">
       <div className="w-full text-center mb-20">
-        <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
+        <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-12">
           Te presentamos nuestra{' '}
           <mark className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0">
             variedad
           </mark>{' '}
           de <span className="text-primary-500">productos</span>
         </h1>
-        <p className="w-6/12 mx-auto mt-6 lg:mt-7 text-sm lg:text-base">
+        <p className="w-9/12 md:w-6/12 mx-auto mt-6 lg:mt-7 text-sm lg:text-base">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit
           id hac. Consectetur adipiscing elit. Urna in sit id hac.
         </p>
