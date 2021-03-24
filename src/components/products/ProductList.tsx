@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'gatsby';
 import { motion, AnimatePresence } from 'framer-motion';
 import LongArrow from '../icons/LongArrow';
 import LeftArrow from '../icons/LeftArrow';
@@ -40,16 +41,15 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
       <p className="mb-4 leading-snug text-sm lg:text-base">
         {product?.description}
       </p>
-      <button
-        type="button"
-        className="flex items-center w-full text-secondary-500 focus:ring-0 focus:outline-none hover:text-secondary-300 duration-150 transition-all ease-in-out"
-        onClick={() => {
-          console.log('Oprimi un producto');
-        }}
+
+      {/* this button or anchor will take you the contact section */}
+      <Link
+        className="flex items-center w-full text-secondary-500 hover:text-primary-300 duration-150 transition-all ease-in-out"
+        to="#contact"
       >
         <p className="text-xs md:text-sm mr-3">Solicitar</p>
         <LongArrow className="h-4" />
-      </button>
+      </Link>
     </motion.li>
   );
 }
@@ -65,6 +65,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
   const rotate = (change: number) => {
     const { length } = products;
 
+    // change the order of products
     setProducts((prev) => {
       if (change === -1) {
         return prev.map((_, idx) => prev[(idx + change + length) % length]);
@@ -72,6 +73,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
       return prev.map((_, idx) => prev[(idx + change) % length]);
     });
 
+    // will set in which direction the carousel is going to change the animation slightly
     setDirection(change);
   };
 
@@ -88,6 +90,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
 
       {/* Cards carousel */}
       <ul className="w-full flex gap-12 lg:gap-20 justify-center mx-4">
+        {/* manage how many cards will show up in each device size */}
         <AnimatePresence>
           {products.map((product, idx) => (
             <>
