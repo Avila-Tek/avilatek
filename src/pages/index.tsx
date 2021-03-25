@@ -3,6 +3,7 @@ import Banner from '../components/Banner';
 import Technologies from '../components/Tecnologies';
 import AboutUs from '../components/AboutUs';
 import SEO from '../components/SEO';
+import ProductsSection from '../components/products/ProductsSection';
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <Banner />
       <Technologies />
       <AboutUs />
+      <ProductsSection />
     </main>
   );
 }
