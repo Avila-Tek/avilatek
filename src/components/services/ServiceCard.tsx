@@ -4,15 +4,19 @@ interface ServiceCardProps {
   illustration: any;
   title: string;
   description: string;
+  cardClass?: string;
+  idx?: number;
 }
 
 export default function ServiceCard({
   illustration,
   title,
   description,
+  cardClass,
+  idx,
 }: ServiceCardProps) {
   return (
-    <div className="flip-card first-flip-card w-64 h-80">
+    <div className={`flip-card w-64 h-80 absolute ${cardClass}`}>
       {/* Card inner */}
       <div className="flip-card-inner relative w-full h-full text-center">
         {/* Front card */}
@@ -25,13 +29,19 @@ export default function ServiceCard({
           </div>
         </div>
         {/* Back card */}
-        <div className="flip-card-back w-full h-full overflow-hidden absolute shadow-blue bg-primary-300 rounded-md">
+        <button
+          type="button"
+          onClick={() => {
+            console.log('CARDS');
+          }}
+          className="flip-card-back w-full h-full overflow-hidden focus:ring-0 focus:outline-none absolute shadow-blue bg-primary-300 rounded-md"
+        >
           <div className="w-full h-full flex flex-col justify-center items-center p-10">
             <h1 className="text-lg font-bold">{title}</h1>
-            <hr className="mt-1 mb-3 border-primary-200" />
-            <p className="font-medium">{description}</p>
+            <hr className="w-full mt-1 mb-3 border-primary-100" />
+            <p className="font-medium leading-tight text-sm">{description}</p>
           </div>
-        </div>
+        </button>
       </div>
     </div>
   );
