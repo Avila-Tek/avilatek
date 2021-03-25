@@ -50,3 +50,24 @@ body {
   padding-top: 5.2rem;
   margin-top: -5.2rem;
 }
+
+.flip-card {
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.first-flip-card:hover .flip-card-inner,
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
