@@ -12,8 +12,14 @@
     .filter-grayscale {
       filter: grayscale(100%);
     }
+
+    .flip-rotation {
+      transform: rotateY(180deg);
+    }
   }
 }
+
+/* purgecss start ignore */
 
 html,
 body {
@@ -71,3 +77,5 @@ body {
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
+
+/* purgecss end ignore */

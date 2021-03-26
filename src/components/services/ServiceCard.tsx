@@ -19,8 +19,8 @@ export default function ServiceCard({
   rotate,
 }: ServiceCardProps) {
   const variants = [
-    { rotate: [2, 0, 2] },
-    { rotate: [6, 0, 6] },
+    { rotate: [1, 0, 1] },
+    { rotate: [8, 0, 8] },
     { rotate: [0, -12, 0] },
   ];
 
@@ -31,7 +31,7 @@ export default function ServiceCard({
       className={`flip-card w-56 lg:w-64 h-72 lg:h-80 absolute ${cardClass}`}
     >
       {/* Card inner */}
-      <div className="flip-card-inner relative w-full h-full text-center">
+      <div className="flip-card-inner relative w-full h-full">
         {/* Front card */}
         <div
           className={`flip-card-front w-full h-full overflow-hidden absolute rounded-md shadow-blue ${

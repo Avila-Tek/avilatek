@@ -14,13 +14,10 @@ interface CardsStackProps {
 export default function CardsStack({ services: _services }: CardsStackProps) {
   const [services, setServices] = useState<Array<Service>>(_services);
   const stackStyles = [
-    'first-flip-card z-30 hover:w-96',
-    'transform rotate-6 z-20',
-    'transform -rotate-12 z-10',
+    'first-flip-card z-30',
+    'z-20',
+    'z-10',
   ];
-
-  // rotate-6 => 6deg
-  // -rotate-12 => -12deg
 
   const rotate = () => {
     const { length } = services;
