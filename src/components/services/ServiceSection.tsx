@@ -28,8 +28,8 @@ export default function ServiceSection() {
   ];
 
   return (
-    <section className="w-full mt-40 mb-56 flex gap-20 px-24 items-center justify-center">
-      <div className="w-4/12">
+    <section className="w-full mt-72 mb-64 flex flex-col md:flex-row gap-20 xl:gap-28 px-14 lg:px-24 items-center justify-center">
+      <div className="w-10/12 md:w-4/12">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
           Los mejores <span className="text-primary-500">servicios</span> a un{' '}
           <mark className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0">
@@ -42,7 +42,7 @@ export default function ServiceSection() {
         </p>
         <Button
           type="button"
-          className="mt-6 lg:mt-7 px-8 md:px-10 lg:px-12"
+          className="mt-6 lg:mt-7 px-8 md:px-10 lg:px-12 text-sm lg:text-base"
           onClick={() => {
             console.log('solicite');
           }}

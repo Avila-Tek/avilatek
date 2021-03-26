@@ -35,7 +35,7 @@ export default function AboutUs() {
       </div>
 
       {/* The phrase */}
-      <div className="w-full mt-56 text-center px-10">
+      <div className="w-10/12 mx-auto mt-56 text-center px-10">
         <h2 className="text-lg lg:text-xl xl:text-2xl font-bold text-primary-500">
           “Una frase cool que represente a Avila Tek pudiese ir aquí etc etc
           etc”
