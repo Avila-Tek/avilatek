@@ -31,6 +31,10 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
       animate="animate"
       exit="exit"
       transition={{ duration: 0.5 }}
+      whileHover={{
+        scale: 1.05,
+        transition: { duration: 0.4 },
+      }}
       key={product?.name}
       className={`w-56 sm:w-60 lg:w-72 h-72 lg:h-80 flex flex-col p-7 rounded-md bg-light-blue shadow-blue justify-between ${className}`}
     >

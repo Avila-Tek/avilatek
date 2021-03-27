@@ -19,7 +19,7 @@ export default function Button({
     <button
       // eslint-disable-next-line react/button-has-type
       type={type}
-      className={`text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 px-6 rounded-full disabled:opacity-50 disabled:bg-primary-500 ${className}`}
+      className={`text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 px-6 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 ${className}`}
       disabled={disabled}
       {...rest}
     >
