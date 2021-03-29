@@ -5,7 +5,16 @@ module.exports = {
   purge: {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     options: {
-      safelist: ['first-flip-card', 'z-30', 'z-20', 'z-10'],
+      safelist: [
+        'first-flip-card',
+        'z-30',
+        'z-20',
+        'z-10',
+        '-top-4',
+        '-right-1',
+        '-top-8',
+        ' -left-4',
+      ],
     },
     // defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
   },
@@ -68,9 +77,9 @@ module.exports = {
   variants: {
     opacity: ({ after }) => after(['disabled']),
     backgroundColor: ({ after }) => after(['disabled', 'active']),
-    extend: {
-      scale: ['hover'],
-    },
+    textColor: ({ after }) => after(['active']),
+    borderColor: ({ after }) => after(['active']),
+    extend: {},
   },
   plugins: [
     require('@tailwindcss/forms'),

@@ -28,7 +28,7 @@ export default function ServiceCard({
     <motion.div
       animate={variants[idx]}
       transition={{ duration: 2, repeat: Infinity }}
-      className={`flip-card w-56 lg:w-64 h-72 lg:h-80 absolute ${cardClass}`}
+      className={`flip-card w-52 sm:w-56 lg:w-64 h-64 sm:h-72 lg:h-80 absolute ${cardClass}`}
     >
       {/* Card inner */}
       <div className="flip-card-inner relative w-full h-full">
