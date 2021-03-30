@@ -15,8 +15,8 @@ export default function CardsStack({ services: _services }: CardsStackProps) {
   const [services, setServices] = useState<Array<Service>>(_services);
   const stackStyles = [
     'first-flip-card z-30',
-    'z-20',
-    'z-10',
+    '-top-4 ml-4 z-20',
+    '-top-8 -left-5 z-10',
   ];
 
   const rotate = () => {
@@ -28,7 +28,7 @@ export default function CardsStack({ services: _services }: CardsStackProps) {
   };
 
   return (
-    <div className="relative w-60 h-72 lg:w-80 lg:h-80">
+    <div className="relative w-60 h-72 lg:w-80 lg:h-80 mt-14 sm:mt-20 md:mt-0">
       {services.map(({ illustration, title, description }, idx) => (
         <ServiceCard
           key={title}

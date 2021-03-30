@@ -5,7 +5,16 @@ module.exports = {
   purge: {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     options: {
-      safelist: ['first-flip-card', 'z-30', 'z-20', 'z-10'],
+      safelist: [
+        'first-flip-card',
+        'z-30',
+        'z-20',
+        'z-10',
+        '-top-4',
+        '-top-8',
+        '-left-5',
+        'ml-4',
+      ],
     },
     // defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
   },
@@ -46,13 +55,13 @@ module.exports = {
           800: '#2C2C2C',
         },
         font: {
-          white: '#F8F8F8',
-          black: '#333333',
+          'white': '#F8F8F8',
+          'black': '#333333',
         },
         'light-blue': '#f9fbfe',
         'medium-blue': '#E5EEFD',
-        light: '#FDFDFD',
-        dark: '#222222',
+        'light': '#FDFDFD',
+        'dark': '#222222',
         'dark-gray': '#313131',
         'medium-gray': '#464646',
       },
@@ -60,17 +69,28 @@ module.exports = {
         0: '0rem',
       },
       boxShadow: {
-        blue: '3px 4px 12px rgba(45, 156, 219, 0.25)',
+        'blue': '3px 4px 12px rgba(45, 156, 219, 0.25)',
         'dark-gray': '3px 4px 12px rgba(73, 73, 73, 0.25)',
+      },
+      spacing: {
+        104: '26rem',
+        112: '28rem',
+        120: '30rem',
+        128: '32rem',
+        136: '34rem',
+        144: '36rem',
+      },
+      fontSize: {
+        '2xs': ['0.615rem', { lineHeight: '0.75rem' }],
       },
     },
   },
   variants: {
     opacity: ({ after }) => after(['disabled']),
     backgroundColor: ({ after }) => after(['disabled', 'active']),
-    extend: {
-      scale: ['hover'],
-    },
+    textColor: ({ after }) => after(['active']),
+    borderColor: ({ after }) => after(['active']),
+    extend: {},
   },
   plugins: [
     require('@tailwindcss/forms'),
