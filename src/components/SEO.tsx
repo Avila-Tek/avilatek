@@ -17,7 +17,10 @@ export default function SEO({ children, title }: SEOProps) {
       {/* Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
-      <meta name="description" content="Here goes the description" />
+      <meta
+        name="description"
+        content="Desarrollamos tecnologías que innovan para ti"
+      />
       {/* Open Graph */}
       {/* {location && <meta property="og:url" content={location.href} />} */}
       <meta property="og:image" content="/logo.svg" />
@@ -25,7 +28,7 @@ export default function SEO({ children, title }: SEOProps) {
       <meta property="og:site_name" content="Avila Tek" key="ogsitename" />
       <meta
         property="og:description"
-        content="Here goes the description"
+        content="Desarrollamos tecnologías que innovan para ti"
         key="ogdesc"
       />
       {children}

@@ -37,9 +37,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed z-50 bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-2 transition duration-500 ease-in-out ${
+      className={`fixed z-50 bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-3 md:py-2 transition duration-500 ease-in-out ${
         isFixed ? 'shadow-blue' : ''
-      }`}
+      } ${isOpen ? 'shadow-blue' : ''}`}
       role="navigation"
     >
       <Link to="/" className="mr-auto">

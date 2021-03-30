@@ -130,7 +130,7 @@ export default function Contact() {
         </form>
 
         {/* Contact us illustration */}
-        <div className="w-9/12 sm:w-6/12 md:w-5/12 mx-auto md:mx-0">
+        <div className="w-8/12 sm:w-6/12 md:w-5/12 mt-10 md:mt-0 mx-auto md:mx-0">
           <img src={ContactUs} alt="contact illustration" className="w-full" />
         </div>
       </div>

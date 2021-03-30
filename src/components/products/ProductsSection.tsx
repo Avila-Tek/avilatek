@@ -27,7 +27,7 @@ export default function ProductsSection() {
   ];
 
   return (
-    <section id="products" className="pt-0.5 -mt-0.5 mb-120 w-full">
+    <section id="products" className="pt-0.5 -mt-0.5 mb-104 w-full">
       <div className="w-full text-center mb-20 mt-32">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-12">
           Te presentamos nuestra{' '}

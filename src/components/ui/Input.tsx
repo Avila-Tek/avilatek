@@ -61,7 +61,7 @@ export default function Input({
           value={value}
           rows={4}
           className={`
-          bg-medium-blue text-font-black rounded-lg px-2 py-1.5 w-full leading-tight outline-none text-sm lg:text-base border-medium-blue focus:border-2 focus:border-primary-300 disabled:opacity-75
+          bg-medium-blue text-font-black rounded-lg px-3 py-1.5 w-full leading-tight outline-none text-sm lg:text-base border-medium-blue focus:border-2 focus:border-primary-300 disabled:opacity-75
             ${extraClass}`}
           onKeyPress={(e) => {
             if (e.key === 'Enter') e.preventDefault();
@@ -89,7 +89,7 @@ export default function Input({
           onChange={onChange}
           value={value}
           className={`
-          bg-medium-blue text-font-black rounded-lg px-2 py-1.5 w-full leading-tight outline-none text-sm lg:text-base border-medium-blue focus:border-2 focus:border-primary-300 disabled:opacity-75
+          bg-medium-blue text-font-black rounded-lg px-3 py-1.5 w-full leading-tight outline-none text-sm lg:text-base border-medium-blue focus:border-2 focus:border-primary-300 disabled:opacity-75
             ${extraClass}`}
         >
           {children}
@@ -117,7 +117,7 @@ export default function Input({
         onChange={onChange}
         value={value}
         className={`
-          bg-medium-blue text-font-black rounded-lg px-2 py-1.5 w-full leading-tight outline-none text-sm lg:text-base border-medium-blue focus:border-2 focus:border-primary-300 disabled:opacity-75
+          bg-medium-blue text-font-black rounded-lg px-3 py-1.5 w-full leading-tight outline-none text-sm lg:text-base border-medium-blue focus:border-2 focus:border-primary-300 disabled:opacity-75
             ${extraClass}`}
         onKeyPress={(e) => {
           if (e.key === 'Enter') e.preventDefault();
