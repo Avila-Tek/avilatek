@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
+import { motion } from 'framer-motion';
 import logo from '../assets/images/logo_white.png';
 
 interface NavItemProps {
