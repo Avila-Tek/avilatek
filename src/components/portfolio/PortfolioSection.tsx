@@ -33,7 +33,7 @@ export default function PortfolioSection() {
 
   return (
     <section className="mt-40 mb-56 w-full">
-      <div className="w-full text-center mb-2">
+      <div className="w-full text-center">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-12">
           Conoce <span className="text-primary-500">los proyectos</span> que
           hemos{' '}

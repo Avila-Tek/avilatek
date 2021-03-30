@@ -23,6 +23,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
     setActive(idx);
   };
 
+  // Slider change automatically
   useEffect(() => {
     const interval = setInterval(
       () => changeSlide((active + 1) % projects.length),
@@ -43,7 +44,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
             className={`rounded-full h-2 w-2 ${
               active === idx
                 ? 'bg-primary-300'
-                : 'bg-medium-blue hover:bg-light-blue'
+                : 'bg-medium-blue hover:bg-primary-100'
             }`}
           />
         ))}
@@ -88,7 +89,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
       </AnimatePresence>
 
       {/* Project photo */}
-      <div className="relative w-80 sm:w-96 lg:w-128 xl:w-136 h-64 sm:h-80 lg:h-96 mx-auto md:mx-0 mt-0 md:mt-16">
+      <div className="relative w-80 sm:w-96 lg:w-128 xl:w-144 h-64 sm:h-80 lg:h-96 xl:h-112 mx-auto md:mx-0 mt-0 md:mt-14">
         {/* Monitor */}
         <img
           src={Monitor}
@@ -96,9 +97,9 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
           className="absolute top-0 left-0 z-20 w-full"
         />
         {/* The image */}
-        <div className="absolute top-2 z-10 rounded-2xl h-44 sm:h-52 lg:h-72 w-full pr-1 overflow-hidden">
+        <div className="absolute top-2 z-10 rounded-2xl h-44 sm:h-52 lg:h-72 xl:h-80 w-full pr-1 overflow-hidden">
           <AnimatePresence>
-            {projects.map(({ src }, idx) => (
+            {projects.map(({ title, src }, idx) => (
               <>
                 {active === idx && (
                   <motion.img
@@ -108,7 +109,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
                     src={src}
-                    alt="Project"
+                    alt={title}
                     className="w-full h-full object-cover object-center"
                   />
                 )}

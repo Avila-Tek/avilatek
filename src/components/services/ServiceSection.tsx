@@ -28,7 +28,7 @@ export default function ServiceSection() {
   ];
 
   return (
-    <section className="w-full mt-72 mb-64 flex flex-col md:flex-row gap-20 xl:gap-28 px-14 lg:px-24 items-center justify-center">
+    <section className="w-full my-96 flex flex-col md:flex-row gap-20 xl:gap-28 px-14 lg:px-24 items-center justify-center">
       <div className="w-10/12 md:w-4/12">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
           Los mejores <span className="text-primary-500">servicios</span> a un{' '}
