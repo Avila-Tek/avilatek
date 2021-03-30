@@ -20,14 +20,14 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   const variants = [
     { rotate: [1, 0, 1] },
-    { rotate: [8, 0, 8] },
-    { rotate: [0, -12, 0] },
+    { rotate: [8, 2, 8] },
+    { rotate: [-6, -12, -6] },
   ];
 
   return (
     <motion.div
       animate={variants[idx]}
-      transition={{ duration: 2, repeat: Infinity }}
+      transition={{ duration: 3, repeat: Infinity }}
       className={`flip-card w-52 sm:w-56 lg:w-64 h-64 sm:h-72 lg:h-80 absolute ${cardClass}`}
     >
       {/* Card inner */}

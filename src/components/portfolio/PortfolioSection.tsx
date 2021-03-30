@@ -1,7 +1,36 @@
 import React from 'react';
-import PortfolioSlider from './PortfolioSlider';
+import { navigate } from 'gatsby';
+import PortfolioSlider, { Project } from './PortfolioSlider';
+import ProjectImg from '../../assets/images/bulb.jpeg';
 
 export default function PortfolioSection() {
+  const projects: Array<Project> = [
+    {
+      title: 'Avila Tek',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing non sit morbi eget.',
+      src: ProjectImg,
+      categories: ['App Web', 'Movil'],
+      link: 'https://avilatek.dev',
+    },
+    {
+      title: 'Avila Tak',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing non sit morbi eget.',
+      src: ProjectImg,
+      categories: ['App Web'],
+      link: 'https://avilatek.dev',
+    },
+    {
+      title: 'Avila Tuk',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing non sit morbi eget.',
+      src: ProjectImg,
+      categories: ['App Web', 'Desktop'],
+      link: 'https://avilatek.dev',
+    },
+  ];
+
   return (
     <section className="mt-40 mb-56 w-full">
       <div className="w-full text-center mb-2">
@@ -18,15 +47,13 @@ export default function PortfolioSection() {
         </p>
       </div>
       {/* Portfolio slider */}
-      <PortfolioSlider />
+      <PortfolioSlider projects={projects} />
       {/* Know more button */}
       <div className="w-full flex justify-center mt-20 lg:mt-28">
         <button
           type="button"
           className="text-sm lg:text-base text-primary-500 bg-transparent border-2 border-primary-500 hover:border-primary-400 hover:text-primary-400 py-1.5 px-6 rounded-full focus:outline-none active:border-primary-300 active:text-primary-300"
-          onClick={() => {
-            console.log('CONOZCO');
-          }}
+          onClick={() => navigate('/')}
         >
           Conoce más de nuestro trabajo
         </button>
