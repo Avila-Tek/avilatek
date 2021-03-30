@@ -4,7 +4,7 @@ import BrickPattern from '../assets/images/brick-wall.svg';
 
 export default function AboutUs() {
   return (
-    <section className="mt-24 mb-52 w-full">
+    <section id="about-us" className="pt-48 -mt-48 mb-60 w-full">
       <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-16 xl:gap-20 px-6 md:px-10 lg:px-20">
         {/* Coding illustation */}
         <div className="w-9/12 sm:w-6/12 md:w-5/12 lg:w-4/12">

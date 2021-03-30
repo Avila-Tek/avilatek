@@ -136,10 +136,7 @@ body {
   background: #38e18c;
 }
 
-.anchor {
-  padding-top: 5.2rem;
-  margin-top: -5.2rem;
-}
+/* Flipping animation */
 
 .flip-card {
   background-color: transparent;

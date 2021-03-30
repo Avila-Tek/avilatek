@@ -76,8 +76,8 @@ export default function Navbar() {
         <NavItem title="Inicio" href="/" />
         <NavItem title="Nosotros" href="#about-us" />
         <NavItem title="Productos" href="#products" />
-        <NavItem title="Servicios" href="#servicios" />
-        <NavItem title="Portafolio" href="/portfolio" />
+        <NavItem title="Servicios" href="#services" />
+        <NavItem title="Portafolio" href="#portfolio" />
         <NavItem title="Contacto" href="#contact" />
       </div>
     </nav>

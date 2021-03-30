@@ -42,7 +42,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="mt-32 mb-48 w-full px-14 md:px-20 lg:px-28 xl:px-48">
+    <section id="contact" className="pt-24 -mt-24 mb-48 w-full px-14 md:px-20 lg:px-28 xl:px-48">
       {/* Section details */}
       <div className="w-10/12 md:w-9/12 xl:w-6/12 mb-16 mx-auto md:mx-0">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
