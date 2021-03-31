@@ -33,7 +33,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
   }, [active]);
 
   return (
-    <div className="w-10/12 mx-auto flex flex-col md:flex-row justify-center items-center gap-14 md:gap-8 lg:gap-16 mt-20 md:mt-0">
+    <div className="w-10/12 mx-auto flex flex-col md:flex-row justify-center items-center gap-12 md:gap-8 lg:gap-16 mt-12 md:mt-0">
       {/* Slider buttons */}
       <div className="flex md:flex-col gap-3 md:h-full justify-center">
         {projects.map((_, idx) => (

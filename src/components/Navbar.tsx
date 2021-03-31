@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
+import { motion } from 'framer-motion';
 import logo from '../assets/images/logo_white.png';
 
 interface NavItemProps {
@@ -37,9 +38,9 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed z-50 bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-2 transition duration-500 ease-in-out ${
+      className={`fixed z-50 bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-3 md:py-2 transition duration-500 ease-in-out ${
         isFixed ? 'shadow-blue' : ''
-      }`}
+      } ${isOpen ? 'shadow-blue' : ''}`}
       role="navigation"
     >
       <Link to="/" className="mr-auto">
@@ -76,8 +77,8 @@ export default function Navbar() {
         <NavItem title="Inicio" href="/" />
         <NavItem title="Nosotros" href="#about-us" />
         <NavItem title="Productos" href="#products" />
-        <NavItem title="Servicios" href="#servicios" />
-        <NavItem title="Portafolio" href="/portfolio" />
+        <NavItem title="Servicios" href="#services" />
+        <NavItem title="Portafolio" href="#portfolio" />
         <NavItem title="Contacto" href="#contact" />
       </div>
     </nav>
