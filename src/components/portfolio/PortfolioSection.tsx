@@ -32,7 +32,7 @@ export default function PortfolioSection() {
   ];
 
   return (
-    <section id="portfolio" className="pt-24 -mt-24 mb-80 w-full">
+    <section id="portfolio" className="pt-24 -mt-24 mb-80 w-full relative z-10 overflow-hidden">
       <div className="w-full text-center">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-12">
           Conoce <span className="text-primary-500">los proyectos</span> que
@@ -58,6 +58,7 @@ export default function PortfolioSection() {
           Conoce más de nuestro trabajo
         </button>
       </div>
+      <div className="absolute top-6 left-1/3 rounded-third-blob w-96 md:w-7/12 h-64 md:h-80 brick bg-medium-blue bg-opacity-90" />
     </section>
   );
 }

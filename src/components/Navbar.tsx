@@ -37,10 +37,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav
-      className={`fixed z-50 bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-3 md:py-2 transition duration-500 ease-in-out ${
-        isFixed ? 'shadow-blue' : ''
-      } ${isOpen ? 'shadow-blue' : ''}`}
+    <motion.nav
+      animate={{ height: isOpen ? 'auto' : '4rem' }}
+      transition={{ type: 'spring', damping: 25 }}
+      className={`fixed z-50 md:h-auto bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-4 sm:py-3 md:py-2 transition duration-500 ease-in-out overflow-hidden ${
+        isFixed || isOpen ? 'shadow-blue' : ''
+      }`}
       role="navigation"
     >
       <Link to="/" className="mr-auto">
@@ -48,7 +50,7 @@ export default function Navbar() {
       </Link>
 
       {/* Hamburger button */}
-      <div className="ml-auto md:hidden w-auto">
+      <div className="ml-auto md:hidden w-auto mt-1">
         <button
           className="text-font-black hover:text-primary-300 focus:outline-none"
           type="button"
@@ -69,11 +71,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div
-        className={`md:flex w-full h-full md:h-auto md:w-auto items-center overflow-hidden ${
-          isOpen ? 'my-6 md:my-0' : 'hidden'
-        }`}
-      >
+      <div className="md:flex w-full md:w-auto items-center overflow-hidden my-6 md:my-0">
         <NavItem title="Inicio" href="/" />
         <NavItem title="Nosotros" href="#about-us" />
         <NavItem title="Productos" href="#products" />
@@ -81,6 +79,6 @@ export default function Navbar() {
         <NavItem title="Portafolio" href="#portfolio" />
         <NavItem title="Contacto" href="#contact" />
       </div>
-    </nav>
+    </motion.nav>
   );
 }

@@ -45,7 +45,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="pt-24 -mt-24 mb-48 w-full px-14 md:px-20 lg:px-28 xl:px-48"
+      className="pt-24 -mt-24 pb-48 w-full px-14 md:px-20 lg:px-28 xl:px-48 relative z-10 overflow-hidden"
     >
       {/* Section details */}
       <div className="w-10/12 md:w-9/12 xl:w-6/12 mb-16 mx-auto md:mx-0">
@@ -143,10 +143,11 @@ export default function Contact() {
         </form>
 
         {/* Contact us illustration */}
-        <div className="w-8/12 sm:w-6/12 md:w-5/12 mt-10 md:mt-0 mx-auto md:mx-0">
+        <div className="w-9/12 sm:w-7/12 md:w-5/12 mt-12 md:mt-0 mx-auto md:mx-0">
           <img src={ContactUs} alt="contact illustration" className="w-full" />
         </div>
       </div>
+      <div className="absolute top-8 left-1/3 rounded-second-blob w-96 md:w-6/12 h-72 md:h-96 brick bg-medium-blue bg-opacity-90" />
     </section>
   );
 }
