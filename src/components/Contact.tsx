@@ -19,24 +19,30 @@ export default function Contact() {
       e.preventDefault();
 
       if (!validateName(name) || String(name).length > 127) {
-        return setStatus({ message: 'Nombre inválido', type: 'danger' });
+        setStatus({ message: 'Nombre inválido', type: 'danger' });
+        return false;
       }
 
       if (!validateEmail(email) || String(email).length > 127) {
-        return setStatus({ message: 'Correo inválido', type: 'danger' });
+        setStatus({ message: 'Correo inválido', type: 'danger' });
+        return false;
       }
 
       if (!validateString(message) || String(message).length > 127) {
-        return setStatus({ message: 'Mensaje inválido', type: 'danger' });
+        setStatus({ message: 'Mensaje inválido', type: 'danger' });
+        return false;
       }
 
       setDisabled(true);
       NProgress.start();
       setStatus({ message: 'Se ha enviado su solicitud', type: 'success' });
       setDisabled(false);
+      console.log('sent');
+      return true;
     } catch (error) {
       setDisabled(false);
       setStatus({ message: error, type: 'danger' });
+      return false;
     } finally {
       NProgress.done();
     }
@@ -65,6 +71,7 @@ export default function Contact() {
         {/* Contact form */}
         <form
           method="POST"
+          action="https://formsubmit.co/bcda760496243488a981984ded63aef7"
           onSubmit={onSubmit}
           className="bg-light-blue shadow-blue rounded-md p-7 md w-80 sm:w-96 md:w-80 lg:w-96 mx-auto md:mx-0"
         >
