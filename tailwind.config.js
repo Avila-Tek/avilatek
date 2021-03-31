@@ -1,5 +1,6 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
+// const bricks = require('./src/assets/images/brick-wall.svg');
 
 module.exports = {
   purge: {
@@ -82,6 +83,11 @@ module.exports = {
       },
       fontSize: {
         '2xs': ['0.615rem', { lineHeight: '0.75rem' }],
+      },
+      borderRadius: {
+        'blob': '81% 30% 30% 70% / 60% 40% 60% 40%;',
+        'second-blob': '30% 70% 28% 72% / 45% 30% 70% 55%',
+        'third-blob': '34% 66% 43% 57% / 76% 75% 25% 24%',
       },
     },
   },

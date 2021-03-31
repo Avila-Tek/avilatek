@@ -27,7 +27,7 @@ export default function ProductsSection() {
   ];
 
   return (
-    <section id="products" className="pt-0.5 -mt-0.5 mb-104 w-full">
+    <section id="products" className="pt-0.5 -mt-0.5 pb-104 w-full relative z-10 overflow-hidden">
       <div className="w-full text-center mb-20 mt-32">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-12">
           Te presentamos nuestra{' '}
@@ -42,6 +42,7 @@ export default function ProductsSection() {
         </p>
       </div>
       <ProductList products={products} />
+      <div className="absolute top-16 right-1/3 rounded-third-blob w-7/12 md:w-5/12 h-72 brick bg-medium-blue bg-opacity-90" />
     </section>
   );
 }

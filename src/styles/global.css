@@ -159,4 +159,10 @@ body {
   backface-visibility: hidden;
 }
 
+.brick {
+  -webkit-mask-image: url('../assets/images/brick-wall.svg');
+  mask-image: url('../assets/images/brick-wall.svg');
+  z-index: -1;
+}
+
 /* purgecss end ignore */
