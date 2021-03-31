@@ -33,7 +33,8 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
   }, [active]);
 
   return (
-    <div className="w-10/12 mx-auto flex flex-col md:flex-row justify-center items-center gap-12 md:gap-8 lg:gap-16 mt-12 md:mt-0">
+    // gap-12 md:gap-8 lg:gap-16
+    <div className="w-10/12 mx-auto flex flex-col md:flex-row justify-center items-center mt-12 md:mt-0">
       {/* Slider buttons */}
       <div className="flex md:flex-col gap-3 md:h-full justify-center">
         {projects.map((_, idx) => (
@@ -60,7 +61,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8 }}
-                className="w-10/12 md:w-4/12 lg:w-3/12"
+                className="w-10/12 md:w-4/12 lg:w-3/12 my-12 md:my-0 mx-0 md:mx-8 lg:mx-16"
                 key={uuid()}
               >
                 {/* Categories */}

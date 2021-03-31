@@ -49,13 +49,13 @@ export default function ServiceCard({
         <button
           type="button"
           onClick={rotate}
-          className="flip-card-back w-full h-full overflow-hidden focus:ring-0 focus:outline-none absolute top-0 left-0 shadow-blue bg-primary-300 rounded-md"
+          className="flip-card-back w-full h-full text-font-white overflow-hidden focus:ring-0 focus:outline-none absolute top-0 left-0 shadow-blue bg-secondary-300 rounded-md"
         >
           <div className="w-full h-full flex flex-col justify-center items-center p-8 lg:p-10">
             <h1 className="text-sm lg:text-lg font-bold leading-snug">
               {title}
             </h1>
-            <hr className="w-full mt-1 mb-3 border-primary-100" />
+            <hr className="w-full mt-2 mb-3 border-secondary-100" />
             <p className="font-medium leading-tight text-xs lg:text-sm">
               {description}
             </p>

@@ -70,11 +70,11 @@ export default function Footer() {
           <Button
             type="button"
             className="text-xs md:text-sm"
-            onClick={() => {
-              console.log('Hola');
-            }}
+            onClick={() => {}}
           >
-            Trabaja con nosotros
+            <a href="https://bit.ly/avila-tek" target="_blank">
+              Trabaja con nosotros
+            </a>
           </Button>
         </div>
       </div>

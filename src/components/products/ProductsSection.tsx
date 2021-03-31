@@ -31,10 +31,10 @@ export default function ProductsSection() {
       <div className="w-full text-center mb-20 mt-32">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-12">
           Te presentamos nuestra{' '}
-          <mark className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0">
+          <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0">
             variedad
           </mark>{' '}
-          de <span className="text-primary-500">productos</span>
+          de <span className="text-primary-400">productos</span>
         </h1>
         <p className="w-9/12 md:w-6/12 mx-auto mt-6 lg:mt-7 text-sm lg:text-base">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit

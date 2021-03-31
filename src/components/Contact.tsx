@@ -50,7 +50,7 @@ export default function Contact() {
       {/* Section details */}
       <div className="w-10/12 md:w-9/12 xl:w-6/12 mb-16 mx-auto md:mx-0">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-          <span className="text-primary-500">Contáctanos</span> para tu próxima{' '}
+          <span className="text-primary-400">Contáctanos</span> para tu próxima{' '}
           <mark className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0">
             gran idea
           </mark>

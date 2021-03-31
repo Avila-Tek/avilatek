@@ -38,15 +38,15 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      animate={{ height: isOpen ? 'auto' : '4rem' }}
+      animate={{ height: isOpen ? 'auto' : '4.2rem' }}
       transition={{ type: 'spring', damping: 25 }}
-      className={`fixed z-50 md:h-auto bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-4 sm:py-3 md:py-2 transition duration-500 ease-in-out overflow-hidden ${
+      className={`fixed z-50 md:h-auto bg-light-blue flex flex-wrap justify-between items-center w-full px-8 md:px-10 lg:px-20 py-4 sm:py-3 md:py-2 transition duration-500 ease-in-out overflow-hidden ${
         isFixed || isOpen ? 'shadow-blue' : ''
       }`}
       role="navigation"
     >
       <Link to="/" className="mr-auto">
-        <img src={logo} alt="Avila Tek logo" className="h-8 sm:h-10 lg:h-12" />
+        <img src={logo} alt="Avila Tek logo" className="h-10 lg:h-12" />
       </Link>
 
       {/* Hamburger button */}
