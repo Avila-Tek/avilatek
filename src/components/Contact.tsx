@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Input from './ui/Input';
 import Button from './ui/Button';
 import ContactUs from '../assets/illustrations/contact-us.svg';
+import Textarea from './ui/Textarea';
 
 export default function Contact() {
   const [name, setName] = useState<string>('');
@@ -42,7 +43,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="pt-24 -mt-24 mb-48 w-full px-14 md:px-20 lg:px-28 xl:px-48">
+    <section
+      id="contact"
+      className="pt-24 -mt-24 mb-48 w-full px-14 md:px-20 lg:px-28 xl:px-48"
+    >
       {/* Section details */}
       <div className="w-10/12 md:w-9/12 xl:w-6/12 mb-16 mx-auto md:mx-0">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
@@ -76,6 +80,9 @@ export default function Contact() {
             }}
             required
             maxLength={127}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') e.preventDefault();
+            }}
           />
           <Input
             name="email"
@@ -89,10 +96,12 @@ export default function Contact() {
             }}
             required
             maxLength={127}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') e.preventDefault();
+            }}
           />
-          <Input
+          <Textarea
             name="message"
-            type="textarea"
             value={message}
             placeholder="Mensaje"
             label="Describa su proyecto o duda"
@@ -101,7 +110,11 @@ export default function Contact() {
               setMessage(e.target.value);
             }}
             required
+            rows={5}
             maxLength={1000}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') e.preventDefault();
+            }}
           />
           <Button
             type="submit"
