@@ -89,6 +89,10 @@ module.exports = {
         'second-blob': '30% 70% 28% 72% / 45% 30% 70% 55%',
         'third-blob': '34% 66% 43% 57% / 76% 75% 25% 24%',
       },
+      height: {
+        'half': '50vh',
+        'third': '75vh',
+      }
     },
   },
   variants: {

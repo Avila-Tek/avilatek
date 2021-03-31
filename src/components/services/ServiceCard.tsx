@@ -40,7 +40,7 @@ export default function ServiceCard({
         >
           <div className="w-full h-full flex flex-col justify-center items-center p-10 text-center">
             <img src={illustration} alt={title} className="w-10/12" />
-            <h2 className="text-primary-400 font-bold mx-auto text-base lg:text-lg mt-6 leading-snug">
+            <h2 className="text-primary-400 font-bold mx-auto text-base lg:text-lg mt-6 leading-tight">
               {title}
             </h2>
           </div>
@@ -49,13 +49,13 @@ export default function ServiceCard({
         <button
           type="button"
           onClick={rotate}
-          className="flip-card-back w-full h-full text-font-white overflow-hidden focus:ring-0 focus:outline-none absolute top-0 left-0 shadow-blue bg-secondary-300 rounded-md"
+          className="flip-card-back w-full h-full text-font-white overflow-hidden focus:ring-0 focus:outline-none absolute top-0 left-0 shadow-blue bg-primary-400 rounded-md"
         >
           <div className="w-full h-full flex flex-col justify-center items-center p-8 lg:p-10">
-            <h1 className="text-sm lg:text-lg font-bold leading-snug">
+            <h1 className="text-sm lg:text-lg font-bold leading-tight">
               {title}
             </h1>
-            <hr className="w-full mt-2 mb-3 border-secondary-100" />
+            <hr className="w-full mt-2 mb-3 border-primary-300" />
             <p className="font-medium leading-tight text-xs lg:text-sm">
               {description}
             </p>
