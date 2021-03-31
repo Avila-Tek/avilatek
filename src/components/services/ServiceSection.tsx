@@ -28,7 +28,7 @@ export default function ServiceSection() {
   ];
 
   return (
-    <section className="w-full my-96 flex flex-col md:flex-row gap-20 xl:gap-28 px-14 lg:px-24 items-center justify-center">
+    <section id="services" className="pt-20 md:pt-56 -mt-20 md:-mt-56 w-full pb-96 flex flex-col md:flex-row gap-20 xl:gap-28 px-14 lg:px-24 items-center justify-center relative z-10 overflow-hidden">
       <div className="w-10/12 md:w-4/12">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
           Los mejores <span className="text-primary-500">servicios</span> a un{' '}
@@ -51,6 +51,7 @@ export default function ServiceSection() {
         </Button>
       </div>
       <CardsStack services={services} />
+      <div className="absolute top-32 right-1/2 rounded-blob w-80 md:w-3/12 h-104 brick bg-medium-blue bg-opacity-90" />
     </section>
   );
 }

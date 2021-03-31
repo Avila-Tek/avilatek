@@ -29,6 +29,90 @@ body {
   @apply bg-light;
 }
 
+/* Spinner */
+
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: #13cb6e;
+  position: fixed;
+  z-index: 1060;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #13cb6e, 0 0 5px #13cb6e;
+  opacity: 1;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  right: 15px;
+}
+
+#nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+
+  border: solid 2px transparent;
+  border-top-color: #13cb6e;
+  border-left-color: #13cb6e;
+  border-radius: 50%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+  animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Scrollbar */
+
 body {
   scrollbar-width: thin;
   scrollbar-color: #13cb6e transparent;
@@ -52,10 +136,7 @@ body {
   background: #38e18c;
 }
 
-.anchor {
-  padding-top: 5.2rem;
-  margin-top: -5.2rem;
-}
+/* Flipping animation */
 
 .flip-card {
   background-color: transparent;
@@ -76,6 +157,12 @@ body {
 .flip-card-back {
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+}
+
+.brick {
+  -webkit-mask-image: url('../assets/images/brick-wall.svg');
+  mask-image: url('../assets/images/brick-wall.svg');
+  z-index: -1;
 }
 
 /* purgecss end ignore */
