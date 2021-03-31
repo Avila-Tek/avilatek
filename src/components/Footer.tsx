@@ -8,7 +8,7 @@ import LinkedIn from './icons/LinkedIn';
 
 export default function Footer() {
   return (
-    <footer className="bg-light-blue w-full px-10 lg:px-20 py-2">
+    <footer className="bg-light-blue w-full px-10 lg:px-20 py-2 shadow-blue border-t-2 border-medium-blue">
       <div className="flex flex-col sm:flex-row w-full py-6 gap-6 sm:gap-20">
         {/* Contact section */}
         <div className="w-full sm:w-1/3 text-xs md:text-sm">
