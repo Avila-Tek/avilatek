@@ -53,7 +53,7 @@ export default function PortfolioSection() {
         <button
           type="button"
           className="text-sm lg:text-base text-primary-500 bg-transparent border-2 border-primary-500 hover:border-primary-400 hover:text-primary-400 py-1.5 px-6 rounded-full focus:outline-none active:border-primary-300 active:text-primary-300"
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/portfolio')}
         >
           Conoce más de nuestro trabajo
         </button>
