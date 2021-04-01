@@ -38,6 +38,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
+      initial={{ height: '4.2rem' }}
       animate={{ height: isOpen ? 'auto' : '4.2rem' }}
       transition={{ type: 'spring', damping: 25 }}
       className={`fixed z-50 md:h-auto bg-light-blue flex flex-wrap justify-between items-center w-full px-8 md:px-10 lg:px-20 py-4 sm:py-3 md:py-2 transition duration-500 ease-in-out overflow-hidden ${

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { v4 as uuid } from 'uuid';
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
 import ReactLogo from '../assets/images/technologies/react.png';
@@ -37,7 +38,7 @@ const logos = [
 ];
 
 interface LogoItemProps {
-  src: any; // ! find out what class is src
+  src: any; // ! find out what type is src
   name: string;
   className?: string;
 }
@@ -51,7 +52,6 @@ function LogoItem({ src, name, className }: LogoItemProps) {
       transition={{ duration: 0.3 }}
       src={src}
       alt={name}
-      key={name}
       className={`mx-7 xl:mx-8 duration-150 transition-all filter-grayscale hover:filter-none ease-in-out ${
         name === 'Android' ? 'h-5 md:h-6 xl:h-7' : 'h-10 md:h-12'
       } ${className}`}
@@ -95,15 +95,30 @@ export default function Technologies() {
           <AnimatePresence>
             {technologies.map(({ src, name }, idx) => (
               <>
-                {0 === idx && <LogoItem src={src} name={name} />}
+                {0 === idx && <LogoItem src={src} name={name} key={uuid()} />}
                 {1 === idx && (
-                  <LogoItem src={src} name={name} className="hidden sm:block" />
+                  <LogoItem
+                    src={src}
+                    name={name}
+                    className="hidden sm:block"
+                    key={uuid()}
+                  />
                 )}
                 {2 === idx && (
-                  <LogoItem src={src} name={name} className="hidden lg:block" />
+                  <LogoItem
+                    src={src}
+                    name={name}
+                    className="hidden lg:block"
+                    key={uuid()}
+                  />
                 )}
                 {3 === idx && (
-                  <LogoItem src={src} name={name} className="hidden xl:block" />
+                  <LogoItem
+                    src={src}
+                    name={name}
+                    className="hidden xl:block"
+                    key={uuid()}
+                  />
                 )}
               </>
             ))}

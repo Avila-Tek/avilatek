@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import NProgress from 'nprogress';
-import { validateEmail, validateName, validateString } from 'avilatek-utils';
-import { motion } from 'framer-motion';
+// import NProgress from 'nprogress';
+// import { validateEmail, validateName, validateString } from 'avilatek-utils';
+// import { motion } from 'framer-motion';
 import Input from './ui/Input';
 import Button from './ui/Button';
 import ContactUs from '../assets/illustrations/contact-us.svg';
@@ -11,42 +11,42 @@ export default function Contact() {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
-  const [disabled, setDisabled] = useState<boolean>(false);
-  const [status, setStatus] = useState<{ message: string; type: string }>();
+  // const [disabled, setDisabled] = useState<boolean>(false);
+  // const [status, setStatus] = useState<{ message: string; type: string }>();
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    try {
-      e.preventDefault();
+  // const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   try {
+  //     e.preventDefault();
 
-      if (!validateName(name) || String(name).length > 127) {
-        setStatus({ message: 'Nombre inválido', type: 'danger' });
-        return false;
-      }
+  //     if (!validateName(name) || String(name).length > 127) {
+  //       setStatus({ message: 'Nombre inválido', type: 'danger' });
+  //       return false;
+  //     }
 
-      if (!validateEmail(email) || String(email).length > 127) {
-        setStatus({ message: 'Correo inválido', type: 'danger' });
-        return false;
-      }
+  //     if (!validateEmail(email) || String(email).length > 127) {
+  //       setStatus({ message: 'Correo inválido', type: 'danger' });
+  //       return false;
+  //     }
 
-      if (!validateString(message) || String(message).length > 127) {
-        setStatus({ message: 'Mensaje inválido', type: 'danger' });
-        return false;
-      }
+  //     if (!validateString(message) || String(message).length > 127) {
+  //       setStatus({ message: 'Mensaje inválido', type: 'danger' });
+  //       return false;
+  //     }
 
-      setDisabled(true);
-      NProgress.start();
-      setStatus({ message: 'Se ha enviado su solicitud', type: 'success' });
-      setDisabled(false);
-      console.log('sent');
-      return true;
-    } catch (error) {
-      setDisabled(false);
-      setStatus({ message: error, type: 'danger' });
-      return false;
-    } finally {
-      NProgress.done();
-    }
-  };
+  //     setDisabled(true);
+  //     NProgress.start();
+  //     setStatus({ message: 'Se ha enviado su solicitud', type: 'success' });
+  //     setDisabled(false);
+  //     console.log('sent');
+  //     return true;
+  //   } catch (error) {
+  //     setDisabled(false);
+  //     setStatus({ message: error, type: 'danger' });
+  //     return false;
+  //   } finally {
+  //     NProgress.done();
+  //   }
+  // };
 
   return (
     <section
@@ -72,7 +72,6 @@ export default function Contact() {
         <form
           method="POST"
           action="https://formsubmit.co/bcda760496243488a981984ded63aef7"
-          onSubmit={onSubmit}
           className="bg-light-blue shadow-blue rounded-md p-7 md w-80 sm:w-96 md:w-80 lg:w-96 mx-auto md:mx-0"
         >
           <Input
@@ -87,7 +86,7 @@ export default function Contact() {
             }}
             required
             maxLength={127}
-            pattern="[^()/><\][\\\x22,;|]+"
+            pattern="^[a-zA-Z\u00C0-\u00FF]+\s?[a-zA-Z\u00C0-\u00FF]+$"
             title="No se admiten carácteres especiales"
             onKeyPress={(e) => {
               if (e.key === 'Enter') e.preventDefault();
@@ -125,14 +124,17 @@ export default function Contact() {
               if (e.key === 'Enter') e.preventDefault();
             }}
           />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" value="¡Nuevo mensaje!" />
+          <input type="hidden" name="_next" value="https://avilatek.dev" />
           <Button
             type="submit"
-            disabled={disabled}
             className="w-full text-sm lg:text-base"
           >
             Contactar
           </Button>
-          {status && (
+          {/* {status && (
             <motion.div
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -148,7 +150,7 @@ export default function Contact() {
                 {status?.message}
               </h1>
             </motion.div>
-          )}
+          )} */}
         </form>
 
         {/* Contact us illustration */}
