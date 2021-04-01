@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-// import NProgress from 'nprogress';
-// import { validateEmail, validateName, validateString } from 'avilatek-utils';
-// import { motion } from 'framer-motion';
 import Input from './ui/Input';
 import Button from './ui/Button';
 import ContactUs from '../assets/illustrations/contact-us.svg';
@@ -11,42 +8,6 @@ export default function Contact() {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
-  // const [disabled, setDisabled] = useState<boolean>(false);
-  // const [status, setStatus] = useState<{ message: string; type: string }>();
-
-  // const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //   try {
-  //     e.preventDefault();
-
-  //     if (!validateName(name) || String(name).length > 127) {
-  //       setStatus({ message: 'Nombre inválido', type: 'danger' });
-  //       return false;
-  //     }
-
-  //     if (!validateEmail(email) || String(email).length > 127) {
-  //       setStatus({ message: 'Correo inválido', type: 'danger' });
-  //       return false;
-  //     }
-
-  //     if (!validateString(message) || String(message).length > 127) {
-  //       setStatus({ message: 'Mensaje inválido', type: 'danger' });
-  //       return false;
-  //     }
-
-  //     setDisabled(true);
-  //     NProgress.start();
-  //     setStatus({ message: 'Se ha enviado su solicitud', type: 'success' });
-  //     setDisabled(false);
-  //     console.log('sent');
-  //     return true;
-  //   } catch (error) {
-  //     setDisabled(false);
-  //     setStatus({ message: error, type: 'danger' });
-  //     return false;
-  //   } finally {
-  //     NProgress.done();
-  //   }
-  // };
 
   return (
     <section
@@ -127,30 +88,13 @@ export default function Contact() {
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_subject" value="¡Nuevo mensaje!" />
-          <input type="hidden" name="_next" value="https://avilatek.dev" />
+          <input type="hidden" name="_next" value="https://avilatek.dev/successful-submission" />
           <Button
             type="submit"
             className="w-full text-sm lg:text-base"
           >
             Contactar
           </Button>
-          {/* {status && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className={`w-full text-center mt-4 bg-opacity-10 py-1 rounded-md ${
-                status?.type === 'success' ? 'bg-green-500' : 'bg-red-500'
-              }`}
-            >
-              <h1
-                className={`text-xs md:text-sm font-medium ${
-                  status?.type === 'success' ? 'text-green-800' : 'text-red-800'
-                }`}
-              >
-                {status?.message}
-              </h1>
-            </motion.div>
-          )} */}
         </form>
 
         {/* Contact us illustration */}
