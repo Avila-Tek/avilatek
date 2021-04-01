@@ -73,11 +73,11 @@ export default function Navbar() {
 
       <div className="md:flex w-full md:w-auto items-center overflow-hidden my-6 md:my-0">
         <NavItem title="Inicio" href="/" />
-        <NavItem title="Nosotros" href="#about-us" />
-        <NavItem title="Productos" href="#products" />
-        <NavItem title="Servicios" href="#services" />
-        <NavItem title="Portafolio" href="#portfolio" />
-        <NavItem title="Contacto" href="#contact" />
+        <NavItem title="Nosotros" href="/#about-us" />
+        <NavItem title="Productos" href="/#products" />
+        <NavItem title="Servicios" href="/#services" />
+        <NavItem title="Portafolio" href="/#portfolio" />
+        <NavItem title="Contacto" href="/#contact" />
       </div>
     </motion.nav>
   );

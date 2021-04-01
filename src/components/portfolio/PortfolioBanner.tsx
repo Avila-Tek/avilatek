@@ -19,7 +19,7 @@ export default function Banner() {
     <div className="bg-light-blue">
       <div className="flex flex-col-reverse md:flex-row justify-center items-center md:items-start pt-14 md:pt-24 pb-8 md:pb-6 px-10 md:px-12 lg:px-16 xl:px-20">
         {/* Banner details */}
-        <div className="w-10/12 sm:w-8/12 md:w-4/12 pt-14 md:pt-16">
+        <div className="w-10/12 sm:w-8/12 md:w-4/12 pt-6 md:pt-16">
           <h1 className="text-xl lg:text-2xl xl:text-3xl font-bold relative">
             <motion.span
               variants={bracketVariants}

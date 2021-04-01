@@ -87,6 +87,8 @@ export default function Contact() {
             }}
             required
             maxLength={127}
+            pattern="[^()/><\][\\\x22,;|]+"
+            title="No se admiten carácteres especiales"
             onKeyPress={(e) => {
               if (e.key === 'Enter') e.preventDefault();
             }}

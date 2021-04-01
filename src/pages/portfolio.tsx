@@ -3,6 +3,7 @@ import PortfolioBanner from '../components/portfolio/PortfolioBanner';
 import { Project } from '../components/portfolio/PortfolioSlider';
 import ProjectImg from '../assets/images/bulb.jpeg';
 import ProjectsList from '../components/portfolio/ProjectsList';
+import SEO from '../components/SEO';
 
 export default function PortfolioPage() {
   const projects: Array<Project> = [
@@ -34,6 +35,7 @@ export default function PortfolioPage() {
 
   return (
     <main>
+      <SEO title="Portafolio" />
       <PortfolioBanner />
       <ProjectsList projects={projects} />
     </main>
