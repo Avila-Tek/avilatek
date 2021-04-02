@@ -32,7 +32,7 @@ export default function Contact() {
         {/* Contact form */}
         <form
           method="POST"
-          action="https://formsubmit.co/bcda760496243488a981984ded63aef7"
+          action="https://formsubmit.co/info@avilatek.dev"
           className="bg-light-blue shadow-blue rounded-md p-7 md w-80 sm:w-96 md:w-80 lg:w-96 mx-auto md:mx-0"
         >
           <Input
