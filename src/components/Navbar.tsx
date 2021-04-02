@@ -11,9 +11,9 @@ interface NavItemProps {
 function NavItem({ title, href }: NavItemProps) {
   return (
     <Link to={href}>
-      <h1 className="text-sm lg:text-base tracking-wide mx-2 lg:mx-3 text-font-dark cursor-pointer my-2 hover:text-primary-400">
+      <p className="text-sm lg:text-base tracking-wide mx-2 lg:mx-3 text-font-dark cursor-pointer my-2 hover:text-primary-400">
         {title}
-      </h1>
+      </p>
     </Link>
   );
 }

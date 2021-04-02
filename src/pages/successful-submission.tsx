@@ -14,9 +14,9 @@ export default function MessageSentPage() {
           className="w-8/12 md:w-5/12 mr-8"
         />
         <div className="mt-6 w-8/12 md:w-5/12 relative z-10">
-          <h1 className="font-bold text-primary-500 text-base lg:text-lg">
+          <h2 className="font-bold text-primary-500 text-base lg:text-lg">
             ¡Muchas gracias por su tiempo!
-          </h1>
+          </h2>
           <p className="mt-4 mb-2 text-sm lg:text-base">
             Hemos recibido correctamente su mensaje, nos pondremos en contacto
             con la mayor prontitud posible respondiendo a tu consulta.

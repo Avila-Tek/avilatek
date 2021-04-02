@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { v4 as uuid } from 'uuid';
 import Monitor from '../../assets/images/monitor.png';
 import CategoryPill from './CategoryPill';
 
@@ -62,17 +61,17 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8 }}
                 className="w-10/12 md:w-4/12 lg:w-3/12 my-12 md:my-0 mx-0 md:mx-8 lg:mx-16"
-                key={uuid()}
+                key={title}
               >
                 {/* Categories */}
                 <div className="flex flex-wrap items-center gap-2 mb-3 -ml-1">
                   {categories.map((category) => (
-                    <CategoryPill name={category} />
+                    <CategoryPill name={category} key={category} />
                   ))}
                 </div>
-                <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary-500 font-bold">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary-500 font-bold">
                   {title}
-                </h1>
+                </h2>
                 <p className="text-sm lg:text-base my-4 lg:my-6">
                   {description}
                 </p>
@@ -104,7 +103,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
               <>
                 {active === idx && (
                   <motion.img
-                    key={uuid()}
+                    key={src}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { v4 as uuid } from 'uuid';
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
 import ReactLogo from '../assets/images/technologies/react.png';
@@ -95,13 +94,13 @@ export default function Technologies() {
           <AnimatePresence>
             {technologies.map(({ src, name }, idx) => (
               <>
-                {0 === idx && <LogoItem src={src} name={name} key={uuid()} />}
+                {0 === idx && <LogoItem src={src} name={name} key={name} />}
                 {1 === idx && (
                   <LogoItem
                     src={src}
                     name={name}
                     className="hidden sm:block"
-                    key={uuid()}
+                    key={name}
                   />
                 )}
                 {2 === idx && (
@@ -109,7 +108,7 @@ export default function Technologies() {
                     src={src}
                     name={name}
                     className="hidden lg:block"
-                    key={uuid()}
+                    key={name}
                   />
                 )}
                 {3 === idx && (
@@ -117,7 +116,7 @@ export default function Technologies() {
                     src={src}
                     name={name}
                     className="hidden xl:block"
-                    key={uuid()}
+                    key={name}
                   />
                 )}
               </>

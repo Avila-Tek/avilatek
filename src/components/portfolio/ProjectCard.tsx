@@ -30,17 +30,17 @@ export default function ProjectCard({
       </div>
 
       {/* Info that appears when you hover */}
-      <div
-        className="w-full h-full absolute top-0 left-0 p-7 bg-primary-100 bg-opacity-80 flex flex-col justify-between opacity-0 group-hover:opacity-100 duration-500 transition-all ease-in-out"
-      >
+      <div className="w-full h-full absolute top-0 left-0 p-7 bg-primary-100 bg-opacity-80 flex flex-col justify-between opacity-0 group-hover:opacity-100 duration-500 transition-all ease-in-out">
         <div>
-          <h1 className="font-bold text-base md:text-lg cursor-default">{title}</h1>
+          <h2 className="font-bold text-base md:text-lg cursor-default">
+            {title}
+          </h2>
           <p className="text-sm mt-2 mb-4 font-medium leading-tight cursor-default">
             {description}
           </p>
           <div className="flex flex-wrap items-center gap-2 mb-4 -ml-1 cursor-default">
             {categories.map((category) => (
-              <CategoryPill name={category} />
+              <CategoryPill name={category} key={category} />
             ))}
           </div>
         </div>
