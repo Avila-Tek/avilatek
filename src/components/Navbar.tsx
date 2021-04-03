@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
 import logo from '../assets/images/logo_white.png';
+import LightModeIcon from './icons/LightModeIcon';
+import DarkModeIcon from './icons/DarkModeIcon';
 
 interface NavItemProps {
   title: string;
@@ -79,6 +81,9 @@ export default function Navbar() {
         <NavItem title="Servicios" href="/#services" />
         <NavItem title="Portafolio" href="/#portfolio" />
         <NavItem title="Contacto" href="/#contact" />
+        <button type="button">
+          <LightModeIcon />
+        </button>
       </div>
     </motion.nav>
   );
