@@ -33,7 +33,7 @@ export default function Contact() {
         <form
           method="POST"
           action="https://formsubmit.co/info@avilatek.dev"
-          className="bg-light-blue shadow-blue rounded-md p-7 md w-80 sm:w-96 md:w-80 lg:w-96 mx-auto md:mx-0"
+          className="bg-light-blue dark:bg-dark-gray shadow-blue dark:shadow-dark-gray rounded-md p-7 md w-80 sm:w-96 md:w-80 lg:w-96 mx-auto md:mx-0"
         >
           <Input
             name="name"
@@ -102,7 +102,7 @@ export default function Contact() {
           <img src={ContactUs} alt="contact illustration" className="w-full" />
         </div>
       </div>
-      <div className="absolute top-8 left-1/3 rounded-second-blob w-96 md:w-6/12 h-72 md:h-96 brick bg-medium-blue bg-opacity-90" />
+      <div className="absolute top-8 left-1/3 rounded-second-blob w-96 md:w-6/12 h-72 md:h-96 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90" />
     </section>
   );
 }

@@ -19,7 +19,7 @@ export default function ProjectCard({
   link,
 }: ProjectCardProps) {
   return (
-    <div className="group relative h-56 sm:h-60 lg:h-64 w-10/12 sm:w-full max-w-sm mx-auto rounded-lg overflow-hidden shadow-blue">
+    <div className="group relative h-56 sm:h-60 lg:h-64 w-10/12 sm:w-full max-w-sm mx-auto rounded-lg overflow-hidden shadow-blue dark:shadow-dark-gray">
       {/* Image of the project */}
       <div className="w-full h-full overflow-hidden">
         <img

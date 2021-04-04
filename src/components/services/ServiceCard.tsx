@@ -34,8 +34,8 @@ export default function ServiceCard({
       <div className="flip-card-inner relative w-full h-full">
         {/* Front card */}
         <div
-          className={`flip-card-front w-full h-full overflow-hidden absolute rounded-md shadow-blue ${
-            idx === 0 ? 'bg-light-blue' : 'bg-medium-blue'
+          className={`flip-card-front w-full h-full overflow-hidden absolute rounded-md shadow-blue dark:shadow-dark-gray ${
+            idx === 0 ? 'bg-light-blue dark:bg-medium-gray' : 'bg-medium-blue dark:bg-dark-gray'
           }`}
         >
           <div className="w-full h-full flex flex-col justify-center items-center p-10 text-center">

@@ -52,7 +52,7 @@ export default function ServiceSection() {
         </Button>
       </div>
       <CardsStack services={services} />
-      <div className="absolute top-32 right-1/2 rounded-blob w-80 md:w-3/12 h-104 brick bg-medium-blue bg-opacity-90" />
+      <div className="absolute top-32 right-1/2 rounded-blob w-80 md:w-3/12 h-104 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90" />
     </section>
   );
 }

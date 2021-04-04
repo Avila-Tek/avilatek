@@ -44,7 +44,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
             className={`rounded-full h-2 w-2 ${
               active === idx
                 ? 'bg-primary-300'
-                : 'bg-medium-blue hover:bg-primary-100'
+                : 'bg-medium-blue dark:bg-medium-gray hover:bg-primary-100'
             }`}
           />
         ))}

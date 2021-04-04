@@ -44,8 +44,7 @@ export default function AboutUs() {
           etc”
         </h2>
       </div>
-      <div className="absolute top-28 left-1/4 rounded-blob w-80 h-96 brick bg-medium-blue bg-opacity-90" />
-      <div className="absolute bottom-28 right-1/4 rounded-second-blob w-80 md:w-6/12 h-72 md:h-80 brick bg-medium-blue bg-opacity-90" />
+      <div className="absolute top-28 left-1/4 rounded-blob w-80 h-96 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90" />
+      <div className="absolute bottom-28 right-1/4 rounded-second-blob w-80 md:w-6/12 h-72 md:h-80 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90" />
     </section>
-  );
-}
+  );}

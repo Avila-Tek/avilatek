@@ -58,7 +58,7 @@ export default function PortfolioSection() {
           Conoce más de nuestro trabajo
         </button>
       </div>
-      <div className="absolute top-6 left-1/3 rounded-third-blob w-96 md:w-7/12 h-64 md:h-80 brick bg-medium-blue bg-opacity-90" />
+      <div className="absolute top-6 left-1/3 rounded-third-blob w-96 md:w-7/12 h-64 md:h-80 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90" />
     </section>
   );
 }

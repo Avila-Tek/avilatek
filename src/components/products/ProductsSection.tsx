@@ -42,7 +42,7 @@ export default function ProductsSection() {
         </p>
       </div>
       <ProductList products={products} />
-      <div className="absolute top-16 right-1/3 rounded-third-blob w-7/12 md:w-5/12 h-72 brick bg-medium-blue bg-opacity-90" />
+      <div className="absolute top-16 right-1/3 rounded-third-blob w-7/12 md:w-5/12 h-72 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90" />
     </section>
   );
 }

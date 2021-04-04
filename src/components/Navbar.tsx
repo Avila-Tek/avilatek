@@ -13,7 +13,7 @@ interface NavItemProps {
 function NavItem({ title, href }: NavItemProps) {
   return (
     <Link to={href}>
-      <p className="text-sm lg:text-base tracking-wide mx-2 lg:mx-3 text-font-dark cursor-pointer my-2 hover:text-primary-400">
+      <p className="text-sm lg:text-base tracking-wide mx-2 lg:mx-3 text-font-dark dark:text-font-white cursor-pointer my-2 hover:text-primary-400">
         {title}
       </p>
     </Link>
@@ -43,8 +43,8 @@ export default function Navbar() {
       initial={{ height: '4.2rem' }}
       animate={{ height: isOpen ? 'auto' : '4.2rem' }}
       transition={{ type: 'spring', damping: 25 }}
-      className={`fixed z-50 md:h-auto bg-light-blue flex flex-wrap justify-between items-center w-full px-8 md:px-10 lg:px-20 py-4 sm:py-3 md:py-2 transition duration-500 ease-in-out overflow-hidden ${
-        isFixed || isOpen ? 'shadow-blue' : ''
+      className={`fixed z-50 md:h-auto bg-light-blue dark:bg-dark-gray flex flex-wrap justify-between items-center w-full px-8 md:px-10 lg:px-20 py-4 sm:py-3 md:py-2 transition duration-500 ease-in-out overflow-hidden ${
+        isFixed || isOpen ? 'shadow-blue dark:shadow-dark-gray' : ''
       }`}
       role="navigation"
     >
@@ -55,7 +55,7 @@ export default function Navbar() {
       {/* Hamburger button */}
       <div className="ml-auto md:hidden w-auto mt-1">
         <button
-          className="text-font-black hover:text-primary-300 focus:outline-none"
+          className="text-font-black dark:text-font-white hover:text-primary-300 focus:outline-none"
           type="button"
           onClick={toggleNav}
         >
