@@ -35,13 +35,12 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
         scale: 1.05,
         transition: { duration: 0.4 },
       }}
-      key={product?.name}
-      className={`w-56 sm:w-60 lg:w-72 h-72 lg:h-80 flex flex-col p-7 rounded-md bg-light-blue shadow-blue justify-between ${className}`}
+      className={`w-56 sm:w-60 lg:w-72 h-72 lg:h-80 mx-6 lg:mx-10 flex flex-col p-7 rounded-md bg-light-blue shadow-blue justify-between ${className}`}
     >
       <img src={product?.svg} alt={product?.name} className="w-2/5" />
-      <h1 className="text-primary-500 font-bold mt-3 mb-2 text-sm lg:text-base">
+      <h2 className="text-primary-500 font-bold mt-3 mb-2 text-sm lg:text-base">
         {product?.name}
-      </h1>
+      </h2>
       <p className="mb-4 leading-snug text-sm lg:text-base">
         {product?.description}
       </p>
@@ -92,17 +91,22 @@ export default function ProductList({ products: _products }: ProductListProps) {
         <LeftArrow className="h-6 w-6 md:h-8 md:w-8" />
       </button>
 
-      {/* Cards carousel */}
-      <ul className="w-full flex gap-12 lg:gap-20 justify-center mx-4">
+      {/* Cards carousel, gap-12 lg:gap-20 */}
+      <ul className="w-full flex justify-center mx-4">
         {/* manage how many cards will show up in each device size */}
         <AnimatePresence>
           {products.map((product, idx) => (
             <>
               {idx === 0 && (
-                <ProductCard product={product} direction={direction} />
+                <ProductCard
+                  key={product?.name}
+                  product={product}
+                  direction={direction}
+                />
               )}
               {idx === 1 && (
                 <ProductCard
+                  key={product?.name}
                   product={product}
                   className="hidden md:block"
                   direction={direction}
@@ -110,6 +114,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
               )}
               {idx === 2 && (
                 <ProductCard
+                  key={product?.name}
                   product={product}
                   className="hidden xl:block"
                   direction={direction}

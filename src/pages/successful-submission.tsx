@@ -1,25 +1,26 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import SEO from '../components/SEO';
-import FourOhFourIllustration from '../assets/illustrations/404-error-page-animate.svg';
+import CompletedIllustration from '../assets/illustrations/sent-message-animate.svg';
 
-export default function NotFoundPage() {
+export default function MessageSentPage() {
   return (
     <main>
-      <SEO title="404" />
+      <SEO title="Mensaje enviado con éxito" />
       <div className="h-screen w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-12 lg:px-20">
         <img
-          src={FourOhFourIllustration}
-          alt="404 Not Found"
+          src={CompletedIllustration}
+          alt="Successfully sent the message"
           className="w-8/12 md:w-5/12 mr-8"
         />
         <div className="mt-6 w-8/12 md:w-5/12 relative z-10">
           <h2 className="font-bold text-primary-500 text-base lg:text-lg">
-            Oops, la página no pudo se encontrada
+            ¡Muchas gracias por su tiempo!
           </h2>
           <p className="mt-4 mb-2 text-sm lg:text-base">
-            Lo sentimos pero la página que está buscando no existe, ha sido
-            eliminada o no se encuentra actualmente disponible
+            Hemos recibido correctamente su mensaje, nos pondremos en contacto
+            con la mayor prontitud posible respondiendo a tu consulta.
+            ¡Mantengamos el contacto por las redes sociales!
           </p>
           <Link
             to="/"
@@ -30,13 +31,6 @@ export default function NotFoundPage() {
           <div className="absolute -top-14 -left-10 rounded-blob w-72 h-80 brick bg-medium-blue bg-opacity-90" />
         </div>
       </div>
-      {/* {process.env.NODE_ENV === 'development' ? (
-        <>
-          <br />
-          Try creating a page in <code>src/pages/</code>.
-          <br />
-        </>
-      ) : null} */}
     </main>
   );
 }

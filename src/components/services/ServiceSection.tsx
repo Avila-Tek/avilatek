@@ -28,11 +28,12 @@ export default function ServiceSection() {
   ];
 
   return (
-    <section id="services" className="pt-20 md:pt-56 -mt-20 md:-mt-56 w-full pb-96 flex flex-col md:flex-row gap-20 xl:gap-28 px-14 lg:px-24 items-center justify-center relative z-10 overflow-hidden">
-      <div className="w-10/12 md:w-4/12">
+    // gap-20 xl:gap-28
+    <section id="services" className="pt-24 md:pt-56 -mt-24 md:-mt-56 w-full pb-96 flex flex-col md:flex-row px-14 lg:px-24 items-center justify-center relative z-10 overflow-hidden">
+      <div className="w-10/12 md:w-4/12 mb-20 md:mb-0 mr-0 md:mr-20 xl:mr-28">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-          Los mejores <span className="text-primary-500">servicios</span> a un{' '}
-          <mark className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0">
+          Los mejores <span className="text-primary-400">servicios</span> a un{' '}
+          <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0">
             click de distancia
           </mark>
         </h1>

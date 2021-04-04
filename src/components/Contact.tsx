@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import NProgress from 'nprogress';
-import { validateEmail, validateName, validateString } from 'avilatek-utils';
-import { motion } from 'framer-motion';
 import Input from './ui/Input';
 import Button from './ui/Button';
 import ContactUs from '../assets/illustrations/contact-us.svg';
@@ -11,36 +8,6 @@ export default function Contact() {
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
-  const [disabled, setDisabled] = useState<boolean>(false);
-  const [status, setStatus] = useState<{ message: string; type: string }>();
-
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    try {
-      e.preventDefault();
-
-      if (!validateName(name) || String(name).length > 127) {
-        return setStatus({ message: 'Nombre inválido', type: 'danger' });
-      }
-
-      if (!validateEmail(email) || String(email).length > 127) {
-        return setStatus({ message: 'Correo inválido', type: 'danger' });
-      }
-
-      if (!validateString(message) || String(message).length > 127) {
-        return setStatus({ message: 'Mensaje inválido', type: 'danger' });
-      }
-
-      setDisabled(true);
-      NProgress.start();
-      setStatus({ message: 'Se ha enviado su solicitud', type: 'success' });
-      setDisabled(false);
-    } catch (error) {
-      setDisabled(false);
-      setStatus({ message: error, type: 'danger' });
-    } finally {
-      NProgress.done();
-    }
-  };
 
   return (
     <section
@@ -50,7 +17,7 @@ export default function Contact() {
       {/* Section details */}
       <div className="w-10/12 md:w-9/12 xl:w-6/12 mb-16 mx-auto md:mx-0">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-          <span className="text-primary-500">Contáctanos</span> para tu próxima{' '}
+          <span className="text-primary-400">Contáctanos</span> para tu próxima{' '}
           <mark className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0">
             gran idea
           </mark>
@@ -65,7 +32,7 @@ export default function Contact() {
         {/* Contact form */}
         <form
           method="POST"
-          onSubmit={onSubmit}
+          action="https://formsubmit.co/info@avilatek.dev"
           className="bg-light-blue shadow-blue rounded-md p-7 md w-80 sm:w-96 md:w-80 lg:w-96 mx-auto md:mx-0"
         >
           <Input
@@ -80,6 +47,8 @@ export default function Contact() {
             }}
             required
             maxLength={127}
+            pattern="^[a-zA-Z\u00C0-\u00FF]+\s?[a-zA-Z\u00C0-\u00FF]+$"
+            title="No se admiten carácteres especiales"
             onKeyPress={(e) => {
               if (e.key === 'Enter') e.preventDefault();
             }}
@@ -116,30 +85,16 @@ export default function Contact() {
               if (e.key === 'Enter') e.preventDefault();
             }}
           />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" value="¡Nuevo mensaje!" />
+          <input type="hidden" name="_next" value="https://avilatek.dev/successful-submission" />
           <Button
             type="submit"
-            disabled={disabled}
             className="w-full text-sm lg:text-base"
           >
             Contactar
           </Button>
-          {status && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className={`w-full text-center mt-4 bg-opacity-10 py-1 rounded-md ${
-                status?.type === 'success' ? 'bg-green-500' : 'bg-red-500'
-              }`}
-            >
-              <h1
-                className={`text-xs md:text-sm font-medium ${
-                  status?.type === 'success' ? 'text-green-800' : 'text-red-800'
-                }`}
-              >
-                {status?.message}
-              </h1>
-            </motion.div>
-          )}
         </form>
 
         {/* Contact us illustration */}

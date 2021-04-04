@@ -11,9 +11,9 @@ interface NavItemProps {
 function NavItem({ title, href }: NavItemProps) {
   return (
     <Link to={href}>
-      <h1 className="text-sm lg:text-base tracking-wide mx-2 lg:mx-3 text-font-dark cursor-pointer my-2 hover:text-primary-400">
+      <p className="text-sm lg:text-base tracking-wide mx-2 lg:mx-3 text-font-dark cursor-pointer my-2 hover:text-primary-400">
         {title}
-      </h1>
+      </p>
     </Link>
   );
 }
@@ -38,15 +38,16 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      animate={{ height: isOpen ? 'auto' : '4rem' }}
+      initial={{ height: '4.2rem' }}
+      animate={{ height: isOpen ? 'auto' : '4.2rem' }}
       transition={{ type: 'spring', damping: 25 }}
-      className={`fixed z-50 md:h-auto bg-light-blue flex flex-wrap justify-between items-center w-full px-6 md:px-10 lg:px-20 py-4 sm:py-3 md:py-2 transition duration-500 ease-in-out overflow-hidden ${
+      className={`fixed z-50 md:h-auto bg-light-blue flex flex-wrap justify-between items-center w-full px-8 md:px-10 lg:px-20 py-4 sm:py-3 md:py-2 transition duration-500 ease-in-out overflow-hidden ${
         isFixed || isOpen ? 'shadow-blue' : ''
       }`}
       role="navigation"
     >
       <Link to="/" className="mr-auto">
-        <img src={logo} alt="Avila Tek logo" className="h-8 sm:h-10 lg:h-12" />
+        <img src={logo} alt="Avila Tek logo" className="h-10 lg:h-12" />
       </Link>
 
       {/* Hamburger button */}
@@ -73,11 +74,11 @@ export default function Navbar() {
 
       <div className="md:flex w-full md:w-auto items-center overflow-hidden my-6 md:my-0">
         <NavItem title="Inicio" href="/" />
-        <NavItem title="Nosotros" href="#about-us" />
-        <NavItem title="Productos" href="#products" />
-        <NavItem title="Servicios" href="#services" />
-        <NavItem title="Portafolio" href="#portfolio" />
-        <NavItem title="Contacto" href="#contact" />
+        <NavItem title="Nosotros" href="/#about-us" />
+        <NavItem title="Productos" href="/#products" />
+        <NavItem title="Servicios" href="/#services" />
+        <NavItem title="Portafolio" href="/#portfolio" />
+        <NavItem title="Contacto" href="/#contact" />
       </div>
     </motion.nav>
   );

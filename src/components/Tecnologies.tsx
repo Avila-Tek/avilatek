@@ -37,7 +37,7 @@ const logos = [
 ];
 
 interface LogoItemProps {
-  src: any; // ! find out what class is src
+  src: any; // ! find out what type is src
   name: string;
   className?: string;
 }
@@ -51,8 +51,7 @@ function LogoItem({ src, name, className }: LogoItemProps) {
       transition={{ duration: 0.3 }}
       src={src}
       alt={name}
-      key={name}
-      className={`duration-150 transition-all filter-grayscale hover:filter-none ease-in-out ${
+      className={`mx-7 xl:mx-8 duration-150 transition-all filter-grayscale hover:filter-none ease-in-out ${
         name === 'Android' ? 'h-5 md:h-6 xl:h-7' : 'h-10 md:h-12'
       } ${className}`}
     />
@@ -90,20 +89,35 @@ export default function Technologies() {
           <LeftArrow className="h-6 w-6 md:h-8 md:w-8" />
         </button>
 
-        {/* Carousel */}
-        <ul className="duration-500 transition-all w-11/12 md:w-10/12 flex gap-14 xl:gap-16 items-center justify-center mx-12">
+        {/* Carousel, gap-14 xl:gap-16 */}
+        <ul className="duration-500 transition-all w-11/12 md:w-10/12 flex items-center justify-center mx-12">
           <AnimatePresence>
             {technologies.map(({ src, name }, idx) => (
               <>
-                {0 === idx && <LogoItem src={src} name={name} />}
+                {0 === idx && <LogoItem src={src} name={name} key={name} />}
                 {1 === idx && (
-                  <LogoItem src={src} name={name} className="hidden sm:block" />
+                  <LogoItem
+                    src={src}
+                    name={name}
+                    className="hidden sm:block"
+                    key={name}
+                  />
                 )}
                 {2 === idx && (
-                  <LogoItem src={src} name={name} className="hidden lg:block" />
+                  <LogoItem
+                    src={src}
+                    name={name}
+                    className="hidden lg:block"
+                    key={name}
+                  />
                 )}
                 {3 === idx && (
-                  <LogoItem src={src} name={name} className="hidden xl:block" />
+                  <LogoItem
+                    src={src}
+                    name={name}
+                    className="hidden xl:block"
+                    key={name}
+                  />
                 )}
               </>
             ))}

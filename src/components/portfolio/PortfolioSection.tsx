@@ -35,9 +35,9 @@ export default function PortfolioSection() {
     <section id="portfolio" className="pt-24 -mt-24 mb-80 w-full relative z-10 overflow-hidden">
       <div className="w-full text-center">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-12">
-          Conoce <span className="text-primary-500">los proyectos</span> que
+          Conoce <span className="text-primary-400">los proyectos</span> que
           hemos{' '}
-          <mark className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0">
+          <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0">
             desarrollado
           </mark>
         </h1>
@@ -53,7 +53,7 @@ export default function PortfolioSection() {
         <button
           type="button"
           className="text-sm lg:text-base text-primary-500 bg-transparent border-2 border-primary-500 hover:border-primary-400 hover:text-primary-400 py-1.5 px-6 rounded-full focus:outline-none active:border-primary-300 active:text-primary-300"
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/portfolio')}
         >
           Conoce más de nuestro trabajo
         </button>
