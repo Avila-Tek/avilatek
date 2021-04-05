@@ -12,10 +12,6 @@
     .filter-grayscale {
       filter: grayscale(100%);
     }
-
-    .flip-rotation {
-      transform: rotateY(180deg);
-    }
   }
 }
 
@@ -121,13 +117,13 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: #0a8647;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #13cb6e;
   border-radius: 0.25rem;
-  /* border: #e5eefd 2px solid; */
+  border: #0a8647 1px solid;
 }
 
 ::-webkit-scrollbar-thumb:hover {
