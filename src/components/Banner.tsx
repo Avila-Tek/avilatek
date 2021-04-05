@@ -60,7 +60,7 @@ export default function Banner() {
                       animate="animate"
                       exit="exit"
                       transition={{ duration: 0.5 }}
-                      className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0"
+                      className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white" 
                     >
                       {word}
                     </motion.mark>

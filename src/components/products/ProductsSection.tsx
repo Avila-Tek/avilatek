@@ -31,7 +31,7 @@ export default function ProductsSection() {
       <div className="w-full text-center mb-20 mt-32">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-12">
           Te presentamos nuestra{' '}
-          <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0">
+          <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
             variedad
           </mark>{' '}
           de <span className="text-primary-400">productos</span>
@@ -42,7 +42,7 @@ export default function ProductsSection() {
         </p>
       </div>
       <ProductList products={products} />
-      <div className="absolute top-16 right-1/3 rounded-third-blob w-7/12 md:w-5/12 h-72 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90" />
+      <div className="absolute top-16 right-1/3 rounded-third-blob w-7/12 md:w-5/12 h-72 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90 dark:bg-opacity-25" />
     </section>
   );
 }

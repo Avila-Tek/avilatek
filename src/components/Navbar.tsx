@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
 import logo from '../assets/images/logo_white.png';
 import LightModeIcon from './icons/LightModeIcon';
 import DarkModeIcon from './icons/DarkModeIcon';
+import { ThemeContext } from '../context/ThemeContext';
 
 interface NavItemProps {
   title: string;
@@ -23,6 +24,12 @@ function NavItem({ title, href }: NavItemProps) {
 export default function Navbar() {
   const [isOpen, setOpen] = useState<boolean>(false);
   const [isFixed, setFixed] = useState<boolean>(false);
+  // const [theme, setTheme] = useState('light');
+  const { theme, setTheme } = useContext(ThemeContext);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
 
   const toggleNav = () => {
     setOpen((prev) => !prev);
@@ -43,7 +50,7 @@ export default function Navbar() {
       initial={{ height: '4.2rem' }}
       animate={{ height: isOpen ? 'auto' : '4.2rem' }}
       transition={{ type: 'spring', damping: 25 }}
-      className={`fixed z-50 md:h-auto bg-light-blue dark:bg-dark-gray flex flex-wrap justify-between items-center w-full px-8 md:px-10 lg:px-20 py-4 sm:py-3 md:py-2 transition duration-500 ease-in-out overflow-hidden ${
+      className={`fixed z-50 md:h-auto bg-light-blue dark:bg-dark-gray flex flex-wrap justify-between items-center w-full px-8 lg:px-16 xl:px-20 py-4 sm:py-3 md:py-2 transition duration-300 ease-in-out overflow-hidden ${
         isFixed || isOpen ? 'shadow-blue dark:shadow-dark-gray' : ''
       }`}
       role="navigation"
@@ -81,8 +88,18 @@ export default function Navbar() {
         <NavItem title="Servicios" href="/#services" />
         <NavItem title="Portafolio" href="/#portfolio" />
         <NavItem title="Contacto" href="/#contact" />
-        <button type="button">
-          <LightModeIcon />
+        {/* theme === 'light' ? 'bg-purple-700 hover:bg-purple-600 active:bg-purple-800' : 'bg-yellow-500 hover:bg-yellow-400 active:bg-yellow-600' */}
+        {/* theme === 'light' ? 'bg-secondary-400 hover:bg-secondary-300 active:bg-secondary-500' : 'bg-primary-400 hover:bg-primary-300 active:bg-primary-500' */}
+        <button
+          type="button"
+          onClick={toggleTheme}
+          className={`ml-2 md:ml-4 mt-2 md:mt-0 py-1 px-8 md:p-2 rounded-full focus:outline-none text-font-white bg-opacity-60 hover:bg-opacity-75 transition-all ease-in-out duration-200 ${
+            theme === 'light'
+              ? 'bg-purple-700 hover:bg-purple-600 active:bg-purple-800'
+              : 'bg-yellow-500 hover:bg-yellow-400 active:bg-yellow-600'
+          }`}
+        >
+          {theme === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
         </button>
       </div>
     </motion.nav>

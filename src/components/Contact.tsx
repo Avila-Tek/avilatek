@@ -18,7 +18,7 @@ export default function Contact() {
       <div className="w-10/12 md:w-9/12 xl:w-6/12 mb-16 mx-auto md:mx-0">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
           <span className="text-primary-400">Contáctanos</span> para tu próxima{' '}
-          <mark className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0">
+          <mark className="inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
             gran idea
           </mark>
         </h1>
@@ -102,7 +102,7 @@ export default function Contact() {
           <img src={ContactUs} alt="contact illustration" className="w-full" />
         </div>
       </div>
-      <div className="absolute top-8 left-1/3 rounded-second-blob w-96 md:w-6/12 h-72 md:h-96 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90" />
+      <div className="absolute top-8 left-1/3 rounded-second-blob w-96 md:w-6/12 h-72 md:h-96 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90 dark:bg-opacity-25" />
     </section>
   );
 }

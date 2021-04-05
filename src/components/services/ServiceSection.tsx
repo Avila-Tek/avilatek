@@ -33,7 +33,7 @@ export default function ServiceSection() {
       <div className="w-10/12 md:w-4/12 mb-20 md:mb-0 mr-0 md:mr-20 xl:mr-28">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
           Los mejores <span className="text-primary-400">servicios</span> a un{' '}
-          <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0">
+          <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
             click de distancia
           </mark>
         </h1>
@@ -52,7 +52,7 @@ export default function ServiceSection() {
         </Button>
       </div>
       <CardsStack services={services} />
-      <div className="absolute top-32 right-1/2 rounded-blob w-80 md:w-3/12 h-104 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90" />
+      <div className="absolute top-32 right-1/2 rounded-blob w-80 md:w-3/12 h-104 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90 dark:bg-opacity-25" />
     </section>
   );
 }

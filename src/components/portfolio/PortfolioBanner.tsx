@@ -29,7 +29,7 @@ export default function Banner() {
               [
             </motion.span>
             Frase relacionada al{' '}
-            <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0">
+            <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
               portafolio
             </mark>{' '}
             de aqui

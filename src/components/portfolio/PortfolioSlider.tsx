@@ -69,7 +69,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                     <CategoryPill name={category} key={category} />
                   ))}
                 </div>
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary-500 font-bold">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary-500 dark:text-primary-400 font-bold">
                   {title}
                 </h2>
                 <p className="text-sm lg:text-base my-4 lg:my-6">
