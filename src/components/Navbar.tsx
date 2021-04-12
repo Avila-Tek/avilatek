@@ -24,7 +24,6 @@ function NavItem({ title, href }: NavItemProps) {
 export default function Navbar() {
   const [isOpen, setOpen] = useState<boolean>(false);
   const [isFixed, setFixed] = useState<boolean>(false);
-  // const [theme, setTheme] = useState('light');
   const { theme, setTheme } = useContext(ThemeContext);
 
   const toggleTheme = () => {

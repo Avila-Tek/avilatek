@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../components/ui/Button';
+import Waves from './icons/Waves';
 import AtTheOffice from '../assets/illustrations/on-the-office-animate.svg';
-import Waves from '../assets/images/waves.svg';
 
 export default function Banner() {
   const [active, setActive] = useState<number>(0);
@@ -60,7 +60,7 @@ export default function Banner() {
                       animate="animate"
                       exit="exit"
                       transition={{ duration: 0.5 }}
-                      className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white" 
+                      className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white"
                     >
                       {word}
                     </motion.mark>
@@ -101,7 +101,7 @@ export default function Banner() {
       </div>
       {/* Waves */}
       <div className="w-full">
-        <img src={Waves} alt="wave" className="w-full" />
+        <Waves className="w-full h-full" />
       </div>
     </div>
   );

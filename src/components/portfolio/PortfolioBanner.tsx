@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../ui/Button';
 import FolderGirl from '../../assets/illustrations/documents-animate.svg';
-import Waves from '../../assets/images/waves.svg';
+import Waves from '../icons/Waves';
 
 export default function Banner() {
   const bracketVariants = {
@@ -66,7 +66,7 @@ export default function Banner() {
       </div>
       {/* Waves */}
       <div className="w-full">
-        <img src={Waves} alt="wave" className="w-full" />
+        <Waves className="w-full h-full" />
       </div>
     </div>
   );
