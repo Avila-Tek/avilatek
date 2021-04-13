@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import Input from './ui/Input';
 import Button from './ui/Button';
@@ -6,9 +6,9 @@ import ContactUs from '../assets/illustrations/contact-us.svg';
 import Textarea from './ui/Textarea';
 
 export default function Contact() {
-  const [name, setName] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
-  const [message, setMessage] = useState<string>('');
+  const [name, setName] = React.useState<string>('');
+  const [email, setEmail] = React.useState<string>('');
+  const [message, setMessage] = React.useState<string>('');
 
   return (
     <section

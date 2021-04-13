@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import { motion, AnimatePresence } from 'framer-motion';
 import LongArrow from '../icons/LongArrow';
@@ -62,8 +62,8 @@ interface ProductListProps {
 }
 
 export default function ProductList({ products: _products }: ProductListProps) {
-  const [products, setProducts] = useState(_products);
-  const [direction, setDirection] = useState(1); // * 1. to the right | -1. to the left
+  const [products, setProducts] = React.useState(_products);
+  const [direction, setDirection] = React.useState(1); // * 1. to the right | -1. to the left
 
   const rotate = (change: number) => {
     const { length } = products;

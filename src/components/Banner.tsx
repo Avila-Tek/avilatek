@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import Button from '../components/ui/Button';
@@ -6,7 +6,7 @@ import Waves from './icons/Waves';
 import AtTheOffice from '../assets/illustrations/on-the-office-animate.svg';
 
 export default function Banner() {
-  const [active, setActive] = useState<number>(0);
+  const [active, setActive] = React.useState<number>(0);
   const words = ['adipiscing', 'elit', 'sit'];
 
   const variants = {
@@ -26,7 +26,7 @@ export default function Banner() {
   };
 
   // so that the words change
-  useEffect(() => {
+  React.useEffect(() => {
     const interval = setInterval(
       () => setActive((prev) => (prev + 1) % words.length),
       6000

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Monitor from '../../assets/images/monitor.png';
 import CategoryPill from './CategoryPill';
@@ -16,14 +16,14 @@ interface PortfolioSliderProps {
 }
 
 export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
-  const [active, setActive] = useState<number>(0);
+  const [active, setActive] = React.useState<number>(0);
 
   const changeSlide = (idx: number) => {
     setActive(idx);
   };
 
   // Slider change automatically
-  useEffect(() => {
+  React.useEffect(() => {
     const interval = setInterval(
       () => changeSlide((active + 1) % projects.length),
       10000

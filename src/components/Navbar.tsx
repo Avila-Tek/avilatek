@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
 import logo from '../assets/images/logo_white.png';
 import LightModeIcon from './icons/LightModeIcon';
 import DarkModeIcon from './icons/DarkModeIcon';
 import useTheme from '../hooks/useTheme';
-import { ThemeContext } from '../context/ThemeContext';
 
 interface NavItemProps {
   title: string;
@@ -23,8 +22,8 @@ function NavItem({ title, href }: NavItemProps) {
 }
 
 export default function Navbar() {
-  const [isOpen, setOpen] = useState<boolean>(false);
-  const [isFixed, setFixed] = useState<boolean>(false);
+  const [isOpen, setOpen] = React.useState<boolean>(false);
+  const [isFixed, setFixed] = React.useState<boolean>(false);
   const [theme, setTheme] = useTheme();
 
   const toggleTheme = () => {
@@ -35,7 +34,7 @@ export default function Navbar() {
     setOpen((prev) => !prev);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Set fixed true when the scroll height is greater than 400px
     const changeColor = () => {
       let screenOffset = 280;

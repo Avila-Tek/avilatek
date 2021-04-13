@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Fade, Zoom } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
 import ReactLogo from '../assets/images/technologies/react.png';
@@ -60,7 +60,7 @@ function LogoItem({ src, name, className }: LogoItemProps) {
 }
 
 export default function Technologies() {
-  const [technologies, setTechnologies] = useState([...logos]);
+  const [technologies, setTechnologies] = React.useState([...logos]);
 
   const rotate = (change: number) => {
     const { length } = technologies;
@@ -73,7 +73,7 @@ export default function Technologies() {
     });
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     const interval = setInterval(() => rotate(1), 6000);
     return () => clearInterval(interval);
   }, [technologies]);

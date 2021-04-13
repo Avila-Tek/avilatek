@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 const getInitialTheme = () => {
   if (typeof window !== 'undefined' && window.localStorage) {
@@ -35,7 +35,7 @@ export const ThemeProvider = ({
   initialTheme,
   children,
 }: ThemeProviderProps) => {
-  const [theme, setTheme] = useState(getInitialTheme);
+  const [theme, setTheme] = React.useState(getInitialTheme);
 
   const rawSetTheme = (theme) => {
     const root = window.document.documentElement;
@@ -45,13 +45,13 @@ export const ThemeProvider = ({
     localStorage.setItem('color-theme', theme);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (initialTheme) {
       rawSetTheme(initialTheme);
     }
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     rawSetTheme(theme);
   }, [theme]);
 
