@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import logo from '../assets/images/logo_white.png';
 import LightModeIcon from './icons/LightModeIcon';
 import DarkModeIcon from './icons/DarkModeIcon';
+import useTheme from '../hooks/useTheme';
 import { ThemeContext } from '../context/ThemeContext';
 
 interface NavItemProps {
@@ -24,7 +25,7 @@ function NavItem({ title, href }: NavItemProps) {
 export default function Navbar() {
   const [isOpen, setOpen] = useState<boolean>(false);
   const [isFixed, setFixed] = useState<boolean>(false);
-  const { theme, setTheme } = useContext(ThemeContext);
+  const [theme, setTheme] = useTheme();
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));

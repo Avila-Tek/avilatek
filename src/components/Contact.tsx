@@ -36,7 +36,7 @@ export default function Contact() {
           <form
             method="POST"
             action="https://formsubmit.co/info@avilatek.dev"
-            className="bg-light-blue dark:bg-dark-gray shadow-blue dark:shadow-dark-gray rounded-md p-7 md w-80 sm:w-96 md:w-80 lg:w-96 mx-auto md:mx-0"
+            className="bg-light-blue dark:bg-dark-gray shadow-blue dark:shadow-dark-gray rounded-md p-7 md w-80 sm:w-96 md:w-80 lg:w-96 mx-auto md:mx-0 transition-all duration-300 ease-in-out"
           >
             <Input
               name="name"

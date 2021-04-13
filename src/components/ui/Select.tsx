@@ -40,7 +40,7 @@ export default function Select({
         id={name}
         defaultValue={value}
         onChange={onChange}
-        className="mt-1 px-3 py-1.5 w-full block bg-medium-blue text-font-black dark:bg-medium-gray dark:text-font-white rounded-lg text-sm lg:text-base border-medium-blue dark:border-medium-gray focus:border-2 focus:border-primary-300 disabled:opacity-75"
+        className="mt-1 px-3 py-1.5 w-full block bg-medium-blue text-font-black dark:bg-medium-gray dark:text-font-white rounded-lg text-sm lg:text-base border-medium-blue dark:border-medium-gray focus:border-2 focus:border-primary-300 disabled:opacity-75 transition-all duration-300 ease-in-out"
         disabled={rest.disabled}
         {...rest}
       >

@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../components/ui/Button';
 import Avila from '../assets/images/logo-avila-tek.png';
 import InstagramIcon from './icons/InstagramIcon';
 import FacebookIcon from './icons/FacebookIcon';
@@ -8,7 +7,7 @@ import LinkedIn from './icons/LinkedIn';
 
 export default function Footer() {
   return (
-    <footer className="bg-light-blue dark:bg-medium-gray w-full px-10 lg:px-20 py-2 shadow-blue dark:shadow-dark-gray border-t-2 border-medium-blue dark:border-dark-gray dark:text-font-white">
+    <footer className="bg-light-blue dark:bg-medium-gray w-full px-10 lg:px-20 py-2 shadow-blue dark:shadow-dark-gray border-t-2 border-medium-blue dark:border-dark-gray dark:text-font-white transition-all duration-300 ease-in-out">
       <div className="flex flex-col sm:flex-row w-full py-6 gap-6 sm:gap-20">
         {/* Contact section */}
         <div className="w-full sm:w-1/3 text-xs md:text-sm">
@@ -67,21 +66,19 @@ export default function Footer() {
           <div className="w-40 flex justify-end">
             <img src={Avila} alt="Avila logo" className="h-6 mt-2" />
           </div>
-          <Button
-            type="button"
-            className="text-xs md:text-sm"
-            onClick={() => {}}
+          <a
+            href="https://bit.ly/avila-tek"
+            target="_blank"
+            className="px-10 md:px-14 text-xs md:text-sm text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
           >
-            <a href="https://bit.ly/avila-tek" target="_blank">
-              Trabaja con nosotros
-            </a>
-          </Button>
+            Trabaja con nosotros
+          </a>
         </div>
       </div>
       {/* Copyright info */}
       <div className="relative w-full">
         <svg
-          className="h-32 w-32 text-medium-blue dark:text-dark-gray dark:text-opacity-50 absolute right-3"
+          className="h-32 w-32 text-medium-blue dark:text-dark-gray dark:text-opacity-50 absolute right-3 transition-all duration-300 ease-in-out"
           style={{ top: '-7rem' }}
           viewBox="0 0 176 5"
           xmlns="http://www.w3.org/2000/svg"

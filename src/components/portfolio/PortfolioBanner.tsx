@@ -1,7 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
-import Button from '../ui/Button';
+import { motion } from 'framer-motion';
 import Waves from '../icons/Waves';
 import FolderGirl from '../../assets/illustrations/documents-animate.svg';
 
@@ -47,15 +46,13 @@ export default function Banner() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in
               sit id hac.{' '}
             </p>
-            <Button
-              type="button"
-              onClick={() => {}}
-              className="px-10 md:px-14 text-sm lg:text-base"
+            <a
+              href="https://bit.ly/avila-tek"
+              target="_blank"
+              className="px-10 md:px-14 text-sm lg:text-base text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
             >
-              <a href="https://bit.ly/avila-tek" target="_blank">
-                Trabaja con nosotros
-              </a>
-            </Button>
+              Trabaja con nosotros
+            </a>
           </Fade>
         </div>
         {/* Animated Illustration */}
