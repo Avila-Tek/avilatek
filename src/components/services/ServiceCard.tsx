@@ -34,8 +34,8 @@ export default function ServiceCard({
       <div className="flip-card-inner relative w-full h-full">
         {/* Front card */}
         <div
-          className={`flip-card-front w-full h-full overflow-hidden absolute rounded-md shadow-blue ${
-            idx === 0 ? 'bg-light-blue' : 'bg-medium-blue'
+          className={`flip-card-front w-full h-full overflow-hidden absolute rounded-md shadow-blue dark:shadow-dark-gray transition-all duration-300 ease-in-out ${
+            idx === 0 ? 'bg-light-blue dark:bg-medium-gray' : 'bg-medium-blue dark:bg-dark-gray'
           }`}
         >
           <div className="w-full h-full flex flex-col justify-center items-center p-10 text-center">
@@ -49,13 +49,13 @@ export default function ServiceCard({
         <button
           type="button"
           onClick={rotate}
-          className="flip-card-back w-full h-full text-font-white overflow-hidden focus:ring-0 focus:outline-none absolute top-0 left-0 shadow-blue bg-primary-400 rounded-md"
+          className="flip-card-back w-full h-full text-font-white overflow-hidden focus:ring-0 focus:outline-none absolute top-0 left-0 shadow-blue dark:shadow-dark-gray bg-primary-400 dark:bg-primary-500 rounded-md"
         >
           <div className="w-full h-full flex flex-col justify-center items-center p-8 lg:p-10">
             <h2 className="text-sm lg:text-lg font-bold leading-tight">
               {title}
             </h2>
-            <hr className="w-full mt-2 mb-3 border-primary-300" />
+            <hr className="w-full mt-2 mb-3 border-primary-300 dark:border-primary-400" />
             <p className="font-medium leading-tight text-xs lg:text-sm">
               {description}
             </p>

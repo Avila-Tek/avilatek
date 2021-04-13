@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ServiceCard from './ServiceCard';
 
 export type Service = {
@@ -12,7 +12,7 @@ interface CardsStackProps {
 }
 
 export default function CardsStack({ services: _services }: CardsStackProps) {
-  const [services, setServices] = useState<Array<Service>>(_services);
+  const [services, setServices] = React.useState<Array<Service>>(_services);
   const stackStyles = [
     'first-flip-card z-30',
     '-top-4 ml-4 z-20',

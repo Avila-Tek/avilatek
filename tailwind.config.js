@@ -100,6 +100,7 @@ module.exports = {
     backgroundColor: ({ after }) => after(['disabled', 'active']),
     textColor: ({ after }) => after(['active']),
     borderColor: ({ after }) => after(['active']),
+    boxShadow: ({ after }) => after(['dark']),
     extend: {},
   },
   plugins: [

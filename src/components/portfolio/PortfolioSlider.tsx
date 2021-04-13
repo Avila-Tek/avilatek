@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Monitor from '../../assets/images/monitor.png';
 import CategoryPill from './CategoryPill';
@@ -16,14 +16,14 @@ interface PortfolioSliderProps {
 }
 
 export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
-  const [active, setActive] = useState<number>(0);
+  const [active, setActive] = React.useState<number>(0);
 
   const changeSlide = (idx: number) => {
     setActive(idx);
   };
 
   // Slider change automatically
-  useEffect(() => {
+  React.useEffect(() => {
     const interval = setInterval(
       () => changeSlide((active + 1) % projects.length),
       10000
@@ -44,7 +44,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
             className={`rounded-full h-2 w-2 ${
               active === idx
                 ? 'bg-primary-300'
-                : 'bg-medium-blue hover:bg-primary-100'
+                : 'bg-medium-blue dark:bg-medium-gray hover:bg-primary-100'
             }`}
           />
         ))}
@@ -69,7 +69,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                     <CategoryPill name={category} key={category} />
                   ))}
                 </div>
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary-500 font-bold">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary-500 dark:text-primary-400 font-bold">
                   {title}
                 </h2>
                 <p className="text-sm lg:text-base my-4 lg:my-6">

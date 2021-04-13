@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import { motion, AnimatePresence } from 'framer-motion';
 import LongArrow from '../icons/LongArrow';
@@ -35,10 +35,10 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
         scale: 1.05,
         transition: { duration: 0.4 },
       }}
-      className={`w-56 sm:w-60 lg:w-72 h-72 lg:h-80 mx-6 lg:mx-10 flex flex-col p-7 rounded-md bg-light-blue shadow-blue justify-between ${className}`}
+      className={`w-56 sm:w-60 lg:w-72 h-72 lg:h-80 mx-6 lg:mx-10 flex flex-col p-7 rounded-md bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-dark-gray justify-between transition-all duration-300 ease-in-out ${className}`}
     >
       <img src={product?.svg} alt={product?.name} className="w-2/5" />
-      <h2 className="text-primary-500 font-bold mt-3 mb-2 text-sm lg:text-base">
+      <h2 className="text-primary-400 font-bold mt-3 mb-2 text-sm lg:text-base">
         {product?.name}
       </h2>
       <p className="mb-4 leading-snug text-sm lg:text-base">
@@ -47,7 +47,7 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
 
       {/* this button or anchor will take you the contact section */}
       <Link
-        className="flex items-center w-full text-secondary-500 hover:text-primary-300 duration-150 transition-all ease-in-out"
+        className="flex items-center w-full text-secondary-500 dark:text-font-white hover:text-primary-300 duration-150 transition-all ease-in-out"
         to="#contact"
       >
         <p className="text-xs md:text-sm mr-3">Solicitar</p>
@@ -62,8 +62,8 @@ interface ProductListProps {
 }
 
 export default function ProductList({ products: _products }: ProductListProps) {
-  const [products, setProducts] = useState(_products);
-  const [direction, setDirection] = useState(1); // * 1. to the right | -1. to the left
+  const [products, setProducts] = React.useState(_products);
+  const [direction, setDirection] = React.useState(1); // * 1. to the right | -1. to the left
 
   const rotate = (change: number) => {
     const { length } = products;
@@ -85,7 +85,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
       {/* Left arrow btn */}
       <button
         type="button"
-        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue hover:text-primary-300 duration-150 transition-all ease-in-out"
+        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue dark:text-dark-gray hover:text-primary-300 duration-150 transition-all ease-in-out"
         onClick={() => rotate(-1)}
       >
         <LeftArrow className="h-6 w-6 md:h-8 md:w-8" />
@@ -128,7 +128,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
       {/* Right arrow btn */}
       <button
         type="button"
-        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue hover:text-primary-300 duration-150 transition-all ease-in-out"
+        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue dark:text-dark-gray hover:text-primary-300 duration-150 transition-all ease-in-out"
         onClick={() => rotate(1)}
       >
         <RightArrow className="h-6 w-6 md:h-8 md:w-8" />
