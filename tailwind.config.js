@@ -34,7 +34,7 @@ module.exports = {
           100: '#76e0aa',
           200: '#38e18c',
           300: '#13cb6e',
-          400: '#03b059',
+          400: '#16a85f',
           500: '#0a8647',
         },
         secondary: {
@@ -74,6 +74,7 @@ module.exports = {
         'dark-gray': '3px 4px 12px rgba(73, 73, 73, 0.25)',
       },
       spacing: {
+        18: '4.5rem',
         104: '26rem',
         112: '28rem',
         120: '30rem',

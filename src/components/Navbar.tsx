@@ -49,13 +49,14 @@ export default function Navbar() {
       initial={{ height: '4.2rem' }}
       animate={{ height: isOpen ? 'auto' : '4.2rem' }}
       transition={{ type: 'spring', damping: 25 }}
-      className={`fixed z-50 md:h-auto bg-light-blue dark:bg-dark-gray flex flex-wrap justify-between items-center w-full px-8 lg:px-16 xl:px-20 py-4 sm:py-3 md:py-2 transition duration-300 ease-in-out overflow-hidden ${
+      className={`fixed z-50 md:h-auto bg-light-blue dark:bg-dark-gray flex flex-wrap justify-between items-center w-full px-6 lg:px-16 xl:px-20 py-4 md:py-2 transition duration-300 ease-in-out overflow-hidden ${
         isFixed || isOpen ? 'shadow-blue dark:shadow-dark-gray' : ''
       }`}
       role="navigation"
     >
+      {/* h-9 lg:h-12 */}
       <Link to="/" className="mr-auto">
-        <img src={logo} alt="Avila Tek logo" className="h-10 lg:h-12" />
+        <img src={logo} alt="Avila Tek logo" className="w-40 lg:w-48 xl:w-56" />
       </Link>
 
       {/* Hamburger button */}
@@ -87,11 +88,11 @@ export default function Navbar() {
         <NavItem title="Servicios" href="/#services" />
         <NavItem title="Portafolio" href="/#portfolio" />
         <NavItem title="Contacto" href="/#contact" />
-        {/* theme === 'light' ? 'bg-purple-700 hover:bg-purple-600 active:bg-purple-800' : 'bg-yellow-500 hover:bg-yellow-400 active:bg-yellow-600' */}
-        {/* theme === 'light' ? 'bg-secondary-400 hover:bg-secondary-300 active:bg-secondary-500' : 'bg-primary-400 hover:bg-primary-300 active:bg-primary-500' */}
+
         <button
           type="button"
           onClick={toggleTheme}
+          aria-label="Cambiar de tema"
           className={`ml-2 md:ml-4 mt-2 md:mt-0 py-1 px-8 md:p-2 rounded-full focus:outline-none text-font-white bg-opacity-60 hover:bg-opacity-75 transition-all ease-in-out duration-200 ${
             theme === 'light'
               ? 'bg-purple-700 hover:bg-purple-600 active:bg-purple-800'

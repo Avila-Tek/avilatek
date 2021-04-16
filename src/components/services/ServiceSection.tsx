@@ -10,21 +10,21 @@ export default function ServiceSection() {
   const services: Array<Service> = [
     {
       illustration: DaaS,
-      title: 'DaaS',
+      title: 'Tu departamento de tecnología',
       description:
-        'Nuestro servicio de “Development as a Service” te permite obtener un equipo de personas profesionales para tu empresa, entrenada y capacitada para desarrollar tu aplicación o sistema.',
+        'Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro servicio de Desarrollo como Servicio (DaaS), donde te asignamos un equipo dedicado con base a las necesidades para la ejecución y mantenimiento de tu proyecto.',
     },
     {
       illustration: Development,
-      title: 'Desarrollo de aplicaciones',
+      title: 'Marketing',
       description:
-        'Elaboramos Apps para plataformas Web, iOS, Android, Windows y MacOS, en las mejores tecnologías tendencias del mercado.',
+        'Si necesitas ayuda en el desarrollo de una campaña publicitaria, tenemos el equipo ideal, con campañas de alcance masivo, haciendo análisis de tu cliente ideal para la focalización de publicidad, con técnicas como A/B testing que permiten iterar en publicidad que si funcione.',
     },
     {
       illustration: Consulting,
       title: 'Consultorías',
       description:
-        'Ofrecemos un servicio profesional con experiencia y conocimiento en tecnología y desarrollo de software.',
+        'Ofrecemos estudio de exploración y análisis de datos para mejoras en tu negocio, aumento de ventas, mejorar experiencia de usuario, mejoras en performance y más.',
     },
   ];
 
@@ -37,23 +37,25 @@ export default function ServiceSection() {
       <div className="w-10/12 md:w-4/12 mb-20 md:mb-0 mr-0 md:mr-20 xl:mr-28">
         <Fade cascade triggerOnce>
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-            Los mejores <span className="text-primary-400">servicios</span> a un{' '}
-            <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-              click de distancia
-            </mark>
+            Nuestros <span className="text-primary-400">servicios</span> a la{' '}
+            <mark className="text-font0-black inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
+              medida
+            </mark>{' '}
+            de tu negocio
           </h1>
           <p className="mt-6 lg:mt-7 text-sm lg:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit
-            id hac. Consectetur adipiscing elit. Urna in sit id hac.
+            Te ofrecemos los siguientes servicios para llevar tu negocio al
+            siguiente nivel.
           </p>
           <Button
             type="button"
+            aria-label="Cotiza tu proyecto en servicios"
             className="mt-6 lg:mt-7 px-8 md:px-10 lg:px-12 text-sm lg:text-base"
             onClick={() => {
               console.log('solicite');
             }}
           >
-            Solicitalos
+            Cotiza tu proyecto
           </Button>
         </Fade>
       </div>

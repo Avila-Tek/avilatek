@@ -29,11 +29,10 @@ export default function Banner() {
               >
                 [
               </motion.span>
-              Frase relacionada al{' '}
+              Conocer parte de nuestros{' '}
               <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-                portafolio
-              </mark>{' '}
-              de aqui
+                proyectos
+              </mark>
               <motion.span
                 variants={bracketVariants}
                 animate="animation"
@@ -43,13 +42,12 @@ export default function Banner() {
               </motion.span>
             </h1>
             <p className="my-6 text-sm lg:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in
-              sit id hac.{' '}
+              Proyectos desarollados a la medida con base a las necesidades de cada cliente.{' '}
             </p>
             <a
               href="https://bit.ly/avila-tek"
               target="_blank"
-              className="px-10 md:px-14 text-sm lg:text-base text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
+              className="px-10 text-sm lg:text-base text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
             >
               Trabaja con nosotros
             </a>

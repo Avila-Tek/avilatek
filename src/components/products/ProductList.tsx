@@ -50,7 +50,7 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
         className="flex items-center w-full text-secondary-500 dark:text-font-white hover:text-primary-300 duration-150 transition-all ease-in-out"
         to="#contact"
       >
-        <p className="text-xs md:text-sm mr-3">Solicitar</p>
+        <p className="text-xs md:text-sm mr-3">Conoce más</p>
         <LongArrow className="h-4" />
       </Link>
     </motion.li>
@@ -85,6 +85,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
       {/* Left arrow btn */}
       <button
         type="button"
+        aria-label="Avanzar en productos"
         className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue dark:text-dark-gray hover:text-primary-300 duration-150 transition-all ease-in-out"
         onClick={() => rotate(-1)}
       >
@@ -92,34 +93,34 @@ export default function ProductList({ products: _products }: ProductListProps) {
       </button>
 
       {/* Cards carousel, gap-12 lg:gap-20 */}
-      <ul className="w-full flex justify-center mx-4">
+      <ul className="md:w-full flex justify-center mx-4">
         {/* manage how many cards will show up in each device size */}
         <AnimatePresence>
           {products.map((product, idx) => (
             <>
-              {idx === 0 && (
+              {idx === 0 ? (
                 <ProductCard
                   key={product?.name}
                   product={product}
                   direction={direction}
                 />
-              )}
-              {idx === 1 && (
+              ) : null}
+              {idx === 1 ? (
                 <ProductCard
                   key={product?.name}
                   product={product}
                   className="hidden md:block"
                   direction={direction}
                 />
-              )}
-              {idx === 2 && (
+              ) : null}
+              {idx === 2 ? (
                 <ProductCard
                   key={product?.name}
                   product={product}
                   className="hidden xl:block"
                   direction={direction}
                 />
-              )}
+              ) : null}
             </>
           ))}
         </AnimatePresence>
@@ -128,6 +129,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
       {/* Right arrow btn */}
       <button
         type="button"
+        aria-label="Retroceder en productos"
         className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue dark:text-dark-gray hover:text-primary-300 duration-150 transition-all ease-in-out"
         onClick={() => rotate(1)}
       >

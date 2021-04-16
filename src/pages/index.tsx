@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 import ProductsSection from '../components/products/ProductsSection';
 import ServiceSection from '../components/services/ServiceSection';
 import PortfolioSection from '../components/portfolio/PortfolioSection';
-import Contact from '../components/Contact';
+import ContactSection from '../components/ContactSection';
 
 export default function HomePage() {
   return (
@@ -18,7 +18,7 @@ export default function HomePage() {
       <ProductsSection />
       <ServiceSection />
       <PortfolioSection />
-      <Contact />
+      <ContactSection />
     </main>
   );
 }

@@ -81,18 +81,28 @@ export default function Technologies() {
   return (
     <section className="pt-28 md:pt-18 mb-52 lg:mb-80">
       <Fade triggerOnce>
+        <div className="w-full mb-16 sm:mb-20 px-16 md:px-36">
+          <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
+            Las{' '}
+            <mark className="text-font0-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
+              mejores
+            </mark>{' '}
+            <span className="text-primary-400">tecnologías </span> del mercado
+          </h1>
+        </div>
         <div className="w-full flex justify-center items-center text-medium-blue dark:text-dark-gray px-16 md:px-28">
           {/* Left arrow btn */}
           <button
             type="button"
             className="focus:ring-0 focus:outline-none hover:text-primary-300 duration-150 transition-all ease-in-out"
             onClick={() => rotate(-1)}
+            aria-label="Retroceder en tecnologias"
           >
             <LeftArrow className="h-6 w-6 md:h-8 md:w-8" />
           </button>
 
           {/* Carousel, gap-14 xl:gap-16 */}
-          <ul className="duration-500 transition-all w-11/12 md:w-10/12 flex items-center justify-center mx-12">
+          <div className="duration-500 transition-all w-11/12 md:w-9/12 flex items-center justify-center mx-12">
             <AnimatePresence>
               {technologies.map(({ src, name }, idx) => (
                 <>
@@ -124,13 +134,14 @@ export default function Technologies() {
                 </>
               ))}
             </AnimatePresence>
-          </ul>
+          </div>
 
           {/* Right arrow btn */}
           <button
             type="button"
             className="focus:ring-0 focus:outline-none hover:text-primary-300 duration-150 transition-all ease-in-out"
             onClick={() => rotate(1)}
+            aria-label="Avanzar en tecnologias"
           >
             <RightArrow className="h-6 w-6 md:h-8 md:w-8" />
           </button>

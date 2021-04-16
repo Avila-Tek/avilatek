@@ -33,15 +33,16 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
 
   return (
     // gap-12 md:gap-8 lg:gap-16
-    <div className="w-10/12 mx-auto flex flex-col md:flex-row justify-center items-center mt-12 md:mt-0">
+    <div className="w-10/12 md:w-11/12 mx-auto flex flex-col md:flex-row justify-center items-center mt-12 md:mt-16">
       {/* Slider buttons */}
-      <div className="flex md:flex-col gap-3 md:h-full justify-center">
+      <div className="flex md:flex-col md:h-full justify-center">
         {projects.map((_, idx) => (
           <button
             key={idx}
             type="button"
+            aria-label="Numero de proyecto"
             onClick={() => changeSlide(idx)}
-            className={`rounded-full h-2 w-2 ${
+            className={`rounded-full h-2 w-2 mx-1 md:mx-0 md:my-1 ${
               active === idx
                 ? 'bg-primary-300'
                 : 'bg-medium-blue dark:bg-medium-gray hover:bg-primary-100'
@@ -60,19 +61,23 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.8 }}
-                className="w-10/12 md:w-4/12 lg:w-3/12 my-12 md:my-0 mx-0 md:mx-8 lg:mx-16"
+                className="w-10/12 md:w-4/12 xl:w-4/12 my-12 md:my-0 mx-0 md:ml-7 md:mr-6 lg:mx-8 xl:mx-16"
                 key={title}
               >
                 {/* Categories */}
-                <div className="flex flex-wrap items-center gap-2 mb-3 -ml-1">
+                <div className="flex flex-wrap items-center mb-3">
                   {categories.map((category) => (
-                    <CategoryPill name={category} key={category} />
+                    <CategoryPill
+                      name={category}
+                      key={category}
+                      className="mr-2"
+                    />
                   ))}
                 </div>
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-primary-500 dark:text-primary-400 font-bold">
+                <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-primary-500 dark:text-primary-400 font-bold">
                   {title}
                 </h2>
-                <p className="text-sm lg:text-base my-4 lg:my-6">
+                <p className="text-sm xl:text-base my-4 lg:my-6">
                   {description}
                 </p>
                 <a
@@ -97,7 +102,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
           className="absolute top-0 left-0 z-20 w-full"
         />
         {/* The image */}
-        <div className="absolute top-2 z-10 rounded-2xl h-44 sm:h-52 lg:h-72 xl:h-80 w-full pr-1 overflow-hidden">
+        <div className="absolute top-2 z-10 rounded-2xl h-44 sm:h-52 lg:h-72 xl:h-80 w-full px-1 overflow-hidden">
           <AnimatePresence>
             {projects.map(({ title, src }, idx) => (
               <>
