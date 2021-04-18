@@ -38,7 +38,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
       <div className="flex md:flex-col md:h-full justify-center">
         {projects.map((_, idx) => (
           <button
-            key={idx}
+            key={idx}s
             type="button"
             aria-label="Numero de proyecto"
             onClick={() => changeSlide(idx)}
@@ -55,7 +55,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
       <AnimatePresence>
         {projects.map(({ title, categories, description, link }, idx) => (
           <>
-            {active === idx && (
+            {active === idx ? (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -83,12 +83,14 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                 <a
                   href={link}
                   target="_blank"
+                  rel="noopener"
+                  aria-label={`Ir a ${title}`}
                   className="text-xs sm:text-sm lg:text-base px-8 text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full active:bg-primary-500"
                 >
                   Visitar
                 </a>
               </motion.div>
-            )}
+            ) : null}
           </>
         ))}
       </AnimatePresence>
@@ -106,7 +108,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
           <AnimatePresence>
             {projects.map(({ title, src }, idx) => (
               <>
-                {active === idx && (
+                {active === idx ? (
                   <motion.img
                     key={src}
                     initial={{ opacity: 0 }}
@@ -117,7 +119,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                     alt={title}
                     className="w-full h-full object-cover object-center"
                   />
-                )}
+                ) : null}
               </>
             ))}
           </AnimatePresence>

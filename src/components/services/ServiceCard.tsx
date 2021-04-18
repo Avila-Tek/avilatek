@@ -28,14 +28,16 @@ export default function ServiceCard({
     <motion.div
       animate={variants[idx]}
       transition={{ duration: 3, repeat: Infinity }}
-      className={`flip-card w-64 lg:w-68 h-80 lg:h-88 absolute ${cardClass}`}
+      className={`flip-card w-64 lg:w-68 h-80 lg:h-88 absolute transition-all duration-300 ease-in-out ${cardClass}`}
     >
       {/* Card inner */}
       <div className="flip-card-inner relative w-full h-full">
         {/* Front card */}
         <div
           className={`flip-card-front w-full h-full overflow-hidden absolute rounded-md shadow-blue dark:shadow-dark-gray transition-all duration-300 ease-in-out ${
-            idx === 0 ? 'bg-light-blue dark:bg-medium-gray' : 'bg-medium-blue dark:bg-dark-gray'
+            idx === 0
+              ? 'bg-light-blue dark:bg-medium-gray'
+              : 'bg-medium-blue dark:bg-dark-gray'
           }`}
         >
           <div className="w-full h-full flex flex-col justify-center items-center p-8 sm:p-10 text-center">

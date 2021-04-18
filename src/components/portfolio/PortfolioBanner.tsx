@@ -47,6 +47,8 @@ export default function Banner() {
             <a
               href="https://bit.ly/avila-tek"
               target="_blank"
+              rel="noopener"
+              aria-label="Trabaja con nosotros"
               className="px-10 text-sm lg:text-base text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
             >
               Trabaja con nosotros

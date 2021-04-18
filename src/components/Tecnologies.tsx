@@ -94,7 +94,7 @@ export default function Technologies() {
           {/* Left arrow btn */}
           <button
             type="button"
-            className="focus:ring-0 focus:outline-none hover:text-primary-300 duration-150 transition-all ease-in-out"
+            className="focus:ring-0 focus:outline-none hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
             onClick={() => rotate(-1)}
             aria-label="Retroceder en tecnologias"
           >
@@ -106,31 +106,33 @@ export default function Technologies() {
             <AnimatePresence>
               {technologies.map(({ src, name }, idx) => (
                 <>
-                  {0 === idx && <LogoItem src={src} name={name} key={name} />}
-                  {1 === idx && (
+                  {0 === idx ? (
+                    <LogoItem src={src} name={name} key={name} />
+                  ) : null}
+                  {1 === idx ? (
                     <LogoItem
                       src={src}
                       name={name}
                       className="hidden sm:block"
                       key={name}
                     />
-                  )}
-                  {2 === idx && (
+                  ) : null}
+                  {2 === idx ? (
                     <LogoItem
                       src={src}
                       name={name}
                       className="hidden lg:block"
                       key={name}
                     />
-                  )}
-                  {3 === idx && (
+                  ) : null}
+                  {3 === idx ? (
                     <LogoItem
                       src={src}
                       name={name}
                       className="hidden xl:block"
                       key={name}
                     />
-                  )}
+                  ) : null}
                 </>
               ))}
             </AnimatePresence>
@@ -139,7 +141,7 @@ export default function Technologies() {
           {/* Right arrow btn */}
           <button
             type="button"
-            className="focus:ring-0 focus:outline-none hover:text-primary-300 duration-150 transition-all ease-in-out"
+            className="focus:ring-0 focus:outline-none hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
             onClick={() => rotate(1)}
             aria-label="Avanzar en tecnologias"
           >

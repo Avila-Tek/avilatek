@@ -51,6 +51,7 @@ export default function ProjectCard({
           href={link}
           target="_blank"
           aria-label={`Visitar ${title}`}
+          rel="noopener"
           className="flex items-center w-full text-secondary-500 dark:text-font-white hover:text-primary-500 dark:hover:text-primary-100 duration-150 transition-all ease-in-out"
         >
           <p className="font-medium text-sm mr-3">Visitar</p>

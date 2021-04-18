@@ -1,5 +1,7 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
+import LeftArrow from '../icons/LeftArrow';
+import RightArrow from '../icons/RightArrow';
 
 export type Service = {
   illustration: any;
@@ -28,18 +30,33 @@ export default function CardsStack({ services: _services }: CardsStackProps) {
   };
 
   return (
-    <div className="relative w-60 h-72 lg:w-80 lg:h-80 mt-10 md:mt-0">
-      {services.map(({ illustration, title, description }, idx) => (
-        <ServiceCard
-          key={title}
-          illustration={illustration}
-          title={title}
-          description={description}
-          cardClass={stackStyles[idx]}
-          idx={idx}
-          rotate={rotate}
-        />
-      ))}
-    </div>
+    <>
+      <div className="relative w-60 h-72 lg:w-80 lg:h-80 mt-10 md:mt-0">
+        {services.map(({ illustration, title, description }, idx) => (
+          <ServiceCard
+            key={title}
+            illustration={illustration}
+            title={title}
+            description={description}
+            cardClass={stackStyles[idx]}
+            idx={idx}
+            rotate={rotate}
+          />
+        ))}
+      </div>
+      <div className="mt-14 w-full flex justify-center">
+        <div className="text-medium-blue dark:text-dark-gray duration-150 transition-all ease-in-out">
+          <LeftArrow className="h-7 w-7s md:h-8 md:w-8 mr-4" />
+        </div>
+        <button
+          type="button"
+          className="focus:ring-0 focus:outline-none text-medium-blue dark:text-dark-gray hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
+          onClick={rotate}
+          aria-label="Avanzar en servicios"
+        >
+          <RightArrow className="h-7 w-7 md:h-8 md:w-8" />
+        </button>
+      </div>
+    </>
   );
 }

@@ -29,6 +29,7 @@ export default function Footer() {
               target="_blank"
               className="hover:text-primary-300 cursor-pointer mr-4"
               aria-label="Instagram"
+              rel="noopener"
             >
               <InstagramIcon />
             </a>
@@ -37,6 +38,7 @@ export default function Footer() {
               target="_blank"
               className="hover:text-primary-300 cursor-pointer mr-4"
               aria-label="Twitter"
+              rel="noopener"
             >
               <TwitterIcon />
             </a>
@@ -45,6 +47,7 @@ export default function Footer() {
               target="_blank"
               className="hover:text-primary-300 cursor-pointer mr-4"
               aria-label="Facebook"
+              rel="noopener"
             >
               <FacebookIcon />
             </a>
@@ -53,6 +56,7 @@ export default function Footer() {
               target="_blank"
               className="hover:text-primary-300 cursor-pointer"
               aria-label="LinkedIn"
+              rel="noopener"
             >
               <LinkedIn />
             </a>
@@ -74,6 +78,7 @@ export default function Footer() {
             href="https://bit.ly/avila-tek"
             target="_blank"
             aria-label="Trabaja con nosotros"
+            rel="noopener"
             className="px-8 text-xs md:text-sm text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
           >
             Trabaja con nosotros

@@ -43,10 +43,10 @@ export default function ContactSection() {
               <div className="flex items-center">
                 <LightningIcon className="h-6 w-6 mr-6 text-primary-400" />
                 <div>
-                  <h2 className="font-bold text-primary-400">
+                  <h2 className="font-bold text-primary-400 text-sm lg:text-base">
                     Respuesta rápida
                   </h2>
-                  <p className="text-sm">
+                  <p className="mt-1 text-xsm lg:text-sm">
                     Te estaremos contactando en menos de 24 horas
                   </p>
                 </div>
@@ -55,10 +55,10 @@ export default function ContactSection() {
               <div className="flex items-center my-4">
                 <MessageIcon className="h-12 w-12 mr-6 text-primary-400" />
                 <div>
-                  <h2 className="font-bold text-primary-400">
+                  <h2 className="font-bold text-primary-400 text-sm lg:text-base">
                     Consultoría incluida
                   </h2>
-                  <p className="text-sm">
+                  <p className="mt-1 text-xsm lg:text-sm">
                     Antes de hacer un presupuesto debemos pautar una reunion de
                     levantamiento de requerimientos
                   </p>
@@ -68,10 +68,10 @@ export default function ContactSection() {
               <div className="flex items-center">
                 <SettingsIcon className="h-12 w-12 mr-7 text-primary-400" />
                 <div>
-                  <h2 className="font-bold text-primary-400">
+                  <h2 className="font-bold text-primary-400 text-sm lg:text-base">
                     Proyectos a la medida
                   </h2>
-                  <p className="text-sm">
+                  <p className="mt-1 text-xsm lg:text-sm">
                     Cada proyecto tiene sus especificaciones que trabajamos de
                     cero para cumplir las necesidades de cada cliente
                   </p>
