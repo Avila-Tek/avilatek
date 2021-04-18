@@ -31,7 +31,7 @@ export default function CardsStack({ services: _services }: CardsStackProps) {
 
   return (
     <>
-      <div className="relative w-60 h-72 lg:w-80 lg:h-80 mt-10 md:mt-0">
+      <div className="relative w-60 h-72 lg:w-64 lg:h-80 mt-10 md:mt-0">
         {services.map(({ illustration, title, description }, idx) => (
           <ServiceCard
             key={title}

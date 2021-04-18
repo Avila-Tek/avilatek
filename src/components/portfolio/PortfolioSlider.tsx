@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Monitor from '../../assets/images/monitor.png';
 import CategoryPill from './CategoryPill';
+import LeftArrow from '../icons/LeftArrow';
+import RightArrow from '../icons/RightArrow';
+import Monitor from '../../assets/images/monitor.png';
 
 export type Project = {
   title: string;
@@ -17,6 +19,7 @@ interface PortfolioSliderProps {
 
 export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
   const [active, setActive] = React.useState<number>(0);
+  const { length } = projects;
 
   const changeSlide = (idx: number) => {
     setActive(idx);
@@ -35,10 +38,18 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
     // gap-12 md:gap-8 lg:gap-16
     <div className="w-10/12 md:w-11/12 mx-auto flex flex-col md:flex-row justify-center items-center mt-12 md:mt-16">
       {/* Slider buttons */}
-      <div className="flex md:flex-col md:h-full justify-center">
+      <div className="flex md:flex-col md:h-full justify-center items-center">
+        <button
+          type="button"
+          onClick={() => changeSlide((active - 1 + length) % length)}
+          className="mr-3 md:mr-0 md:mb-3 focus:ring-0 focus:outline-none text-medium-blue dark:text-dark-gra hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
+          aria-label="Retroceder en el portafolio"
+        >
+          <LeftArrow className="h-5 w-5 transform md:rotate-90" />
+        </button>
         {projects.map((_, idx) => (
           <button
-            key={idx}s
+            key={idx}
             type="button"
             aria-label="Numero de proyecto"
             onClick={() => changeSlide(idx)}
@@ -49,6 +60,14 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
             }`}
           />
         ))}
+        <button
+          type="button"
+          onClick={() => changeSlide((active + 1) % length)}
+          className="ml-3 md:ml-0 md:mt-3 focus:ring-0 focus:outline-none text-medium-blue dark:text-dark-gra hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
+          aria-label="Avanzar en el portafolio"
+        >
+          <RightArrow className="transform md:rotate-90 h-5 w-5" />
+        </button>
       </div>
 
       {/* Project details */}
