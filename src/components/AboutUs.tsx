@@ -47,7 +47,7 @@ export default function AboutUs() {
             “Let’s go invent tomorrow instead of worrying about what happened
             yesterday.”
           </h2>
-          <h3 className="text-primary-500 dark:text-primary-400 font-medium text-sm mt-4">
+          <h3 className="text-primary-500 dark:text-primary-400 font-medium text-sm lg:text-base mt-4">
             Steve Jobs
           </h3>
         </Fade>

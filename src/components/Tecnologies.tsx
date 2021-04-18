@@ -53,7 +53,7 @@ function LogoItem({ src, name, className }: LogoItemProps) {
       src={src}
       alt={name}
       className={`mx-7 xl:mx-8 duration-150 transition-all filter-grayscale hover:filter-none ease-in-out ${
-        name === 'Android' ? 'h-5 md:h-6 xl:h-7' : 'h-10 md:h-12'
+        name === 'Android' ? 'h-5 md:h-6 xl:h-7' : 'h-10 lg:h-12'
       } ${className}`}
     />
   );
@@ -79,7 +79,7 @@ export default function Technologies() {
   }, [technologies]);
 
   return (
-    <section className="pt-28 md:pt-18 mb-52 lg:mb-80">
+    <section className="pt-28 md:pt-18 mb-52 lg:mb-80 xl:mb-104">
       <Fade triggerOnce>
         <div className="w-full mb-16 sm:mb-20 px-16 md:px-36">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
@@ -90,7 +90,7 @@ export default function Technologies() {
             <span className="text-primary-400">tecnologías </span> del mercado
           </h1>
         </div>
-        <div className="w-full flex justify-center items-center text-medium-blue dark:text-dark-gray px-16 md:px-28">
+        <div className="w-full flex justify-center items-center text-medium-blue dark:text-medium-gray px-16 md:px-28">
           {/* Left arrow btn */}
           <button
             type="button"

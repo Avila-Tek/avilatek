@@ -45,16 +45,16 @@ export default function CardsStack({ services: _services }: CardsStackProps) {
         ))}
       </div>
       <div className="mt-14 w-full flex justify-center">
-        <div className="text-medium-blue dark:text-dark-gray duration-150 transition-all ease-in-out">
-          <LeftArrow className="h-7 w-7s md:h-8 md:w-8 mr-4" />
+        <div className="text-medium-blue dark:text-medium-gray duration-150 transition-all ease-in-out">
+          <LeftArrow className="h-7 w-7 mr-4" />
         </div>
         <button
           type="button"
-          className="focus:ring-0 focus:outline-none text-medium-blue dark:text-dark-gray hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
+          className="focus:ring-0 focus:outline-none text-medium-blue dark:text-medium-gray hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
           onClick={rotate}
           aria-label="Avanzar en servicios"
         >
-          <RightArrow className="h-7 w-7 md:h-8 md:w-8" />
+          <RightArrow className="h-7 w-7" />
         </button>
       </div>
     </>

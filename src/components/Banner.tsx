@@ -34,7 +34,7 @@ export default function Banner() {
   React.useEffect(() => {
     const interval = setInterval(
       () => setActive((prev) => (prev + 1) % words.length),
-      1000
+      6000
     );
     return () => clearInterval(interval);
   }, [active]);

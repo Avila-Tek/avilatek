@@ -31,7 +31,7 @@ export default function ContactSection() {
           <ContactForm />
 
           {/* Contact us illustration */}
-          <div className="w-10/12 sm:w-7/12 lg:w-5/12 mt-12 lg:mt-0 mx-auto lg:mx-0">
+          <div className="w-10/12 sm:w-7/12 lg:w-5/12 mt-12 lg:mt-0 mx-auto lg:mx-0 h-full">
             <img
               src={ContactUs}
               alt="contact illustration"
