@@ -12,13 +12,13 @@ export default function ServiceSection() {
       illustration: DaaS,
       title: 'Tu departamento de tecnología',
       description:
-        'Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro servicio de Desarrollo como Servicio (DaaS), donde te asignamos un equipo dedicado con base a las necesidades para la ejecución y mantenimiento de tu proyecto.',
+        'Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro servicio de Desarrollo como Servicio (DaaS), donde te asignamos un equipo con base a las necesidades para la ejecución y mantenimiento de tu proyecto.',
     },
     {
       illustration: Development,
       title: 'Marketing',
       description:
-        'Si necesitas ayuda en el desarrollo de una campaña publicitaria, tenemos el equipo ideal, con campañas de alcance masivo, haciendo análisis de tu cliente ideal para la focalización de publicidad, con técnicas como A/B testing que permiten iterar en publicidad que si funcione.',
+        'Si necesitas ayuda en el desarrollo de una campaña publicitaria de alcance masivo, tenemos el equipo ideal, haciendo análisis de tu cliente ideal para la focalización de publicidad, con técnicas como A/B testing que permiten iterar en publicidad que si funcione.',
     },
     {
       illustration: Consulting,
