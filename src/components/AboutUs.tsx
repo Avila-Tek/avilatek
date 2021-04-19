@@ -22,7 +22,7 @@ export default function AboutUs() {
         </div>
 
         {/* Text */}
-        <div className="w-10/12 sm:w-8/12 md:w-5/12">
+        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-6/12">
           <Fade cascade triggerOnce>
             <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
               Sobre <span className="text-primary-400">nosotros</span>

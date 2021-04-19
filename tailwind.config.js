@@ -15,6 +15,12 @@ module.exports = {
         '-top-8',
         '-left-5',
         'ml-4',
+        'w-28',
+        'w-32',
+        'w-36',
+        'w-40',
+        'w-44',
+        'w-48',
       ],
     },
     // defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
@@ -56,13 +62,13 @@ module.exports = {
           800: '#2C2C2C',
         },
         font: {
-          'white': '#F8F8F8',
-          'black': '#333333',
+          white: '#F8F8F8',
+          black: '#333333',
         },
         'light-blue': '#f9fbfe',
         'medium-blue': '#E5EEFD',
-        'light': '#FDFDFD',
-        'dark': '#222222',
+        light: '#FDFDFD',
+        dark: '#222222',
         'dark-gray': '#313131',
         'medium-gray': '#464646',
       },
@@ -70,7 +76,7 @@ module.exports = {
         0: '0rem',
       },
       boxShadow: {
-        'blue': '3px 4px 12px rgba(45, 156, 219, 0.25)',
+        blue: '3px 4px 12px rgba(45, 156, 219, 0.25)',
         'dark-gray': '3px 4px 12px rgba(73, 73, 73, 0.25)',
       },
       spacing: {
@@ -85,18 +91,18 @@ module.exports = {
         144: '36rem',
       },
       fontSize: {
-        'xsm': ['0.825rem', { lineHeight: '1.2rem' }],
+        xsm: ['0.825rem', { lineHeight: '1.2rem' }],
         '2xs': ['0.615rem', { lineHeight: '0.75rem' }],
       },
       borderRadius: {
-        'blob': '81% 30% 30% 70% / 60% 40% 60% 40%;',
+        blob: '81% 30% 30% 70% / 60% 40% 60% 40%;',
         'second-blob': '30% 70% 28% 72% / 45% 30% 70% 55%',
         'third-blob': '34% 66% 43% 57% / 76% 75% 25% 24%',
       },
       height: {
-        'half': '50vh',
-        'third': '75vh',
-      }
+        half: '50vh',
+        third: '75vh',
+      },
     },
   },
   variants: {

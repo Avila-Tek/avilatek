@@ -60,7 +60,7 @@ export default function Banner() {
                 <AnimatePresence exitBeforeEnter>
                   {words.map((word, idx) => (
                     <>
-                      {active === idx && (
+                      {active === idx ? (
                         <motion.mark
                           key={idx}
                           variants={variants}
@@ -68,11 +68,11 @@ export default function Banner() {
                           animate="animate"
                           exit="exit"
                           transition={{ duration: 0.5 }}
-                          className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 text-font-dark dark:text-font-white"
+                          className="text-font-black inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 text-font-dark dark:text-font-white"
                         >
                           {word}
                         </motion.mark>
-                      )}
+                      ) : null}
                     </>
                   ))}
                 </AnimatePresence>

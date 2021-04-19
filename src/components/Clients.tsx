@@ -3,47 +3,62 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
-import ReactLogo from '../assets/images/technologies/react.png';
-import NextJSLogo from '../assets/images/technologies/nextjs.png';
-import GatsbyLogo from '../assets/images/technologies/gatsby.png';
-import GraphQLLogo from '../assets/images/technologies/graphql.png';
-import AndroidLogo from '../assets/images/technologies/android.png';
-import iOSLogo from '../assets/images/technologies/ios.png';
+import Bat from '../assets/images/logos/bat.png';
+import Bigott from '../assets/images/logos/bigott.png';
+import Bloop from '../assets/images/logos/bloop.png';
+import Bloopex from '../assets/images/logos/bloopex.png';
+import Continental from '../assets/images/logos/continental.png';
+import HabitatVenezuela from '../assets/images/logos/habitat-venezuela.png';
+import HabitatVillage from '../assets/images/logos/habitat-village.png';
+import Pomelos from '../assets/images/logos/pomelos.png';
+import Rockval from '../assets/images/logos/rockval.png';
+import Grint from '../assets/images/logos/the-grint.png';
 
 const logos = [
   {
-    src: ReactLogo,
-    name: 'ReactJS',
+    src: Bat,
+    size: 'w-28 lg:w-32',
   },
   {
-    src: NextJSLogo,
-    name: 'NextJS',
+    src: Bigott,
+    size: 'w-36 lg:w-40',
   },
   {
-    src: GatsbyLogo,
-    name: 'Gatsby',
+    src: Bloop,
+    size: 'w-28',
   },
   {
-    src: GraphQLLogo,
-    name: 'GraphQL',
+    src: Bloopex,
+    size: 'w-28',
   },
   {
-    src: AndroidLogo,
-    name: 'Android',
+    src: Continental,
+    size: 'w-44 lg:w-48',
   },
   {
-    src: iOSLogo,
-    name: 'iOS',
+    src: HabitatVenezuela,
+  },
+  {
+    src: HabitatVillage,
+  },
+  {
+    src: Pomelos,
+  },
+  {
+    src: Rockval,
+  },
+  {
+    src: Grint,
   },
 ];
 
 interface LogoItemProps {
-  src: any; // ! find out what type is src
-  name: string;
+  src: any;
+  size?: string;
   className?: string;
 }
 
-function LogoItem({ src, name, className }: LogoItemProps) {
+function LogoItem({ src, className, size }: LogoItemProps) {
   return (
     <motion.img
       initial={{ opacity: 0.2 }}
@@ -51,21 +66,22 @@ function LogoItem({ src, name, className }: LogoItemProps) {
       exit={{ opacity: 0.2 }}
       transition={{ duration: 0.3 }}
       src={src}
-      alt={name}
-      className={`mx-7 xl:mx-8 duration-150 transition-all filter-grayscale hover:filter-none ease-in-out ${
-        name === 'Android' ? 'h-5 md:h-6 xl:h-7' : 'h-10 lg:h-12'
-      } ${className}`}
+      alt={src}
+      // w-28 lg:w-32
+      className={`mx-8 xl:mx-9 duration-150 transition-all filter-grayscale hover:filter-none ease-in-out ${className} ${
+        size ?? 'w-32 lg:w-36'
+      }`}
     />
   );
 }
 
-export default function Technologies() {
-  const [technologies, setTechnologies] = React.useState([...logos]);
+export default function Clients() {
+  const [clients, setClients] = React.useState([...logos]);
 
   const rotate = (change: number) => {
-    const { length } = technologies;
+    const { length } = clients;
 
-    setTechnologies((prev) => {
+    setClients((prev) => {
       if (change === -1) {
         return prev.map((_, idx) => prev[(idx + change + length) % length]);
       }
@@ -76,18 +92,18 @@ export default function Technologies() {
   React.useEffect(() => {
     const interval = setInterval(() => rotate(1), 6000);
     return () => clearInterval(interval);
-  }, [technologies]);
+  }, [clients]);
 
   return (
-    <section className="pt-16 md:pt-12 mb-52 lg:mb-72">
+    <section className="pt-28 md:pt-18 mb-52 lg:mb-80 xl:mb-104">
       <Fade triggerOnce>
         <div className="w-full mb-16 sm:mb-20 px-16 md:px-36">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-            Las{' '}
+            Conoce{' '}
             <mark className="text-font0-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-              mejores
+              algunos
             </mark>{' '}
-            <span className="text-primary-400">tecnologías </span> del mercado
+            de nuestros <span className="text-primary-400">clientes </span>
           </h1>
         </div>
         <div className="w-full flex justify-center items-center text-medium-blue dark:text-medium-gray px-16 md:px-28">
@@ -96,56 +112,56 @@ export default function Technologies() {
             type="button"
             className="focus:ring-0 focus:outline-none hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
             onClick={() => rotate(-1)}
-            aria-label="Retroceder en tecnologias"
+            aria-label="Retroceder en clientes"
           >
             <LeftArrow className="h-6 w-6 lg:h-7 lg:w-7" />
           </button>
 
           {/* Carousel, gap-14 xl:gap-16 */}
-          <div className="duration-500 transition-all w-11/12 md:w-9/12 flex items-center justify-center mx-12">
+          <div className="duration-500 transition-all h-32 w-11/12 md:w-9/12 flex items-center justify-center mx-12">
             <AnimatePresence>
-              {technologies.map(({ src, name }, idx) => (
+              {clients.map(({ src, size }, idx) => (
                 <>
                   {0 === idx ? (
-                    <LogoItem src={src} name={name} key={name} />
+                    <LogoItem src={src} key={src} size={size} />
                   ) : null}
                   {1 === idx ? (
                     <LogoItem
                       src={src}
-                      name={name}
+                      size={size}
+                      key={src}
                       className="hidden sm:block"
-                      key={name}
                     />
                   ) : null}
                   {2 === idx ? (
                     <LogoItem
                       src={src}
-                      name={name}
+                      size={size}
+                      key={src}
                       className="hidden lg:block"
-                      key={name}
                     />
                   ) : null}
                   {3 === idx ? (
                     <LogoItem
                       src={src}
-                      name={name}
+                      size={size}
+                      key={src}
                       className="hidden xl:block"
-                      key={name}
                     />
                   ) : null}
                 </>
               ))}
             </AnimatePresence>
           </div>
-s
+
           {/* Right arrow btn */}
           <button
             type="button"
             className="focus:ring-0 focus:outline-none hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
             onClick={() => rotate(1)}
-            aria-label="Avanzar en tecnologias"
+            aria-label="Avanzar en clientes"
           >
-            <RightArrow className="h-6 w-6 lg:h-7 lg:w-7" />
+            <RightArrow className="h-6 w-6 md:h-7 md:w-7" />
           </button>
         </div>
       </Fade>

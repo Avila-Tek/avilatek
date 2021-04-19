@@ -1,9 +1,10 @@
 import React from 'react';
 import PortfolioBanner from '../components/portfolio/PortfolioBanner';
 import { Project } from '../components/portfolio/PortfolioSlider';
-import ProjectImg from '../assets/images/bulb.jpeg';
-import ProjectsList from '../components/portfolio/ProjectsList';
 import SEO from '../components/SEO';
+import Technologies from '../components/Tecnologies';
+import ProjectsList from '../components/portfolio/ProjectsList';
+import ProjectImg from '../assets/images/bulb.jpeg';
 
 export default function PortfolioPage() {
   const projects: Array<Project> = [
@@ -83,6 +84,7 @@ export default function PortfolioPage() {
     <main>
       <SEO title="Portafolio" />
       <PortfolioBanner />
+      <Technologies />
       <ProjectsList projects={projects} />
     </main>
   );
