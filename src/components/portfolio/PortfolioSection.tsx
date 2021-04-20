@@ -3,6 +3,9 @@ import { navigate } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
 import PortfolioSlider, { Project } from './PortfolioSlider';
 import ProjectImg from '../../assets/images/bulb.jpeg';
+import Continental from '../../assets/images/projects/continental.png';
+import Unidos from '../../assets/images/projects/unidos.png';
+import Bloop from '../../assets/images/projects/bloop.png';
 
 export default function PortfolioSection() {
   const projects: Array<Project> = [
@@ -10,23 +13,23 @@ export default function PortfolioSection() {
       title: 'Continental de Seguros',
       description:
         'Sistema de seguros para empresas aseguradoras, con manejo de cartera de clientes, administración de pólizas, siniestros, recibos, manejo de capital y reportes estadísticos para toma de decisiones.',
-      src: ProjectImg,
+      src: Continental,
       categories: ['App Web'],
-      link: 'https://avilatek.dev',
+      link: 'https://continentaldeseguros.com.ve/',
     },
     {
       title: 'Plataforma Unidos',
       description:
       'Sistema de la trasnacional British American Tobacco, es un CRM que brinda indicadores a sus clientes. Cuenta con manejo de estadísticas, plan de fidelidad con canjeo de "experiencias" por buenos resultados en la venta de productos y un sistema de autogestión y evaluación interna de venta de productos.',
-      src: ProjectImg,
+      src: Unidos,
       categories: ['App Web'],
-      link: 'https://www.probloop.com/',
+      link: 'https://plataformaunidos.net/',
     },
     {
       title: 'Bloop!',
       description:
         'Plataforma para productora de eventos, es un CRM a la medida, para auto gestionar proyectos, proveedores, clientes y usuarios, y automatizar procesos de la empresa.',
-      src: ProjectImg,
+      src: Bloop,
       categories: ['App Web'],
       link: 'https://www.probloop.com/',
     },

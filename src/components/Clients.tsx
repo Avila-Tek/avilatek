@@ -17,15 +17,15 @@ import Grint from '../assets/images/logos/the-grint.png';
 const logos = [
   {
     src: Bat,
-    size: 'w-28 lg:w-32',
+    size: 'w-32',
   },
   {
     src: Bigott,
-    size: 'w-36 lg:w-40',
+    size: 'w-40 lg:w-44',
   },
   {
     src: Bloop,
-    size: 'w-28',
+    size: 'w-28 lg:w-32',
   },
   {
     src: Bloopex,
@@ -33,7 +33,7 @@ const logos = [
   },
   {
     src: Continental,
-    size: 'w-44 lg:w-48',
+    size: 'w-56 lg:w-60',
   },
   {
     src: HabitatVenezuela,
@@ -68,8 +68,8 @@ function LogoItem({ src, className, size }: LogoItemProps) {
       src={src}
       alt={src}
       // w-28 lg:w-32
-      className={`mx-8 xl:mx-9 duration-150 transition-all filter-grayscale hover:filter-none ease-in-out ${className} ${
-        size ?? 'w-32 lg:w-36'
+      className={`mx-8 duration-150 transition-all filter-grayscale hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
+        size ?? 'w-36 lg:w-40'
       }`}
     />
   );
@@ -118,7 +118,7 @@ export default function Clients() {
           </button>
 
           {/* Carousel, gap-14 xl:gap-16 */}
-          <div className="duration-500 transition-all h-32 w-11/12 md:w-9/12 flex items-center justify-center mx-12">
+          <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-75 dark:bg-opacity-20 rounded-full duration-500 transition-all h-36 w-11/12 md:w-10/12 flex items-center justify-center mx-12">
             <AnimatePresence>
               {clients.map(({ src, size }, idx) => (
                 <>

@@ -104,7 +104,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                   target="_blank"
                   rel="noopener"
                   aria-label={`Ir a ${title}`}
-                  className="text-xs sm:text-sm lg:text-base px-8 text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full active:bg-primary-500"
+                  className="text-xsm sm:text-sm lg:text-base px-8 text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full active:bg-primary-500"
                 >
                   Visitar
                 </a>
@@ -123,7 +123,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
           className="absolute top-0 left-0 z-20 w-full"
         />
         {/* The image */}
-        <div className="absolute top-2 z-10 rounded-2xl h-44 sm:h-52 lg:h-72 xl:h-80 w-full px-1 overflow-hidden">
+        <div className="absolute top-2 z-10 rounded-2xl h-44 sm:h-52 lg:h-72 xl:h-80 w-full px-3 py-1 lg:px-5 lg:py-3 overflow-hidden">
           <AnimatePresence>
             {projects.map(({ title, src }, idx) => (
               <>

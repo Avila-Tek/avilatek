@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* purgecss start ignore */
+
 @layer utilities {
   @variants hover {
     .filter-none {
@@ -12,10 +14,13 @@
     .filter-grayscale {
       filter: grayscale(100%);
     }
+
+    .filter-drop-shadow {
+      -webkit-filter: drop-shadow(3px 3px 3px rgba(73, 73, 73, 0.4));
+      filter: drop-shadow(3px 3px 3px rgba(73, 73, 73, 0.4));
+    }
   }
 }
-
-/* purgecss start ignore */
 
 html,
 body {
