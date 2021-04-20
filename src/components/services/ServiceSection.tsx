@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
 import CardsStack, { Service } from './CardsStack';
-import Button from '../ui/Button';
 import DaaS from '../../assets/illustrations/daas.svg';
 import Development from '../../assets/illustrations/development.svg';
 import Consulting from '../../assets/illustrations/consulting.svg';
@@ -43,20 +43,17 @@ export default function ServiceSection() {
             </mark>{' '}
             de tu negocio
           </h1>
-          <p className="mt-6 lg:mt-7 text-sm lg:text-base">
+          <p className="my-6 lg:my-7 text-sm lg:text-base">
             Te ofrecemos los siguientes servicios para llevar tu negocio al
             siguiente nivel.
           </p>
-          <Button
-            type="button"
+          <Link
+            to="#contact"
             aria-label="Cotiza tu proyecto en servicios"
-            className="mt-6 lg:mt-7 px-8 md:px-10 lg:px-12 text-sm lg:text-base"
-            onClick={() => {
-              console.log('solicite');
-            }}
+            className="text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full active:bg-primary-500 px-8 md:px-10 lg:px-12 text-sm lg:text-base"
           >
             Cotiza tu proyecto
-          </Button>
+          </Link>
         </Fade>
       </div>
       <Fade triggerOnce>

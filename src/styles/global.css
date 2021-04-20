@@ -16,8 +16,8 @@
     }
 
     .filter-drop-shadow {
-      -webkit-filter: drop-shadow(3px 3px 3px rgba(73, 73, 73, 0.4));
-      filter: drop-shadow(3px 3px 3px rgba(73, 73, 73, 0.4));
+      -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(73, 73, 73));
+      filter: drop-shadow(0.5px 0.5px 0.5px rgba(73, 73, 73));
     }
   }
 }
