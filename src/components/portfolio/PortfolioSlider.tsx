@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+// import { StaticImage } from 'gatsby-plugin-image';
 import CategoryPill from './CategoryPill';
 import LeftArrow from '../icons/LeftArrow';
 import RightArrow from '../icons/RightArrow';
@@ -117,6 +118,13 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
       {/* Project photo */}
       <div className="relative w-80 sm:w-96 lg:w-128 xl:w-144 h-64 sm:h-80 lg:h-96 xl:h-112 mx-auto md:mx-0 mt-0 md:mt-14">
         {/* Monitor */}
+        {/* <StaticImage
+          src="../../assets/images/monitor.png"
+          alt="MAC monitor"
+          placeholder="blurred"
+          layout="fixed"
+          className="absolute top-0 left-0 z-20 w-full"
+        /> */}
         <img
           src={Monitor}
           alt="MAC monitor"

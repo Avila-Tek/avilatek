@@ -17,15 +17,15 @@ import Grint from '../assets/images/logos/the-grint.png';
 const logos = [
   {
     src: Bat,
-    size: 'w-32',
+    size: 'w-28 xl:w-32',
   },
   {
     src: Bigott,
-    size: 'w-40 lg:w-44',
+    size: 'w-40 xl:w-44',
   },
   {
     src: Bloop,
-    size: 'w-28 lg:w-32',
+    size: 'w-28 xl:w-32',
   },
   {
     src: Bloopex,
@@ -33,16 +33,17 @@ const logos = [
   },
   {
     src: Continental,
-    size: 'w-56 lg:w-60',
+    size: 'w-48 md:w-56 xl:w-60',
+  },
+  {
+    src: Pomelos,
+    size: 'w-32 xl:w-40',
   },
   {
     src: HabitatVenezuela,
   },
   {
     src: HabitatVillage,
-  },
-  {
-    src: Pomelos,
   },
   {
     src: Rockval,
@@ -68,8 +69,8 @@ function LogoItem({ src, className, size }: LogoItemProps) {
       src={src}
       alt={src}
       // w-28 lg:w-32
-      className={`mx-8 duration-200 transition-all filter-grayscale hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
-        size ?? 'w-36 lg:w-40'
+      className={`mx-6 md:mx-7 xl:mx-10 duration-200 transition-all filter-grayscale hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
+        size ?? 'w-32 md:w-36 xl:w-40'
       }`}
     />
   );
@@ -118,7 +119,7 @@ export default function Clients() {
           </button>
 
           {/* Carousel, gap-14 xl:gap-16 */}
-          <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-70 dark:bg-opacity-20 rounded-full duration-500 transition-all h-36 w-11/12 md:w-10/12 flex items-center justify-center mx-12">
+          <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-90 rounded-full duration-500 transition-all h-36 w-full md:w-11/12 xl:w-10/12 flex items-center justify-center mx-8 lg:mx-12">
             <AnimatePresence>
               {clients.map(({ src, size }, idx) => (
                 <>
@@ -139,14 +140,6 @@ export default function Clients() {
                       size={size}
                       key={src}
                       className="hidden lg:block"
-                    />
-                  ) : null}
-                  {3 === idx ? (
-                    <LogoItem
-                      src={src}
-                      size={size}
-                      key={src}
-                      className="hidden xl:block"
                     />
                   ) : null}
                 </>
