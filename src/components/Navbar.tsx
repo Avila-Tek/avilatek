@@ -89,18 +89,18 @@ export default function Navbar() {
         <NavItem title="Portafolio" href="/#portfolio" />
         <NavItem title="Contacto" href="/#contact" />
 
-        <button
-          type="button"
-          onClick={toggleTheme}
-          aria-label="Cambiar de tema"
-          className={`ml-2 md:ml-4 mt-2 md:mt-0 py-1 px-8 md:p-2 rounded-full focus:outline-none text-font-white bg-opacity-60 hover:bg-opacity-75 transition-all ease-in-out duration-200 ${
-            theme === 'light'
-              ? 'bg-purple-700 hover:bg-purple-600 active:bg-purple-800'
-              : 'bg-yellow-500 hover:bg-yellow-400 active:bg-yellow-600'
-          }`}
-        >
-          {theme === 'light' ? <DarkModeIcon /> : <LightModeIcon />}
-        </button>
+        <label className="relative inline-block w-14 h-7 ml-1.5">
+          <input
+            type="checkbox"
+            className="checkbox focus:outline-none"
+            aria-label="Cambiar de tema"
+            onClick={toggleTheme}
+          />
+          <span className="thumb bg-secondary-300 dark:bg-primary-400">
+            <LightModeIcon className="h-4 w-4" />
+            <DarkModeIcon className="h-4 w-4" />
+          </span>
+        </label>
       </div>
     </motion.nav>
   );

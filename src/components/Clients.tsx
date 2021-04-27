@@ -33,7 +33,7 @@ const logos = [
   },
   {
     src: Continental,
-    size: 'w-48 md:w-56 xl:w-60',
+    size: 'w-48 md:w-52 xl:w-60',
   },
   {
     src: Pomelos,
@@ -69,7 +69,7 @@ function LogoItem({ src, className, size }: LogoItemProps) {
       src={src}
       alt={src}
       // w-28 lg:w-32
-      className={`mx-6 md:mx-7 xl:mx-10 duration-200 transition-all filter-grayscale hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
+      className={`mx-6 xl:mx-9 duration-200 transition-all filter-logo-light dark:filter-logo-dark hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
         size ?? 'w-32 md:w-36 xl:w-40'
       }`}
     />
@@ -119,7 +119,7 @@ export default function Clients() {
           </button>
 
           {/* Carousel, gap-14 xl:gap-16 */}
-          <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-90 rounded-full duration-500 transition-all h-36 w-full md:w-11/12 xl:w-10/12 flex items-center justify-center mx-8 lg:mx-12">
+          <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-30 rounded-full duration-500 transition-all h-36 w-full md:w-11/12 xl:w-10/12 flex items-center justify-center mx-8 lg:mx-12">
             <AnimatePresence>
               {clients.map(({ src, size }, idx) => (
                 <>

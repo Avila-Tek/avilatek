@@ -62,7 +62,7 @@ export default function Banner() {
                     <>
                       {active === idx ? (
                         <motion.mark
-                          key={idx}
+                          key={word}
                           variants={variants}
                           initial="initial"
                           animate="animate"
