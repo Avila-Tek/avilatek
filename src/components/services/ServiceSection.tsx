@@ -32,7 +32,7 @@ export default function ServiceSection() {
     // gap-20 xl:gap-28
     <section
       id="services"
-      className="pt-24 md:pt-56 -mt-24 md:-mt-56 w-full pb-56 md:pb-80 flex flex-col md:flex-row px-14 lg:px-24 items-center justify-center relative z-10 overflow-hidden"
+      className="pt-24 md:pt-56 -mt-24 md:-mt-56 w-full pb-52 md:pb-80 flex flex-col md:flex-row px-14 lg:px-24 items-center justify-center relative z-10 overflow-hidden"
     >
       <div className="w-10/12 md:w-4/12 mb-20 md:mb-0 mr-0 md:mr-20 xl:mr-28">
         <Fade cascade triggerOnce>
