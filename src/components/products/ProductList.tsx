@@ -34,7 +34,7 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
         scale: 1.05,
         transition: { duration: 0.3 },
       }}
-      className={`w-64 lg:w-72 h-80 mx-4 lg:mx-10 flex-col justify-between p-7 rounded-md bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-dark-gray transition-all duration-300 ease-in-out ${className}`}
+      className={`w-64 lg:w-72 h-72 md:h-80 mx-4 lg:mx-10 flex-col justify-between p-7 rounded-md bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-dark-gray transition-all duration-300 ease-in-out ${className}`}
     >
       <div>
         <img src={product?.svg} alt={product?.name} className="w-2/5 md:h-20" />

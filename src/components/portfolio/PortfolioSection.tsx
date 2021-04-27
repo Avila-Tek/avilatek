@@ -38,7 +38,7 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="pt-24 -mt-24 mb-80 w-full relative z-10 overflow-hidden"
+      className="pt-24 -mt-24 mb-60 md:mb-80 w-full relative z-10 overflow-hidden"
     >
       <Fade cascade triggerOnce>
         <div className="w-full text-center mb-10">

@@ -17,11 +17,11 @@ import Grint from '../assets/images/logos/the-grint.png';
 const logos = [
   {
     src: Bat,
-    size: 'w-28 xl:w-32',
+    size: 'w-24 md:w-28 xl:w-32',
   },
   {
     src: Bigott,
-    size: 'w-40 xl:w-44',
+    size: 'w-36 md:w-40 xl:w-44',
   },
   {
     src: Bloop,
@@ -29,7 +29,7 @@ const logos = [
   },
   {
     src: Bloopex,
-    size: 'w-28',
+    size: 'w-24 md:w-28',
   },
   {
     src: Continental,
@@ -96,7 +96,7 @@ export default function Clients() {
   }, [clients]);
 
   return (
-    <section className="pt-28 md:pt-18 mb-52 lg:mb-80 xl:mb-104">
+    <section className="pt-28 md:pt-18 mb-60 lg:mb-80 xl:mb-104">
       <Fade triggerOnce>
         <div className="w-full mb-16 sm:mb-20 px-16 md:px-36">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">

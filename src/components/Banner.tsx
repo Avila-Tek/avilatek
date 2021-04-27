@@ -113,7 +113,7 @@ export default function Banner() {
       </div>
       {/* Waves */}
       <div className="w-full mt-8">
-        <Waves className="w-full h-full" />
+        <Waves className="w-full h-full -mb-2" />
       </div>
     </div>
   );

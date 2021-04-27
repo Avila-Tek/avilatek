@@ -32,7 +32,7 @@ export default function ServiceSection() {
     // gap-20 xl:gap-28
     <section
       id="services"
-      className="pt-24 md:pt-56 -mt-24 md:-mt-56 w-full pb-96 flex flex-col md:flex-row px-14 lg:px-24 items-center justify-center relative z-10 overflow-hidden"
+      className="pt-24 md:pt-56 -mt-24 md:-mt-56 w-full pb-56 md:pb-80 flex flex-col md:flex-row px-14 lg:px-24 items-center justify-center relative z-10 overflow-hidden"
     >
       <div className="w-10/12 md:w-4/12 mb-20 md:mb-0 mr-0 md:mr-20 xl:mr-28">
         <Fade cascade triggerOnce>
@@ -50,7 +50,7 @@ export default function ServiceSection() {
           <Link
             to="#contact"
             aria-label="Cotiza tu proyecto en servicios"
-            className="text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full active:bg-primary-500 px-8 md:px-10 lg:px-12 text-sm lg:text-base"
+            className="text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 rounded-full active:bg-primary-500 px-8 md:px-10 lg:px-12 text-sm lg:text-base"
           >
             Cotiza tu proyecto
           </Link>

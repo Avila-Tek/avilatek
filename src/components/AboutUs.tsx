@@ -6,7 +6,7 @@ export default function AboutUs() {
   return (
     <section
       id="about-us"
-      className="pt-48 -mt-48 pb-60 w-full relative z-10 overflow-hidden"
+      className="pt-48 -mt-48 pb-40 md:pb-44 w-full relative z-10 overflow-hidden"
     >
       {/* gap-6 md:gap-16 xl:gap-20 */}
       <div className="flex flex-col md:flex-row justify-center items-center px-8 md:px-10 lg:px-20">

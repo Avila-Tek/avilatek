@@ -89,7 +89,7 @@ export default function Navbar() {
         <NavItem title="Portafolio" href="/#portfolio" />
         <NavItem title="Contacto" href="/#contact" />
 
-        <label className="relative inline-block w-14 h-7 ml-1.5">
+        <label className="relative inline-block w-14 h-7 ml-1.5 mt-1.5 md:mt-0">
           <input
             type="checkbox"
             className="checkbox focus:outline-none"
