@@ -43,10 +43,10 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
         <button
           type="button"
           onClick={() => changeSlide((active - 1 + length) % length)}
-          className="mr-3 md:mr-0 md:mb-3 focus:ring-0 focus:outline-none text-medium-blue dark:text-medium-gray hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
+          className="mr-3 md:mr-0 md:mb-3 focus:ring-0 focus:outline-none text-dark-blue dark:text-medium-gray hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
           aria-label="Retroceder en el portafolio"
         >
-          <LeftArrow className="h-5 w-5 transform md:rotate-90" />
+          <LeftArrow className="h-6 w-6 transform md:rotate-90" />
         </button>
         {projects.map((_, idx) => (
           <button
@@ -64,10 +64,10 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
         <button
           type="button"
           onClick={() => changeSlide((active + 1) % length)}
-          className="ml-3 md:ml-0 md:mt-3 focus:ring-0 focus:outline-none text-medium-blue dark:text-medium-gray hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
+          className="ml-3 md:ml-0 md:mt-3 focus:ring-0 focus:outline-none text-dark-blue dark:text-medium-gray hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
           aria-label="Avanzar en el portafolio"
         >
-          <RightArrow className="transform md:rotate-90 h-5 w-5" />
+          <RightArrow className="transform md:rotate-90 h-6 w-6" />
         </button>
       </div>
 
