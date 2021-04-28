@@ -42,17 +42,9 @@ export default function Banner() {
               </motion.span>
             </h1>
             <p className="my-6 text-sm lg:text-base">
-              Proyectos desarollados a la medida con base a las necesidades de cada cliente.{' '}
+              Proyectos desarollados a la medida con base a las necesidades de
+              cada cliente.{' '}
             </p>
-            <a
-              href="https://bit.ly/avila-tek"
-              target="_blank"
-              rel="noopener"
-              aria-label="Trabaja con nosotros"
-              className="px-10 text-sm lg:text-base text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
-            >
-              Trabaja con nosotros
-            </a>
           </Fade>
         </div>
         {/* Animated Illustration */}
