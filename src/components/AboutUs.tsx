@@ -6,7 +6,7 @@ export default function AboutUs() {
   return (
     <section
       id="about-us"
-      className="pt-48 -mt-48 pb-60 w-full relative z-10 overflow-hidden"
+      className="pt-48 -mt-48 pb-40 md:pb-44 w-full relative z-10 overflow-hidden"
     >
       {/* gap-6 md:gap-16 xl:gap-20 */}
       <div className="flex flex-col md:flex-row justify-center items-center px-8 md:px-10 lg:px-20">
@@ -22,33 +22,34 @@ export default function AboutUs() {
         </div>
 
         {/* Text */}
-        <div className="w-10/12 sm:w-8/12 md:w-5/12">
+        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-6/12">
           <Fade cascade triggerOnce>
             <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-              Te{' '}
-              <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-                contamos
-              </mark>{' '}
-              acerca de <span className="text-primary-400">Avila Tek</span>
+              Sobre <span className="text-primary-400">nosotros</span>
             </h1>
             <p className="my-6 lg:my-7 text-sm lg:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor,
-              nunc augue ut neque amet sed sed laoreet. Vitae egestas sit ornare
-              consequat, laoreet sit eget sollicitudin a. Velit malesuada dui
-              porta sed facilisis posuere imperdiet. Imperdiet faucibus
-              vestibulum justo, malesuada eu vel.
+              Avila Tek es una empresa con sede en Venezuela que desarrolla
+              aplicaciones móviles y web que ayudan a las empresas a innovar y
+              obtener una ventaja competitiva con aplicaciones atractivas.
+              Ofrecemos servicios de desarrollo de extremo a extremo con las
+              mejores tecnologías del mercado. Ya sea que necesites una
+              aplicación, un sistema personalizado para tu empresa o definas una
+              estrategia de redes sociales, podemos ayudarte.
             </p>
           </Fade>
         </div>
       </div>
 
       {/* The phrase */}
-      <div className="w-10/12 mx-auto mt-56 text-center px-10">
-        <Fade triggerOnce>
+      <div className="w-10/12 md:w-9/12 mx-auto mt-56 text-center px-10">
+        <Fade triggerOnce className="w-full">
           <h2 className="text-lg lg:text-xl xl:text-2xl font-bold text-primary-500 dark:text-primary-400">
-            “Una frase cool que represente a Avila Tek pudiese ir aquí etc etc
-            etc”
+            “Let’s go invent tomorrow instead of worrying about what happened
+            yesterday.”
           </h2>
+          <h3 className="text-primary-500 dark:text-primary-400 font-medium text-sm lg:text-base mt-4">
+            Steve Jobs
+          </h3>
         </Fade>
       </div>
       <div className="absolute top-28 left-1/4 rounded-blob w-80 h-96 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90 dark:bg-opacity-25" />

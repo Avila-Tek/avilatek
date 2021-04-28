@@ -19,9 +19,9 @@ interface ProductCardProps {
 
 function ProductCard({ product, className, direction }: ProductCardProps) {
   const variants = {
-    initial: { opacity: 0.5, x: direction === 1 ? 6 : -6 },
+    initial: { opacity: 0.2, x: direction === 1 ? 3 : -3 },
     animate: { opacity: 1, x: 0 },
-    exit: { opacity: 0.5, x: direction === 1 ? -6 : 6 },
+    exit: { opacity: 0.2, x: direction === 1 ? -3 : 3 },
   };
 
   return (
@@ -30,27 +30,28 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={{ duration: 0.5 }}
       whileHover={{
         scale: 1.05,
-        transition: { duration: 0.4 },
+        transition: { duration: 0.3 },
       }}
-      className={`w-56 sm:w-60 lg:w-72 h-72 lg:h-80 mx-6 lg:mx-10 flex flex-col p-7 rounded-md bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-dark-gray justify-between transition-all duration-300 ease-in-out ${className}`}
+      className={`w-64 lg:w-72 h-72 md:h-80 mx-4 lg:mx-10 flex-col justify-between p-7 rounded-md bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-dark-gray transition-all duration-300 ease-in-out ${className}`}
     >
-      <img src={product?.svg} alt={product?.name} className="w-2/5" />
-      <h2 className="text-primary-400 font-bold mt-3 mb-2 text-sm lg:text-base">
-        {product?.name}
-      </h2>
-      <p className="mb-4 leading-snug text-sm lg:text-base">
-        {product?.description}
-      </p>
+      <div>
+        <img src={product?.svg} alt={product?.name} className="w-2/5 md:h-20" />
+        <h2 className="text-primary-400 font-bold mt-3 mb-2 text-sm lg:text-base">
+          {product?.name}
+        </h2>
+        <p className="mb-4 leading-snug text-xsm md:text-sm">
+          {product?.description}
+        </p>
+      </div>
 
       {/* this button or anchor will take you the contact section */}
       <Link
-        className="flex items-center w-full text-secondary-500 dark:text-font-white hover:text-primary-300 duration-150 transition-all ease-in-out"
+        className="flex items-center text-secondary-500 dark:text-font-white hover:text-primary-300 duration-150 transition-all ease-in-out"
         to="#contact"
       >
-        <p className="text-xs md:text-sm mr-3">Solicitar</p>
+        <p className="text-xs md:text-sm mr-3">Conoce más</p>
         <LongArrow className="h-4" />
       </Link>
     </motion.li>
@@ -85,41 +86,43 @@ export default function ProductList({ products: _products }: ProductListProps) {
       {/* Left arrow btn */}
       <button
         type="button"
-        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue dark:text-dark-gray hover:text-primary-300 duration-150 transition-all ease-in-out"
+        aria-label="Avanzar en productos"
+        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue dark:text-medium-gray hover:text-primary-300 active:text-primary-500 dark:hover:text-primary-300 dark:active:text-primary-500 duration-150 transition-all ease-in-out"
         onClick={() => rotate(-1)}
       >
-        <LeftArrow className="h-6 w-6 md:h-8 md:w-8" />
+        <LeftArrow className="h-6 w-6 md:h-7 md:w-7" />
       </button>
 
       {/* Cards carousel, gap-12 lg:gap-20 */}
-      <ul className="w-full flex justify-center mx-4">
+      <ul className="md:w-full flex justify-center mx-4">
         {/* manage how many cards will show up in each device size */}
         <AnimatePresence>
           {products.map((product, idx) => (
             <>
-              {idx === 0 && (
+              {idx === 0 ? (
                 <ProductCard
                   key={product?.name}
                   product={product}
                   direction={direction}
+                  className="flex"
                 />
-              )}
-              {idx === 1 && (
+              ) : null}
+              {idx === 1 ? (
                 <ProductCard
                   key={product?.name}
                   product={product}
-                  className="hidden md:block"
+                  className="hidden md:flex"
                   direction={direction}
                 />
-              )}
-              {idx === 2 && (
+              ) : null}
+              {idx === 2 ? (
                 <ProductCard
                   key={product?.name}
                   product={product}
-                  className="hidden xl:block"
+                  className="hidden xl:flex"
                   direction={direction}
                 />
-              )}
+              ) : null}
             </>
           ))}
         </AnimatePresence>
@@ -128,10 +131,11 @@ export default function ProductList({ products: _products }: ProductListProps) {
       {/* Right arrow btn */}
       <button
         type="button"
-        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue dark:text-dark-gray hover:text-primary-300 duration-150 transition-all ease-in-out"
+        aria-label="Retroceder en productos"
+        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue dark:text-medium-gray hover:text-primary-300 active:text-primary-500 dark:hover:text-primary-300 dark:active:text-primary-500 duration-150 transition-all ease-in-out"
         onClick={() => rotate(1)}
       >
-        <RightArrow className="h-6 w-6 md:h-8 md:w-8" />
+        <RightArrow className="h-6 w-6 md:h-7 md:w-7" />
       </button>
     </div>
   );

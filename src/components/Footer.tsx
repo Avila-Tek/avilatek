@@ -23,25 +23,31 @@ export default function Footer() {
           </p>
           <p>info@avilatek.dev</p>
           {/* RRSS icons */}
-          <div className="flex gap-4 mt-4">
+          <div className="flex mt-4">
             <a
               href="https://www.instagram.com/avilatek/?hl=es-la"
               target="_blank"
-              className="hover:text-primary-300 cursor-pointer"
+              className="hover:text-primary-300 cursor-pointer mr-4"
+              aria-label="Instagram"
+              rel="noopener"
             >
               <InstagramIcon />
             </a>
             <a
               href="https://twitter.com/avilatek_?lang=es"
               target="_blank"
-              className="hover:text-primary-300 cursor-pointer"
+              className="hover:text-primary-300 cursor-pointer mr-4"
+              aria-label="Twitter"
+              rel="noopener"
             >
               <TwitterIcon />
             </a>
             <a
               href="https://www.facebook.com/pg/avilatek.dev/about/"
               target="_blank"
-              className="hover:text-primary-300 cursor-pointer"
+              className="hover:text-primary-300 cursor-pointer mr-4"
+              aria-label="Facebook"
+              rel="noopener"
             >
               <FacebookIcon />
             </a>
@@ -49,19 +55,21 @@ export default function Footer() {
               href="https://ve.linkedin.com/company/avilatek"
               target="_blank"
               className="hover:text-primary-300 cursor-pointer"
+              aria-label="LinkedIn"
+              rel="noopener"
             >
               <LinkedIn />
             </a>
           </div>
         </div>
         {/* Join the team section */}
-        <div className="w-full sm:w-1/3 text-xs md:text-sm">
+        <div className="w-full sm:w-1/2 lg:w-1/3 text-xs md:text-sm">
           <h2 className="text-primary-400 font-semibold text-sm md:text-base">
             Únete al equipo
           </h2>
           <p className="my-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit
-            id hac. Urna in sit id hac.{' '}
+            Si tienes conocimientos en desarrollo de software y quieres formar
+            parte de un equipo profesional, contáctanos.{' '}
           </p>
           <div className="w-40 flex justify-end">
             <img src={Avila} alt="Avila logo" className="h-6 mt-2" />
@@ -69,7 +77,9 @@ export default function Footer() {
           <a
             href="https://bit.ly/avila-tek"
             target="_blank"
-            className="px-10 md:px-14 text-xs md:text-sm text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
+            aria-label="Trabaja con nosotros"
+            rel="noopener"
+            className="px-8 text-xs md:text-sm text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
           >
             Trabaja con nosotros
           </a>
