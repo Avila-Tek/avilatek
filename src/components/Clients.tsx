@@ -17,7 +17,7 @@ import Grint from '../assets/images/logos/the-grint.png';
 const logos = [
   {
     src: Bat,
-    size: 'w-24 lg:w-28 xl:w-32 mb-1 pl-2 sm:pl-0',
+    size: 'w-24 lg:w-28 mb-1 pl-2 sm:pl-0',
   },
   {
     src: Bigott,
@@ -90,10 +90,10 @@ export default function Clients() {
     });
   };
 
-  // React.useEffect(() => {
-  //   const interval = setInterval(() => rotate(1), 6000);
-  //   return () => clearInterval(interval);
-  // }, [clients]);
+  React.useEffect(() => {
+    const interval = setInterval(() => rotate(1), 6000);
+     return () => clearInterval(interval);
+  }, [clients]);
 
   return (
     <section className="pt-28 md:pt-18 mb-60 lg:mb-80 xl:mb-104">
