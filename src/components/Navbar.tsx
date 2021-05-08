@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 import { motion } from 'framer-motion';
-import logo from '../assets/images/logo_white.png';
 import LightModeIcon from './icons/LightModeIcon';
 import DarkModeIcon from './icons/DarkModeIcon';
 import useTheme from '../hooks/useTheme';
@@ -54,9 +54,15 @@ export default function Navbar() {
       }`}
       role="navigation"
     >
-      {/* h-9 lg:h-12 */}
       <Link to="/" className="mr-auto">
-        <img src={logo} alt="Avila Tek logo" className="w-40 lg:w-48 xl:w-56" />
+        <div className="w-40 lg:w-48 xl:w-56">
+          <StaticImage
+            src="../assets/images/logo_white.png"
+            alt="Avila Tek logo"
+            placeholder="blurred"
+            layout="fullWidth"
+          />
+        </div>
       </Link>
 
       {/* Hamburger button */}
