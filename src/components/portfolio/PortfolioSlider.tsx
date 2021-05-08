@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-// import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage } from 'gatsby-plugin-image';
 import CategoryPill from './CategoryPill';
 import LeftArrow from '../icons/LeftArrow';
 import RightArrow from '../icons/RightArrow';
-import Monitor from '../../assets/images/monitor.png';
 
 export type Project = {
   title: string;
@@ -118,18 +117,14 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
       {/* Project photo */}
       <div className="relative w-80 sm:w-96 lg:w-128 xl:w-144 h-64 sm:h-80 lg:h-96 xl:h-112 mx-auto md:mx-0 mt-0 md:mt-14">
         {/* Monitor */}
-        {/* <StaticImage
-          src="../../assets/images/monitor.png"
-          alt="MAC monitor"
-          placeholder="blurred"
-          layout="fixed"
-          className="absolute top-0 left-0 z-20 w-full"
-        /> */}
-        <img
-          src={Monitor}
-          alt="MAC monitor"
-          className="absolute top-0 left-0 z-20 w-full"
-        />
+        <div className="absolute top-0 left-0 z-20 w-full">
+          <StaticImage
+            src="../../assets/images/monitor.png"
+            alt="MAC monitor"
+            placeholder="blurred"
+            layout="fullWidth"
+          />
+        </div>
         {/* The image */}
         <div className="absolute top-2 z-10 rounded-2xl h-44 sm:h-52 lg:h-72 xl:h-80 w-full px-3 py-1 lg:px-5 lg:py-3 overflow-hidden">
           <AnimatePresence>

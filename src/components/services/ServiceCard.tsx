@@ -43,7 +43,7 @@ export default function ServiceCard({
           <div className="w-full h-full flex flex-col justify-center items-center p-8 sm:p-10 text-center">
             <img src={illustration} alt={title} className="w-10/12" />
             <h2 className="text-primary-400 dark:text-primary-300 font-bold mx-auto text-base lg:text-lg mt-6 leading-snug">
-              {title}
+              {title} {typeof illustration}
             </h2>
           </div>
         </div>

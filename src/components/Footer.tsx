@@ -1,5 +1,5 @@
 import React from 'react';
-import Avila from '../assets/images/logo-avila-tek.png';
+import { StaticImage } from 'gatsby-plugin-image';
 import InstagramIcon from './icons/InstagramIcon';
 import FacebookIcon from './icons/FacebookIcon';
 import TwitterIcon from './icons/TwitterIcon';
@@ -71,15 +71,22 @@ export default function Footer() {
             Si tienes conocimientos en desarrollo de software y quieres formar
             parte de un equipo profesional, contáctanos.{' '}
           </p>
-          <div className="w-40 flex justify-end">
-            <img src={Avila} alt="Avila logo" className="h-6 mt-2" />
+          <div className="w-36 flex justify-end">
+            <div className="w-12 mt-2 pb-1">
+              <StaticImage
+                src="../assets/images/logo-avila-tek.png"
+                alt="Avila Tek logo"
+                placeholder="blurred"
+                layout="fullWidth"
+              />
+            </div>
           </div>
           <a
             href="https://bit.ly/avila-tek"
             target="_blank"
             aria-label="Trabaja con nosotros"
             rel="noopener"
-            className="px-8 text-xs md:text-sm text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
+            className="px-6 text-xs md:text-sm text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
           >
             Trabaja con nosotros
           </a>
