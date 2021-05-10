@@ -4,7 +4,7 @@ import ContactForm from './ContactForm';
 import LightningIcon from './icons/LightningIcon';
 import MessageIcon from './icons/MessageIcon';
 import SettingsIcon from './icons/SettingsIcon';
-import ContactUs from '../assets/illustrations/contact-us.svg';
+import CallCenter from './icons/CallCenter';
 
 export default function ContactSection() {
   return (
@@ -32,13 +32,9 @@ export default function ContactSection() {
 
           {/* Contact us illustration */}
           <div className="w-10/12 sm:w-7/12 lg:w-5/12 mt-12 lg:mt-0 mx-auto lg:mx-0 h-full">
-            <img
-              src={ContactUs}
-              alt="contact illustration"
-              className="w-full xl:w-10/12"
-            />
+            <CallCenter />
             {/* Extra info */}
-            <div className="mt-3">
+            <div className="mt-10">
               {/* Fast response */}
               <div className="flex items-center">
                 <LightningIcon className="h-6 w-6 mr-6 text-primary-400" />
@@ -79,7 +75,6 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
-          
         </div>
       </Fade>
       <div className="absolute top-8 left-1/3 rounded-second-blob w-96 md:w-6/12 h-72 md:h-96 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90 dark:bg-opacity-25" />

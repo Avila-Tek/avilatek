@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import Button from '../components/ui/Button';
 import Waves from './icons/Waves';
-import AtTheOffice from '../assets/illustrations/on-the-office-animate.svg';
+import AtTheOffice from './icons/OnTheOffice';
 
 export default function Banner() {
   const [active, setActive] = React.useState<number>(0);
@@ -103,11 +103,7 @@ export default function Banner() {
         {/* Animated Illustration */}
         <div className="w-10/12 sm:w-8/12 md:w-5/12 ml-0 md:ml-16 lg:ml-20 xl:ml-24">
           <Fade triggerOnce>
-            <img
-              src={AtTheOffice}
-              alt="at the office illustration"
-              className="w-full"
-            />
+            <AtTheOffice />
           </Fade>
         </div>
       </div>

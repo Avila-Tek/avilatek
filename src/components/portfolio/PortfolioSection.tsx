@@ -2,7 +2,6 @@ import React from 'react';
 import { navigate } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
 import PortfolioSlider, { Project } from './PortfolioSlider';
-import ProjectImg from '../../assets/images/bulb.jpeg';
 import Continental from '../../assets/images/projects/continental.png';
 import Unidos from '../../assets/images/projects/unidos.png';
 import Bloop from '../../assets/images/projects/bloop.png';

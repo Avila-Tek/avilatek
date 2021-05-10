@@ -31,6 +31,22 @@ module.exports = {
       __key: "pages",
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "illustrations",
+        path: "./src/assets/illustrations",
+      },
+      __key: "illustrations",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "projects",
+        path: "./src/assets/images/projects",
+      },
+      __key: "projects",
+    },
+    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-79745040-2',

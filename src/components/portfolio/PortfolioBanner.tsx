@@ -2,7 +2,7 @@ import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { motion } from 'framer-motion';
 import Waves from '../icons/Waves';
-import FolderGirl from '../../assets/illustrations/documents-animate.svg';
+import Documents from '../icons/Documents';
 
 export default function Banner() {
   const bracketVariants = {
@@ -50,11 +50,7 @@ export default function Banner() {
         {/* Animated Illustration */}
         <div className="w-9/12 sm:w-6/12 md:w-5/12 lg:w-4/12 mx-auto md:mr-0 md:ml-16 lg:ml-20 xl:ml-24">
           <Fade triggerOnce>
-            <img
-              src={FolderGirl}
-              alt="at the office illustration"
-              className="w-full"
-            />
+            <Documents />
           </Fade>
         </div>
       </div>
