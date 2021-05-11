@@ -90,7 +90,7 @@ export default function Technologies() {
             <span className="text-primary-400">tecnologías </span> del mercado
           </h1>
         </div>
-        <div className="w-full flex justify-center items-center text-medium-blue dark:text-medium-gray px-16 md:px-28">
+        <div className="w-full flex justify-center items-center text-dark-blue dark:text-medium-gray px-16 md:px-28">
           {/* Left arrow btn */}
           <button
             type="button"
@@ -100,7 +100,6 @@ export default function Technologies() {
           >
             <LeftArrow className="h-6 w-6 lg:h-7 lg:w-7" />
           </button>
-
           {/* Carousel, gap-14 xl:gap-16 */}
           <div className="duration-500 transition-all w-11/12 md:w-9/12 flex items-center justify-center mx-12">
             <AnimatePresence>
@@ -137,8 +136,7 @@ export default function Technologies() {
               ))}
             </AnimatePresence>
           </div>
-s
-          {/* Right arrow btn */}
+          s{/* Right arrow btn */}
           <button
             type="button"
             className="focus:ring-0 focus:outline-none hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"

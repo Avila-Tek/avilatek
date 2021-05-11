@@ -107,7 +107,7 @@ export default function Clients() {
             de nuestros <span className="text-primary-400">clientes </span>
           </h1>
         </div>
-        <div className="w-full flex justify-center items-center text-medium-blue dark:text-medium-gray px-16 md:px-28">
+        <div className="w-full flex justify-center items-center text-dark-blue dark:text-medium-gray px-16 md:px-28">
           {/* Left arrow btn */}
           <button
             type="button"

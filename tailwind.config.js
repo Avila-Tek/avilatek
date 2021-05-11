@@ -115,7 +115,7 @@ module.exports = {
   variants: {
     opacity: ({ after }) => after(['disabled']),
     backgroundColor: ({ after }) => after(['disabled', 'active']),
-    textColor: ({ after }) => after(['active']),
+    textColor: ({ after }) => after(['active', 'disabled']),
     borderColor: ({ after }) => after(['active']),
     boxShadow: ({ after }) => after(['dark']),
     extend: {},

@@ -67,20 +67,10 @@ export default function Footer() {
           <h2 className="text-primary-400 font-semibold text-sm md:text-base">
             Únete al equipo
           </h2>
-          <p className="my-4">
+          <p className="mt-4 mb-7">
             Si tienes conocimientos en desarrollo de software y quieres formar
             parte de un equipo profesional, contáctanos.{' '}
           </p>
-          <div className="w-36 flex justify-end">
-            <div className="w-12 mt-2 pb-1">
-              <StaticImage
-                src="../assets/images/logo-avila-tek.png"
-                alt="Avila Tek logo"
-                placeholder="blurred"
-                layout="fullWidth"
-              />
-            </div>
-          </div>
           <a
             href="https://bit.ly/avila-tek"
             target="_blank"
