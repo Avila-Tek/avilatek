@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import Button from '../components/ui/Button';
@@ -44,7 +45,7 @@ export default function Banner() {
     <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12">
       <div className="h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-24 pb-12 px-10 md:px-12 lg:px-16 xl:px-20">
         {/* Banner details */}
-        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pt-14 md:pt-10 lg:pt-16 xl:pt-16">
+        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pt-4 md:pt-10 lg:pt-16 xl:pt-16">
           <Fade triggerOnce cascade>
             <div className="h-18 sm:h-16 md:h-20 lg:h-24">
               <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold relative">
@@ -85,19 +86,16 @@ export default function Banner() {
                 </motion.span>
               </h1>
             </div>
-            <p className="my-5 sm:my-6 lg:my-7 xl:my-8 text-sm lg:text-base">
+            <p className="my-5 lg:my-7 xl:my-8 text-sm lg:text-base">
               Desarrollamos tecnologías innovadoras.{' '}
             </p>
-            <Button
-              type="button"
-              onClick={() => {
-                console.log('conoci mas');
-              }}
-              className="px-10 text-sm lg:text-base"
+            <Link
+              to="/#contact"
               aria-label="Boton de cotiza tu proyecto"
+              className="px-10 text-sm lg:text-base text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer"
             >
               Cotiza tu proyecto
-            </Button>
+            </Link>
           </Fade>
         </div>
         {/* Animated Illustration */}
