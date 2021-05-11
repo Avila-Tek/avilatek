@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
-import Button from '../components/ui/Button';
 import Waves from './icons/Waves';
 import AtTheOffice from './icons/OnTheOffice';
 
@@ -62,7 +61,7 @@ export default function Banner() {
                   {words.map((word, idx) => (
                     <>
                       {active === idx ? (
-                        <motion.mark
+                        <motion.p
                           key={word}
                           variants={variants}
                           initial="initial"
@@ -72,7 +71,7 @@ export default function Banner() {
                           className="text-font-black inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 text-font-dark dark:text-font-white"
                         >
                           {word}
-                        </motion.mark>
+                        </motion.p>
                       ) : null}
                     </>
                   ))}
@@ -92,7 +91,7 @@ export default function Banner() {
             <Link
               to="/#contact"
               aria-label="Boton de cotiza tu proyecto"
-              className="px-10 text-sm lg:text-base text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer"
+              className="px-6 md:px-8 text-sm lg:text-base text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer"
             >
               Cotiza tu proyecto
             </Link>

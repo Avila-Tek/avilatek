@@ -96,7 +96,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                 <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-primary-500 dark:text-primary-400 font-bold">
                   {title}
                 </h2>
-                <p className="text-sm xl:text-base my-4 lg:my-6">
+                <p className="text-sm xl:text-base my-5 lg:my-6">
                   {description}
                 </p>
                 <a

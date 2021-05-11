@@ -19,7 +19,7 @@ export default function PortfolioSection() {
     {
       title: 'Plataforma Unidos',
       description:
-      'Sistema de la trasnacional British American Tobacco, es un CRM que brinda indicadores a sus clientes. Cuenta con manejo de estadísticas, plan de fidelidad con canjeo de "experiencias" por buenos resultados en la venta de productos y un sistema de autogestión y evaluación interna de venta de productos.',
+        'Sistema de la trasnacional British American Tobacco, es un CRM que brinda indicadores a sus clientes. Cuenta con manejo de estadísticas, plan de fidelidad con canjeo de "experiencias" por buenos resultados en la venta de productos y un sistema de autogestión y evaluación interna de venta de productos.',
       src: Unidos,
       categories: ['App Web'],
       link: 'https://plataformaunidos.net/',
@@ -37,7 +37,7 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="pt-24 -mt-24 mb-60 md:mb-80 w-full relative z-10 overflow-hidden"
+      className="pt-24 -mt-24 mb-56 md:mb-68 w-full relative z-10 overflow-hidden"
     >
       <Fade cascade triggerOnce>
         <div className="w-full text-center mb-10">

@@ -136,7 +136,7 @@ export default function Technologies() {
               ))}
             </AnimatePresence>
           </div>
-          s{/* Right arrow btn */}
+          {/* Right arrow btn */}
           <button
             type="button"
             className="focus:ring-0 focus:outline-none hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"

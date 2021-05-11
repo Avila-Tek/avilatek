@@ -33,7 +33,7 @@ export default function ProjectCard({
       </div>
 
       {/* Info that appears when you hover */}
-      <div className="w-full h-full absolute top-0 left-0 p-6 lg:p-8 bg-primary-100 dark:bg-primary-500 bg-opacity-90 dark:bg-opacity-80 flex flex-col justify-between opacity-0 group-hover:opacity-100 duration-500 transition-all ease-in-out">
+      <div className="w-full h-full absolute top-0 left-0 p-6 lg:p-8 text-font-white bg-secondary-300 dark:bg-secondary-500 bg-opacity-90 dark:bg-opacity-90 flex flex-col justify-between opacity-0 group-hover:opacity-100 duration-500 transition-all ease-in-out">
         <div>
           <div className="flex flex-wrap items-center mb-1.5 cursor-default">
             {categories.map((category) => (
@@ -52,7 +52,7 @@ export default function ProjectCard({
           target="_blank"
           aria-label={`Visitar ${title}`}
           rel="noopener"
-          className="flex items-center w-full text-secondary-500 dark:text-font-white hover:text-primary-500 dark:hover:text-primary-100 duration-150 transition-all ease-in-out"
+          className="flex items-center w-full text-font-white hover:text-primary-300 dark:hover:text-primary-100 duration-150 transition-all ease-in-out"
         >
           <p className="font-medium text-sm mr-3">Visitar</p>
           <LongArrow className="h-4" />
