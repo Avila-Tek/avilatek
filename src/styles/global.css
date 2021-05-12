@@ -6,7 +6,7 @@
 /* purgecss start ignore */
 
 @layer utilities {
-  @variants hover {
+  @variants dark, hover {
     .filter-none {
       filter: none;
     }
@@ -15,12 +15,12 @@
       filter: grayscale(100%) brightness(0.7);
     }
 
-    .filter-logo-light {
-      filter: grayscale(100%) brightness(0.6) saturate(150%) contrast(190%);
+    .filter-grayscale-bright {
+      filter: grayscale(100%) brightness(150%) contrast(10%);
     }
 
-    .filter-logo-dark {
-      filter: grayscale(100%) brightness(1.4) saturate(150%) contrast(190%);
+    .filter-logo-light {
+      filter: grayscale(100%) brightness(0.6) saturate(150%) contrast(190%);
     }
 
     .filter-drop-shadow {

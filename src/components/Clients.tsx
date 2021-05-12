@@ -69,7 +69,7 @@ function LogoItem({ src, className, size }: LogoItemProps) {
       src={src}
       alt={src}
       // w-28 lg:w-32
-      className={`mx-6 xl:mx-9 duration-200 transition-all filter-logo-light dark:filter-logo-dark hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
+      className={`mx-6 xl:mx-9 duration-200 transition-all filter-logo-light dark:filter-grayscale-bright hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
         size ?? 'w-32 md:w-36 xl:w-40'
       }`}
     />
@@ -96,7 +96,7 @@ export default function Clients() {
   }, [clients]);
 
   return (
-    <section className="pt-28 md:pt-18 mb-56 lg:mb-72">
+    <section className="pt-28 md:pt-18 mb-48 lg:mb-72">
       <Fade triggerOnce>
         <div className="w-full mb-16 sm:mb-20 px-16 md:px-36">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">

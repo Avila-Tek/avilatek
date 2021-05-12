@@ -52,7 +52,7 @@ function LogoItem({ src, name, className }: LogoItemProps) {
       transition={{ duration: 0.3 }}
       src={src}
       alt={name}
-      className={`mx-7 xl:mx-8 duration-150 transition-all filter-grayscale hover:filter-none ease-in-out ${
+      className={`mx-7 xl:mx-8 duration-150 transition-all filter-grayscale dark:filter-grayscale-bright hover:filter-none ease-in-out ${
         name === 'Android' ? 'h-5 md:h-6 xl:h-7' : 'h-10 lg:h-12'
       } ${className}`}
     />
@@ -74,9 +74,9 @@ export default function Technologies() {
   };
 
   React.useEffect(() => {
-    const interval = setInterval(() => rotate(1), 6000);
-    return () => clearInterval(interval);
-  }, [technologies]);
+     const interval = setInterval(() => rotate(1), 6000);
+     return () => clearInterval(interval);
+   }, [technologies]);
 
   return (
     <section className="pt-16 md:pt-12 mb-52 lg:mb-72">
