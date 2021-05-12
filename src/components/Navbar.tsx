@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
+import { globalHistory } from '@reach/router';
 import { motion } from 'framer-motion';
 import LightModeIcon from './icons/LightModeIcon';
 import DarkModeIcon from './icons/DarkModeIcon';
@@ -24,7 +25,7 @@ function NavItem({ title, href }: NavItemProps) {
 export default function Navbar() {
   const [isOpen, setOpen] = React.useState<boolean>(false);
   const [isFixed, setFixed] = React.useState<boolean>(false);
-  const [theme, setTheme] = useTheme();
+  const [, setTheme] = useTheme();
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
@@ -43,6 +44,12 @@ export default function Navbar() {
 
     window.addEventListener('scroll', changeColor);
   }, []);
+
+  React.useEffect(() => {
+    return globalHistory.listen(({ action }) => {
+      if (action === 'PUSH') setOpen(false);
+    });
+  }, [setOpen]);
 
   return (
     <motion.nav
