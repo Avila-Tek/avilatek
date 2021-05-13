@@ -87,7 +87,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
       <button
         type="button"
         aria-label="Avanzar en productos"
-        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue dark:text-medium-gray hover:text-primary-300 active:text-primary-500 dark:hover:text-primary-300 dark:active:text-primary-500 duration-150 transition-all ease-in-out"
+        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-dark-blue dark:text-medium-gray hover:text-primary-300 active:text-primary-500 dark:hover:text-primary-300 dark:active:text-primary-500 duration-150 transition-all ease-in-out"
         onClick={() => rotate(-1)}
       >
         <LeftArrow className="h-6 w-6 md:h-7 md:w-7" />
@@ -132,7 +132,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
       <button
         type="button"
         aria-label="Retroceder en productos"
-        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-medium-blue dark:text-medium-gray hover:text-primary-300 active:text-primary-500 dark:hover:text-primary-300 dark:active:text-primary-500 duration-150 transition-all ease-in-out"
+        className="block xl:hidden focus:ring-0 focus:border-transparent focus:outline-none text-dark-blue dark:text-medium-gray hover:text-primary-300 active:text-primary-500 dark:hover:text-primary-300 dark:active:text-primary-500 duration-150 transition-all ease-in-out"
         onClick={() => rotate(1)}
       >
         <RightArrow className="h-6 w-6 md:h-7 md:w-7" />

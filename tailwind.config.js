@@ -24,6 +24,9 @@ module.exports = {
         'w-48',
         'w-52',
         'w-60',
+        'mb-1',
+        'mb-2',
+        'pl-2',
       ],
     },
     // defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
@@ -112,7 +115,7 @@ module.exports = {
   variants: {
     opacity: ({ after }) => after(['disabled']),
     backgroundColor: ({ after }) => after(['disabled', 'active']),
-    textColor: ({ after }) => after(['active']),
+    textColor: ({ after }) => after(['active', 'disabled']),
     borderColor: ({ after }) => after(['active']),
     boxShadow: ({ after }) => after(['dark']),
     extend: {},

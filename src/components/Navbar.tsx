@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+import { globalHistory } from '@reach/router';
 import { motion } from 'framer-motion';
-import logo from '../assets/images/logo_white.png';
 import LightModeIcon from './icons/LightModeIcon';
 import DarkModeIcon from './icons/DarkModeIcon';
 import useTheme from '../hooks/useTheme';
@@ -13,6 +14,7 @@ interface NavItemProps {
 
 function NavItem({ title, href }: NavItemProps) {
   return (
+    // activeClassName="text-primary-400"
     <Link to={href}>
       <p className="text-sm lg:text-base tracking-wide mx-2 lg:mx-3 text-font-dark dark:text-font-white cursor-pointer my-2 hover:text-primary-400">
         {title}
@@ -24,7 +26,7 @@ function NavItem({ title, href }: NavItemProps) {
 export default function Navbar() {
   const [isOpen, setOpen] = React.useState<boolean>(false);
   const [isFixed, setFixed] = React.useState<boolean>(false);
-  const [theme, setTheme] = useTheme();
+  const [, setTheme] = useTheme();
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
@@ -44,6 +46,12 @@ export default function Navbar() {
     window.addEventListener('scroll', changeColor);
   }, []);
 
+  React.useEffect(() => {
+    return globalHistory.listen(({ action }) => {
+      if (action === 'PUSH') setOpen(false);
+    });
+  }, [setOpen]);
+
   return (
     <motion.nav
       initial={{ height: '4.2rem' }}
@@ -54,9 +62,15 @@ export default function Navbar() {
       }`}
       role="navigation"
     >
-      {/* h-9 lg:h-12 */}
       <Link to="/" className="mr-auto">
-        <img src={logo} alt="Avila Tek logo" className="w-40 lg:w-48 xl:w-56" />
+        <div className="w-40 lg:w-48 xl:w-56">
+          <StaticImage
+            src="../assets/images/logo_white.png"
+            alt="Avila Tek logo"
+            placeholder="blurred"
+            layout="fullWidth"
+          />
+        </div>
       </Link>
 
       {/* Hamburger button */}

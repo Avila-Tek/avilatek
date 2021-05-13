@@ -11,24 +11,24 @@ module.exports = {
     'gatsby-plugin-sitemap',
     'gatsby-transformer-remark',
     'gatsby-plugin-mdx',
-    // 'gatsby-plugin-image',
-    // 'gatsby-plugin-sharp',
-    // 'gatsby-transformer-sharp',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'assets',
+        path: `${__dirname}/src/assets/images`,
       },
-      __key: "pages",
+      __key: 'assets',
     },
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -48,8 +48,8 @@ module.exports = {
         websiteId: '0540c02c-b342-4bef-a11b-e8669fd3a28f',
         enableDuringDevelop: true, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
         defer: false, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
-        enableImprovedAccessibility: true // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
+        enableImprovedAccessibility: true, // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
       },
-    }
+    },
   ],
 };

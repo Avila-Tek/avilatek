@@ -2,10 +2,6 @@ import React from 'react';
 import { navigate } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
 import PortfolioSlider, { Project } from './PortfolioSlider';
-import ProjectImg from '../../assets/images/bulb.jpeg';
-import Continental from '../../assets/images/projects/continental.png';
-import Unidos from '../../assets/images/projects/unidos.png';
-import Bloop from '../../assets/images/projects/bloop.png';
 
 export default function PortfolioSection() {
   const projects: Array<Project> = [
@@ -13,15 +9,15 @@ export default function PortfolioSection() {
       title: 'Continental de Seguros',
       description:
         'Sistema de seguros para empresas aseguradoras, con manejo de cartera de clientes, administración de pólizas, siniestros, recibos, manejo de capital y reportes estadísticos para toma de decisiones.',
-      src: Continental,
+      src: 'projects/continental.png',
       categories: ['App Web'],
       link: 'https://continentaldeseguros.com.ve/',
     },
     {
       title: 'Plataforma Unidos',
       description:
-      'Sistema de la trasnacional British American Tobacco, es un CRM que brinda indicadores a sus clientes. Cuenta con manejo de estadísticas, plan de fidelidad con canjeo de "experiencias" por buenos resultados en la venta de productos y un sistema de autogestión y evaluación interna de venta de productos.',
-      src: Unidos,
+        'Sistema de la trasnacional British American Tobacco, es un CRM que brinda indicadores a sus clientes. Cuenta con manejo de estadísticas, plan de fidelidad con canjeo de "experiencias" por buenos resultados en la venta de productos y un sistema de autogestión y evaluación interna de venta de productos.',
+      src: 'projects/unidos.png',
       categories: ['App Web'],
       link: 'https://plataformaunidos.net/',
     },
@@ -29,7 +25,7 @@ export default function PortfolioSection() {
       title: 'Bloop!',
       description:
         'Plataforma para productora de eventos, es un CRM a la medida, para auto gestionar proyectos, proveedores, clientes y usuarios, y automatizar procesos de la empresa.',
-      src: Bloop,
+      src: 'projects/bloop.png',
       categories: ['App Web'],
       link: 'https://www.probloop.com/',
     },
@@ -38,7 +34,7 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="pt-24 -mt-24 mb-60 md:mb-80 w-full relative z-10 overflow-hidden"
+      className="pt-24 -mt-24 mb-56 md:mb-68 w-full relative z-10 overflow-hidden"
     >
       <Fade cascade triggerOnce>
         <div className="w-full text-center mb-10">

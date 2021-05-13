@@ -1,6 +1,6 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
-import CodingIllustration from '../assets/illustrations/code-typing-animate.svg';
+import CodeTyping from './icons/CodeTyping';
 
 export default function AboutUs() {
   return (
@@ -13,11 +13,7 @@ export default function AboutUs() {
         {/* Coding illustation */}
         <div className="w-9/12 sm:w-6/12 md:w-5/12 lg:w-4/12 mb-6 md:mb-0 mr-0 md:mr-16 xl:mr-20">
           <Fade triggerOnce>
-            <img
-              src={CodingIllustration}
-              alt="at the office illustration"
-              className="w-full"
-            />
+            <CodeTyping />
           </Fade>
         </div>
 

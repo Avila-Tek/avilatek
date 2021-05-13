@@ -2,7 +2,7 @@ import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { motion } from 'framer-motion';
 import Waves from '../icons/Waves';
-import FolderGirl from '../../assets/illustrations/documents-animate.svg';
+import Documents from '../icons/Documents';
 
 export default function Banner() {
   const bracketVariants = {
@@ -42,33 +42,21 @@ export default function Banner() {
               </motion.span>
             </h1>
             <p className="my-6 text-sm lg:text-base">
-              Proyectos desarollados a la medida con base a las necesidades de cada cliente.{' '}
+              Proyectos desarollados a la medida con base a las necesidades de
+              cada cliente.{' '}
             </p>
-            <a
-              href="https://bit.ly/avila-tek"
-              target="_blank"
-              rel="noopener"
-              aria-label="Trabaja con nosotros"
-              className="px-10 text-sm lg:text-base text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
-            >
-              Trabaja con nosotros
-            </a>
           </Fade>
         </div>
         {/* Animated Illustration */}
         <div className="w-9/12 sm:w-6/12 md:w-5/12 lg:w-4/12 mx-auto md:mr-0 md:ml-16 lg:ml-20 xl:ml-24">
           <Fade triggerOnce>
-            <img
-              src={FolderGirl}
-              alt="at the office illustration"
-              className="w-full"
-            />
+            <Documents />
           </Fade>
         </div>
       </div>
       {/* Waves */}
-      <div className="w-full">
-        <Waves className="w-full h-full" />
+      <div className="w-full mt-8">
+        <Waves className="w-full h-full -mb-2" />
       </div>
     </div>
   );

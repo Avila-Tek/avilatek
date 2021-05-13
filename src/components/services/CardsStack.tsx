@@ -44,7 +44,7 @@ export default function CardsStack({ services: _services }: CardsStackProps) {
           />
         ))}
       </div>
-      <div className="mt-14 w-full flex justify-center text-medium-blue dark:text-medium-gray">
+      <div className="mt-14 w-full flex justify-center text-dark-blue dark:text-medium-gray disabled:text-medium-blue">
         <div className="dark:text-dark-gray duration-150 transition-all ease-in-out cursor-not-allowed">
           <LeftArrow className="h-7 w-7 mr-4" />
         </div>
