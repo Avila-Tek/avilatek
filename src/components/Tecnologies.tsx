@@ -3,37 +3,38 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
-import ReactLogo from '../assets/images/technologies/react.png';
-import NextJSLogo from '../assets/images/technologies/nextjs.png';
-import GatsbyLogo from '../assets/images/technologies/gatsby.png';
-import GraphQLLogo from '../assets/images/technologies/graphql.png';
-import AndroidLogo from '../assets/images/technologies/android.png';
-import iOSLogo from '../assets/images/technologies/ios.png';
+import Image from './Image';
 
-const logos = [
+const logos: Array<{ src: string; name: string; className: string }> = [
   {
-    src: ReactLogo,
+    src: 'react.png',
     name: 'ReactJS',
+    className: 'w-32',
   },
   {
-    src: NextJSLogo,
+    src: 'nextjs.png',
     name: 'NextJS',
+    className: 'w-24',
   },
   {
-    src: GatsbyLogo,
+    src: 'gatsby.png',
     name: 'Gatsby',
+    className: 'w-40',
   },
   {
-    src: GraphQLLogo,
+    src: 'graphql.png',
     name: 'GraphQL',
+    className: 'w-40',
   },
   {
-    src: AndroidLogo,
+    src: 'android.png',
     name: 'Android',
+    className: 'w-40',
   },
   {
-    src: iOSLogo,
+    src: 'ios.png',
     name: 'iOS',
+    className: 'w-24',
   },
 ];
 
@@ -45,17 +46,18 @@ interface LogoItemProps {
 
 function LogoItem({ src, name, className }: LogoItemProps) {
   return (
-    <motion.img
+    <motion.div
       initial={{ opacity: 0.2 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0.2 }}
       transition={{ duration: 0.3 }}
-      src={src}
-      alt={name}
-      className={`mx-7 xl:mx-8 duration-150 transition-all filter-grayscale dark:filter-grayscale-bright hover:filter-none ease-in-out ${
-        name === 'Android' ? 'h-5 md:h-6 xl:h-7' : 'h-10 lg:h-12'
-      } ${className}`}
-    />
+    >
+      <Image
+        filename={src}
+        alt={name}
+        className={`mx-7 xl:mx-8 duration-150 transition-all filter-grayscale dark:filter-grayscale-bright hover:filter-none ease-in-out ${className}`}
+      />
+    </motion.div>
   );
 }
 
@@ -74,9 +76,9 @@ export default function Technologies() {
   };
 
   React.useEffect(() => {
-     const interval = setInterval(() => rotate(1), 6000);
-     return () => clearInterval(interval);
-   }, [technologies]);
+    const interval = setInterval(() => rotate(1), 6000);
+    return () => clearInterval(interval);
+  }, [technologies]);
 
   return (
     <section className="pt-16 md:pt-12 mb-48 lg:mb-68">
@@ -101,18 +103,23 @@ export default function Technologies() {
             <LeftArrow className="h-6 w-6 lg:h-7 lg:w-7" />
           </button>
           {/* Carousel, gap-14 xl:gap-16 */}
-          <div className="duration-500 transition-all w-11/12 md:w-9/12 flex items-center justify-center mx-12">
+          <div className="duration-500 transition-all w-11/12 md:w-9/12 h-18 flex items-center justify-center mx-12">
             <AnimatePresence>
-              {technologies.map(({ src, name }, idx) => (
+              {technologies.map(({ src, name, className }, idx) => (
                 <>
                   {0 === idx ? (
-                    <LogoItem src={src} name={name} key={name} />
+                    <LogoItem
+                      src={src}
+                      name={name}
+                      key={name}
+                      className={className}
+                    />
                   ) : null}
                   {1 === idx ? (
                     <LogoItem
                       src={src}
                       name={name}
-                      className="hidden sm:block"
+                      className={`hidden sm:block ${className}`}
                       key={name}
                     />
                   ) : null}
@@ -120,7 +127,7 @@ export default function Technologies() {
                     <LogoItem
                       src={src}
                       name={name}
-                      className="hidden lg:block"
+                      className={`hidden lg:block ${className}`}
                       key={name}
                     />
                   ) : null}
@@ -128,7 +135,7 @@ export default function Technologies() {
                     <LogoItem
                       src={src}
                       name={name}
-                      className="hidden xl:block"
+                      className={`hidden xl:block ${className}`}
                       key={name}
                     />
                   ) : null}

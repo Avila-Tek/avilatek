@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import LongArrow from '../icons/LongArrow';
 import CategoryPill from './CategoryPill';
+import Image from '../Image';
 
 interface ProjectCardProps {
   title: string;
@@ -25,8 +26,8 @@ export default function ProjectCard({
     >
       {/* Image of the project */}
       <div className="w-full h-full overflow-hidden">
-        <img
-          src={src}
+        <Image
+          filename={src}
           alt={title}
           className="h-full w-full object-cover object-center"
         />

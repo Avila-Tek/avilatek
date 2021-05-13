@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { StaticImage } from 'gatsby-plugin-image';
 import CategoryPill from './CategoryPill';
+import Image from '../Image';
 import LeftArrow from '../icons/LeftArrow';
 import RightArrow from '../icons/RightArrow';
 
@@ -131,16 +132,19 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
             {projects.map(({ title, src }, idx) => (
               <>
                 {active === idx ? (
-                  <motion.img
+                  <motion.div
                     key={src}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.8 }}
-                    src={src}
-                    alt={title}
-                    className="w-full h-full object-cover object-center"
-                  />
+                  >
+                    <Image
+                      filename={src}
+                      alt={title}
+                      className="w-full h-full object-cover object-center"
+                    />
+                  </motion.div>
                 ) : null}
               </>
             ))}

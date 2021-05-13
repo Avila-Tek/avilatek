@@ -14,6 +14,7 @@ interface NavItemProps {
 
 function NavItem({ title, href }: NavItemProps) {
   return (
+    // activeClassName="text-primary-400"
     <Link to={href}>
       <p className="text-sm lg:text-base tracking-wide mx-2 lg:mx-3 text-font-dark dark:text-font-white cursor-pointer my-2 hover:text-primary-400">
         {title}

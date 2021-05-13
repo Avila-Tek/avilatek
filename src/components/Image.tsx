@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 const Image = ({ filename, alt, className }) => {
   const data = useStaticQuery(graphql`
@@ -12,7 +12,7 @@ const Image = ({ filename, alt, className }) => {
             relativePath
             name
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             }
           }
         }
@@ -30,7 +30,8 @@ const Image = ({ filename, alt, className }) => {
 
   return (
     <GatsbyImage
-      image={image.node.childImageSharp.gatsbyImageData}
+      // image={image.node.childImageSharp.gatsbyImageData}
+      image={getImage(image.node)}
       alt={alt}
       className={className}
     />

@@ -3,53 +3,44 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
-import Bat from '../assets/images/logos/bat.png';
-import Bigott from '../assets/images/logos/bigott.png';
-import Bloop from '../assets/images/logos/bloop.png';
-import Bloopex from '../assets/images/logos/bloopex.png';
-import Continental from '../assets/images/logos/continental.png';
-import HabitatVenezuela from '../assets/images/logos/habitat-venezuela.png';
-import HabitatVillage from '../assets/images/logos/habitat-village.png';
-import Pomelos from '../assets/images/logos/pomelos.png';
-import Rockval from '../assets/images/logos/rockval.png';
-import Grint from '../assets/images/logos/the-grint.png';
+import Image from './Image';
 
 const logos = [
   {
-    src: Bat,
+    src: 'logos/bat.png',
     size: 'w-24 lg:w-28 mb-1 pl-2 sm:pl-0',
   },
   {
-    src: Bigott,
+    src: 'logos/bigott.png',
     size: 'w-36 md:w-40 xl:w-44 mb-1',
   },
   {
-    src: Bloop,
+    src: 'logos/bloop-logo.png',
     size: 'w-28 xl:w-32',
   },
   {
-    src: Bloopex,
+    src: 'logos/bloopex.png',
     size: 'w-24 md:w-28',
   },
   {
-    src: Continental,
+    src: 'logos/continental-logo.png',
     size: 'w-48 md:w-52 xl:w-60',
   },
   {
-    src: Pomelos,
+    src: 'logos/pomelos-logo.png',
     size: 'w-32 xl:w-40',
   },
   {
-    src: HabitatVenezuela,
+    src: 'logos/habitat-venezuela.png',
   },
   {
-    src: HabitatVillage,
+    src: 'logos/habitat-village.png',
   },
   {
-    src: Rockval,
+    src: 'logos/rockval.png',
   },
   {
-    src: Grint,
+    src: 'logos/the-grint.png',
   },
 ];
 
@@ -61,18 +52,20 @@ interface LogoItemProps {
 
 function LogoItem({ src, className, size }: LogoItemProps) {
   return (
-    <motion.img
+    <motion.div
       initial={{ opacity: 0.2 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0.2 }}
       transition={{ duration: 0.3 }}
-      src={src}
-      alt={src}
-      // w-28 lg:w-32
-      className={`mx-6 xl:mx-9 duration-200 transition-all filter-logo-light dark:filter-grayscale-bright hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
-        size ?? 'w-32 md:w-36 xl:w-40'
-      }`}
-    />
+    >
+      <Image
+        filename={src}
+        alt={src}
+        className={`mx-6 xl:mx-9 duration-200 transition-all filter-logo-light dark:filter-grayscale-bright hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
+          size ?? 'w-32 md:w-36 xl:w-40'
+        }`}
+      />
+    </motion.div>
   );
 }
 
@@ -92,7 +85,7 @@ export default function Clients() {
 
   React.useEffect(() => {
     const interval = setInterval(() => rotate(1), 6000);
-     return () => clearInterval(interval);
+    return () => clearInterval(interval);
   }, [clients]);
 
   return (
