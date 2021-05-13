@@ -1,9 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-const Image = ({ filename, alt, className }) => {
+interface ImageProps {
+  filename: string;
+  alt?: string;
+  className?: string;
+}
+
+export default function Image({ filename, alt, className = '' }: ImageProps) {
   const data = useStaticQuery(graphql`
     {
       images: allFile {
@@ -29,23 +34,6 @@ const Image = ({ filename, alt, className }) => {
   }
 
   return (
-    <GatsbyImage
-      // image={image.node.childImageSharp.gatsbyImageData}
-      image={getImage(image.node)}
-      alt={alt}
-      className={className}
-    />
+    <GatsbyImage image={getImage(image.node)} alt={alt} className={className} />
   );
-};
-
-Image.propTypes = {
-  filename: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
-  className: PropTypes.string,
-};
-
-Image.defaultProps = {
-  className: '',
-};
-
-export default Image;
+}
