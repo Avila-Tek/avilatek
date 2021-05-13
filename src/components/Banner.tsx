@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import Waves from './icons/Waves';
 import AtTheOffice from './icons/OnTheOffice';
+import RotatingTriangle from './icons/RotatingTriangle';
+import Line from './icons/Line';
 
 export default function Banner() {
   const [active, setActive] = React.useState<number>(0);
@@ -42,9 +44,9 @@ export default function Banner() {
   // gap-2 md:gap-16 lg:gap-20 xl:gap-24
   return (
     <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12">
-      <div className="h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-24 pb-12 px-10 md:px-12 lg:px-16 xl:px-20">
+      <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-24 pb-12 px-10 md:px-12 lg:px-16 xl:px-20">
         {/* Banner details */}
-        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pt-4 md:pt-10 lg:pt-16 xl:pt-16">
+        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pt-4 md:pt-10 lg:pt-16 xl:pt-16 z-10">
           <Fade triggerOnce cascade>
             <div className="h-18 sm:h-16 md:h-20 lg:h-24">
               <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold relative">
@@ -68,7 +70,7 @@ export default function Banner() {
                           animate="animate"
                           exit="exit"
                           transition={{ duration: 0.5 }}
-                          className="text-font-black inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 text-font-dark dark:text-font-white"
+                          className="break-all text-font-black inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 text-font-dark dark:text-font-white"
                         >
                           {word}
                         </motion.p>
@@ -98,11 +100,16 @@ export default function Banner() {
           </Fade>
         </div>
         {/* Animated Illustration */}
-        <div className="w-10/12 sm:w-8/12 md:w-5/12 ml-0 md:ml-16 lg:ml-20 xl:ml-24">
+        <div className="w-10/12 sm:w-8/12 md:w-5/12 ml-0 md:ml-16 lg:ml-20 xl:ml-24 z-10">
           <Fade triggerOnce>
             <AtTheOffice />
           </Fade>
         </div>
+        <RotatingTriangle className="top-10" />
+        <Line className="top-12 right-1/4 w-12"/> 
+        <Line className="top-1/4 left-2/12 w-14 hidden md:block"/> 
+        <Line className="bottom-3/12 md:bottom-1/12 left-3/12 md:left-5/12 w-10"/> 
+        <Line className="bottom-0 right-2/12 md:right-1/12 w-12"/> 
       </div>
       {/* Waves */}
       <div className="w-full mt-8">
