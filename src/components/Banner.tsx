@@ -105,11 +105,14 @@ export default function Banner() {
             <AtTheOffice />
           </Fade>
         </div>
-        <RotatingTriangle className="top-10" />
-        <Line className="top-12 right-1/4 w-12"/> 
-        <Line className="top-1/4 left-2/12 w-14 hidden md:block"/> 
-        <Line className="bottom-3/12 md:bottom-1/12 left-3/12 md:left-5/12 w-10"/> 
-        <Line className="bottom-0 right-2/12 md:right-1/12 w-12"/> 
+        <RotatingTriangle className="top-12 right-8/12 md:right-1/2" />
+        <RotatingTriangle className="right-2/12 top-5/12" />
+        <RotatingTriangle className="bottom-1/12 left-5/12 md:left-3/12" />
+        <RotatingTriangle className="top-28 left-1/12 hidden md:block" />
+        <Line className="top-12 right-1/4 w-12" />
+        <Line className="top-1/4 left-2/12 w-14 hidden md:block" />
+        <Line className="bottom-3/12 md:bottom-1/12 left-2/12 md:left-5/12 w-10" />
+        <Line className="bottom-0 right-2/12 md:right-1/12 w-12" />
       </div>
       {/* Waves */}
       <div className="w-full mt-8">
