@@ -22,7 +22,7 @@ function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
       <button
         type="button"
         onClick={() => updateActiveLink(title)}
-        className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 dark:text-font-white cursor-pointer my-2 hover:text-primary-400 focus:outline-none ${
+        className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 dark:text-font-white cursor-pointer my-2 hover:text-primary-400 focus:ring-0 focus:outline-none ${
           activeLink === title
             ? 'text-primary-400 font-medium'
             : 'text-font-dark'
@@ -76,14 +76,18 @@ export default function Navbar() {
       role="navigation"
     >
       <Link to="/" className="mr-auto">
-        <div className="w-40 lg:w-48 xl:w-56">
+        <button
+          type="button"
+          onClick={() => setActiveLink('Inicio')}
+          className="focus:ring-0 focus:outline-none w-40 lg:w-48 xl:w-56"
+        >
           <StaticImage
             src="../assets/images/logo_white.png"
             alt="Avila Tek logo"
             placeholder="blurred"
             layout="fullWidth"
           />
-        </div>
+        </button>
       </Link>
 
       {/* Hamburger button */}
