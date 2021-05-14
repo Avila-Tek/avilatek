@@ -89,7 +89,7 @@ export default function Clients() {
   }, [clients]);
 
   return (
-    <section className="pt-28 md:pt-18 mb-48 lg:mb-72">
+    <section className="pt-28 md:pt-18 mb-52 lg:mb-72">
       <Fade triggerOnce>
         <div className="w-full mb-16 sm:mb-20 px-16 md:px-36">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">

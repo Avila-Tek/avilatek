@@ -12,7 +12,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               "use strict";
@@ -40,7 +40,7 @@ export default function HTML(props) {
               drift.load('wsfk64gcc5rc');
             `,
           }}
-        />
+        /> */}
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
