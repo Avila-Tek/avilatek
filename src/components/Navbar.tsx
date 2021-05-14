@@ -22,10 +22,10 @@ function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
       <button
         type="button"
         onClick={() => updateActiveLink(title)}
-        className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 dark:text-font-white cursor-pointer my-2 hover:text-primary-400 focus:ring-0 focus:outline-none ${
+        className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
           activeLink === title
-            ? 'text-primary-400 font-medium'
-            : 'text-font-dark'
+            ? 'text-primary-400 dark:text-primary-300 font-medium border-b border-primary-400'
+            : 'text-font-dark dark:text-font-white'
         }`}
       >
         {title}

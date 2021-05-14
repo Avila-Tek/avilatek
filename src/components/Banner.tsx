@@ -36,14 +36,14 @@ export default function Banner() {
   React.useEffect(() => {
     const interval = setInterval(
       () => setActive((prev) => (prev + 1) % words.length),
-      6000
-    );
-    return () => clearInterval(interval);
-  }, [active]);
+       7000
+     );
+     return () => clearInterval(interval);
+   }, [active]);
 
   // gap-2 md:gap-16 lg:gap-20 xl:gap-24
   return (
-    <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12">
+    <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
       <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-24 pb-12 px-10 md:px-12 lg:px-16 xl:px-20">
         {/* Banner details */}
         <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pt-4 md:pt-10 lg:pt-16 xl:pt-16 z-10">
@@ -63,17 +63,16 @@ export default function Banner() {
                   {words.map((word, idx) => (
                     <>
                       {active === idx ? (
-                        <motion.p
+                        <motion.span
                           key={word}
-                          variants={variants}
-                          initial="initial"
-                          animate="animate"
-                          exit="exit"
-                          transition={{ duration: 0.5 }}
-                          className="break-all text-font-black inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 text-font-dark dark:text-font-white"
+                          initial={{ y: -20, opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          exit={{ y: 20, opacity: 0 }}
+                          transition={{ duration: 0.7 }}
+                          className="word break-words inline ml-1 text-font-black text-font-dark dark:text-font-white"
                         >
                           {word}
-                        </motion.p>
+                        </motion.span>
                       ) : null}
                     </>
                   ))}

@@ -20,7 +20,6 @@
     "avilatek-utils": "^0.1.0",
     "framer-motion": "^3.10.5",
     "gatsby": "^3.0.1",
-    "gatsby-plugin-crisp-chat": "^3.2.2",
     "gatsby-plugin-gatsby-cloud": "^2.1.0",
     "gatsby-plugin-google-analytics": "^3.1.0",
     "gatsby-plugin-image": "^1.2.0",

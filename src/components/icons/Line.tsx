@@ -16,7 +16,7 @@ export default function Line({ className }: IconProps) {
     >
       <path
         fill="currentColor"
-        className="text-primary-100 dark:text-secondary-200 opacity-25 dark:opacity-20"
+        className="text-primary-100 dark:text-secondary-200 opacity-25 dark:opacity-20 transition duration-300 ease-in-out"
         d="M8.474 88.597l80-80A5.002 5.002 0 0084.957 0a5 5 0 00-3.553 1.526l-80 80a5 5 0 007.07 7.07z"
       />
     </svg>
