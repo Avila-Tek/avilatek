@@ -10,15 +10,26 @@ import useTheme from '../hooks/useTheme';
 interface NavItemProps {
   title: string;
   href: string;
+  activeLink?: string;
+  updateActiveLink?: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function NavItem({ title, href }: NavItemProps) {
+function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
   return (
     // activeClassName="text-primary-400"
+    // ! Link activeClassName doesn't work this anchors
     <Link to={href}>
-      <p className="text-sm lg:text-base tracking-wide mx-2 lg:mx-3 text-font-dark dark:text-font-white cursor-pointer my-2 hover:text-primary-400">
+      <button
+        type="button"
+        onClick={() => updateActiveLink(title)}
+        className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
+          activeLink === title
+            ? 'text-primary-400 dark:text-primary-300 font-medium border-b border-primary-400'
+            : 'text-font-dark dark:text-font-white'
+        }`}
+      >
         {title}
-      </p>
+      </button>
     </Link>
   );
 }
@@ -26,6 +37,8 @@ function NavItem({ title, href }: NavItemProps) {
 export default function Navbar() {
   const [isOpen, setOpen] = React.useState<boolean>(false);
   const [isFixed, setFixed] = React.useState<boolean>(false);
+  const [activeLink, setActiveLink] = React.useState<string>('Inicio');
+  const updateActiveLink = React.useCallback(setActiveLink, [setActiveLink]);
   const [, setTheme] = useTheme();
 
   const toggleTheme = () => {
@@ -63,14 +76,18 @@ export default function Navbar() {
       role="navigation"
     >
       <Link to="/" className="mr-auto">
-        <div className="w-40 lg:w-48 xl:w-56">
+        <button
+          type="button"
+          onClick={() => setActiveLink('Inicio')}
+          className="focus:ring-0 focus:outline-none w-40 lg:w-48 xl:w-56"
+        >
           <StaticImage
             src="../assets/images/logo_white.png"
             alt="Avila Tek logo"
             placeholder="blurred"
             layout="fullWidth"
           />
-        </div>
+        </button>
       </Link>
 
       {/* Hamburger button */}
@@ -96,12 +113,42 @@ export default function Navbar() {
       </div>
 
       <div className="md:flex w-full md:w-auto items-center overflow-hidden my-6 md:my-0">
-        <NavItem title="Inicio" href="/" />
-        <NavItem title="Nosotros" href="/#about-us" />
-        <NavItem title="Productos" href="/#products" />
-        <NavItem title="Servicios" href="/#services" />
-        <NavItem title="Portafolio" href="/#portfolio" />
-        <NavItem title="Contacto" href="/#contact" />
+        <NavItem
+          title="Inicio"
+          href="/"
+          activeLink={activeLink}
+          updateActiveLink={updateActiveLink}
+        />
+        <NavItem
+          title="Nosotros"
+          href="/#about-us"
+          activeLink={activeLink}
+          updateActiveLink={updateActiveLink}
+        />
+        <NavItem
+          title="Productos"
+          href="/#products"
+          activeLink={activeLink}
+          updateActiveLink={updateActiveLink}
+        />
+        <NavItem
+          title="Servicios"
+          href="/#services"
+          activeLink={activeLink}
+          updateActiveLink={updateActiveLink}
+        />
+        <NavItem
+          title="Portafolio"
+          href="/#portfolio"
+          activeLink={activeLink}
+          updateActiveLink={updateActiveLink}
+        />
+        <NavItem
+          title="Contacto"
+          href="/#contact"
+          activeLink={activeLink}
+          updateActiveLink={updateActiveLink}
+        />
 
         <label className="relative inline-block w-14 h-7 ml-1.5 mt-1.5 md:mt-0">
           <input
