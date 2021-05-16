@@ -41,12 +41,11 @@ export default function Banner() {
      return () => clearInterval(interval);
    }, [active]);
 
-  // gap-2 md:gap-16 lg:gap-20 xl:gap-24
   return (
     <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
-      <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-24 pb-12 px-10 md:px-12 lg:px-16 xl:px-20">
+      <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-20 pb-12 px-10 md:px-12 lg:px-16 xl:px-20">
         {/* Banner details */}
-        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pt-4 md:pt-10 lg:pt-16 xl:pt-16 z-10">
+        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pt-4 md:pt-10 lg:pt-12 z-10">
           <Fade triggerOnce cascade>
             <div className="h-18 sm:h-16 md:h-20 lg:h-24">
               <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold relative">
