@@ -1,13 +1,13 @@
 import React from 'react';
 
 // a hook that alerts when someone clicks outside of the passed ref
-export default function useOutsideAlerter(ref, calledFunction) {
+export default function useOutsideAlerter(ref, calledFunction: () => any) {
   React.useEffect(() => {
     function handleClickOutside(e) {
       if (ref.current && !ref.current.contains(e.target)) {
         // do the action here
         alert('Clicked outside');
-        calledFunction();
+        // calledFunction();
       }
     }
     // if the document exists, then we bind the event listener
