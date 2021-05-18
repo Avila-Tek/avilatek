@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import LightModeIcon from './icons/LightModeIcon';
 import DarkModeIcon from './icons/DarkModeIcon';
 import useTheme from '../hooks/useTheme';
+// import useOutsideAlerter from '../hooks/useOutsideAlerter';
 
 interface NavItemProps {
   title: string;
@@ -24,7 +25,7 @@ function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
         onClick={() => updateActiveLink(title)}
         className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
           activeLink === title
-            ? 'text-primary-400 dark:text-primary-300 font-medium border-b border-primary-400'
+            ? 'text-primary-400 dark:text-primary-400 border-b border-primary-400'
             : 'text-font-dark dark:text-font-white'
         }`}
       >
@@ -39,7 +40,10 @@ export default function Navbar() {
   const [isFixed, setFixed] = React.useState<boolean>(false);
   const [activeLink, setActiveLink] = React.useState<string>('Inicio');
   const updateActiveLink = React.useCallback(setActiveLink, [setActiveLink]);
+  const updateOpenState = React.useCallback(setOpen, [setOpen]);
   const [, setTheme] = useTheme();
+  // const wrapperRef = React.useRef(null);
+  // useOutsideAlerter(wrapperRef, updateOpenState(false));
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
@@ -67,6 +71,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
+      // ref={wrapperRef}
       initial={{ height: '4.2rem' }}
       animate={{ height: isOpen ? 'auto' : '4.2rem' }}
       transition={{ type: 'spring', damping: 25 }}
@@ -112,7 +117,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className="md:flex w-full md:w-auto items-center overflow-hidden my-6 md:my-0">
+      <div className="flex flex-col md:flex-row w-full md:w-auto md:items-center overflow-hidden my-6 md:my-0">
         <NavItem
           title="Inicio"
           href="/"
