@@ -3,13 +3,9 @@ import useOutsideAlerter from '../hooks/useOutsideAlerter';
 
 interface OutsideAlerterProps {
   children?: React.ReactChild | Array<React.ReactChild>;
-  updateOpenState?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export default function OutsideAlerter({
-  children,
-  updateOpenState,
-}: OutsideAlerterProps) {
+export default function OutsideAlerter({ children }: OutsideAlerterProps) {
   const wrapperRef = React.useRef(null);
   useOutsideAlerter(wrapperRef);
 

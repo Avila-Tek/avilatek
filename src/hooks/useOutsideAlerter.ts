@@ -1,7 +1,7 @@
 import React from 'react';
 
 // a hook that alerts when someone clicks outside of the passed ref
-export default function useOutsideAlerter(ref, calledFunction: () => any) {
+export default function useOutsideAlerter(ref) {
   React.useEffect(() => {
     function handleClickOutside(e) {
       if (ref.current && !ref.current.contains(e.target)) {
@@ -18,5 +18,5 @@ export default function useOutsideAlerter(ref, calledFunction: () => any) {
         document.removeEventListener('mousedown', handleClickOutside);
       };
     }
-  }, [ref]);
+  }, []);
 }
