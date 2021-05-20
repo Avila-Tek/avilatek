@@ -114,7 +114,7 @@ export default function Navbar() {
       </Link>
 
       {/* Hamburger button */}
-      <div className="ml-auto md:hidden w-auto mt-1">
+      <div className="ml-auto md:hidden w-auto">
         <button
           className="text-font-black dark:text-font-white hover:text-primary-300 focus:outline-none"
           type="button"

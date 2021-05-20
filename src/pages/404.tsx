@@ -11,7 +11,7 @@ export default function NotFoundPage() {
         <img
           src={FourOhFourIllustration}
           alt="404 Not Found"
-          className="w-8/12 md:w-5/12 mr-8"
+          className="w-7/12 sm:w-6/12 md:w-5/12 xl:w-4/12 mr-8"
         />
         <div className="mt-6 w-8/12 md:w-5/12 relative z-10">
           <h2 className="font-bold text-primary-500 text-base lg:text-lg">
@@ -27,16 +27,9 @@ export default function NotFoundPage() {
           >
             Volver al inicio
           </Link>
-          <div className="absolute -top-14 -left-10 rounded-blob w-72 h-80 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90 dark:bg-opacity-25" />
+          <div className="absolute -top-14 -left-10 rounded-blob w-72 h-64 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90 dark:bg-opacity-25" />
         </div>
       </div>
-      {/* {process.env.NODE_ENV === 'development' ? (
-        <>
-          <br />
-          Try creating a page in <code>src/pages/</code>.
-          <br />
-        </>
-      ) : null} */}
     </main>
   );
 }
