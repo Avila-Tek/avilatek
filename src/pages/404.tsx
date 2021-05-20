@@ -10,7 +10,7 @@ export default function NotFoundPage() {
       <div className="h-screen w-full flex flex-col md:flex-row items-center justify-center py-32 px-6 md:px-12 lg:px-20">
         <PageNotFound />
         <div className="mt-2 md:mt-6 w-8/12 md:w-5/12 relative z-10">
-          <h2 className="font-bold text-primary-500 text-base lg:text-lg">
+          <h2 className="font-bold text-primary-500 dark:text-primary-400 text-base lg:text-lg">
             Oops, la página no pudo se encontrada
           </h2>
           <p className="mt-4 mb-2 text-sm lg:text-base">
