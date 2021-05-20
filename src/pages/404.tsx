@@ -1,19 +1,15 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 import SEO from '../components/SEO';
-import FourOhFourIllustration from '../assets/illustrations/404-error-page-animate.svg';
+import PageNotFound from '../components/icons/PageNotFound';
 
 export default function NotFoundPage() {
   return (
     <main>
       <SEO title="404" />
-      <div className="h-screen w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-12 lg:px-20">
-        <img
-          src={FourOhFourIllustration}
-          alt="404 Not Found"
-          className="w-7/12 sm:w-6/12 md:w-5/12 xl:w-4/12 mr-8"
-        />
-        <div className="mt-6 w-8/12 md:w-5/12 relative z-10">
+      <div className="h-screen w-full flex flex-col md:flex-row items-center justify-center py-32 px-6 md:px-12 lg:px-20">
+        <PageNotFound />
+        <div className="mt-2 md:mt-6 w-8/12 md:w-5/12 relative z-10">
           <h2 className="font-bold text-primary-500 text-base lg:text-lg">
             Oops, la página no pudo se encontrada
           </h2>
