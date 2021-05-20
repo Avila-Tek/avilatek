@@ -25,7 +25,8 @@ export default function CallCenter() {
           ></path>
           <path
             id="Vector_3"
-            fill="#E6E9EE"
+            className="text-gray-300 dark:text-gray-500"
+            fill="currentColor"
             d="M302.886 10.016H140.78v153.149h162.106V10.015z"
           ></path>
           <path
