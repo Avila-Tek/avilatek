@@ -53,7 +53,7 @@ export default function PortfolioSection() {
         {/* Portfolio slider */}
         <PortfolioSlider projects={projects} />
         {/* Know more button */}
-        <div className="w-full flex justify-center mt-16 lg:mt-20">
+        <div className="w-full flex justify-center mt-14 lg:mt-18">
           <button
             type="button"
             aria-label="Ir al portafolio"

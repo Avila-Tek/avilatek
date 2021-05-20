@@ -31,7 +31,7 @@ export default function ContactSection() {
           <ContactForm />
 
           {/* Contact us illustration */}
-          <div className="w-10/12 sm:w-7/12 lg:w-5/12 mt-12 lg:mt-0 mx-auto lg:mx-0 h-full">
+          <div className="w-10/12 sm:w-7/12 lg:w-5/12 pt-8 lg:pt-0 mt-12 lg:mt-0 mx-auto lg:mx-0 h-full">
             <CallCenter />
             {/* Extra info */}
             <div className="mt-10">
