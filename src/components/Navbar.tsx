@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import LightModeIcon from './icons/LightModeIcon';
 import DarkModeIcon from './icons/DarkModeIcon';
 import useTheme from '../hooks/useTheme';
+import useOutsideAlerter from '../hooks/useOutsideAlerter';
 
 interface NavItemProps {
   title: string;
@@ -16,7 +17,6 @@ interface NavItemProps {
 
 function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
   return (
-    // activeClassName="text-primary-400"
     // ! Link activeClassName doesn't work this anchors
     <Link to={href}>
       <button
@@ -42,8 +42,7 @@ export default function Navbar() {
   const updateActiveLink = React.useCallback(setActiveLink, [setActiveLink]);
   const updateOpenState = React.useCallback(setOpen, [setOpen]);
   const [, setTheme] = useTheme();
-  // const wrapperRef = React.useRef(null);
-  // useOutsideAlerter(wrapperRef, updateOpenState(false));
+  useOutsideAlerter(wrapper, updateOpenState);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
@@ -52,24 +51,6 @@ export default function Navbar() {
   const toggleNav = () => {
     setOpen((prev) => !prev);
   };
-
-  React.useEffect(() => {
-    function handleClickOutside(e) {
-      if (wrapper.current && !wrapper.current.contains(e.target)) {
-        // do the action here
-        setOpen(false);
-        // calledFunction();
-      }
-    }
-    // if the document exists, then we bind the event listener
-    if (typeof document !== undefined) {
-      document.addEventListener('mousedown', handleClickOutside);
-      return () => {
-        // unbind the event listener on clean up
-        document.removeEventListener('mousedown', handleClickOutside);
-      };
-    }
-  }, []);
 
   React.useEffect(() => {
     // Set fixed true when the scroll height is greater than 400px
