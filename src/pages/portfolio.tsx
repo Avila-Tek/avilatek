@@ -1,9 +1,10 @@
 import React from 'react';
-import PortfolioBanner from '../components/portfolio/PortfolioBanner';
 import { Project } from '../components/portfolio/PortfolioSlider';
 import SEO from '../components/SEO';
 import Technologies from '../components/Tecnologies';
 import ProjectsList from '../components/portfolio/ProjectsList';
+import Documents from '../components/icons/Documents';
+import DefaultBanner from '../components/DefaultBanner';
 
 export default function PortfolioPage() {
   const projects: Array<Project> = [
@@ -71,10 +72,24 @@ export default function PortfolioPage() {
     },
   ];
 
+  const data = {
+    title: (
+      <>
+        Conocer parte de nuestros{' '}
+        <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
+          proyectos
+        </mark>
+      </>
+    ),
+    description:
+      'Proyectos desarollados a la medida con base a las necesidades de cada cliente.',
+    illustration: <Documents />,
+  };
+
   return (
     <main>
       <SEO title="Portafolio" />
-      <PortfolioBanner />
+      <DefaultBanner {...data} />
       <Technologies />
       <ProjectsList projects={projects} />
     </main>

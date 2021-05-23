@@ -1,12 +1,21 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { motion } from 'framer-motion';
-import Waves from '../icons/Waves';
-import Documents from '../icons/Documents';
-import Line from '../icons/Line';
-import RotatingTriangle from '../icons/RotatingTriangle';
+import Waves from './icons/Waves';
+import Line from './icons/Line';
+import RotatingTriangle from './icons/RotatingTriangle';
 
-export default function Banner() {
+interface DefaultBannerProps {
+  title?: React.ReactChild | Array<React.ReactChild>;
+  description?: string;
+  illustration?: React.ReactChild | Array<React.ReactChild>;
+}
+
+export default function DefaultBanner({
+  description,
+  illustration,
+  title,
+}: DefaultBannerProps) {
   const bracketVariants = {
     animation: {
       opacity: [1, 0.4, 1],
@@ -31,10 +40,7 @@ export default function Banner() {
               >
                 [
               </motion.span>
-              Conocer parte de nuestros{' '}
-              <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-                proyectos
-              </mark>
+              {title}
               <motion.span
                 variants={bracketVariants}
                 animate="animation"
@@ -43,17 +49,12 @@ export default function Banner() {
                 ]
               </motion.span>
             </h1>
-            <p className="w-full my-6 text-sm lg:text-base">
-              Proyectos desarollados a la medida con base a las necesidades de
-              cada cliente.{' '}
-            </p>
+            <p className="w-full my-6 text-sm lg:text-base">{description}</p>
           </Fade>
         </div>
         {/* Animated Illustration */}
         <div className="w-9/12 sm:w-6/12 md:w-5/12 lg:w-4/12 mx-auto md:mr-0 md:ml-14 lg:ml-16 xl:ml-24 z-10">
-          <Fade triggerOnce>
-            <Documents />
-          </Fade>
+          <Fade triggerOnce>{illustration}</Fade>
         </div>
         <RotatingTriangle className="top-12 right-8/12 md:right-1/2" />
         <RotatingTriangle className="right-2/12 top-5/12" />
