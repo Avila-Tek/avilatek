@@ -19,79 +19,23 @@ export default function Documents() {
             d="M448.904 299.455H0v.225h448.904v-.225z"
           ></path>
           <path
-            id="elz9ard0a6uc"
-            fill="#E6E6E6"
-            d="M420.534 307.374h-16.852v.224h16.852v-.224z"
-          ></path>
-          <path
-            id="el2ir5ibxmlx2"
-            fill="#E6E6E6"
-            d="M342.747 313.533h-7.802v.224h7.802v-.224z"
-          ></path>
-          <path
-            id="els5ak5tv08c"
-            fill="#E6E6E6"
-            d="M268.732 310.435h-17.381v.225h17.381v-.225z"
-          ></path>
-          <path
-            id="elkz35zi9x7u"
-            fill="#E6E6E6"
-            d="M111.436 310.319H72.66v.224h38.776v-.224z"
-          ></path>
-          <path
-            id="el0cn9rd7koxet"
-            fill="#E6E6E6"
-            d="M64.669 310.319h-5.683v.224h5.683v-.224z"
-          ></path>
-          <path
-            id="elsczp346zbiq"
-            fill="#E6E6E6"
-            d="M254.062 305.003h-84.107v.225h84.107v-.225z"
-          ></path>
-          <path
-            id="elko9965qd5d"
-            fill="#E6E6E6"
-            d="M212.781 259.413H39.423a5.13 5.13 0 01-5.118-5.127V10.594a5.126 5.126 0 015.118-5.081H212.78a5.129 5.129 0 015.126 5.126v243.647a5.126 5.126 0 01-5.126 5.127zM39.423 5.693a4.902 4.902 0 00-4.893 4.901v243.692a4.901 4.901 0 004.893 4.902H212.78a4.908 4.908 0 004.902-4.902V10.594a4.913 4.913 0 00-4.902-4.902H39.423z"
-          ></path>
-          <path
-            id="elg6yi5qjtunq"
-            fill="#E6E6E6"
-            d="M406.986 259.413H233.619a5.139 5.139 0 01-5.127-5.127V10.594a5.133 5.133 0 015.127-5.081h173.367a5.126 5.126 0 015.108 5.081v243.692a5.129 5.129 0 01-5.108 5.127zM233.619 5.693a4.911 4.911 0 00-4.902 4.901v243.692a4.908 4.908 0 004.902 4.902h173.367a4.908 4.908 0 004.902-4.902V10.594a4.913 4.913 0 00-4.902-4.902H233.619z"
-          ></path>
-          <path
             id="elxhjezcpqkh9"
-            fill="#FAFAFA"
+            className="text-gray-100 dark:text-gray-300"
+            fill="currentColor"
             d="M234.292 22.284H52.71v129.401h181.582V22.284z"
           ></path>
           <path
-            id="elevkfn8rzsj8"
-            fill="#F5F5F5"
-            d="M237.65 22.284H54.282v129.401H237.65V22.284z"
-          ></path>
-          <g id="elaic4zimz76t">
-            <path
-              id="Vector"
-              fill="#FAFAFA"
-              d="M205.383 0H86.549v173.959h118.834V0z"
-            ></path>
-          </g>
-          <path
             id="elunbr5qkyrds"
-            fill="#fff"
+            fill="currentColor"
+            className="text-gray-100"
             d="M90.66 146.397L118.26 27.563h36.182l-27.599 118.834H90.661z"
           ></path>
           <path
             id="elazb1syf3hj9"
-            fill="#fff"
+            fill="currentColor"
+            className="text-gray-100"
             d="M132.696 146.397l27.608-118.834h16.34l-27.608 118.834h-16.34z"
           ></path>
-          <g id="elvbcjc14wzgs">
-            <path
-              id="Vector_2"
-              fill="#FAFAFA"
-              d="M292.066 86.683H173.232v.602h118.834v-.602z"
-            ></path>
-          </g>
           <path
             id="elylo7wyhtxk"
             fill="#E0E0E0"
@@ -133,11 +77,6 @@ export default function Documents() {
             id="elzwplvwnbf29"
             fill="#F4F8FF"
             d="M229.444 299.455h7.964v-13.35h-16.313l8.349 13.35z"
-          ></path>
-          <path
-            id="elomfbm2iujoe"
-            fill="#E0E0E0"
-            d="M94.674 183.871H64.84v115.584h29.834V183.871z"
           ></path>
           <path
             id="elosn4dis1vqe"
@@ -202,7 +141,8 @@ export default function Documents() {
           <g id="elvvgpe3xgf3">
             <path
               id="Vector_4"
-              fill="#fff"
+              fill="currentColor"
+              className="text-gray-50 dark:text-gray-200"
               d="M322.744 14.643h-38.731v59.588h38.731V14.643z"
             ></path>
           </g>
@@ -226,17 +166,12 @@ export default function Documents() {
           <g id="elym2ix1jrkuo">
             <path
               id="Vector_6"
-              fill="#fff"
+              // fill="#fff"
+              className="text-gray-50 dark:text-gray-200"
+              fill="currentColor"
               d="M387.405 48.949h-33.83v33.515h33.83V48.949z"
             ></path>
           </g>
-        </g>
-        <g id="shadow">
-          <path
-            id="elfiainqwfpfb"
-            fill="#F5F5F5"
-            d="M224.452 340c96.14 0 174.076-4.55 174.076-10.163s-77.936-10.163-174.076-10.163c-96.139 0-174.076 4.55-174.076 10.163S128.313 340 224.452 340z"
-          ></path>
         </g>
         <motion.g
           animate={{ rotate: [1.5, 0, 1.1] }}
@@ -590,14 +525,6 @@ export default function Documents() {
               opacity="0.6"
             ></path>
           </g>
-          <g id="elezsc7qi5jfj">
-            <path
-              id="Vector_17"
-              fill="#13CB6E"
-              d="M145.598 107.099l6.401 20.731a10.425 10.425 0 0013.027 6.877l20.722-6.401-40.15-21.207z"
-              opacity="0.22"
-            ></path>
-          </g>
           <path
             id="eliprlzfgqyte"
             fill="#13CB6E"
@@ -722,27 +649,6 @@ export default function Documents() {
               fill="#000"
               d="M198.793 55.62l23.505 52.377a5.666 5.666 0 01-2.837 7.47l-99.711 44.756a5.655 5.655 0 01-7.47-2.837l-23.513-52.378a5.656 5.656 0 012.837-7.48l99.71-44.755a5.675 5.675 0 017.479 2.846z"
               opacity="0.3"
-            ></path>
-          </g>
-          <g id="elu4su6z1e2ci">
-            <path
-              id="Vector_20"
-              fill="#13CB6E"
-              d="M183.413 53.707h-3.492v.898h3.492v-.898z"
-            ></path>
-          </g>
-          <g id="elgx239u1dj7m">
-            <path
-              id="Vector_21"
-              fill="#13CB6E"
-              d="M176.087 58.654h-10.89v.898h10.89v-.898z"
-            ></path>
-          </g>
-          <g id="elbcnw5k1mvpb">
-            <path
-              id="Vector_22"
-              fill="#13CB6E"
-              d="M90.078 110.188h-.898v6.644h.897v-6.644z"
             ></path>
           </g>
           <g id="el3zo51qrad65">

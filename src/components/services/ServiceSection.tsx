@@ -34,7 +34,7 @@ export default function ServiceSection() {
       id="services"
       className="pt-24 md:pt-56 -mt-24 md:-mt-56 w-full pb-48 md:pb-64 flex flex-col md:flex-row px-14 lg:px-24 items-center justify-center relative z-10 overflow-hidden"
     >
-      <div className="w-10/12 md:w-4/12 mb-20 md:mb-0 mr-0 md:mr-20 xl:mr-28">
+      <div className="w-10/12 md:w-4/12 mb-20 md:mb-0 mr-0 md:mr-20 xl:mr-28 -mt-6 sm:-mt-10 md:-mt-14 lg:-mt-20">
         <Fade cascade triggerOnce>
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
             Nuestros <span className="text-primary-400">servicios</span> a la{' '}

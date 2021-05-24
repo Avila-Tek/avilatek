@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import LightModeIcon from './icons/LightModeIcon';
 import DarkModeIcon from './icons/DarkModeIcon';
 import useTheme from '../hooks/useTheme';
-// import useOutsideAlerter from '../hooks/useOutsideAlerter';
+import useOutsideAlerter from '../hooks/useOutsideAlerter';
 
 interface NavItemProps {
   title: string;
@@ -17,13 +17,12 @@ interface NavItemProps {
 
 function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
   return (
-    // activeClassName="text-primary-400"
     // ! Link activeClassName doesn't work this anchors
     <Link to={href}>
       <button
         type="button"
         onClick={() => updateActiveLink(title)}
-        className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
+        className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
           activeLink === title
             ? 'text-primary-400 dark:text-primary-400 border-b border-primary-400'
             : 'text-font-dark dark:text-font-white'
@@ -36,14 +35,14 @@ function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
 }
 
 export default function Navbar() {
+  const wrapper = React.useRef(null);
   const [isOpen, setOpen] = React.useState<boolean>(false);
   const [isFixed, setFixed] = React.useState<boolean>(false);
   const [activeLink, setActiveLink] = React.useState<string>('Inicio');
   const updateActiveLink = React.useCallback(setActiveLink, [setActiveLink]);
   const updateOpenState = React.useCallback(setOpen, [setOpen]);
   const [, setTheme] = useTheme();
-  // const wrapperRef = React.useRef(null);
-  // useOutsideAlerter(wrapperRef, updateOpenState(false));
+  useOutsideAlerter(wrapper, updateOpenState);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
@@ -71,7 +70,7 @@ export default function Navbar() {
 
   return (
     <motion.nav
-      // ref={wrapperRef}
+      ref={wrapper}
       initial={{ height: '4.2rem' }}
       animate={{ height: isOpen ? 'auto' : '4.2rem' }}
       transition={{ type: 'spring', damping: 25 }}
@@ -96,7 +95,7 @@ export default function Navbar() {
       </Link>
 
       {/* Hamburger button */}
-      <div className="ml-auto md:hidden w-auto mt-1">
+      <div className="ml-auto md:hidden w-auto">
         <button
           className="text-font-black dark:text-font-white hover:text-primary-300 focus:outline-none"
           type="button"
@@ -117,7 +116,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className="flex flex-col md:flex-row w-full md:w-auto md:items-center overflow-hidden my-6 md:my-0">
+      <div className="flex flex-col md:flex-row w-full md:w-auto md:items-center overflow-hidden my-4 md:my-0">
         <NavItem
           title="Inicio"
           href="/"
@@ -155,7 +154,7 @@ export default function Navbar() {
           updateActiveLink={updateActiveLink}
         />
 
-        <label className="relative inline-block w-14 h-7 ml-1.5 mt-1.5 md:mt-0">
+        <label className="relative inline-block w-14 h-7 ml-1.5 mt-4 md:mt-0">
           <input
             type="checkbox"
             className="checkbox focus:outline-none"

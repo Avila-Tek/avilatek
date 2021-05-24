@@ -21,7 +21,7 @@ export default function Banner() {
     <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
       <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center md:items-start pt-14 md:pt-24 pb-8 md:pb-6 px-10 md:px-12 lg:px-16 xl:px-20">
         {/* Banner details */}
-        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pt-4 md:pt-24 lg:pt-20 z-10">
+        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pt-2 md:pt-24 lg:pt-20 z-10">
           <Fade triggerOnce cascade>
             <h1 className="text-xl lg:text-2xl xl:text-3xl font-bold relative">
               <motion.span
