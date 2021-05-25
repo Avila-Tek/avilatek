@@ -52,17 +52,17 @@ export default function PostCard({
         />
       </div>
       {/* Post details */}
-      <div className="absolute bottom-6 left-6 p-5 flex flex-col items-center justify-between text-center rounded-md w-10/12 h-48 md:h-52 xl:h-56 bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-none">
+      <div className="absolute bottom-6 left-6 p-6 lg:p-5 flex flex-col items-center justify-between text-center rounded-md w-10/12 h-48 md:h-52 xl:h-56 bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-none">
         {/* Category and title are in same tag so it looks neater */}
         <div className="w-full">
           <h3 className="text-xs lg:text-xsm text-secondary-100 dark:text-neutral-300 mb-1.5 sm:mb-1">
             {category}
           </h3>
-          <h2 className="second-line-clamp text-primary-500 dark:text-primary-300 text-sm md:text-base xl:text-2base font-medium leading-snug sm:leading-tight">
+          <h2 className="third-line-clamp text-primary-500 dark:text-primary-300 text-sm md:text-base xl:text-2base font-medium leading-snug sm:leading-tight">
             {title}
           </h2>
         </div>
-        <p className="second-line-clamp xl:third-line-clamp text-xsm md:text-sm leading-snug">
+        <p className="second-line-clamp xl:third-line-clamp text-xsm lg:text-sm leading-snug">
           {description}
         </p>
         {/* Author and date */}

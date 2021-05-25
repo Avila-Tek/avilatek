@@ -37,6 +37,36 @@ const posts: Array<Post> = [
     image: 'imagine there is a image',
     date: new Date(),
   },
+  {
+    id: 'this-is-a-test-4',
+    title: 'Why should we use GatsbyJS',
+    author: 'John Doe',
+    category: 'Desarrollo Web',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.',
+    image: 'imagine there is a image',
+    date: new Date(),
+  },
+  {
+    id: 'this-is-a-test-5',
+    title: 'Why should we use GatsbyJS',
+    author: 'John Doe',
+    category: 'Desarrollo Web',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.',
+    image: 'imagine there is a image',
+    date: new Date(),
+  },
+  {
+    id: 'this-is-a-test-6',
+    title: 'Why should we use GatsbyJS',
+    author: 'John Doe',
+    category: 'Desarrollo Web',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.',
+    image: 'imagine there is a image',
+    date: new Date(),
+  },
 ];
 
 export default function BlogPage() {
