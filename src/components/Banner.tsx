@@ -16,12 +16,6 @@ export default function Banner() {
     'hacemos consultorías',
   ];
 
-  const variants = {
-    initial: { y: -20, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-    exit: { y: 20, opacity: 0 },
-  };
-
   const bracketVariants = {
     animation: {
       opacity: [1, 0.4, 1],

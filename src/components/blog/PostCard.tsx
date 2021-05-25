@@ -39,7 +39,7 @@ export default function PostCard({
   return (
     <motion.div
       whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
-      className="relative h-88 w-80 rounded-md shadow-blue dark:shadow-none bg-medium-blue dark:bg-dark-gray overflow-hidden"
+      className="relative h-80 w-68 lg:h-88 lg:w-80 rounded-md shadow-blue dark:shadow-none bg-medium-blue dark:bg-dark-gray my-4 mx-auto sm:mx-4 overflow-hidden"
     >
       {/* Post image */}
       <div className="w-full h-1/2">
@@ -52,19 +52,19 @@ export default function PostCard({
         />
       </div>
       {/* Post details */}
-      <div className="absolute bottom-6 left-6 p-5 flex flex-col items-center justify-between text-center rounded-md w-10/12 h-56 bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-none">
+      <div className="absolute bottom-6 left-6 p-5 flex flex-col items-center justify-between text-center rounded-md w-10/12 h-50 md:h-52 lg:h-56 bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-none">
         {/* Category and title are in same tag so it looks neater */}
         <div className="w-full">
-          <h3 className="text-xsm text-secondary-100 font-medium mb-1">
+          <h3 className="text-xs md:text-xsm text-secondary-100 dark:text-neutral-200 font-medium mb-1.5 sm:mb-1">
             {category}
           </h3>
           <h2 className="text-primary-500 dark:text-primary-300 xl:text-lg font-semibold leading-tight">
             {title}
           </h2>
         </div>
-        <p className="line-clamp text-sm leading-snug">{description}</p>
+        <p className="second-line-clamp lg:third-line-clamp text-xsm md:text-sm leading-snug">{description}</p>
         {/* Author and date */}
-        <div className="text-xsm flex items-center text-secondary-50">
+        <div className="text-xs md:text-xsm flex items-center text-secondary-50 dark:text-neutral-300">
           <h3>{author}</h3>
           <p className="mx-2">•</p>
           <h4>

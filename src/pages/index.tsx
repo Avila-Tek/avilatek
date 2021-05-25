@@ -19,7 +19,7 @@ export default function HomePage() {
       <ProductsSection />
       <ServiceSection />
       <PortfolioSection />
-      {/* <BlogSection /> */}
+      <BlogSection />
       <ContactSection />
     </main>
   );

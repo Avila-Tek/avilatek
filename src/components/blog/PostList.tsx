@@ -15,7 +15,7 @@ export default function PostList({
   return (
     <div className="w-full flex justify-center px-10 md:px-28">
       {filters ? <div>I'M A FILTER</div> : null}
-      <div className="grid grid-cols-3 gap-8">
+      <div className="w-full flex flex-wrap justify-center">
         {posts.map((post) => (
           <PostCard key={post?.id} {...post} />
         ))}
