@@ -2,7 +2,7 @@ import React from 'react';
 import DefaultBanner from '../components/DefaultBanner';
 import SEO from '../components/SEO';
 import BlogPost from '../components/icons/BlogPost';
-import PostProfile from '../components/blog/PostProfile';
+import SinglePostPage from '../templates/PostProfile';
 
 export default function BlogPage() {
   const data = {
@@ -23,8 +23,8 @@ export default function BlogPage() {
   return (
     <main>
       <SEO title="Blog" />
-      {/* <DefaultBanner {...data} /> */}
-      <PostProfile />
+      <DefaultBanner {...data} />
+      {/* <SinglePostPage /> */}
     </main>
   );
 }
