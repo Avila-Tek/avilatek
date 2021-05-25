@@ -41,7 +41,7 @@ export default function ProductsSection() {
   return (
     <section
       id="blog"
-      className="pt-0.5 -mt-0.5 pb-56 md:pb-80 w-full relative z-10 overflow-hidden"
+      className="pt-0.5 -mt-0.5 pb-48 md:pb-68 w-full relative z-10 overflow-hidden"
     >
       <Fade cascade triggerOnce>
         <div className="w-full text-center mb-20 mt-32">

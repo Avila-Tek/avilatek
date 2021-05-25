@@ -90,6 +90,7 @@ module.exports = {
         18: '4.5rem',
         50: '12.5rem',
         68: '17rem',
+        76: '19rem',
         88: '22rem',
         104: '26rem',
         112: '28rem',
@@ -101,6 +102,7 @@ module.exports = {
       fontSize: {
         xsm: ['0.825rem', { lineHeight: '1.2rem' }],
         '2xs': ['0.615rem', { lineHeight: '0.75rem' }],
+        '2base': ['1.07rem', { lineHeight: '1.55rem' }],
       },
       borderRadius: {
         blob: '81% 30% 30% 70% / 60% 40% 60% 40%;',
