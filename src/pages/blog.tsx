@@ -37,11 +37,11 @@ export default function BlogPage({ data }) {
   };
 
   return (
-    <main>
+    <>
       <SEO title="Blog" />
       <DefaultBanner {...banner} />
       <PostList posts={posts} pagination filters />
-    </main>
+    </>
   );
 }
 
