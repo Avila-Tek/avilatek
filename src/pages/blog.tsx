@@ -1,76 +1,27 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import DefaultBanner from '../components/DefaultBanner';
 import SEO from '../components/SEO';
 import BlogPost from '../components/icons/BlogPost';
-import SinglePostPage from '../templates/PostProfile';
 import { Post } from '../components/blog/PostCard';
 import PostList from '../components/blog/PostList';
 
-const posts: Array<Post> = [
-  {
-    id: 'this-is-a-test',
-    title: 'Why should we use GatsbyJS',
-    author: 'John Doe',
-    category: 'Desarrollo Web',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.',
-    image: 'imagine there is a image',
-    date: new Date(),
-  },
-  {
-    id: 'this-is-a-test-2',
-    title: 'Why should we use GatsbyJS',
-    author: 'John Doe',
-    category: 'Desarrollo Web',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.',
-    image: 'imagine there is a image',
-    date: new Date(),
-  },
-  {
-    id: 'this-is-a-test-3',
-    title: 'Why should we use GatsbyJS',
-    author: 'John Doe',
-    category: 'Desarrollo Web',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.',
-    image: 'imagine there is a image',
-    date: new Date(),
-  },
-  {
-    id: 'this-is-a-test-4',
-    title: 'Why should we use GatsbyJS',
-    author: 'John Doe',
-    category: 'Desarrollo Web',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.',
-    image: 'imagine there is a image',
-    date: new Date(),
-  },
-  {
-    id: 'this-is-a-test-5',
-    title: 'Why should we use GatsbyJS',
-    author: 'John Doe',
-    category: 'Desarrollo Web',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.',
-    image: 'imagine there is a image',
-    date: new Date(),
-  },
-  {
-    id: 'this-is-a-test-6',
-    title: 'Why should we use GatsbyJS',
-    author: 'John Doe',
-    category: 'Desarrollo Web',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.',
-    image: 'imagine there is a image',
-    date: new Date(),
-  },
-];
+export default function BlogPage({ data }) {
+  const posts: Array<Post> = data?.allMarkdownRemark?.edges.map(
+    (n) =>
+      ({
+        author: n.node.frontmatter.author,
+        date: new Date(n.node.frontmatter.date),
+        slug: n.node.frontmatter.slug,
+        title: n.node.frontmatter.title,
+        subtitle: n.node.frontmatter.subtitle,
+        description: n.node.frontmatter.description,
+        image: n.node.frontmatter.image,
+        category: n.node.frontmatter.category,
+      } as Post)
+  );
 
-export default function BlogPage() {
-  const data = {
+  const banner = {
     title: (
       <>
         Frase relacionada a este{' '}
@@ -88,9 +39,30 @@ export default function BlogPage() {
   return (
     <main>
       <SEO title="Blog" />
-      <DefaultBanner {...data} />
-      <PostList posts={posts} pagination />
-      {/* <SinglePostPage /> */}
+      <DefaultBanner {...banner} />
+      <PostList posts={posts} pagination filters />
     </main>
   );
 }
+
+export const getPosts = graphql`
+  query getPosts {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            author
+            date
+            slug
+            subtitle
+            title
+            description
+            image
+            category
+          }
+          html
+        }
+      }
+    }
+  }
+`;

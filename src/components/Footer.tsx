@@ -76,7 +76,7 @@ export default function Footer() {
             target="_blank"
             aria-label="Trabaja con nosotros"
             rel="noopener"
-            className="px-6 text-xs md:text-sm text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
+            className="px-6 text-xs md:text-sm text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
           >
             Trabaja con nosotros
           </a>

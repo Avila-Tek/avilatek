@@ -74,7 +74,7 @@ export default function Navbar() {
       initial={{ height: '4.2rem' }}
       animate={{ height: isOpen ? 'auto' : '4.2rem' }}
       transition={{ type: 'spring', damping: 25 }}
-      className={`fixed z-50 md:h-auto bg-light-blue dark:bg-dark-gray flex flex-wrap justify-between items-center w-full px-6 lg:px-16 xl:px-20 py-4 md:py-2 transition duration-300 ease-in-out overflow-hidden ${
+      className={`fixed z-50 md:h-auto bg-light-blue dark:bg-dark-gray flex flex-wrap justify-between items-center w-full px-6 lg:px-16 xl:px-20 py-4 md:py-1 transition duration-300 ease-in-out overflow-hidden ${
         isFixed || isOpen ? 'shadow-blue dark:shadow-dark-gray' : ''
       }`}
       role="navigation"

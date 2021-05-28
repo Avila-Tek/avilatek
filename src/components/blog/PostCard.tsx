@@ -10,25 +10,28 @@ dayjs.locale('es');
 export type Post = {
   category?: string;
   title: string;
-  id: string; // ? or maybe slug
+  slug: string; // ? or maybe slug
   description?: string;
   author?: string;
   date?: Date;
-  image?: any; // TODO define where will this be stored
+  image?: string;
+  authorImage?: string;
+  authorDescription?: string;
+  html?: any;
 };
 
 interface PostCardProps {
   category?: string;
   title: string;
-  id: string;
+  slug: string;
   description?: string;
   author?: string;
   date?: Date;
-  image?: any;
+  image?: string;
 }
 
 export default function PostCard({
-  id,
+  slug,
   title,
   author,
   category,
@@ -37,45 +40,49 @@ export default function PostCard({
   image,
 }: PostCardProps) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.04, transition: { duration: 0.3 } }}
-      className="relative h-72 w-64 md:h-80 md:w-68 xl:h-88 xl:w-76 rounded-md shadow-blue dark:shadow-none bg-medium-blue dark:bg-dark-gray my-3 lg:my-4 mx-auto sm:mx-3 lg:mx-4 overflow-hidden"
-    >
-      {/* Post image */}
-      <div className="w-full h-1/2">
-        <StaticImage
-          src="../../assets/images/projects/continental.png"
-          alt="random image"
-          placeholder="blurred"
-          layout="fullWidth"
-          className="w-full h-full"
-        />
-      </div>
-      {/* Post details */}
-      <div className="absolute bottom-6 left-6 p-6 lg:p-5 flex flex-col items-center justify-between text-center rounded-md w-10/12 h-48 md:h-52 xl:h-56 bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-none">
-        {/* Category and title are in same tag so it looks neater */}
-        <div className="w-full">
-          <h3 className="text-xs lg:text-xsm text-secondary-100 dark:text-neutral-300 mb-1.5 sm:mb-1">
-            {category}
-          </h3>
-          <h2 className="third-line-clamp text-primary-500 dark:text-primary-300 text-sm md:text-base xl:text-2base font-medium leading-snug sm:leading-tight">
-            {title}
-          </h2>
+    <Link to={`/blog/${slug}`}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        whileHover={{ scale: 1.04, transition: { duration: 0.3 } }}
+        className="relative h-72 w-64 md:h-80 md:w-68 xl:h-88 xl:w-76 rounded-md shadow-blue dark:shadow-none bg-medium-blue dark:bg-dark-gray my-3 lg:my-4 mx-auto sm:mx-3 lg:mx-4 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        {/* Post image */}
+        <div className="w-full h-1/2">
+          <StaticImage
+            src="../../assets/images/projects/continental.png"
+            alt="random image"
+            placeholder="blurred"
+            layout="fullWidth"
+            className="w-full h-full"
+          />
         </div>
-        <p className="second-line-clamp xl:third-line-clamp text-xsm lg:text-sm leading-snug">
-          {description}
-        </p>
-        {/* Author and date */}
-        <div className="text-xs lg:text-xsm flex items-center text-secondary-50 dark:text-neutral-400">
-          <h3>{author}</h3>
-          <p className="mx-1 md:mx-2">•</p>
-          <h4>
-            {dayjs(new Date(date).toISOString().split('T')[0]).format(
-              'DD MMM, YYYY'
-            )}
-          </h4>
+        {/* Post details */}
+        <div className="absolute bottom-6 left-6 p-5 flex flex-col items-center justify-between text-center rounded-md w-10/12 h-48 md:h-52 xl:h-56 bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-none transition-all duration-300 ease-in-out">
+          {/* Category and title are in same tag so it looks neater */}
+          <div className="w-full">
+            <h3 className="text-xs lg:text-xsm text-secondary-100 dark:text-neutral-300 mb-1.5 sm:mb-1">
+              {category}
+            </h3>
+            <h2 className="third-line-clamp text-primary-500 dark:text-primary-300 text-sm md:text-base xl:text-2base font-medium leading-snug sm:leading-tight">
+              {title}
+            </h2>
+          </div>
+          <p className="second-line-clamp xl:third-line-clamp text-xsm lg:text-sm leading-snug">
+            {description}
+          </p>
+          {/* Author and date */}
+          <div className="text-xs lg:text-xsm flex items-center text-secondary-50 dark:text-neutral-400">
+            <h3>{author}</h3>
+            <p className="mx-1 md:mx-2">•</p>
+            <h4>
+              {dayjs(new Date(date).toISOString().split('T')[0]).format(
+                'DD MMM, YYYY'
+              )}
+            </h4>
+          </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </Link>
   );
 }

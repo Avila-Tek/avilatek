@@ -1,7 +1,8 @@
 import React from 'react';
-import Waves from '../components/icons/Waves';
+import { graphql } from 'gatsby';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
+import Waves from '../components/icons/Waves';
 import RotatingTriangle from '../components/icons/RotatingTriangle';
 import Line from '../components/icons/Line';
 import SEO from '../components/SEO';
@@ -10,13 +11,17 @@ import { Post } from '../components/blog/PostCard';
 dayjs.locale('es');
 
 interface SinglePostPageProps {
-  post?: Post;
+  data?: any;
 }
 
-export default function SinglePostPage({ post }: SinglePostPageProps) {
+export default function SinglePostPage({ data }: SinglePostPageProps) {
+  // const { markdownRemark: post } = data;
+  // const { frontmatter, html } = post;
+  // frontmatter.title etc
+
   return (
     <>
-      <SEO title="Blog" />
+      <SEO title={' Why we all should use Gatsby and why it works so well'} />
       <main>
         {/* Banner */}
         <section className="relative w-full bg-light-blue dark:bg-dark-gray flex flex-col items-center pt-32 md:pt-44 transition duration-300 ease-in-out">
@@ -64,9 +69,13 @@ export default function SinglePostPage({ post }: SinglePostPageProps) {
           </div>
           <hr className="my-12 border border-dark-blue dark:border-dark-gray" />
           {/* Post body */}
-          <div className="grid gap-5 text-sm lg:text-base">
+          <div className="w-full grid gap-5 text-sm lg:text-base">
             <div className="w-full h-half lg:h-third bg-secondary-200 mb-4" />
             {/* //! Hard coded just for now */}
+            {/* <div
+              className="w-full grid gap-5 text-sm lg:text-base"
+              dangerouslySetInnerHTML={{ __html: html }}
+            /> */}
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Enim
               arcu, nunc consectetur tincidunt. Amet, et at nunc dolor. Sed a
@@ -93,19 +102,6 @@ export default function SinglePostPage({ post }: SinglePostPageProps) {
               pellentesque. Mattis dictumst arcu tempus morbi. Sit nulla lectus
               mattis quis tellus urna.
             </p>
-            <p>
-              Lacinia sit est non, in leo, pellentesque. Pellentesque aliquam
-              mi, ultricies mi. Ornare mi eget magna sit ut sed tellus. Turpis
-              ultrices convallis amet diam eget sagittis. Elit in non vulputate
-              rutrum eu donec. Tempor lorem nunc, faucibus aenean consectetur at
-              malesuada condimentum. Justo fermentum nisi turpis scelerisque
-              cursus. Facilisi et netus vestibulum mus in. Tellus maecenas nec
-              donec dui mattis. Elementum, placerat aenean cras sit tempor eget
-              massa viverra sem. Netus commodo arcu et eget. Dolor feugiat
-              vestibulum odio vel gravida dolor rhoncus semper. Sit aliquam
-              adipiscing quam viverra pellentesque. Proin curabitur porta
-              viverra sit nunc.
-            </p>
           </div>
           <hr className="my-12 border border-dark-blue dark:border-dark-gray" />
           {/* Post footer */}
@@ -128,3 +124,22 @@ export default function SinglePostPage({ post }: SinglePostPageProps) {
     </>
   );
 }
+
+// export const postQuery = graphql`
+//   query BlogPost($slug: String!) {
+//     markdownRemark(frontmatter: { slug: {eq: $slug} }) {
+//       html,
+//       frontmatter {
+//         title
+//         subtitle
+//         date
+//         author
+//          authorImage
+//         description
+//          image
+//          authorDescription
+//          category
+//       }
+//     }
+//   }
+// `;
