@@ -87,11 +87,11 @@ export default function PortfolioPage() {
   };
 
   return (
-    <main>
+    <>
       <SEO title="Portafolio" />
       <DefaultBanner {...data} />
       <Technologies />
       <ProjectsList projects={projects} />
-    </main>
+    </>
   );
 }
