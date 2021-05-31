@@ -41,28 +41,6 @@ export default function HTML(props) {
             `,
           }}
         />
-        {/* <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            function() {
-              console.log(
-                \`              o\\
-              _________/__\\__________
-             |                  - (  |
-            ,'-.                 . \`-|
-           (____".       ,-.    '   ||
-             |          /\\,-\\   ,-.  |
-             |      ,-./     \\ /'.-\\ |
-             |     /-.,\\      /     \\|
-             |    /     \\    ,-.     \\
-             |___/_______\\__/___\\_____\\\`,
-                '\n\n¡Trabaja con nosotros!\n',
-                'https://bit.ly/avila-tek'
-              );
-            }
-        `,
-          }}
-        /> */}
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
