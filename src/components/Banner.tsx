@@ -79,7 +79,7 @@ export default function Banner() {
                 </motion.span>
               </h1>
             </div>
-            <p className="my-5 lg:my-7 xl:my-8 text-sm lg:text-base">
+            <p className="my-5 lg:my-7 xl:my-8 text-xsm sm:text-sm lg:text-base">
               Desarrollamos tecnologías innovadoras.{' '}
             </p>
             <Link

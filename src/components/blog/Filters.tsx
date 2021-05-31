@@ -39,7 +39,7 @@ export default function Filters({ updateFilter, updateSearch }: FilterProps) {
             e.preventDefault();
             setCategory(e.target.value);
           }}
-          className="bg-medium-blue dark:bg-medium-gray rounded-md w-1/3 sm:w-32 md:w-40 lg:w-48 text-xsm md:text-sm border-0 mr-3 md:mr-5 focus:outline-none focus:ring-0 focus:border-transparent transition-all duration-300 ease-in-out"
+          className="bg-medium-blue dark:bg-medium-gray rounded-md w-2/5 sm:w-32 md:w-40 lg:w-48 text-xsm md:text-sm border-0 mr-3 md:mr-5 focus:outline-none focus:ring-0 focus:border-transparent transition-all duration-300 ease-in-out"
         >
           <option value="">Categorías</option>
           <option value="desarrollo web">Desarrollo Web</option>
@@ -52,7 +52,7 @@ export default function Filters({ updateFilter, updateSearch }: FilterProps) {
             e.preventDefault();
             setAuthor(e.target.value);
           }}
-          className="bg-medium-blue dark:bg-medium-gray rounded-md w-1/3 sm:w-32 md:w-40 lg:w-48 text-xsm md:text-sm border-0 mr-1.5 md:mr-4 lg:mr-5 focus:outline-none focus:ring-0 focus:border-transparent transition-all duration-300 ease-in-out"
+          className="bg-medium-blue dark:bg-medium-gray rounded-md w-2/5 sm:w-32 md:w-40 lg:w-48 text-xsm md:text-sm border-0 mr-2 sm:mr-1.5 md:mr-4 lg:mr-5 focus:outline-none focus:ring-0 focus:border-transparent transition-all duration-300 ease-in-out"
         >
           <option value="">Autores</option>
           <option value="john doe">John Doe</option>
@@ -61,13 +61,13 @@ export default function Filters({ updateFilter, updateSearch }: FilterProps) {
           type="button"
           aria-label="Boton para reiniciar filtros"
           onClick={refreshFilters}
-          className="focus:outline-none focus:border-transparent text-xs md:text-xsm font-medium text-secondary-50 hover:text-secondary-100 active:text-secondary-300 dark:text-neutral-300 dark:hover:text-neutral-200 dark:active:text-neutral-100"
+          className="focus:outline-none focus:border-transparent text-sm sm:text-xs md:text-xsm font-medium text-secondary-50 hover:text-secondary-100 active:text-secondary-300 dark:text-neutral-300 dark:hover:text-neutral-200 dark:active:text-neutral-100"
         >
-          &#8634; Reiniciar
+          &#8634; <span className="hidden sm:inline-block">Reiniciar</span>
         </button>
       </div>
       {/* Search bar */}
-      <div className="bg-medium-blue dark:bg-medium-gray rounded-md w-1/3 sm:w-40 md:w-44 lg:w-52 mt-3 sm:mt-0 flex justify-between items-center px-4 transition-all duration-300 ease-in-out">
+      <div className="bg-medium-blue dark:bg-medium-gray rounded-md w-2/5 sm:w-40 md:w-44 lg:w-52 mt-3 sm:mt-0 flex justify-between items-center px-4 transition-all duration-300 ease-in-out">
         <input
           type="text"
           name="search"

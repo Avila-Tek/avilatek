@@ -102,7 +102,8 @@ module.exports = {
       fontSize: {
         xsm: ['0.825rem', { lineHeight: '1.2rem' }],
         '2xs': ['0.615rem', { lineHeight: '0.75rem' }],
-        '2base': ['1.07rem', { lineHeight: '1.55rem' }],
+        '2sm': ['0.925rem', { lineHeight: '1.25rem' }],
+        '2base': ['1.07rem', { lineHeight: '1.5rem' }],
       },
       borderRadius: {
         blob: '81% 30% 30% 70% / 60% 40% 60% 40%;',

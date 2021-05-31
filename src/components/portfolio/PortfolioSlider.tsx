@@ -133,7 +133,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
               <>
                 {active === idx ? (
                   <motion.div
-                    key={src}
+                    key={title + src}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}

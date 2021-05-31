@@ -106,7 +106,7 @@ export default function PostList({
               >
                 <path d="M5.13611 0.263508C5.30483 0.432283 5.39962 0.66116 5.39962 0.899808C5.39962 1.13846 5.30483 1.36733 5.13611 1.53611L2.17241 4.49981L5.13611 7.46351C5.30005 7.63325 5.39076 7.86059 5.38871 8.09657C5.38666 8.33255 5.29201 8.55828 5.12514 8.72514C4.95828 8.89201 4.73255 8.98666 4.49657 8.98871C4.26059 8.99076 4.03325 8.90005 3.86351 8.73611L0.263508 5.13611C0.094784 4.96733 0 4.73846 0 4.49981C0 4.26116 0.094784 4.03228 0.263508 3.86351L3.86351 0.263508C4.03228 0.094784 4.26116 0 4.49981 0C4.73846 0 4.96733 0.094784 5.13611 0.263508Z" />
               </svg>
-              Anterior
+              <span className="hidden sm:inline-block">Anterior</span>
             </button>
             <span className="text-xsm sm:text-sm">
               Página <span className="font-medium">{page}</span> de{' '}
@@ -126,7 +126,7 @@ export default function PostList({
                 setPage((_page) => _page + 1);
               }}
             >
-              Siguiente
+              <span className="hidden sm:inline-block">Siguiente</span>
               <svg
                 width="6"
                 height="9"

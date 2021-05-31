@@ -30,9 +30,9 @@ export default function DefaultBanner({
     <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
       <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center md:items-start pt-14 md:pt-24 pb-8 md:pb-6 px-10 md:px-12 lg:px-16 xl:px-20">
         {/* Banner details */}
-        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pt-2 md:pt-24 lg:pt-20 z-10">
+        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pb-4 sm:pb-0 pt-0 md:pt-20 z-10">
           <Fade triggerOnce cascade>
-            <h1 className="text-xl lg:text-2xl xl:text-3xl font-bold relative">
+            <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold relative">
               <motion.span
                 variants={bracketVariants}
                 animate="animation"
@@ -49,11 +49,11 @@ export default function DefaultBanner({
                 ]
               </motion.span>
             </h1>
-            <p className="w-full my-6 text-sm lg:text-base">{description}</p>
+            <p className="my-5 lg:my-7 xl:my-8 text-xsm sm:text-sm lg:text-base">{description}</p>
           </Fade>
         </div>
         {/* Animated Illustration */}
-        <div className="w-7/12 sm:w-6/12 md:w-5/12 lg:w-4/12 mx-auto md:mr-0 md:ml-14 lg:ml-16 xl:ml-24 z-10">
+        <div className="w-9/12 sm:w-6/12 md:w-5/12 lg:w-4/12 mx-auto md:mr-0 md:ml-14 lg:ml-16 xl:ml-24 z-10">
           <Fade triggerOnce>{illustration}</Fade>
         </div>
         <RotatingTriangle className="top-12 right-8/12 md:right-1/2" />
