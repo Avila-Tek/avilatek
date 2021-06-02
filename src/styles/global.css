@@ -28,6 +28,24 @@
       filter: drop-shadow(0.4px 0.4px 0.4px rgb(73, 73, 73));
     }
   }
+
+  @variants responsive {
+    .third-line-clamp {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    .second-line-clamp {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
 }
 
 html,

@@ -88,7 +88,9 @@ module.exports = {
       },
       spacing: {
         18: '4.5rem',
+        50: '12.5rem',
         68: '17rem',
+        76: '19rem',
         88: '22rem',
         104: '26rem',
         112: '28rem',
@@ -100,6 +102,8 @@ module.exports = {
       fontSize: {
         xsm: ['0.825rem', { lineHeight: '1.2rem' }],
         '2xs': ['0.615rem', { lineHeight: '0.75rem' }],
+        '2sm': ['0.925rem', { lineHeight: '1.25rem' }],
+        '2base': ['1.07rem', { lineHeight: '1.5rem' }],
       },
       borderRadius: {
         blob: '81% 30% 30% 70% / 60% 40% 60% 40%;',
@@ -111,12 +115,12 @@ module.exports = {
         third: '75vh',
       },
       zIndex: {
-        'minus': '-10',
-        '60': '60',
-        '70': '70',
+        minus: '-10',
+        60: '60',
+        70: '70',
       },
       inset: {
-        '26': '-6.5rem',
+        26: '-6.5rem',
         '1/12': '8.333333%',
         '2/12': '16.666667%',
         '3/12': '25%',
@@ -128,7 +132,7 @@ module.exports = {
         '9/12': '75%',
         '10/12': '83.333333%',
         '11/12': '91.666667%',
-        'full': '100%',
+        full: '100%',
       },
     },
   },
@@ -136,6 +140,7 @@ module.exports = {
     opacity: ({ after }) => after(['disabled']),
     backgroundColor: ({ after }) => after(['disabled', 'active']),
     textColor: ({ after }) => after(['active', 'disabled']),
+    cursor: ({ after }) => after(['disabled']),
     borderColor: ({ after }) => after(['active']),
     boxShadow: ({ after }) => after(['dark']),
     extend: {},

@@ -16,12 +16,6 @@ export default function Banner() {
     'hacemos consultorías',
   ];
 
-  const variants = {
-    initial: { y: -20, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-    exit: { y: 20, opacity: 0 },
-  };
-
   const bracketVariants = {
     animation: {
       opacity: [1, 0.4, 1],
@@ -85,7 +79,7 @@ export default function Banner() {
                 </motion.span>
               </h1>
             </div>
-            <p className="my-5 lg:my-7 xl:my-8 text-sm lg:text-base">
+            <p className="my-5 lg:my-7 xl:my-8 text-xsm sm:text-sm lg:text-base">
               Desarrollamos tecnologías innovadoras.{' '}
             </p>
             <Link

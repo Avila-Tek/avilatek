@@ -83,7 +83,7 @@ export default function ContactForm() {
         <option value="" disabled>
           Seleccione una opción
         </option>
-        <option value="< $5.000">Menos de $5.000'</option>
+        <option value="< $5.000">Menos de $5.000</option>
         <option value="$5.000 - $10.000">$5.000 - $10.000</option>
         <option value="$10.000 - $20.000">$10.000 - $20.000</option>
         <option value="$30.000 - $50.000">$30.000 - $50.000</option>

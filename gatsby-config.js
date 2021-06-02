@@ -31,6 +31,13 @@ module.exports = {
       __key: 'assets',
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: 'posts',
+        path: `${__dirname}/src/posts`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-79745040-2',
