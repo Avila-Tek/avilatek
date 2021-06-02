@@ -28,11 +28,11 @@ export default function SinglePostPage({ data }) {
       <main>
         {/* Banner */}
         <section className="relative w-full bg-light-blue dark:bg-dark-gray flex flex-col items-center pt-32 md:pt-44 transition duration-300 ease-in-out">
-          <div className="flex flex-col items-center px-10 text-center z-10">
+          <div className="flex flex-col items-center px-14 sm:px-10 text-center z-10">
             <h3 className="text-sm md:text-base text-secondary-50 dark:text-primary-100 font-semibold mb-2">
               {category}
             </h3>
-            <h1 className="w-10/12 font-bold text-lg md:text-xl">{title}</h1>
+            <h1 className="w-full sm:w-11/12 lg:w-10/12 font-bold text-lg md:text-xl">{title}</h1>
           </div>
           <div className="w-full mt-24 md:mt-32">
             <Waves className="w-full h-full -mb-2" />

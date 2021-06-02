@@ -10,6 +10,7 @@ dayjs.locale('es');
 export type Post = {
   category?: string;
   title: string;
+  subtitle?: string;
   slug: string; // ? or maybe slug
   description?: string;
   author?: string;
@@ -61,18 +62,18 @@ export default function PostCard({
         <div className="absolute bottom-5 left-5 sm:bottom-6 sm:left-6 p-5 flex flex-col items-center justify-between text-center rounded-md w-10/12 h-48 md:h-52 xl:h-56 bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-none transition-all duration-300 ease-in-out">
           {/* Category and title are in same tag so it looks neater */}
           <div className="w-full">
-            <h3 className="text-xs lg:text-xsm text-secondary-100 dark:text-neutral-300 mb-1.5 sm:mb-1">
+            <h3 className="text-xs xl:text-xsm text-secondary-100 dark:text-neutral-300 mb-1.5 sm:mb-1 transition-all duration-300 ease-in-out">
               {category}
             </h3>
-            <h2 className="third-line-clamp text-primary-500 dark:text-primary-300 text-sm md:text-2sm lg:text-base font-medium leading-snug">
+            <h2 className="third-line-clamp text-primary-500 dark:text-primary-300 text-sm md:text-2sm xl:text-base font-medium leading-snug transition-all duration-300 ease-in-out">
               {title}
             </h2>
           </div>
-          <p className="second-line-clamp xl:third-line-clamp text-xs sm:text-xsm lg:text-sm leading-snug">
+          <p className="second-line-clamp lg:third-line-clamp text-xs sm:text-xsm xl:text-sm leading-snug">
             {description}
           </p>
           {/* Author and date */}
-          <div className="text-xs lg:text-xsm flex items-center text-secondary-50 dark:text-neutral-400">
+          <div className="text-xs xl:text-xsm flex items-center text-secondary-50 dark:text-neutral-400 transition-all duration-300 ease-in-out">
             <h3>{author}</h3>
             <p className="mx-1 lg:mx-2">•</p>
             <h4>

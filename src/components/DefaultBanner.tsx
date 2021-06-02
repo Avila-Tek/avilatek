@@ -53,7 +53,7 @@ export default function DefaultBanner({
           </Fade>
         </div>
         {/* Animated Illustration */}
-        <div className="w-9/12 sm:w-6/12 md:w-5/12 lg:w-4/12 mx-auto md:mr-0 md:ml-14 lg:ml-16 xl:ml-24 z-10">
+        <div className="w-8/12 sm:w-6/12 md:w-5/12 lg:w-4/12 mx-auto md:mr-0 md:ml-14 lg:ml-16 xl:ml-24 z-10">
           <Fade triggerOnce>{illustration}</Fade>
         </div>
         <RotatingTriangle className="top-12 right-8/12 md:right-1/2" />

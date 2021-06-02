@@ -1,6 +1,8 @@
 import React from 'react';
 
 interface FilterProps {
+  categories?: Array<string>;
+  authors?: Array<string>;
   updateFilter: React.Dispatch<
     React.SetStateAction<{
       category: string;
@@ -10,7 +12,12 @@ interface FilterProps {
   updateSearch: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function Filters({ updateFilter, updateSearch }: FilterProps) {
+export default function Filters({
+  categories,
+  authors,
+  updateFilter,
+  updateSearch,
+}: FilterProps) {
   const [search, setSearch] = React.useState('');
   const [author, setAuthor] = React.useState('');
   const [category, setCategory] = React.useState('');
@@ -29,7 +36,7 @@ export default function Filters({ updateFilter, updateSearch }: FilterProps) {
   }, [search]);
 
   return (
-    <div className="mx-auto w-11/12 lg:w-10/12 xl:w-9/12 flex flex-col sm:flex-row justify-between mb-10">
+    <div className="mx-auto w-11/12 lg:w-10/12 xl:w-9/12 flex flex-col sm:flex-row justify-between mb-10 mt-10 sm:mt-6">
       {/* Filters */}
       <div className="flex items-center">
         <select
@@ -42,8 +49,11 @@ export default function Filters({ updateFilter, updateSearch }: FilterProps) {
           className="bg-medium-blue dark:bg-medium-gray rounded-md w-2/5 sm:w-32 md:w-40 lg:w-48 text-xsm md:text-sm border-0 mr-3 md:mr-5 focus:outline-none focus:ring-0 focus:border-transparent transition-all duration-300 ease-in-out"
         >
           <option value="">Categorías</option>
-          <option value="desarrollo web">Desarrollo Web</option>
-          <option value="machine learning">Machine Learning</option>
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
         </select>
         <select
           name="author"
@@ -55,13 +65,17 @@ export default function Filters({ updateFilter, updateSearch }: FilterProps) {
           className="bg-medium-blue dark:bg-medium-gray rounded-md w-2/5 sm:w-32 md:w-40 lg:w-48 text-xsm md:text-sm border-0 mr-2 sm:mr-1.5 md:mr-4 lg:mr-5 focus:outline-none focus:ring-0 focus:border-transparent transition-all duration-300 ease-in-out"
         >
           <option value="">Autores</option>
-          <option value="john doe">John Doe</option>
+          {authors.map((author) => (
+            <option key={author} value={author}>
+              {author}
+            </option>
+          ))}
         </select>
         <button
           type="button"
-          aria-label="Boton para reiniciar filtros"
+          aria-label="Botón para reiniciar filtros"
           onClick={refreshFilters}
-          className="focus:outline-none focus:border-transparent text-sm sm:text-xs md:text-xsm font-medium text-secondary-50 hover:text-secondary-100 active:text-secondary-300 dark:text-neutral-300 dark:hover:text-neutral-200 dark:active:text-neutral-100"
+          className="focus:outline-none focus:border-transparent text-2sm sm:text-xs md:text-xsm font-medium text-secondary-50 hover:text-secondary-100 active:text-secondary-300 dark:text-neutral-300 dark:hover:text-neutral-200 dark:active:text-neutral-100"
         >
           &#8634; <span className="hidden sm:inline-block">Reiniciar</span>
         </button>

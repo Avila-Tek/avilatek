@@ -54,4 +54,4 @@ Eu tristique lectus nec pharetra, diam fames. Eget urna nunc
 condimentum integer nunc enim. Convallis fringilla ipsum in tellus
 tempus, eu elementum.
 
-<h4>If this works, image will work</h4>
+<h4 class="text-primary-400">If this works, image will work</h4>

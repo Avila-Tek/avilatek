@@ -17,7 +17,7 @@ interface NavItemProps {
 
 function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
   return (
-    // ! Link activeClassName doesn't work this anchors
+    // ! Link activeClassName doesn't work with anchors
     <Link to={href}>
       <button
         type="button"
