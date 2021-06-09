@@ -45,8 +45,8 @@ export default function BlogPage({ data }) {
   );
 }
 
-export const getPosts = graphql`
-  query getPosts {
+export const getAllPosts = graphql`
+  query getAllPosts {
     allMarkdownRemark {
       edges {
         node {

@@ -33,21 +33,21 @@ export default function DefaultBanner({
         <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pb-4 sm:pb-0 pt-0 md:pt-20 z-10">
           <Fade triggerOnce cascade>
             <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold relative">
-              <motion.span
+              {/* <motion.span
                 variants={bracketVariants}
                 animate="animation"
                 className="text-primary-400 absolute -top-1 -left-7"
               >
                 [
-              </motion.span>
+              </motion.span> */}
               {title}
-              <motion.span
+              {/* <motion.span
                 variants={bracketVariants}
                 animate="animation"
                 className="text-primary-400 absolute bottom-0 -right-5"
               >
                 ]
-              </motion.span>
+              </motion.span> */}
             </h1>
             <p className="my-5 lg:my-7 xl:my-8 text-xsm sm:text-sm lg:text-base">{description}</p>
           </Fade>

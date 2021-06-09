@@ -43,13 +43,13 @@ export default function Banner() {
           <Fade triggerOnce cascade>
             <div className="h-18 sm:h-16 md:h-20 lg:h-24">
               <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold relative">
-                <motion.span
+                {/* <motion.span
                   variants={bracketVariants}
                   animate="animation"
                   className="text-primary-400 absolute -top-1 -left-7"
                 >
                   [
-                </motion.span>
+                </motion.span> */}
                 Lleva tu negocio al mundo digital,{' '}
                 {/* Changing words animation */}
                 <AnimatePresence exitBeforeEnter>
@@ -70,13 +70,13 @@ export default function Banner() {
                     </>
                   ))}
                 </AnimatePresence>
-                <motion.span
+                {/* <motion.span
                   variants={bracketVariants}
                   animate="animation"
                   className="text-primary-400 absolute bottom-0 -right-7 transition-all duration-300 ease-in-out"
                 >
                   ]
-                </motion.span>
+                </motion.span> */}
               </h1>
             </div>
             <p className="my-5 lg:my-7 xl:my-8 text-xsm sm:text-sm lg:text-base">
@@ -85,9 +85,9 @@ export default function Banner() {
             <Link
               to="/#contact"
               aria-label="Boton de cotiza tu proyecto"
-              className="px-6 md:px-8 text-sm lg:text-base text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer"
+              className="px-6 md:px-8 py-1.5 text-2sm lg:text-base text-font-white font-medium bg-primary-400 hover:bg-primary-300 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer"
             >
-              Cotiza tu proyecto
+              Cotizar
             </Link>
           </Fade>
         </div>
