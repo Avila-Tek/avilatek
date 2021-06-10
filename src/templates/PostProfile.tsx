@@ -35,7 +35,7 @@ export default function SinglePostPage({ data }) {
             <h1 className="w-full sm:w-11/12 lg:w-10/12 font-bold text-lg md:text-xl">{title}</h1>
           </div>
           <div className="w-full mt-16 md:mt-20">
-            <Waves className="w-full -mb-2" />
+            <Waves className="w-full -mb-2 z-minus" />
           </div>
           <RotatingTriangle className="top-20 right-1/2" />
           <RotatingTriangle className="right-2/12 top-5/12" />

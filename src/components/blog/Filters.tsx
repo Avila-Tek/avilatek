@@ -36,7 +36,7 @@ export default function Filters({
   }, [search]);
 
   return (
-    <div className="mx-auto w-11/12 lg:w-10/12 xl:w-9/12 flex flex-col sm:flex-row justify-between mb-10 mt-10 sm:mt-6">
+    <div className="mx-auto w-11/12 lg:w-10/12 xl:w-9/12 flex flex-col sm:flex-row justify-between mb-10 -mt-10">
       {/* Filters */}
       <div className="flex items-center">
         <select
