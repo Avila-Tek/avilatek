@@ -61,7 +61,7 @@ function LogoItem({ src, className, size }: LogoItemProps) {
       <Image
         filename={src}
         alt={src}
-        className={`mx-6 xl:mx-9 duration-200 transition-all filter-logo-light dark:filter-grayscale-bright hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
+        className={`mx-8 xl:mx-9 duration-200 transition-all filter-logo-light dark:filter-grayscale-bright hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
           size ?? 'w-32 md:w-36 xl:w-40'
         }`}
       />
@@ -89,12 +89,12 @@ export default function Clients() {
   }, [clients]);
 
   return (
-    <section className="pt-28 md:pt-18 mb-52 lg:mb-72">
+    <section className="pt-28 md:pt-18 mb-52 lg:mb-72 -mt-12">
       <Fade triggerOnce>
         <div className="w-full mb-16 sm:mb-20 px-16 md:px-36">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
             Conoce{' '}
-            <mark className="text-font0-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
+            <mark className="text-font-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
               algunos
             </mark>{' '}
             de nuestros <span className="text-primary-400">clientes </span>
@@ -112,18 +112,15 @@ export default function Clients() {
           </button>
 
           {/* Carousel, gap-14 xl:gap-16 */}
-          <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-30 rounded-full duration-500 transition-all h-36 w-full md:w-11/12 xl:w-10/12 flex items-center justify-center mx-8 lg:mx-12">
+          <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-30 rounded-full duration-500 transition-all h-36 w-full md:w-11/12 xl:w-9/12 flex items-center justify-center mx-8 lg:mx-12">
             <AnimatePresence>
               {clients.map(({ src, size }, idx) => (
-                <>
-                  {0 === idx ? (
-                    <LogoItem src={src} key={src} size={size} />
-                  ) : null}
+                <div key={src}>
+                  {0 === idx ? <LogoItem src={src} size={size} /> : null}
                   {1 === idx ? (
                     <LogoItem
                       src={src}
                       size={size}
-                      key={src}
                       className="hidden sm:block"
                     />
                   ) : null}
@@ -131,11 +128,10 @@ export default function Clients() {
                     <LogoItem
                       src={src}
                       size={size}
-                      key={src}
                       className="hidden lg:block"
                     />
                   ) : null}
-                </>
+                </div>
               ))}
             </AnimatePresence>
           </div>

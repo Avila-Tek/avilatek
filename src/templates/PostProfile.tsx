@@ -24,7 +24,7 @@ export default function SinglePostPage({ data }) {
 
   return (
     <>
-      <SEO title={' Why we all should use Gatsby and why it works so well'} />
+      <SEO title={title} />
       <main>
         {/* Banner */}
         <section className="relative w-full bg-light-blue dark:bg-dark-gray flex flex-col items-center pt-32 md:pt-44 transition duration-300 ease-in-out">
@@ -34,8 +34,8 @@ export default function SinglePostPage({ data }) {
             </h3>
             <h1 className="w-full sm:w-11/12 lg:w-10/12 font-bold text-lg md:text-xl">{title}</h1>
           </div>
-          <div className="w-full mt-24 md:mt-32">
-            <Waves className="w-full h-full -mb-2" />
+          <div className="w-full mt-16 md:mt-20">
+            <Waves className="w-full -mb-2" />
           </div>
           <RotatingTriangle className="top-20 right-1/2" />
           <RotatingTriangle className="right-2/12 top-5/12" />
@@ -45,7 +45,7 @@ export default function SinglePostPage({ data }) {
           <Line className="bottom-4/12 right-6/12 w-12" />
         </section>
         {/* Post */}
-        <section className="w-9/12 md:w-7/12 mx-auto mt-8 mb-40">
+        <section className="w-9/12 md:w-7/12 mx-auto mb-40">
           {/* Post header */}
           <div>
             <h2 className="font-semibold text-base md:text-lg text-secondary-100 dark:text-neutral-100">

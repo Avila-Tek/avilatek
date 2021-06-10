@@ -15,6 +15,7 @@ module.exports = {
         '-top-8',
         '-left-5',
         'ml-4',
+        'w-20',
         'w-24',
         'w-28',
         'w-32',

@@ -53,7 +53,7 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
         to="#contact"
       >
         <p className="text-xs md:text-sm mr-3">{product.btnTxt}</p>
-        <LongArrow className="h-4" />
+        <LongArrow className="h-3" />
       </Link>
     </motion.li>
   );
