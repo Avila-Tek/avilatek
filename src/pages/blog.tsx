@@ -24,15 +24,14 @@ export default function BlogPage({ data }) {
   const banner = {
     title: (
       <>
-        Frase relacionada a este{' '}
+        Avila Tek Beyond The{' '}
         <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-          blog
+          Blog
         </mark>{' '}
-        llenando espacio
       </>
     ),
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac.',
+      'Noticias, articulos y experiencias sobre cómo desarrollamos tecnologías que cambian al mundo, recuerda suscríbirte ',
     illustration: <BlogPost />,
   };
 

@@ -5,6 +5,7 @@ import CategoryPill from './CategoryPill';
 import Image from '../Image';
 import LeftArrow from '../icons/LeftArrow';
 import RightArrow from '../icons/RightArrow';
+import Monitor from '../icons/Monitor';
 
 export type Project = {
   title: string;
@@ -97,7 +98,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                 <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-primary-500 dark:text-primary-400 font-bold">
                   {title}
                 </h2>
-                <p className="text-sm xl:text-base my-5 lg:my-6">
+                <p className="text-sm xl:text-base my-5 lg:my-6 text-justify">
                   {description}
                 </p>
                 <a
@@ -119,12 +120,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
       <div className="relative w-80 sm:w-96 lg:w-128 xl:w-144 h-64 sm:h-80 lg:h-96 xl:h-112 mx-auto md:mx-0 mt-0 md:mt-14">
         {/* Monitor */}
         <div className="absolute top-0 left-0 z-20 w-full">
-          <StaticImage
-            src="../../assets/images/monitor.png"
-            alt="MAC monitor"
-            placeholder="blurred"
-            layout="fullWidth"
-          />
+          <Monitor className="w-full" />
         </div>
         {/* The image */}
         <div className="absolute top-2 z-10 rounded-2xl h-44 sm:h-52 lg:h-72 xl:h-80 w-full px-3 py-1 lg:px-5 lg:py-3 overflow-hidden">
