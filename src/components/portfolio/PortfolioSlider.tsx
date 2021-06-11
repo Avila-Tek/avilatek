@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import CategoryPill from './CategoryPill';
-import Image from '../Image';
+import Image from '../common/Image';
 import LeftArrow from '../icons/LeftArrow';
 import RightArrow from '../icons/RightArrow';
 import Monitor from '../icons/Monitor';

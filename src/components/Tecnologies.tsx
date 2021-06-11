@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
-import Image from './Image';
+import Image from './common/Image';
 
 const logos: Array<{ src: string; name: string; className: string }> = [
   {

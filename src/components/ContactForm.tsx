@@ -1,8 +1,8 @@
 import React from 'react';
-import Input from './ui/Input';
-import Select from './ui/Select';
-import Textarea from './ui/Textarea';
-import Button from './ui/Button';
+import Input from './common/Input';
+import Select from './common/Select';
+import Textarea from './common/Textarea';
+import Button from './common/Button';
 
 export default function ContactForm() {
   const [name, setName] = React.useState<string>('');

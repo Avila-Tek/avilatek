@@ -1,9 +1,9 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { motion } from 'framer-motion';
-import Waves from './icons/Waves';
-import Line from './icons/Line';
-import RotatingTriangle from './icons/RotatingTriangle';
+import Waves from '../icons/Waves';
+import Line from '../icons/Line';
+import RotatingTriangle from '../icons/RotatingTriangle';
 
 interface DefaultBannerProps {
   title?: React.ReactChild | Array<React.ReactChild>;

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import LongArrow from '../icons/LongArrow';
 import CategoryPill from './CategoryPill';
-import Image from '../Image';
+import Image from '../common/Image';
 
 interface ProjectCardProps {
   title: string;

@@ -4,7 +4,7 @@ import SEO from '../components/SEO';
 import Technologies from '../components/Tecnologies';
 import ProjectsList from '../components/portfolio/ProjectsList';
 import Documents from '../components/icons/Documents';
-import DefaultBanner from '../components/DefaultBanner';
+import DefaultBanner from '../components/common/DefaultBanner';
 
 export default function PortfolioPage() {
   const projects: Array<Project> = [

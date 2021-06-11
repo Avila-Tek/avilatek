@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import DefaultBanner from '../components/DefaultBanner';
+import DefaultBanner from '../components/common/DefaultBanner';
 import SEO from '../components/SEO';
 import BlogPost from '../components/icons/BlogPost';
 import { Post } from '../components/blog/PostCard';
