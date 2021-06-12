@@ -3,10 +3,9 @@ import InstagramIcon from './icons/InstagramIcon';
 import FacebookIcon from './icons/FacebookIcon';
 import TwitterIcon from './icons/TwitterIcon';
 import LinkedIn from './icons/LinkedIn';
+import LanguageToggle from './common/LanguageToggle';
 
 export default function Footer() {
-  const [language, setLanguage] = React.useState('es');
-
   return (
     <footer className="bg-light-blue dark:bg-medium-gray w-full px-10 lg:px-20 py-2 shadow-blue dark:shadow-dark-gray border-t-2 border-medium-blue dark:border-dark-gray dark:text-font-white transition-all duration-300 ease-in-out">
       <div className="flex flex-col sm:flex-row w-full py-6 gap-6 sm:gap-20">
@@ -102,20 +101,7 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} Avila Tek. Todos los derechos
           reservados
         </p>
-        <label htmlFor="language">
-          <select
-            name="language"
-            value={language}
-            onChange={(e) => {
-              e.preventDefault();
-              setLanguage(e.target.value);
-            }}
-            className="px-8 mx-0 bg-transparent text-xs lg:text-sm text-primary-500 font-medium border-0 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out"
-          >
-            <option value="en">English</option>
-            <option value="es">Español</option>
-          </select>
-        </label>
+        <LanguageToggle />
       </div>
     </footer>
   );

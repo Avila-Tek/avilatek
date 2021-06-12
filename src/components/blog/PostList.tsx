@@ -109,7 +109,7 @@ export default function PostList({
         )}
         {pagination && items.length > 0 ? (
           <div className="mb-36">
-            <div className="w-10/12 sm:w-112 mt-14 mb-18 mx-auto flex items-center justify-between bg-light-blue dark:bg-dark-gray rounded-full py-2 px-10 shadow-blue dark:shadow-none">
+            <div className="w-10/12 sm:w-112 mt-14 mb-18 mx-auto flex items-center justify-between bg-light-blue dark:bg-dark-gray rounded-full py-2 px-12 shadow-blue dark:shadow-none">
               <button
                 type="button"
                 aria-label="Previous button"
@@ -132,7 +132,7 @@ export default function PostList({
                 </svg>
                 <span className="hidden sm:inline-block">Anterior</span>
               </button>
-              <span className="text-xsm sm:text-sm">
+              <span className="text-xsm sm:text-sm my-0.5">
                 Página <span className="font-medium">{page}</span> de{' '}
                 <span className="font-medium">
                   {Math.ceil(posts.length / PER_PAGE)}
