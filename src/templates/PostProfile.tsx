@@ -6,6 +6,7 @@ import Waves from '../components/icons/Waves';
 import RotatingTriangle from '../components/icons/RotatingTriangle';
 import Line from '../components/icons/Line';
 import SEO from '../components/SEO';
+import Subscription from '../components/common/Subscription';
 
 dayjs.locale('es');
 
@@ -91,6 +92,9 @@ export default function SinglePostPage({ data }) {
               <p className="mt-2 text-xsm lg:text-sm">{authorDescription}</p>
             </div>
           </div>
+          <hr className="my-12 border border-medium-blue dark:border-dark-gray" />
+          {/* Subscription */}
+          <Subscription />
         </section>
       </main>
     </>
