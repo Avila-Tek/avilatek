@@ -1,8 +1,8 @@
 import React from 'react';
-import Input from './ui/Input';
-import Select from './ui/Select';
-import Textarea from './ui/Textarea';
-import Button from './ui/Button';
+import Input from './common/Input';
+import Select from './common/Select';
+import Textarea from './common/Textarea';
+import Button from './common/Button';
 
 export default function ContactForm() {
   const [name, setName] = React.useState<string>('');
@@ -53,7 +53,7 @@ export default function ContactForm() {
       />
       <Select
         name="service"
-        label="Servicio que desea"
+        label="Producto/Servicio que desea"
         value={service}
         onChange={(e) => {
           e.preventDefault();
@@ -69,26 +69,31 @@ export default function ContactForm() {
         <option value="departamento de desarrollo">
           Departamento de desarrollo
         </option>
+        <option value="digital funnel">Digital Funnel</option>
+        <option value="digital store">Digital Store</option>
       </Select>
-      <Select
-        name="budget"
-        label="¿Cuál es su presupuesto?"
-        value={budget}
-        onChange={(e) => {
-          e.preventDefault();
-          setBudget(e.target.value);
-        }}
-        required
-      >
-        <option value="" disabled>
-          Seleccione una opción
-        </option>
-        <option value="< $5.000">Menos de $5.000</option>
-        <option value="$5.000 - $10.000">$5.000 - $10.000</option>
-        <option value="$10.000 - $20.000">$10.000 - $20.000</option>
-        <option value="$30.000 - $50.000">$30.000 - $50.000</option>
-        <option value="$50.000+">Más $50.000</option>
-      </Select>
+      
+      {service !== 'digital funnel' && service !== 'digital store' ? (
+        <Select
+          name="budget"
+          label="¿Cuál es su presupuesto?"
+          value={budget}
+          onChange={(e) => {
+            e.preventDefault();
+            setBudget(e.target.value);
+          }}
+          required
+        >
+          <option value="" disabled>
+            Seleccione una opción
+          </option>
+          <option value="< $5.000">Menos de $5.000</option>
+          <option value="$5.000 - $10.000">$5.000 - $10.000</option>
+          <option value="$10.000 - $20.000">$10.000 - $20.000</option>
+          <option value="$30.000 - $50.000">$30.000 - $50.000</option>
+          <option value="$50.000+">Más $50.000</option>
+        </Select>
+      ) : null}
 
       <Textarea
         name="message"

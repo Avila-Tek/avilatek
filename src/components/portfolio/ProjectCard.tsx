@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import LongArrow from '../icons/LongArrow';
 import CategoryPill from './CategoryPill';
-import Image from '../Image';
+import Image from '../common/Image';
 
 interface ProjectCardProps {
   title: string;
@@ -56,7 +56,7 @@ export default function ProjectCard({
           className="flex items-center w-full text-font-white hover:text-primary-300 dark:hover:text-primary-100 duration-150 transition-all ease-in-out"
         >
           <p className="font-medium text-sm mr-3">Visitar</p>
-          <LongArrow className="h-4" />
+          <LongArrow className="h-3" />
         </a>
       </div>
     </motion.div>

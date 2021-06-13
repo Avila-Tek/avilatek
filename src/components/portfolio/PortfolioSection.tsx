@@ -34,7 +34,7 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="pt-24 -mt-24 mb-48 md:mb-64 w-full relative z-10 overflow-hidden"
+      className="pt-24 -mt-24 mb-40 md:mb-44 w-full relative z-10 overflow-hidden"
     >
       <Fade cascade triggerOnce>
         <div className="w-full text-center mb-10">
@@ -53,7 +53,7 @@ export default function PortfolioSection() {
         {/* Portfolio slider */}
         <PortfolioSlider projects={projects} />
         {/* Know more button */}
-        <div className="w-full flex justify-center mt-14 lg:mt-18">
+        <div className="w-full flex justify-center mt-20 lg:mt-36">
           <button
             type="button"
             aria-label="Ir al portafolio"

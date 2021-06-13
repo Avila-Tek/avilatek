@@ -23,7 +23,7 @@ export default function AboutUs() {
             <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
               Sobre <span className="text-primary-400">nosotros</span>
             </h1>
-            <p className="my-6 lg:my-7 text-sm lg:text-base">
+            <p className="my-6 lg:my-7 text-sm lg:text-base text-justify">
               Avila Tek es una empresa con sede en Venezuela que desarrolla
               aplicaciones móviles y web que ayudan a las empresas a innovar y
               obtener una ventaja competitiva con aplicaciones atractivas.

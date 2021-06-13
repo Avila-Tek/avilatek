@@ -1,9 +1,9 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { motion } from 'framer-motion';
-import Waves from './icons/Waves';
-import Line from './icons/Line';
-import RotatingTriangle from './icons/RotatingTriangle';
+import Waves from '../icons/Waves';
+import Line from '../icons/Line';
+import RotatingTriangle from '../icons/RotatingTriangle';
 
 interface DefaultBannerProps {
   title?: React.ReactChild | Array<React.ReactChild>;
@@ -27,27 +27,27 @@ export default function DefaultBanner({
   };
 
   return (
-    <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
-      <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center md:items-start pt-14 md:pt-24 pb-8 md:pb-6 px-10 md:px-12 lg:px-16 xl:px-20">
+    <div className="bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
+      <div className="relative flex flex-col-reverse md:flex-row justify-center items-center md:items-start pt-14 md:pt-24 pb-8 md:pb-6 px-10 md:px-12 lg:px-16 xl:px-20">
         {/* Banner details */}
         <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pb-4 sm:pb-0 pt-0 md:pt-20 z-10">
           <Fade triggerOnce cascade>
             <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold relative">
-              <motion.span
+              {/* <motion.span
                 variants={bracketVariants}
                 animate="animation"
                 className="text-primary-400 absolute -top-1 -left-7"
               >
                 [
-              </motion.span>
+              </motion.span> */}
               {title}
-              <motion.span
+              {/* <motion.span
                 variants={bracketVariants}
                 animate="animation"
                 className="text-primary-400 absolute bottom-0 -right-5"
               >
                 ]
-              </motion.span>
+              </motion.span> */}
             </h1>
             <p className="my-5 lg:my-7 xl:my-8 text-xsm sm:text-sm lg:text-base">{description}</p>
           </Fade>
@@ -66,7 +66,7 @@ export default function DefaultBanner({
         <Line className="bottom-0 right-2/12 md:right-1/12 w-12" />
       </div>
       {/* Waves */}
-      <div className="w-full mt-8">
+      <div className="w-full mt-18">
         <Waves className="w-full h-full -mb-2" />
       </div>
     </div>

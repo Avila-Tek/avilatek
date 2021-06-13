@@ -1,9 +1,9 @@
 import React from 'react';
-import { StaticImage } from 'gatsby-plugin-image';
 import InstagramIcon from './icons/InstagramIcon';
 import FacebookIcon from './icons/FacebookIcon';
 import TwitterIcon from './icons/TwitterIcon';
 import LinkedIn from './icons/LinkedIn';
+import LanguageToggle from './common/LanguageToggle';
 
 export default function Footer() {
   return (
@@ -96,10 +96,13 @@ export default function Footer() {
         </svg>
       </div>
       <hr className="w-full mb-4 mt-2 border-medium-blue dark:border-dark-gray dark:border-opacity-50" />
-      <p className="text-xs lg:text-sm my-2">
-        &copy; {new Date().getFullYear()} Avila Tek. Todos los derechos
-        reservados
-      </p>
+      <div className="w-full flex items-center justify-between text-xs lg:text-sm my-2">
+        <p>
+          &copy; {new Date().getFullYear()} Avila Tek. Todos los derechos
+          reservados
+        </p>
+        <LanguageToggle />
+      </div>
     </footer>
   );
 }

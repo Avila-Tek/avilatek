@@ -9,6 +9,7 @@ export type Product = {
   name: string;
   description: string;
   svg: any;
+  btnTxt?: string;
 };
 
 interface ProductCardProps {
@@ -34,14 +35,14 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
         scale: 1.04,
         transition: { duration: 0.3 },
       }}
-      className={`w-60 sm:w-64 lg:w-72 h-72 md:h-80 mx-4 lg:mx-10 flex-col justify-between p-7 rounded-md bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-dark-gray transition-all duration-300 ease-in-out ${className}`}
+      className={`w-68 md:w-76 h-80 md:h-88 mx-4 md:mx-6 lg:mx-8 flex-col justify-between p-7 rounded-md bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-dark-gray transition-all duration-300 ease-in-out ${className}`}
     >
       <div>
-        <img src={product?.svg} alt={product?.name} className="w-2/5 md:h-20" />
+        <img src={product?.svg} alt={product?.name} className="h-16 md:h-18" />
         <h2 className="text-primary-400 font-bold mt-3 mb-2 text-sm lg:text-base">
           {product?.name}
         </h2>
-        <p className="mb-4 leading-snug text-xsm md:text-sm">
+        <p className="w-full  leading-snug text-xsm md:text-sm">
           {product?.description}
         </p>
       </div>
@@ -51,8 +52,8 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
         className="flex items-center text-secondary-500 dark:text-font-white hover:text-primary-300 duration-150 transition-all ease-in-out"
         to="#contact"
       >
-        <p className="text-xs md:text-sm mr-3">Conoce más</p>
-        <LongArrow className="h-4" />
+        <p className="text-xs md:text-sm mr-3">{product.btnTxt}</p>
+        <LongArrow className="h-3" />
       </Link>
     </motion.li>
   );
@@ -94,7 +95,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
       </button>
 
       {/* Cards carousel, gap-12 lg:gap-20 */}
-      <ul className="md:w-full flex justify-center mx-4">
+      <ul className="lg:w-full flex justify-center mx-4">
         {/* manage how many cards will show up in each device size */}
         <AnimatePresence>
           {products.map((product, idx) => (
@@ -111,7 +112,7 @@ export default function ProductList({ products: _products }: ProductListProps) {
                 <ProductCard
                   key={product?.name}
                   product={product}
-                  className="hidden md:flex"
+                  className="hidden lg:flex"
                   direction={direction}
                 />
               ) : null}

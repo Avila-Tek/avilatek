@@ -10,20 +10,23 @@ export default function ProductsSection() {
     {
       name: 'Digital Funnel',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sed nunc et ut. Elit sed nunc et ut.',
+        'Ten el sitio para tu compañía o producto, donde podrás mostrar información de productos y servicios, un espacio para darte a conocer, y tus clientes te puedan contactar',
       svg: LandingPage,
+      btnTxt: 'Cotizar',
     },
     {
       name: 'Digital Store',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sed nunc et ut. Elit sed nunc et ut.',
+        'Tu E-Commerce a la medida, si tienes algún inventario local, o deseas empezar de cero con tu tienda online, puedes contar con un sistema que te permitirá maximizar tus ventas.',
       svg: ECommerce,
+      btnTxt: 'Cotizar',
     },
     {
       name: 'UI Tools - For Developers',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elit sed nunc et ut. Elit sed nunc et ut.',
+        'Cambiar titulo a "Dev Tools", Para los desarrolladores que deseen sacar el máximo provecho de sus proyectos, con herramientas para maximizar su productividad con productos de calidad.',
       svg: DesignSystems,
+      btnTxt: 'Muy pronto',
     },
   ];
 

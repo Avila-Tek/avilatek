@@ -3,43 +3,43 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
-import Image from './Image';
+import Image from './common/Image';
 
 const logos: Array<{ src: string; name: string; className: string }> = [
   {
     src: 'react.png',
     name: 'ReactJS',
-    className: 'w-32',
+    className: 'w-28 sm:w-32',
   },
   {
     src: 'nextjs.png',
     name: 'NextJS',
-    className: 'w-24',
+    className: 'w-20 sm:w-24',
   },
   {
     src: 'gatsby.png',
     name: 'Gatsby',
-    className: 'w-40',
+    className: 'w-36 sm:w-40',
   },
   {
     src: 'graphql.png',
     name: 'GraphQL',
-    className: 'w-40',
+    className: 'w-36 sm:w-40',
   },
   {
     src: 'android.png',
     name: 'Android',
-    className: 'w-40',
+    className: 'w-36 sm:w-40',
   },
   {
     src: 'ios.png',
     name: 'iOS',
-    className: 'w-24',
+    className: 'w-20 sm:w-24',
   },
 ];
 
 interface LogoItemProps {
-  src: any; // ! find out what type is src
+  src: string;
   name: string;
   className?: string;
 }
@@ -55,7 +55,7 @@ function LogoItem({ src, name, className }: LogoItemProps) {
       <Image
         filename={src}
         alt={name}
-        className={`mx-7 xl:mx-8 duration-150 transition-all filter-grayscale dark:filter-grayscale-bright hover:filter-none ease-in-out ${className}`}
+        className={`mx-8 xl:mx-9 duration-150 transition-all filter-grayscale dark:filter-grayscale-bright hover:filter-none ease-in-out ${className}`}
       />
     </motion.div>
   );
@@ -81,7 +81,7 @@ export default function Technologies() {
   }, [technologies]);
 
   return (
-    <section className="pt-16 md:pt-12 mb-48 lg:mb-68">
+    <section className="pt-16 md:pt-2 mb-44 lg:mb-56 -mt-8">
       <Fade triggerOnce>
         <div className="w-full mb-16 sm:mb-20 px-16 md:px-36">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
@@ -106,12 +106,11 @@ export default function Technologies() {
           <div className="duration-500 transition-all w-11/12 md:w-9/12 h-18 flex items-center justify-center mx-12">
             <AnimatePresence>
               {technologies.map(({ src, name, className }, idx) => (
-                <>
+                <div key={name}>
                   {0 === idx ? (
                     <LogoItem
                       src={src}
                       name={name}
-                      key={name}
                       className={className}
                     />
                   ) : null}
@@ -120,7 +119,6 @@ export default function Technologies() {
                       src={src}
                       name={name}
                       className={`hidden sm:block ${className}`}
-                      key={name}
                     />
                   ) : null}
                   {2 === idx ? (
@@ -128,7 +126,6 @@ export default function Technologies() {
                       src={src}
                       name={name}
                       className={`hidden lg:block ${className}`}
-                      key={name}
                     />
                   ) : null}
                   {3 === idx ? (
@@ -136,10 +133,9 @@ export default function Technologies() {
                       src={src}
                       name={name}
                       className={`hidden xl:block ${className}`}
-                      key={name}
                     />
                   ) : null}
-                </>
+                </div>
               ))}
             </AnimatePresence>
           </div>
