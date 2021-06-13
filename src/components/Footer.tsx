@@ -16,7 +16,7 @@ export default function Footer() {
           </h2>
           <p className="mt-4">
             <span className="font-medium mr-4">Caracas</span> +58 (424) 27 82
-            749
+            759
           </p>
           <p className="my-2">
             <span className="font-medium mr-5">Madrid</span> +34 (682) 35 74 16
