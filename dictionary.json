@@ -1,0 +1,98 @@
+{
+  "es": {
+    "navbar": {
+      "home": "Inicio",
+      "aboutUs": "Nosotros",
+      "products": "Productos",
+      "services": "Servicios",
+      "portfolio": "Portafolio",
+      "blog": "Blog",
+      "contactUs": "Contacto"
+    },
+    "footer": {
+      "copyright": "Todos los derechos reservados",
+      "contact": "Contacto",
+      "joinUs": "Únete al equipo",
+      "joinText": "Si tienes conocimientos en desarrollo de software y quieres formar parte de un equipo profesional, contáctanos.",
+      "workWithUs": "Trabaja con nosotros"
+    },
+    "homeBanner": {
+      "title": "Lleva tu negocio al mundo digital,",
+      "words": [
+        "desarrollamos apps",
+        "desarrollamos sistemas",
+        "hacemos marketing",
+        "hacemos consultorías"
+      ],
+      "quoteBtn": "Cotizar"
+    },
+    "clients": {
+      "firstWord": "Conoce",
+      "markedWord": "algunos",
+      "secondWord": "de nuestros",
+      "highlightedWord": "clientes"
+    },
+    "aboutUsText": "Avila Tek es una empresa con sede en Venezuela que desarrolla aplicaciones móviles y web que ayudan a las empresas a innovar y obtener una ventaja competitiva con aplicaciones atractivas. Ofrecemos servicios de desarrollo de extremo a extremo con las mejores tecnologías del mercado. Ya sea que necesites una aplicación, un sistema personalizado para tu empresa o definas una estrategia de redes sociales, podemos ayudarte.",
+    "blog": {
+      "emptyList": "No se pudieron encontrar resultados",
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "page": "Página",
+      "of": "de"
+    },
+    "subscription": {
+      "title": "Recibe nuestras últimas noticias",
+      "text": "Mantente al día con toda nuestra nueva información directamente en tu buzón de entrada.",
+      "placeholder": "Correo electrónico",
+      "button": "Subscribirse"
+    }
+  },
+  "en": {
+    "navbar": {
+      "home": "Home",
+      "aboutUs": "About us",
+      "products": "Products",
+      "services": "Services",
+      "portfolio": "Portfolio",
+      "blog": "Blog",
+      "contactUs": "Contact"
+    },
+    "footer": {
+      "copyright": "All rights reserved",
+      "contact": "Contact",
+      "joinUs": "Join the team",
+      "joinText": "If you have knowledge in software development and want to be part of a professional team, contact us.",
+      "workWithUs": "Work with us"
+    },
+    "homeBanner": {
+      "title": "Take your business to the digital world,",
+      "words": [
+        "we develop apps",
+        "we develop softwares",
+        "we do marketing",
+        "we do consultancies"
+      ],
+      "quoteBtn": "Quote"
+    },
+    "clients": {
+      "firstWord": "Meet",
+      "markedWord": "some",
+      "secondWord": "of our",
+      "highlightedWord": "clients"
+    },
+    "aboutUsText": "Avila Tek is a Venezuela-based company that develops mobile and web applications that help companies innovate and gain a competitive advantage with engaging applications. We offer end-to-end development services with the best technologies on the market. Whether you need an application, a customized system for your company or to define a social media strategy, we can help you.",
+    "blog": {
+      "emptyList": "Results could not be found",
+      "next": "Next",
+      "previous": "Previous",
+      "page": "Page",
+      "of": "of"
+    },
+    "subscription": {
+      "title": "Receive our latest news",
+      "text": "Stay up to date with all our new information directly in your inbox.",
+      "placeholder": "Email",
+      "button": "Subscribe"
+    }
+  }
+}
