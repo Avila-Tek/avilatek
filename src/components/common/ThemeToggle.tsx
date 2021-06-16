@@ -51,7 +51,7 @@ export default function ThemeToggle() {
   return (
     <div className="relative h-6 w-36 rounded-full bg-dark-blue dark:bg-dark bg-opacity-25 dark:bg-opacity-40">
       {values.map((value) => (
-        <span>
+        <span key={value}>
           <ConcealedRadio value={value} selected={theme} />
           <ClickableLabel title={value} onClick={changeTheme} />
         </span>

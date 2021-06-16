@@ -7,31 +7,19 @@ import Image from './common/Image';
 
 const logos = [
   {
-    src: 'logos/bat.png',
-    size: 'w-24 lg:w-28 mb-1 pl-2 sm:pl-0',
-  },
-  {
     src: 'logos/bigott.png',
-    size: 'w-36 md:w-40 xl:w-44 mb-1',
-  },
-  {
-    src: 'logos/bloop-logo.png',
-    size: 'w-28 xl:w-32',
-  },
-  {
-    src: 'logos/bloopex.png',
-    size: 'w-24 md:w-28',
+    size: 'w-32 md:w-36 xl:w-40 mb-1',
   },
   {
     src: 'logos/continental-logo.png',
     size: 'w-48 md:w-52 xl:w-60',
   },
   {
-    src: 'logos/pomelos-logo.png',
-    size: 'w-32 xl:w-40',
+    src: 'logos/gno-logo.png',
   },
   {
-    src: 'logos/habitat-venezuela.png',
+    src: 'logos/bloop-logo.png',
+    size: 'w-24 md:w-28 xl:w-32',
   },
   {
     src: 'logos/habitat-village.png',
@@ -41,6 +29,45 @@ const logos = [
   },
   {
     src: 'logos/the-grint.png',
+  },
+  {
+    src: 'logos/bat.png',
+    size: 'w-24 lg:w-28 mb-1 pl-2 sm:pl-0',
+  },
+  {
+    src: 'logos/ptck-logo.png',
+    size: 'w-40 md:w-44 xl:w-48',
+  },
+  {
+    src: 'logos/intergraph-logo.png',
+  },
+  {
+    src: 'logos/habitat-venezuela.png',
+  },
+  {
+    src: 'logos/bloopex.png',
+    size: 'w-24 md:w-28',
+  },
+  {
+    src: 'logos/hablemos-seguro-logo-1.png',
+    size: 'w-44 xl:w-48',
+  },
+  {
+    src: 'logos/jpg-logo.png',
+  },
+  {
+    src: 'logos/new-pomelos-logo.png',
+  },
+  {
+    src: 'logos/psh-logo.png',
+    size: 'w-28 xl:w-32',
+  },
+  {
+    src: 'logos/grupo-mre-logo.png',
+  },
+  {
+    src: 'logos/bodebar-logo.png',
+    size: 'w-20 xl:w-24',
   },
 ];
 
@@ -61,7 +88,7 @@ function LogoItem({ src, className, size }: LogoItemProps) {
       <Image
         filename={src}
         alt={src}
-        className={`mx-8 xl:mx-9 duration-200 transition-all filter-logo-light dark:filter-grayscale-bright hover:filter-drop-shadow dark:hover:filter-none ease-in-out ${className} ${
+        className={`mx-7 md:mx-8 xl:mx-9 duration-200 transition-all filter-grayscale-dark dark:filter-grayscale-bright hover:filter-black dark:hover:filter-white ease-in-out ${className} ${
           size ?? 'w-32 md:w-36 xl:w-40'
         }`}
       />
@@ -112,7 +139,7 @@ export default function Clients() {
           </button>
 
           {/* Carousel, gap-14 xl:gap-16 */}
-          <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-30 rounded-full duration-500 transition-all h-36 w-full md:w-11/12 xl:w-9/12 flex items-center justify-center mx-8 lg:mx-12">
+          <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-30 dark:bg-opacity-10 rounded-full duration-500 transition-all h-36 w-full md:w-11/12 xl:w-9/12 flex items-center justify-center mx-8 lg:mx-12">
             <AnimatePresence>
               {clients.map(({ src, size }, idx) => (
                 <div key={src}>
