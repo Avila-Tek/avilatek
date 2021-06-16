@@ -3,9 +3,6 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { globalHistory } from '@reach/router';
 import { motion } from 'framer-motion';
-import LightModeIcon from './icons/LightModeIcon';
-import DarkModeIcon from './icons/DarkModeIcon';
-import useTheme from '../hooks/useTheme';
 import useOutsideAlerter from '../hooks/useOutsideAlerter';
 
 interface NavItemProps {
@@ -41,12 +38,7 @@ export default function Navbar() {
   const [activeLink, setActiveLink] = React.useState<string>('Inicio');
   const updateActiveLink = React.useCallback(setActiveLink, [setActiveLink]);
   const updateOpenState = React.useCallback(setOpen, [setOpen]);
-  const [, setTheme] = useTheme();
   useOutsideAlerter(wrapper, updateOpenState);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
 
   const toggleNav = () => {
     setOpen((prev) => !prev);
@@ -143,7 +135,13 @@ export default function Navbar() {
         />
         <NavItem
           title="Portafolio"
-          href="/#portfolio"
+          href="/portfolio"
+          activeLink={activeLink}
+          updateActiveLink={updateActiveLink}
+        />
+        <NavItem
+          title="Blog"
+          href="/blog"
           activeLink={activeLink}
           updateActiveLink={updateActiveLink}
         />
@@ -153,19 +151,6 @@ export default function Navbar() {
           activeLink={activeLink}
           updateActiveLink={updateActiveLink}
         />
-
-        <label className="relative inline-block w-14 h-7 ml-1.5 mt-4 md:mt-0">
-          <input
-            type="checkbox"
-            className="checkbox focus:outline-none"
-            aria-label="Cambiar de tema"
-            onClick={toggleTheme}
-          />
-          <span className="thumb bg-secondary-300 dark:bg-primary-400">
-            <LightModeIcon className="h-4 w-4" />
-            <DarkModeIcon className="h-4 w-4" />
-          </span>
-        </label>
       </div>
     </motion.nav>
   );

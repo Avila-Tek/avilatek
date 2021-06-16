@@ -25,7 +25,7 @@ export default function BlogPage({ data }) {
     title: (
       <>
         Avila Tek Beyond The{' '}
-        <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
+        <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 text-font-dark dark:text-font-white">
           Blog
         </mark>{' '}
       </>

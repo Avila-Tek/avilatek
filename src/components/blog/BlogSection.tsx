@@ -36,7 +36,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
             className="text-sm lg:text-base text-primary-400 bg-transparent border-2 border-primary-400 hover:border-primary-300 hover:text-primary-300 py-1.5 px-6 rounded-full focus:outline-none active:border-primary-500 active:text-primary-500"
             onClick={() => navigate('/blog')}
           >
-            Aprende con nosotros
+            Ver más
           </button>
         </div>
         <div className="absolute top-0 right-1/3 rounded-third-blob w-7/12 md:w-5/12 h-72 brick bg-medium-blue dark:bg-dark-gray bg-opacity-40 dark:bg-opacity-20" />
