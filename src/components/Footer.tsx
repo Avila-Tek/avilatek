@@ -4,7 +4,6 @@ import FacebookIcon from './icons/FacebookIcon';
 import TwitterIcon from './icons/TwitterIcon';
 import LinkedIn from './icons/LinkedIn';
 import LanguageToggle from './common/LanguageToggle';
-import useLanguage from '../hooks/useLanguage';
 import ThemeToggle from './common/ThemeToggle';
 
 interface FooterProps {

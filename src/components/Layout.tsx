@@ -5,8 +5,8 @@ import Navbar from './Navbar';
 
 export default function Layout({ children }) {
   const location = useLocation();
-  console.log(location.pathname.split("/"));
-  console.log(location.hash);
+  // console.log(location.pathname.split("/"));
+  // console.log(location.hash);
 
   // So that the ascii art appears in every view
   React.useEffect(() => {
