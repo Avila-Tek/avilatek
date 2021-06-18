@@ -1,16 +1,19 @@
 import React from 'react';
 import Input from './common/Input';
+import FileInput from './common/FileInput';
 import Button from './common/Button';
-import UploadIcon from './icons/UploadIcon';
 
 export default function ContactForm() {
   const [name, setName] = React.useState<string>('');
   const [email, setEmail] = React.useState<string>('');
+  const [fileName, setFileName] = React.useState<string>('');
+  const [disabled, setDisabled] = React.useState(false);
 
   return (
     <form
       method="POST"
       action="https://formsubmit.co/erika@avilatek.dev"
+      encType="multipart/form-data"
       className="bg-light-blue dark:bg-dark-gray shadow-blue dark:shadow-dark-gray rounded-md p-8 max-w-md w-full lg:w-6/12 mx-auto md:mx-0 transition-all duration-300 ease-in-out"
     >
       <Input
@@ -41,20 +44,23 @@ export default function ContactForm() {
         required
         maxLength={127}
       />
-
-      <div className="w-full">
-        <span className="text-sm lg:text-base text-primary-500 dark:text-primary-400 font-bold">
-          Adjunte su CV
-        </span>
-        <div className="mt-2 border border-dark-blue dark:border-medium-gray border-dashed w-full p-7 rounded-md">
-          <div className="w-full m-auto text-center">
-            <UploadIcon className="w-14 text-medium-blue dark:text-medium-gray mx-auto mb-3" />
-            <p className="text-xs xl:text-sm text-neutral-500 dark:text-neutral-400">
-              Arrastre el PDF hasta acá, o haga click para seleccionarlo
-            </p>
-          </div>
-        </div>
-      </div>
+      <FileInput
+        name="cv"
+        label="Adjunte su CV"
+        accept="application/pdf"
+        fileName={fileName}
+        onChange={(e) => {
+          e.preventDefault();
+          if (e.target.files[0].type === 'application/pdf') {
+            setFileName(e.target.files[0].name);
+            setDisabled(false);
+          } else {
+            setFileName('Archivo erróneo');
+            setDisabled(true);
+          }
+        }}
+        required
+      />
 
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_template" value="table" />
@@ -68,6 +74,7 @@ export default function ContactForm() {
         type="submit"
         aria-label="Enviar el formulario"
         className="w-full text-sm lg:text-base mt-6"
+        disabled={disabled}
       >
         Aplicar
       </Button>

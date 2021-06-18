@@ -8,8 +8,7 @@ export default function UploadIcon({ className }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="59"
-      height="40"
+      viewBox="0 0 59 40"
       fill="none"
       className={className}
     >

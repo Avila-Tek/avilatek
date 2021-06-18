@@ -12,7 +12,7 @@ export default function LanguageToggle() {
           e.preventDefault();
           setLanguage(e.target.value);
         }}
-        className="px-8 mx-0 bg-transparent text-xs lg:text-sm text-primary-500 dark:text-primary-400 font-medium border-0 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out"
+        className="px-8 mx-0 bg-transparent text-xs lg:text-sm text-primary-500 dark:text-primary-300 font-medium border-0 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out"
       >
         <option value="en">English</option>
         <option value="es">Español</option>
