@@ -56,7 +56,7 @@ export default React.forwardRef<HTMLInputElement, InputProps>(
         <label
           htmlFor={name}
           className={`
-          w-4/12 mt-1 px-3 py-1.5 flex items-center justify-center text-font-white bg-primary-500 hover:bg-primary-400 rounded-r-lg text-xs md:text-sm focus:outline-none active:bg-primary-300 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer transition-all duration-300 ease-in-out
+          w-4/12 mt-1 p-1.5 flex items-center justify-center text-font-white bg-primary-400 hover:bg-primary-300 dark:bg-primary-500 dark:hover:bg-primary-400 rounded-r-lg text-xs md:text-sm focus:outline-none active:bg-primary-500 dark:active:bg-primary-300 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer transition-all duration-300 ease-in-out
           ${rest.disabled ? 'opacity-75 cursor-not-allowed' : ''}`}
         >
           <UploadIcon className="h-5 w-5 mr-1.5" />

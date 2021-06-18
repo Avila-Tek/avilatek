@@ -1,10 +1,12 @@
 import React from 'react';
+import { navigate } from 'gatsby';
 import InstagramIcon from './icons/InstagramIcon';
 import FacebookIcon from './icons/FacebookIcon';
 import TwitterIcon from './icons/TwitterIcon';
 import LinkedIn from './icons/LinkedIn';
 import LanguageToggle from './common/LanguageToggle';
 import ThemeToggle from './common/ThemeToggle';
+import Button from './common/Button';
 
 interface FooterProps {
   language?: string;
@@ -76,15 +78,14 @@ export default function Footer({ language = 'es' }: FooterProps) {
             Si tienes conocimientos en desarrollo de software y quieres formar
             parte de un equipo profesional, contáctanos.{' '}
           </p>
-          <a
-            href="https://bit.ly/avila-tek"
-            target="_blank"
+          <Button
+            type="button"
             aria-label="Trabaja con nosotros"
-            rel="noopener"
-            className="px-6 text-xs md:text-sm text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500"
+            onClick={() => navigate('/work-with-us')}
+            className="px-6 text-xs md:text-sm"
           >
             Trabaja con nosotros
-          </a>
+          </Button>
         </div>
       </div>
       {/* Copyright info */}
