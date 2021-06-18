@@ -2,8 +2,11 @@ import React from 'react';
 import Input from './common/Input';
 import FileInput from './common/FileInput';
 import Button from './common/Button';
+import useLanguage from '../hooks/useLanguage';
 
 export default function ContactForm() {
+  const language = 'es';
+  const [translation] = useLanguage();
   const [name, setName] = React.useState<string>('');
   const [email, setEmail] = React.useState<string>('');
   const [fileName, setFileName] = React.useState<string>('');
@@ -20,8 +23,8 @@ export default function ContactForm() {
         name="name"
         type="text"
         value={name}
-        placeholder="Nombre"
-        label="Nombre"
+        placeholder={translation(language, 'workWithUs.name')}
+        label={translation(language, 'workWithUs.name')}
         onChange={(e) => {
           e.preventDefault();
           setName(e.target.value);
@@ -29,14 +32,14 @@ export default function ContactForm() {
         required
         maxLength={127}
         pattern="^[a-zA-Z\u00C0-\u00FF]+\s?[a-zA-Z\u00C0-\u00FF]+$"
-        title="No se admiten carácteres especiales"
+        title={translation(language, 'workWithUs.error')}
       />
       <Input
         name="email"
         type="email"
         value={email}
-        placeholder="Correo"
-        label="Correo electrónico"
+        placeholder={translation(language, 'workWithUs.email')}
+        label={translation(language, 'workWithUs.email')}
         onChange={(e) => {
           e.preventDefault();
           setEmail(e.target.value);
@@ -46,7 +49,7 @@ export default function ContactForm() {
       />
       <FileInput
         name="cv"
-        label="Adjunta tu CV"
+        label={translation(language, 'workWithUs.cv')}
         accept="application/pdf"
         fileName={fileName}
         onChange={(e) => {
@@ -55,7 +58,7 @@ export default function ContactForm() {
             setFileName(e.target.files[0].name);
             setDisabled(false);
           } else {
-            setFileName('Archivo erróneo');
+            setFileName(translation(language, 'workWithUs.wrongFile'));
             setDisabled(true);
           }
         }}
@@ -76,7 +79,7 @@ export default function ContactForm() {
         className="w-full text-sm lg:text-base mt-6"
         disabled={disabled}
       >
-        Aplicar
+        {translation(language, 'workWithUs.apply')}
       </Button>
     </form>
   );

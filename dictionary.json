@@ -45,6 +45,15 @@
       "text": "Mantente al día con toda nuestra nueva información directamente en tu buzón de entrada.",
       "placeholder": "Correo electrónico",
       "button": "Subscribirse"
+    },
+    "workWithUs": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "cv": "Adjunta tu CV",
+      "browse": "Buscar",
+      "apply": "Aplicar",
+      "error": "No se admiten carácteres especiales",
+      "wrongFile": "Archivo erróneo"
     }
   },
   "en": {
@@ -93,6 +102,15 @@
       "text": "Stay up to date with all our new information directly in your inbox.",
       "placeholder": "Email",
       "button": "Subscribe"
+    },
+    "workWithUs": {
+      "name": "Name",
+      "email": "Email",
+      "cv": "Attach your CV",
+      "browse": "Browse",
+      "apply": "Apply",
+      "error": "Special characters are not allowed",
+      "wrongFile": "Wrong file"
     }
   }
 }

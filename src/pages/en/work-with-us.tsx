@@ -1,27 +1,28 @@
 import * as React from 'react';
 import { Fade } from 'react-awesome-reveal';
-import SEO from '../components/SEO';
-import WorkWithUs from '../components/icons/WorkWithUs';
-import WorkForm from '../components/WorkForm';
+import SEO from '../../components/SEO';
+import WorkWithUs from '../../components/icons/WorkWithUs';
+import WorkForm from '../../components/WorkForm';
 
 export default function WorkWithUsPage() {
   return (
     <>
-      <SEO title="Trabaja con nosotros" />
+      <SEO title="Work with us" />
       <main className="min-h-screen w-full relative overflow-hidden">
         <section className="pt-44 pb-40 px-14 md:px-20 lg:px-28 xl:px-44">
           <Fade triggerOnce>
             {/* Section title */}
             <div className="w-11/12 sm:w-10/12 md:w-9/12 xl:w-6/12 mb-10 mx-auto md:mx-0">
               <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-                <span className="text-primary-400">Únete</span> a la experiencia
-                de{' '}
+                <span className="text-primary-400">Join</span> the{' '}
                 <mark className="text-font0-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
                   Avila Tek
-                </mark>
+                </mark>{' '}
+                experience
               </h1>
               <p className="w-full mt-6 lg:mt-7 text-sm lg:text-base">
-                Si quieres formar parte de nuestro equipo deja tus datos abajo.
+                If you want to be part of our team, leave your information
+                below.
               </p>
             </div>
 

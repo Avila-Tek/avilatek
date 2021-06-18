@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { globalHistory } from '@reach/router';
+import { globalHistory, useLocation } from '@reach/router';
 import { motion } from 'framer-motion';
 import useOutsideAlerter from '../hooks/useOutsideAlerter';
+import useLanguage from '../hooks/useLanguage';
 
 interface NavItemProps {
   title: string;
@@ -13,6 +14,10 @@ interface NavItemProps {
 }
 
 function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
+  const location = useLocation();
+  console.log(location.pathname);
+  console.log(location.hash);
+
   return (
     // ! Link activeClassName doesn't work with anchors
     <Link to={href}>
@@ -33,6 +38,9 @@ function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
 
 export default function Navbar() {
   const wrapper = React.useRef(null);
+  const location = useLocation();
+  const [translation] = useLanguage();
+  const language = location.pathname.includes('en') ? 'en' : 'es';
   const [isOpen, setOpen] = React.useState<boolean>(false);
   const [isFixed, setFixed] = React.useState<boolean>(false);
   const [activeLink, setActiveLink] = React.useState<string>('Inicio');
@@ -110,44 +118,44 @@ export default function Navbar() {
 
       <div className="flex flex-col md:flex-row w-full md:w-auto md:items-center overflow-hidden my-4 md:my-0">
         <NavItem
-          title="Inicio"
-          href="/"
+          title={translation(language, 'navbar.home')}
+          href={`/${language === 'es' ? '' : language + '/'}`}
           activeLink={activeLink}
           updateActiveLink={updateActiveLink}
         />
         <NavItem
-          title="Nosotros"
-          href="/#about-us"
+          title={translation(language, 'navbar.aboutUs')}
+          href={`/${language === 'es' ? '' : language + '/'}#about-us`}
           activeLink={activeLink}
           updateActiveLink={updateActiveLink}
         />
         <NavItem
-          title="Productos"
-          href="/#products"
+          title={translation(language, 'navbar.products')}
+          href={`/${language === 'es' ? '' : language + '/'}#products`}
           activeLink={activeLink}
           updateActiveLink={updateActiveLink}
         />
         <NavItem
-          title="Servicios"
-          href="/#services"
+          title={translation(language, 'navbar.services')}
+          href={`/${language === 'es' ? '' : language + '/'}#services`}
           activeLink={activeLink}
           updateActiveLink={updateActiveLink}
         />
         <NavItem
-          title="Portafolio"
-          href="/portfolio"
+          title={translation(language, 'navbar.portfolio')}
+          href={`/${language === 'es' ? '' : language + '/'}portfolio`}
           activeLink={activeLink}
           updateActiveLink={updateActiveLink}
         />
         <NavItem
-          title="Blog"
-          href="/blog"
+          title={translation(language, 'navbar.blog')}
+          href={`/${language === 'es' ? '' : language + '/'}blog`}
           activeLink={activeLink}
           updateActiveLink={updateActiveLink}
         />
         <NavItem
-          title="Contacto"
-          href="/#contact"
+          title={translation(language, 'navbar.contactUs')}
+          href={`/${language === 'es' ? '' : language + '/'}#contact`}
           activeLink={activeLink}
           updateActiveLink={updateActiveLink}
         />

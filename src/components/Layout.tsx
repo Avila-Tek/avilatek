@@ -1,13 +1,8 @@
 import React from 'react';
-import { useLocation } from '@reach/router';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
 export default function Layout({ children }) {
-  const location = useLocation();
-  // console.log(location.pathname.split("/"));
-  // console.log(location.hash);
-
   // So that the ascii art appears in every view
   React.useEffect(() => {
     console.log(

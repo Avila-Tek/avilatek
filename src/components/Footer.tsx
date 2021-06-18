@@ -1,5 +1,6 @@
 import React from 'react';
 import { navigate } from 'gatsby';
+import { useLocation } from '@reach/router';
 import InstagramIcon from './icons/InstagramIcon';
 import FacebookIcon from './icons/FacebookIcon';
 import TwitterIcon from './icons/TwitterIcon';
@@ -7,19 +8,20 @@ import LinkedIn from './icons/LinkedIn';
 import LanguageToggle from './common/LanguageToggle';
 import ThemeToggle from './common/ThemeToggle';
 import Button from './common/Button';
+import useLanguage from '../hooks/useLanguage';
 
-interface FooterProps {
-  language?: string;
-}
+export default function Footer() {
+  const location = useLocation();
+  const [translation] = useLanguage();
+  const language = location.pathname.includes('en') ? 'en' : 'es';
 
-export default function Footer({ language = 'es' }: FooterProps) {
   return (
     <footer className="bg-light-blue dark:bg-medium-gray w-full px-12 lg:px-24 xl:px-26 py-1.5 shadow-blue dark:shadow-dark-gray border-t-2 border-medium-blue dark:border-dark-gray dark:text-font-white transition-all duration-300 ease-in-out">
       <div className="flex flex-col sm:flex-row w-full py-8 gap-6 sm:gap-20">
         {/* Contact section */}
         <div className="w-full sm:w-1/3 text-xs md:text-sm">
           <h2 className="text-primary-400 font-semibold text-sm md:text-base">
-            Contacto
+            {translation(language, 'footer.contact')}
           </h2>
           <p className="mt-4">
             <span className="font-medium mr-4">Caracas</span> +58 (424) 27 82
@@ -72,19 +74,22 @@ export default function Footer({ language = 'es' }: FooterProps) {
         {/* Join the team section */}
         <div className="w-full sm:w-1/2 lg:w-1/3 text-xs md:text-sm">
           <h2 className="text-primary-400 font-semibold text-sm md:text-base">
-            Únete al equipo
+            {translation(language, 'footer.joinUs')}
           </h2>
           <p className="mt-4 mb-5">
-            Si tienes conocimientos en desarrollo de software y quieres formar
-            parte de un equipo profesional, contáctanos.{' '}
+            {translation(language, 'footer.joinText')}
           </p>
           <Button
             type="button"
             aria-label="Trabaja con nosotros"
-            onClick={() => navigate('/work-with-us')}
+            onClick={() =>
+              navigate(
+                `/${language === 'es' ? '' : language + '/'}work-with-us`
+              )
+            }
             className="px-6 text-xs md:text-sm"
           >
-            Trabaja con nosotros
+            {translation(language, 'footer.workWithUs')}
           </Button>
         </div>
       </div>
@@ -104,8 +109,8 @@ export default function Footer({ language = 'es' }: FooterProps) {
       <hr className="w-full mb-1 mt-4 border-medium-blue dark:border-dark-gray dark:border-opacity-50" />
       <div className="w-full my-0 flex items-center justify-between text-xs lg:text-sm">
         <p>
-          &copy; {new Date().getFullYear()} Avila Tek. Todos los derechos
-          reservados
+          &copy; {new Date().getFullYear()} Avila Tek.{' '}
+          {translation(language, 'footer.copyright')}
         </p>
         <LanguageToggle />
       </div>
