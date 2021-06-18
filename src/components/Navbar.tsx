@@ -9,29 +9,23 @@ import useLanguage from '../hooks/useLanguage';
 interface NavItemProps {
   title: string;
   href: string;
-  activeLink?: string;
-  updateActiveLink?: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
+function NavItem({ title, href }: NavItemProps) {
   const location = useLocation();
-  console.log(location.pathname);
-  console.log(location.hash);
 
   return (
     // ! Link activeClassName doesn't work with anchors
-    <Link to={href}>
-      <button
-        type="button"
-        onClick={() => updateActiveLink(title)}
-        className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
-          activeLink === title
-            ? 'text-primary-400 dark:text-primary-400 border-b border-primary-400'
-            : 'text-font-dark dark:text-font-white'
-        }`}
-      >
-        {title}
-      </button>
+    <Link
+      to={href}
+      aria-label={title}
+      className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
+        location.pathname + location.hash === href
+          ? 'text-primary-400 dark:text-primary-400 border-b-2 border-primary-400'
+          : 'text-font-dark dark:text-font-white'
+      }`}
+    >
+      {title}
     </Link>
   );
 }
@@ -43,8 +37,6 @@ export default function Navbar() {
   const language = location.pathname.includes('en') ? 'en' : 'es';
   const [isOpen, setOpen] = React.useState<boolean>(false);
   const [isFixed, setFixed] = React.useState<boolean>(false);
-  const [activeLink, setActiveLink] = React.useState<string>('Inicio');
-  const updateActiveLink = React.useCallback(setActiveLink, [setActiveLink]);
   const updateOpenState = React.useCallback(setOpen, [setOpen]);
   useOutsideAlerter(wrapper, updateOpenState);
 
@@ -79,19 +71,17 @@ export default function Navbar() {
       }`}
       role="navigation"
     >
-      <Link to="/" className="mr-auto">
-        <button
-          type="button"
-          onClick={() => setActiveLink('Inicio')}
-          className="focus:ring-0 focus:outline-none w-40 lg:w-48 xl:w-56"
-        >
-          <StaticImage
-            src="../assets/images/logo_white.png"
-            alt="Avila Tek logo"
-            placeholder="blurred"
-            layout="fullWidth"
-          />
-        </button>
+      <Link
+        to={`/${language === 'es' ? '' : language + '/'}`}
+        aria-label="Logo"
+        className="mr-auto w-40 lg:w-48 xl:w-56"
+      >
+        <StaticImage
+          src="../assets/images/logo_white.png"
+          alt="Avila Tek logo"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
       </Link>
 
       {/* Hamburger button */}
@@ -120,44 +110,30 @@ export default function Navbar() {
         <NavItem
           title={translation(language, 'navbar.home')}
           href={`/${language === 'es' ? '' : language + '/'}`}
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
         />
         <NavItem
           title={translation(language, 'navbar.aboutUs')}
           href={`/${language === 'es' ? '' : language + '/'}#about-us`}
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
         />
         <NavItem
           title={translation(language, 'navbar.products')}
           href={`/${language === 'es' ? '' : language + '/'}#products`}
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
         />
         <NavItem
           title={translation(language, 'navbar.services')}
           href={`/${language === 'es' ? '' : language + '/'}#services`}
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
         />
         <NavItem
           title={translation(language, 'navbar.portfolio')}
           href={`/${language === 'es' ? '' : language + '/'}portfolio`}
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
         />
         <NavItem
           title={translation(language, 'navbar.blog')}
           href={`/${language === 'es' ? '' : language + '/'}blog`}
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
         />
         <NavItem
           title={translation(language, 'navbar.contactUs')}
           href={`/${language === 'es' ? '' : language + '/'}#contact`}
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
         />
       </div>
     </motion.nav>
