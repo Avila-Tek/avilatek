@@ -46,7 +46,7 @@ export default function ContactForm() {
       />
       <FileInput
         name="cv"
-        label="Adjunte su CV"
+        label="Adjunta tu CV"
         accept="application/pdf"
         fileName={fileName}
         onChange={(e) => {

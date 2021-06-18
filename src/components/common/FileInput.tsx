@@ -48,7 +48,7 @@ export default React.forwardRef<HTMLInputElement, InputProps>(
           name="fileName"
           id="fileName"
           value={fileName}
-          placeholder="Adjunte su CV"
+          placeholder={label}
           className="w-8/12 mt-1 px-3 py-1.5 bg-medium-blue text-font-black dark:bg-medium-gray dark:text-font-white rounded-l-lg text-sm lg:text-base border-medium-blue dark:border-medium-gray cursor-not-allowed"
           disabled
           readOnly

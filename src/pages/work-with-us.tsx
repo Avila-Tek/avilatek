@@ -21,8 +21,7 @@ export default function WorkWithUsPage() {
                 </mark>
               </h1>
               <p className="w-full mt-6 lg:mt-7 text-sm lg:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in
-                sit id hac. Consectetur adipiscing elit. Urna in sit id hac.
+                Si quieres formar parte de nuestro equipo deja tus datos abajo.
               </p>
             </div>
 
