@@ -5,8 +5,8 @@ import Button from './common/Button';
 import useLanguage from '../hooks/useLanguage';
 
 export default function ContactForm() {
+  const [translation, getCurrentLanguage] = useLanguage();
   const language = 'es';
-  const [translation] = useLanguage();
   const [name, setName] = React.useState<string>('');
   const [email, setEmail] = React.useState<string>('');
   const [fileName, setFileName] = React.useState<string>('');
@@ -71,7 +71,9 @@ export default function ContactForm() {
       <input
         type="hidden"
         name="_next"
-        value="https://avilatek.dev/successful-submission"
+        value={`https://avilatek.dev/${
+          language === 'es' ? '' : language + '/'
+        }successful-submission`}
       />
       <Button
         type="submit"

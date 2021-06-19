@@ -3,12 +3,16 @@ import { navigate } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
 import { Post } from './PostCard';
 import PostList from './PostList';
+import useLanguage from '../../hooks/useLanguage';
 
 interface BlogSectionProps {
   posts?: Array<Post>;
 }
 
 export default function BlogSection({ posts }: BlogSectionProps) {
+  const [, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
+
   return (
     <section
       id="blog"
@@ -34,7 +38,9 @@ export default function BlogSection({ posts }: BlogSectionProps) {
             type="button"
             aria-label="Ir al blog"
             className="text-sm lg:text-base text-primary-400 bg-transparent border-2 border-primary-400 hover:border-primary-300 hover:text-primary-300 py-1.5 px-6 rounded-full focus:outline-none active:border-primary-500 active:text-primary-500"
-            onClick={() => navigate('/blog')}
+            onClick={() =>
+              navigate(`/${language === 'es' ? '' : language + '/'}blog`)
+            }
           >
             Ver más
           </button>

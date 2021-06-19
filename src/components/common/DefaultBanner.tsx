@@ -1,6 +1,5 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
-import { motion } from 'framer-motion';
 import Waves from '../icons/Waves';
 import Line from '../icons/Line';
 import RotatingTriangle from '../icons/RotatingTriangle';
@@ -16,16 +15,6 @@ export default function DefaultBanner({
   illustration,
   title,
 }: DefaultBannerProps) {
-  const bracketVariants = {
-    animation: {
-      opacity: [1, 0.4, 1],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-      },
-    },
-  };
-
   return (
     <div className="bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
       <div className="relative flex flex-col-reverse md:flex-row justify-center items-center md:items-start pt-14 md:pt-24 pb-8 md:pb-6 px-10 md:px-12 lg:px-16 xl:px-20">
@@ -33,21 +22,7 @@ export default function DefaultBanner({
         <div className="w-10/12 sm:w-8/12 md:w-5/12 pt-4 md:pt-10 lg:pt-12 z-10">
           <Fade triggerOnce cascade>
             <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold relative">
-              {/* <motion.span
-                variants={bracketVariants}
-                animate="animation"
-                className="text-primary-400 absolute -top-1 -left-7"
-              >
-                [
-              </motion.span> */}
               {title}
-              {/* <motion.span
-                variants={bracketVariants}
-                animate="animation"
-                className="text-primary-400 absolute bottom-0 -right-5"
-              >
-                ]
-              </motion.span> */}
             </h1>
             <p className="my-5 lg:my-7 xl:my-8 text-2sm lg:text-2base">
               {description}

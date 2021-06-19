@@ -6,8 +6,11 @@ import Waves from './icons/Waves';
 import AtTheOffice from './icons/OnTheOffice';
 import RotatingTriangle from './icons/RotatingTriangle';
 import Line from './icons/Line';
+import useLanguage from '../hooks/useLanguage';
 
 export default function Banner() {
+  const [, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const [active, setActive] = React.useState<number>(0);
   const words = [
     'desarrollamos apps',
@@ -16,24 +19,14 @@ export default function Banner() {
     'hacemos consultorías',
   ];
 
-  const bracketVariants = {
-    animation: {
-      opacity: [1, 0.4, 1],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-      },
-    },
-  };
-
   // so that the words change
   React.useEffect(() => {
     const interval = setInterval(
       () => setActive((prev) => (prev + 1) % words.length),
-       7000
-     );
-     return () => clearInterval(interval);
-   }, [active]);
+      7000
+    );
+    return () => clearInterval(interval);
+  }, [active]);
 
   return (
     <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
@@ -43,13 +36,6 @@ export default function Banner() {
           <Fade triggerOnce cascade>
             <div className="h-auto sm:h-18 md:h-auto lg:h-24">
               <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold relative">
-                {/* <motion.span
-                  variants={bracketVariants}
-                  animate="animation"
-                  className="text-primary-400 absolute -top-1 -left-7"
-                >
-                  [
-                </motion.span> */}
                 Lleva tu negocio al mundo digital,{' '}
                 {/* Changing words animation */}
                 <AnimatePresence exitBeforeEnter>
@@ -70,20 +56,13 @@ export default function Banner() {
                     </>
                   ))}
                 </AnimatePresence>
-                {/* <motion.span
-                  variants={bracketVariants}
-                  animate="animation"
-                  className="text-primary-400 absolute bottom-0 -right-7 transition-all duration-300 ease-in-out"
-                >
-                  ]
-                </motion.span> */}
               </h1>
             </div>
             <p className="mt-5 lg:mt-12 mb-6 text-2sm lg:text-2base">
               Desarrollamos tecnologías innovadoras.{' '}
             </p>
             <Link
-              to="/#contact"
+              to={`/${language === 'es' ? '' : language + '/'}#contact`}
               aria-label="Boton de cotiza tu proyecto"
               className="px-6 md:px-8 py-1 sm:py-1.5 text-2sm lg:text-base text-font-white font-medium bg-primary-400 hover:bg-primary-300 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer"
             >

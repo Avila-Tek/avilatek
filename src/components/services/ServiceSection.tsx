@@ -2,11 +2,14 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
 import CardsStack, { Service } from './CardsStack';
+import useLanguage from '../../hooks/useLanguage';
 import DaaS from '../../assets/illustrations/daas.svg';
 import Development from '../../assets/illustrations/development.svg';
 import Consulting from '../../assets/illustrations/consulting.svg';
 
 export default function ServiceSection() {
+  const [, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const services: Array<Service> = [
     {
       illustration: DaaS,
@@ -48,7 +51,7 @@ export default function ServiceSection() {
             siguiente nivel.
           </p>
           <Link
-            to="#contact"
+            to={`/${language === 'es' ? '' : language + '/'}#contact`}
             aria-label="Cotiza tu proyecto en servicios"
             className="text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 rounded-full active:bg-primary-500 px-8 md:px-10 lg:px-12 text-sm lg:text-base"
           >

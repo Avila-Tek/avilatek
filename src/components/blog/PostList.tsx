@@ -10,8 +10,6 @@ interface PostListProps {
   posts: Array<Post>;
   filters?: boolean;
   pagination?: boolean;
-  en?: boolean;
-  language?: string;
 }
 
 // A number that can fit three columns and two columns nicely, example: 6 or 12
@@ -21,10 +19,9 @@ export default function PostList({
   posts: unfilteredPosts = [],
   filters = false,
   pagination = false,
-  en = false,
-  language = 'es',
 }: PostListProps) {
-  const [translation] = useLanguage();
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const [posts, setPosts] = React.useState(unfilteredPosts || []);
   const [items, setItems] = React.useState<Array<Post>>([]);
   const [page, setPage] = React.useState(1);
@@ -89,7 +86,7 @@ export default function PostList({
           <Filters
             authors={authors}
             categories={categories}
-            en={en}
+            en={language === 'en'}
             updateFilter={updateFilter}
             updateSearch={updateSearch}
           />

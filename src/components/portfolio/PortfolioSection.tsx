@@ -2,8 +2,11 @@ import React from 'react';
 import { navigate } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
 import PortfolioSlider, { Project } from './PortfolioSlider';
+import useLanguage from '../../hooks/useLanguage';
 
 export default function PortfolioSection() {
+  const [, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const projects: Array<Project> = [
     {
       title: 'Continental de Seguros',
@@ -34,7 +37,7 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="pt-24 -mt-24 mb-40 md:mb-44 w-full relative z-10 overflow-hidden"
+      className="pt-24 -mt-24 mb-36 md:mb-40 w-full relative z-10 overflow-hidden"
     >
       <Fade cascade triggerOnce>
         <div className="w-full text-center mb-10">
@@ -53,12 +56,14 @@ export default function PortfolioSection() {
         {/* Portfolio slider */}
         <PortfolioSlider projects={projects} />
         {/* Know more button */}
-        <div className="w-full flex justify-center mt-20 lg:mt-36">
+        <div className="w-full flex justify-center mt-20 lg:mt-28">
           <button
             type="button"
             aria-label="Ir al portafolio"
             className="text-sm lg:text-base text-primary-400 bg-transparent border-2 border-primary-400 hover:border-primary-300 hover:text-primary-300 py-1.5 px-6 rounded-full focus:outline-none active:border-primary-500 active:text-primary-500"
-            onClick={() => navigate('/portfolio')}
+            onClick={() =>
+              navigate(`/${language === 'es' ? '' : language + '/'}portfolio`)
+            }
           >
             Conoce más de nuestro trabajo
           </button>

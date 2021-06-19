@@ -1,6 +1,9 @@
+import { useLocation } from '@reach/router';
 import dictionary from '../../dictionary.json';
 
 export default function useLanguage() {
+  const location = useLocation();
+
   const getNestedProperty = (obj: any, path: string) =>
     path.split('.').reduce((prev, curr) => prev[curr], obj || this);
 
@@ -14,5 +17,9 @@ export default function useLanguage() {
     return word || getNestedProperty(dictionary['es'], key) || '';
   };
 
-  return [translation] as const;
+  const getCurrentLanguage = () => {
+    return location.pathname.includes('en') ? 'en' : 'es';
+  };
+
+  return [translation, getCurrentLanguage] as const;
 }
