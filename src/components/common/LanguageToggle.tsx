@@ -1,7 +1,12 @@
 import React from 'react';
+import { navigate } from 'gatsby';
 
 export default function LanguageToggle() {
   const [language, setLanguage] = React.useState('es');
+
+  React.useEffect(() => {
+    navigate(`/${language === 'es' ? '' : language}`);
+  }, [language]);
 
   return (
     <label htmlFor="language">

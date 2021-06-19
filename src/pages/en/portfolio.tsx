@@ -11,61 +11,61 @@ export default function PortfolioPage() {
     {
       title: 'Continental de Seguros',
       description:
-        'Sistema de seguros para empresas aseguradoras, con manejo de cartera de clientes, administración de pólizas, siniestros, recibos, manejo de capital y reportes estadísticos para toma de decisiones.',
+        'Insurance system for insurance companies, with client portfolio management, policy management, claims, receipts, capital management, and statistical reports for decision making.',
       src: 'projects/continental.png',
-      categories: ['App Web'],
+      categories: ['Web App'],
       link: 'https://continentaldeseguros.com.ve/',
     },
     {
       title: 'Plataforma Unidos',
       description:
-        'Sistema de la trasnacional British American Tobacco, es un CRM que brinda indicadores a sus clientes. Cuenta con manejo de estadísticas, plan de fidelidad con canjeo de "experiencias" por buenos resultados en la venta de productos y un sistema de autogestión y evaluación interna de venta de productos.',
+        'The system for the transnational British American Tobacco is a CRM that provides indicators to its clients. It has statistics management, a loyalty plan with an exchange of "experiences" for good results in the sale of products, and a system of self-management and internal evaluation of product sales.',
       src: 'projects/unidos.png',
-      categories: ['App Web'],
+      categories: ['Web App'],
       link: 'https://plataformaunidos.net/',
     },
     {
       title: 'Bloop!',
       description:
-        'Plataforma para productora de eventos, es un CRM a la medida, para auto gestionar proyectos, proveedores, clientes y usuarios, y automatizar procesos de la empresa.',
+        'A platform for an event producer, it is a customized CRM to self-manage projects, suppliers, clients, and users, and automate company processes.',
       src: 'projects/bloop.png',
-      categories: ['App Web'],
+      categories: ['Web App'],
       link: 'https://www.probloop.com/',
     },
     {
       title: 'Frutería Los Pomelos',
       description:
-        'Plataforma de venta y manejo de inventario, es un sistema que ayuda al automercado a manejar sus productos y venderlos de forma online en su plataforma, manejando tracking para delivery o pickup.',
+        'A sales platform and inventory management, it is a system that helps the supermarket to manage its products and sell them online on its platform, managing the tracking for delivery or pickup.',
       src: 'pomelos-ss.png',
-      categories: ['App Web'],
+      categories: ['Web App'],
       link: 'https://fruterialospomelos.store/',
     },
     {
       title: 'Habitat Village',
       description:
-        'Plataforma hotelera para manejo de reservas, este CRM permite publicar la disponibilidad de habitaciones, paquetes extras de actividades e incluye un sistema de fidelidad.',
+        'A hotel platform for reservations management, this CRM allows you to publish the availability of rooms, extra packages of activities and includes a loyalty system.',
       src: 'projects/village-ss.png',
-      categories: ['App Web'],
+      categories: ['Web App'],
       link: 'https://habitatvillage.com/ ',
     },
     {
       title: 'Bodebar',
       description:
-        'Plataforma de venta y manejo de inventario, es un sistema que ayuda al automercado a manejar sus productos y venderlos de forma online en su plataforma, manejando tracking para delivery o pickup.',
+        'A sales platform and inventory management, it is a system that helps the supermarket to manage its products and sell them online on its platform, managing the tracking for delivery or pickup.',
       src: 'projects/bodebar.png',
-      categories: ['App Web', 'Desktop'],
+      categories: ['Web App', 'Desktop'],
       link: 'https://bodebar.avilatek.dev/',
     },
     {
       title: 'PTCK',
-      description: 'Landing page de bufete de abogados.',
+      description: "Law firm's landing page.",
       src: 'projects/ptck.png',
       categories: ['Landing Page'],
       link: 'https://ptck.legal/',
     },
     {
       title: 'JPG Associates',
-      description: 'Landing page de sociedad de corretaje de seguros.',
+      description: "Insurance brokerage company's landing page.",
       src: 'projects/jpg.png',
       categories: ['Landing Page'],
       link: 'https://jpgassociates.net/',
