@@ -22,9 +22,9 @@ export default function ProductsSection() {
       btnTxt: 'Cotizar',
     },
     {
-      name: 'UI Tools - For Developers',
+      name: 'Dev Tools',
       description:
-        'Cambiar titulo a "Dev Tools", Para los desarrolladores que deseen sacar el máximo provecho de sus proyectos, con herramientas para maximizar su productividad con productos de calidad.',
+        'Para los desarrolladores que deseen sacar el máximo provecho de sus proyectos, con herramientas para maximizar su productividad con productos de calidad.',
       svg: DesignSystems,
       btnTxt: 'Muy pronto',
     },

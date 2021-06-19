@@ -43,7 +43,7 @@ export default function Footer() {
               <InstagramIcon />
             </a>
             <a
-              href="https://twitter.com/avilatek_?lang=es"
+              href="https://twitter.com/avilatekdev"
               target="_blank"
               className="hover:text-primary-300 cursor-pointer mr-4"
               aria-label="Twitter"
