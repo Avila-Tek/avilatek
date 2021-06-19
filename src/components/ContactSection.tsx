@@ -5,8 +5,12 @@ import LightningIcon from './icons/LightningIcon';
 import MessageIcon from './icons/MessageIcon';
 import SettingsIcon from './icons/SettingsIcon';
 import CallCenter from './icons/CallCenter';
+import useLanguage from '../hooks/useLanguage';
 
 export default function ContactSection() {
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
+
   return (
     <section
       id="contact"
@@ -40,10 +44,10 @@ export default function ContactSection() {
                 <LightningIcon className="h-6 w-6 mr-6 text-primary-400" />
                 <div>
                   <h2 className="font-bold text-primary-400 text-sm lg:text-base">
-                    Respuesta rápida
+                    {translation(language, 'contactFeatures.quickResponse')}
                   </h2>
                   <p className="mt-1 text-xsm lg:text-sm">
-                    Te estaremos contactando en menos de 24 horas
+                    {translation(language, 'contactFeatures.quickResponseText')}
                   </p>
                 </div>
               </div>
@@ -52,11 +56,10 @@ export default function ContactSection() {
                 <MessageIcon className="h-12 w-12 mr-6 text-primary-400" />
                 <div>
                   <h2 className="font-bold text-primary-400 text-sm lg:text-base">
-                    Consultoría incluida
+                    {translation(language, 'contactFeatures.consulting')}
                   </h2>
                   <p className="mt-1 text-xsm lg:text-sm">
-                    Antes de hacer un presupuesto debemos pautar una reunion de
-                    levantamiento de requerimientos
+                    {translation(language, 'contactFeatures.consultingText')}
                   </p>
                 </div>
               </div>
@@ -65,11 +68,10 @@ export default function ContactSection() {
                 <SettingsIcon className="h-12 w-12 mr-7 text-primary-400" />
                 <div>
                   <h2 className="font-bold text-primary-400 text-sm lg:text-base">
-                    Proyectos a la medida
+                    {translation(language, 'contactFeatures.tailorMade')}
                   </h2>
                   <p className="mt-1 text-xsm lg:text-sm">
-                    Cada proyecto tiene sus especificaciones que trabajamos de
-                    cero para cumplir las necesidades de cada cliente
+                    {translation(language, 'contactFeatures.tailorMadeText')}
                   </p>
                 </div>
               </div>
