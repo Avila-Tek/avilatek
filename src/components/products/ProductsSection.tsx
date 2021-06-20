@@ -1,32 +1,32 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import ProductList, { Product } from './ProductList';
+import useLanguage from '../../hooks/useLanguage';
 import LandingPage from '../../assets/illustrations/landing-page.svg';
 import ECommerce from '../../assets/illustrations/e-commerce.svg';
 import DesignSystems from '../../assets/illustrations/design-systems.svg';
 
 export default function ProductsSection() {
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const products: Array<Product> = [
     {
       name: 'Digital Funnel',
-      description:
-        'Ten el sitio para tu compañía o producto, donde podrás mostrar información de productos y servicios, un espacio para darte a conocer, y tus clientes te puedan contactar',
+      description: translation(language, 'products.digitalFunnel'),
       svg: LandingPage,
-      btnTxt: 'Cotizar',
+      btnTxt: translation(language, 'products.quote'),
     },
     {
       name: 'Digital Store',
-      description:
-        'Tu E-Commerce a la medida, si tienes algún inventario local, o deseas empezar de cero con tu tienda online, puedes contar con un sistema que te permitirá maximizar tus ventas.',
+      description: translation(language, 'products.digitalStore'),
       svg: ECommerce,
-      btnTxt: 'Cotizar',
+      btnTxt: translation(language, 'products.quote'),
     },
     {
       name: 'Dev Tools',
-      description:
-        'Para los desarrolladores que deseen sacar el máximo provecho de sus proyectos, con herramientas para maximizar su productividad con productos de calidad.',
+      description: translation(language, 'products.devTools'),
       svg: DesignSystems,
-      btnTxt: 'Muy pronto',
+      btnTxt: translation(language, 'products.comingSoon'),
     },
   ];
 
@@ -38,16 +38,17 @@ export default function ProductsSection() {
       <Fade cascade triggerOnce>
         <div className="w-full text-center mb-20 mt-32">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-14 sm:px-28">
-            Te presentamos nuestros{' '}
-            <span className="text-primary-400">productos</span> desarrollados a
-            la{' '}
+            {translation(language, 'products.first')}{' '}
+            <span className="text-primary-400">
+              {translation(language, 'products.span')}
+            </span>{' '}
+            {translation(language, 'products.second')}{' '}
             <mark className="text-font-black inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-              medida
+              {translation(language, 'products.mark')}
             </mark>
           </h1>
           <p className="w-9/12 md:w-6/12 mx-auto mt-6 lg:mt-7 text-sm lg:text-base">
-            Productos listos que se ajustan a la necesidad de tu solución de
-            negocio, desarrollado con las mejoras tecnologías del mercado.
+            {translation(language, 'products.text')}
           </p>
         </div>
         <ProductList products={products} />

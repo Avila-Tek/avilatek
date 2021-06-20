@@ -75,13 +75,13 @@ export default function PortfolioPage() {
   const data = {
     title: (
       <>
-        Meet some of our{' '}
+        Meet part of our{' '}
         <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
           projects
         </mark>
       </>
     ),
-    description: 'Custom projects developed based on the needs of each client.',
+    description: 'Tailor-made projects based on the needs of each client.',
     illustration: <Documents />,
   };
 

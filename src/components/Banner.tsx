@@ -9,15 +9,10 @@ import Line from './icons/Line';
 import useLanguage from '../hooks/useLanguage';
 
 export default function Banner() {
-  const [, getCurrentLanguage] = useLanguage();
+  const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
   const [active, setActive] = React.useState<number>(0);
-  const words = [
-    'desarrollamos apps',
-    'desarrollamos sistemas',
-    'hacemos marketing',
-    'hacemos consultorías',
-  ];
+  const words = [...translation(language, 'homeBanner.words')];
 
   // so that the words change
   React.useEffect(() => {
@@ -34,9 +29,9 @@ export default function Banner() {
         {/* Banner details */}
         <div className="w-10/12 sm:w-8/12 md:w-5/12 pt-4 md:pt-10 lg:pt-12 z-10">
           <Fade triggerOnce cascade>
-            <div className="h-auto sm:h-18 md:h-auto lg:h-24">
+            <div className="h-auto lg:h-24">
               <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold relative">
-                Lleva tu negocio al mundo digital,{' '}
+                {translation(language, 'homeBanner.title')}{' '}
                 {/* Changing words animation */}
                 <AnimatePresence exitBeforeEnter>
                   {words.map((word, idx) => (
@@ -59,14 +54,14 @@ export default function Banner() {
               </h1>
             </div>
             <p className="mt-5 lg:mt-12 mb-6 text-2sm lg:text-2base">
-              Desarrollamos tecnologías innovadoras.{' '}
+              {translation(language, 'homeBanner.description')}
             </p>
             <Link
               to={`/${language === 'es' ? '' : language + '/'}#contact`}
               aria-label="Boton de cotiza tu proyecto"
               className="px-6 md:px-8 py-1 sm:py-1.5 text-2sm lg:text-base text-font-white font-medium bg-primary-400 hover:bg-primary-300 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer"
             >
-              Cotizar
+              {translation(language, 'homeBanner.button')}
             </Link>
           </Fade>
         </div>

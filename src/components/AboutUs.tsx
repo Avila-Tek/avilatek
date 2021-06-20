@@ -1,8 +1,12 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import CodeTyping from './icons/CodeTyping';
+import useLanguage from '../hooks/useLanguage';
 
 export default function AboutUs() {
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
+
   return (
     <section
       id="about-us"
@@ -21,16 +25,13 @@ export default function AboutUs() {
         <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-6/12">
           <Fade cascade triggerOnce>
             <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-              Sobre <span className="text-primary-400">nosotros</span>
+              {translation(language, 'aboutUs.about')}{' '}
+              <span className="text-primary-400">
+                {translation(language, 'aboutUs.us')}
+              </span>
             </h1>
             <p className="my-6 lg:my-7 text-sm lg:text-base text-justify">
-              Avila Tek es una empresa con sede en Venezuela que desarrolla
-              aplicaciones móviles y web que ayudan a las empresas a innovar y
-              obtener una ventaja competitiva con aplicaciones atractivas.
-              Ofrecemos servicios de desarrollo de extremo a extremo con las
-              mejores tecnologías del mercado. Ya sea que necesites una
-              aplicación, un sistema personalizado para tu empresa o definas una
-              estrategia de redes sociales, podemos ayudarte.
+              {translation(language, 'aboutUs.text')}
             </p>
           </Fade>
         </div>

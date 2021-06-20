@@ -5,29 +5,26 @@ import PortfolioSlider, { Project } from './PortfolioSlider';
 import useLanguage from '../../hooks/useLanguage';
 
 export default function PortfolioSection() {
-  const [, getCurrentLanguage] = useLanguage();
+  const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
   const projects: Array<Project> = [
     {
       title: 'Continental de Seguros',
-      description:
-        'Sistema de seguros para empresas aseguradoras, con manejo de cartera de clientes, administración de pólizas, siniestros, recibos, manejo de capital y reportes estadísticos para toma de decisiones.',
+      description: translation(language, 'portfolio.continental'),
       src: 'projects/continental.png',
       categories: ['App Web'],
       link: 'https://continentaldeseguros.com.ve/',
     },
     {
       title: 'Plataforma Unidos',
-      description:
-        'Sistema de la trasnacional British American Tobacco, es un CRM que brinda indicadores a sus clientes. Cuenta con manejo de estadísticas, plan de fidelidad con canjeo de "experiencias" por buenos resultados en la venta de productos y un sistema de autogestión y evaluación interna de venta de productos.',
+      description: translation(language, 'portfolio.unidos'),
       src: 'projects/unidos.png',
       categories: ['App Web'],
       link: 'https://plataformaunidos.net/',
     },
     {
       title: 'Bloop!',
-      description:
-        'Plataforma para productora de eventos, es un CRM a la medida, para auto gestionar proyectos, proveedores, clientes y usuarios, y automatizar procesos de la empresa.',
+      description: translation(language, 'portfolio.bloop'),
       src: 'projects/bloop.png',
       categories: ['App Web'],
       link: 'https://www.probloop.com/',
@@ -42,15 +39,17 @@ export default function PortfolioSection() {
       <Fade cascade triggerOnce>
         <div className="w-full text-center mb-10">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-12">
-            Conoce{' '}
+            {translation(language, 'portfolio.first')}{' '}
             <mark className="text-font0-black inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-              parte
+              {translation(language, 'portfolio.mark')}
             </mark>{' '}
-            de nuestro <span className="text-primary-400">trabajo</span>
+            {translation(language, 'portfolio.second')}{' '}
+            <span className="text-primary-400">
+              {translation(language, 'portfolio.work')}
+            </span>
           </h1>
           <p className="w-9/12 md:w-7/12 mx-auto mt-6 lg:mt-7 text-sm lg:text-base">
-            Llevamos más de 6 años en el mercado desarrollando software para
-            empresas en Europa, Estados Unidos y Latino América.
+            {translation(language, 'portfolio.text')}
           </p>
         </div>
         {/* Portfolio slider */}
@@ -65,7 +64,7 @@ export default function PortfolioSection() {
               navigate(`/${language === 'es' ? '' : language + '/'}portfolio`)
             }
           >
-            Conoce más de nuestro trabajo
+            {translation(language, 'portfolio.seeMore')}
           </button>
         </div>
       </Fade>

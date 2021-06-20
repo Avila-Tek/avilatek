@@ -4,6 +4,7 @@ import { Fade } from 'react-awesome-reveal';
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
 import Image from './common/Image';
+import useLanguage from '../hooks/useLanguage';
 
 const logos = [
   {
@@ -97,6 +98,8 @@ function LogoItem({ src, className, size }: LogoItemProps) {
 }
 
 export default function Clients() {
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const [clients, setClients] = React.useState([...logos]);
 
   const rotate = (change: number) => {
@@ -120,11 +123,14 @@ export default function Clients() {
       <Fade triggerOnce>
         <div className="w-full mb-16 sm:mb-20 px-16 md:px-36">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-            Conoce{' '}
+            {translation(language, 'clients.first')}{' '}
             <mark className="text-font-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-              algunos
+              {translation(language, 'clients.mark')}
             </mark>{' '}
-            de nuestros <span className="text-primary-400">clientes </span>
+            {translation(language, 'clients.second')}{' '}
+            <span className="text-primary-400">
+              {translation(language, 'clients.span')}
+            </span>
           </h1>
         </div>
         <div className="w-full flex justify-center items-center text-dark-blue dark:text-medium-gray px-16 md:px-28">

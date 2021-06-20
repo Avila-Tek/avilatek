@@ -26,7 +26,11 @@
       "error": "No se admiten carácteres especiales",
       "chooseOption": "Seleccione una opción"
     },
-    "contactFeatures": {
+    "contactUs": {
+      "span": "Cuéntanos",
+      "first": "de tu",
+      "mark": "idea",
+      "text": "Luego de que recibamos tu información te estaremos contactando.",
       "quickResponse": "Respuesta rápida",
       "quickResponseText": "Te estaremos contactando en menos de 24 horas",
       "consulting": "Consultoría incluida",
@@ -35,6 +39,8 @@
       "tailorMadeText": "Cada proyecto tiene sus especificaciones que trabajamos de cero para cumplir las necesidades de cada cliente"
     },
     "blog": {
+      "text": "Conoce más de Avila Tek, con artículos y noticias relacionados al mundo de la tecnología, desarrollo, marketing y más.",
+      "seeMore": "Ver más",
       "emptyList": "No se pudieron encontrar resultados",
       "next": "Siguiente",
       "previous": "Anterior",
@@ -55,6 +61,81 @@
       "apply": "Aplicar",
       "error": "No se admiten carácteres especiales",
       "wrongFile": "Archivo erróneo"
+    },
+    "homeBanner": {
+      "title": "Lleva tu negocio al mundo digital,",
+      "words": [
+        "desarrollamos apps",
+        "desarrollamos sistemas",
+        "hacemos marketing",
+        "hacemos consultorías"
+      ],
+      "description": "Desarrollamos tecnologías innovadoras.",
+      "button": "Cotizar"
+    },
+    "clients": {
+      "first": "Conoce",
+      "mark": "algunos",
+      "second": "de nuestros",
+      "span": "clientes"
+    },
+    "aboutUs": {
+      "about": "Sobre",
+      "us": "nosotros",
+      "text": "Avila Tek es una empresa con sede en Venezuela que desarrolla aplicaciones móviles y web que ayudan a las empresas a innovar y obtener una ventaja competitiva con aplicaciones atractivas. Ofrecemos servicios de desarrollo de extremo a extremo con las mejores tecnologías del mercado. Ya sea que necesites una aplicación, un sistema personalizado para tu empresa o definas una estrategia de redes sociales, podemos ayudarte."
+    },
+    "products": {
+      "first": "Te presentamos nuestros",
+      "span": "productos",
+      "second": "desarrollados a la",
+      "mark": "medida",
+      "text": "Productos listos que se ajustan a la necesidad de tu solución de negocio, desarrollado con las mejoras tecnologías del mercado.",
+      "digitalFunnel": "Ten el sitio para tu compañía o producto, donde podrás mostrar información de productos y servicios, un espacio para darte a conocer, y tus clientes te puedan contactar.",
+      "digitalStore": "Tu E-Commerce a la medida, si tienes algún inventario local, o deseas empezar de cero con tu tienda online, puedes contar con un sistema que te permitirá maximizar tus ventas.",
+      "devTools": "Para los desarrolladores que deseen sacar el máximo provecho de sus proyectos, con herramientas para maximizar su productividad con productos de calidad.",
+      "quote": "Cotizar",
+      "comingSoon": "Muy pronto"
+    },
+    "services": {
+      "first": "Nuestros",
+      "span": "servicios",
+      "second": "a la medida de",
+      "mark": "tu negocio",
+      "text": "Te ofrecemos los siguientes servicios para llevar tu negocio al siguiente nivel.",
+      "button": "Cotiza tu proyecto",
+      "department": {
+        "title": "Tu departamento de tecnología",
+        "description": "Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro servicio de Desarrollo como Servicio (DaaS), donde te asignamos un equipo con base a las necesidades para la ejecución y mantenimiento de tu proyecto."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Si necesitas ayuda en el desarrollo de una campaña publicitaria de alcance masivo, tenemos el equipo ideal, haciendo análisis de tu cliente ideal para la focalización de publicidad, con técnicas como A/B testing que permiten iterar en publicidad que si funcione."
+      },
+      "consulting": {
+        "title": "Consultorías",
+        "description": "Ofrecemos estudio de exploración y análisis de datos para mejoras en tu negocio, aumento de ventas, mejorar experiencia de usuario, mejoras en performance y más."
+      }
+    },
+    "portfolio": {
+      "first": "Conoce",
+      "mark": "parte",
+      "second": "de nuestro",
+      "span": "trabajo",
+      "text": "Llevamos más de 6 años en el mercado desarrollando software para empresas en Europa, Estados Unidos y Latino América.",
+      "continental": "Sistema de seguros para empresas aseguradoras, con manejo de cartera de clientes, administración de pólizas, siniestros, recibos, manejo de capital y reportes estadísticos para toma de decisiones.",
+      "bloop": "Plataforma para productora de eventos, es un CRM a la medida, para auto gestionar proyectos, proveedores, clientes y usuarios, y automatizar procesos de la empresa.",
+      "unidos": "Sistema de la trasnacional British American Tobacco, es un CRM que brinda indicadores a sus clientes. Cuenta con manejo de estadísticas, plan de fidelidad con canjeo de \"experiencias\" por buenos resultados en la venta de productos y un sistema de autogestión y evaluación interna de venta de productos.",
+      "seeMore": "Conoce más de nuestro trabajo",
+      "present": "Te presentamos parte de",
+      "our": "nuestros",
+      "projects": "proyectos",
+      "visit": "Visitar"
+    },
+    "technologies": {
+      "first": "Las",
+      "mark": "mejores",
+      "span": "tecnologías",
+      "second": "del mercado"
     }
   },
   "en": {
@@ -84,7 +165,11 @@
       "error": "Special characters are not allowed",
       "chooseOption": "Choose an option"
     },
-    "contactFeatures": {
+    "contactUs": {
+      "span": "Tell us",
+      "first": "about your",
+      "mark": "idea",
+      "text": "After we receive your inquiry we will be contacting you.",
       "quickResponse": "Quick response",
       "quickResponseText": "We will be contacting you in less than 24 hours",
       "consulting": "Consulting included",
@@ -93,6 +178,8 @@
       "tailorMadeText": "Each project has its specifications that we work from scratch to meet the needs of each client"
     },
     "blog": {
+      "text": "Learn more about Avila Tek with the articles and news related to the world of technology, development, marketing and more.",
+      "seeMore": "See more",
       "emptyList": "Results could not be found",
       "next": "Next",
       "previous": "Previous",
@@ -113,6 +200,81 @@
       "apply": "Apply",
       "error": "Special characters are not allowed",
       "wrongFile": "Wrong file"
+    },
+    "homeBanner": {
+      "title": "Take your business to the digital world,",
+      "words": [
+        "we develop apps",
+        "we create marketing campaigns",
+        "we do tech consulting",
+        "we serve as your developing department"
+      ],
+      "description": "We develop innovative technologies.",
+      "button": "Get a quote"
+    },
+    "clients": {
+      "first": "Meet",
+      "mark": "part",
+      "second": "of our",
+      "span": "clients"
+    },
+    "aboutUs": {
+      "about": "About",
+      "us": "us",
+      "text": "Avila Tek is a company based in Caracas, Venezuela that develops mobile and web applications that help companies innovate and gain a competitive advantage with attractive applications. We offer end-to-end development services with the best technologies on the market. Wether you need an application, a customized system for your company, or create a marketing strategy, we can help you."
+    },
+    "products": {
+      "first": "Check our",
+      "span": "products",
+      "second": "that give you the tools to be a",
+      "mark": "competitive business",
+      "text": "With these products, you'll fit the need of your business, developed with the best technologies on the market.",
+      "digitalFunnel": "Do you need a website for your company or product? With Digital Funnel you can show information about products and services, a space to make your business known, and your customers can reach you.",
+      "digitalStore": "Your custom E-Commerce, if you have any local inventory, or want to start from scratch with your online store, you can count on a system that will allow you to maximize your sales.",
+      "devTools": "Are you a web developer and desire to make a beautiful UI for your projects? With this tool, you'll maximize your productivity and create stunning UI.",
+      "quote": "Get a quote",
+      "comingSoon": "Coming soon"
+    },
+    "services": {
+      "first": "Do you need a",
+      "span": "tech or marketing",
+      "second": "department for",
+      "mark": "your business?",
+      "text": "We offer you the following services to take your business to the next level.",
+      "button": "Quote your project",
+      "department": {
+        "title": "Development department",
+        "description": "If you have an ambitious project and require a professional team, we offer you our Development as a Service (DaaS), where we assign you a team based on the needs for the execution and maintenance of your project."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "If you need help in the development of a mass outreach advertising campaign, we have the ideal team, doing analysis of your ideal client for advertising targeting, with techniques such as A/B testing that allow you to iterate in advertising that works and optimizes budget for best results."
+      },
+      "consulting": {
+        "title": "Consulting",
+        "description": "If you want to audit software and tech products in your business, we offer a study and data analysis about how your business is, that helps you increase your sales."
+      }
+    },
+    "portfolio": {
+      "first": "Our",
+      "mark": "",
+      "second": "",
+      "span": "work",
+      "text": "We've been on the market for +6 years developing software for companies in Europe, the United States, and Latin America.",
+      "continental": "Insurance system, with customer portfolio, policy management, claims, receipts, capital management, and statistical reports for decision-making.",
+      "bloop": "A platform for event producer, it is a customized CRM, to self-manage projects, suppliers, customers, and users, and automate company processes.",
+      "unidos": "A web platform for the British American Tobacco transnational, it's a CRM that provides indicators to its customers. It has statistics management, a loyalty plan with an exchange of \"experiences\" for good results in sales, and a system of self-management and internal evaluation of products sales.",
+      "seeMore": "See more of our work",
+      "present": "We present you part of",
+      "our": "our",
+      "projects": "projects",
+      "visit": "Visit"
+    },
+    "technologies": {
+      "first": "The",
+      "mark": "best",
+      "span": "technologies",
+      "second": "on the market"
     }
   }
 }

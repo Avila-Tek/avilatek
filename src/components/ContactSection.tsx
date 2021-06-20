@@ -20,13 +20,16 @@ export default function ContactSection() {
         {/* Section details */}
         <div className="w-11/12 sm:w-10/12 md:w-9/12 xl:w-6/12 mb-16 mx-auto md:mx-0">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-            <span className="text-primary-400">Cuéntanos </span> de tu{' '}
+            <span className="text-primary-400">
+              {translation(language, 'contactUs.span')}{' '}
+            </span>{' '}
+            {translation(language, 'contactUs.first')}{' '}
             <mark className="text-font0-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-              idea
+              {translation(language, 'contactUs.mark')}
             </mark>
           </h1>
           <p className="w-full mt-6 lg:mt-7 text-sm lg:text-base">
-            Luego de que recibamos tu información te estaremos contactando.
+            {translation(language, 'contactUs.text')}
           </p>
         </div>
 
@@ -44,10 +47,10 @@ export default function ContactSection() {
                 <LightningIcon className="h-6 w-6 mr-6 text-primary-400" />
                 <div>
                   <h2 className="font-bold text-primary-400 text-sm lg:text-base">
-                    {translation(language, 'contactFeatures.quickResponse')}
+                    {translation(language, 'contactUs.quickResponse')}
                   </h2>
                   <p className="mt-1 text-xsm lg:text-sm">
-                    {translation(language, 'contactFeatures.quickResponseText')}
+                    {translation(language, 'contactUs.quickResponseText')}
                   </p>
                 </div>
               </div>
@@ -56,10 +59,10 @@ export default function ContactSection() {
                 <MessageIcon className="h-12 w-12 mr-6 text-primary-400" />
                 <div>
                   <h2 className="font-bold text-primary-400 text-sm lg:text-base">
-                    {translation(language, 'contactFeatures.consulting')}
+                    {translation(language, 'contactUs.consulting')}
                   </h2>
                   <p className="mt-1 text-xsm lg:text-sm">
-                    {translation(language, 'contactFeatures.consultingText')}
+                    {translation(language, 'contactUs.consultingText')}
                   </p>
                 </div>
               </div>
@@ -68,10 +71,10 @@ export default function ContactSection() {
                 <SettingsIcon className="h-12 w-12 mr-7 text-primary-400" />
                 <div>
                   <h2 className="font-bold text-primary-400 text-sm lg:text-base">
-                    {translation(language, 'contactFeatures.tailorMade')}
+                    {translation(language, 'contactUs.tailorMade')}
                   </h2>
                   <p className="mt-1 text-xsm lg:text-sm">
-                    {translation(language, 'contactFeatures.tailorMadeText')}
+                    {translation(language, 'contactUs.tailorMadeText')}
                   </p>
                 </div>
               </div>

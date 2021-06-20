@@ -10,7 +10,7 @@ interface BlogSectionProps {
 }
 
 export default function BlogSection({ posts }: BlogSectionProps) {
-  const [, getCurrentLanguage] = useLanguage();
+  const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
 
   return (
@@ -27,8 +27,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
             the <span className="text-primary-400">Blog</span>
           </h1>
           <p className="w-9/12 md:w-6/12 mx-auto mt-6 lg:mt-7 text-sm lg:text-base">
-            Conoce más de Avila Tek, con artículos y noticias relacionados al
-            mundo de la tecnología, desarrollo, marketing y más.
+            {translation(language, 'blog.text')}
           </p>
         </div>
         {posts?.length > 0 ? <PostList posts={posts} /> : null}
@@ -42,7 +41,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
               navigate(`/${language === 'es' ? '' : language + '/'}blog`)
             }
           >
-            Ver más
+            {translation(language, 'blog.seeMore')}
           </button>
         </div>
         <div className="absolute top-0 right-1/3 rounded-third-blob w-7/12 md:w-5/12 h-72 brick bg-medium-blue dark:bg-dark-gray bg-opacity-40 dark:bg-opacity-20" />

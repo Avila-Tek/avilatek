@@ -4,6 +4,7 @@ import { Fade } from 'react-awesome-reveal';
 import LeftArrow from './icons/LeftArrow';
 import RightArrow from './icons/RightArrow';
 import Image from './common/Image';
+import useLanguage from '../hooks/useLanguage';
 
 const logos: Array<{ src: string; name: string; className: string }> = [
   {
@@ -62,6 +63,8 @@ function LogoItem({ src, name, className }: LogoItemProps) {
 }
 
 export default function Technologies() {
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const [technologies, setTechnologies] = React.useState([...logos]);
 
   const rotate = (change: number) => {
@@ -85,11 +88,14 @@ export default function Technologies() {
       <Fade triggerOnce>
         <div className="w-full mb-16 sm:mb-20 px-16 md:px-36">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-            Las{' '}
+            {translation(language, 'technologies.first')}{' '}
             <mark className="text-font0-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-              mejores
+              {translation(language, 'technologies.mark')}
             </mark>{' '}
-            <span className="text-primary-400">tecnologías </span> del mercado
+            <span className="text-primary-400">
+              {translation(language, 'technologies.span')}{' '}
+            </span>{' '}
+            {translation(language, 'technologies.second')}
           </h1>
         </div>
         <div className="w-full flex justify-center items-center text-dark-blue dark:text-medium-gray px-16 md:px-28">
@@ -108,11 +114,7 @@ export default function Technologies() {
               {technologies.map(({ src, name, className }, idx) => (
                 <div key={name}>
                   {0 === idx ? (
-                    <LogoItem
-                      src={src}
-                      name={name}
-                      className={className}
-                    />
+                    <LogoItem src={src} name={name} className={className} />
                   ) : null}
                   {1 === idx ? (
                     <LogoItem
