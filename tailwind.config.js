@@ -86,6 +86,7 @@ module.exports = {
       boxShadow: {
         blue: '3px 4px 12px rgba(45, 156, 219, 0.25)',
         'dark-gray': '3px 4px 12px rgba(73, 73, 73, 0.25)',
+        'yellow': '8px 8px 50px rgba(255, 196, 0, 0.25)',
       },
       spacing: {
         13: '3.25rem',

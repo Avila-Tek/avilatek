@@ -45,7 +45,7 @@ export default function PortfolioSection() {
             </mark>{' '}
             {translation(language, 'portfolio.second')}{' '}
             <span className="text-primary-400">
-              {translation(language, 'portfolio.work')}
+              {translation(language, 'portfolio.span')}
             </span>
           </h1>
           <p className="w-9/12 md:w-7/12 mx-auto mt-6 lg:mt-7 text-sm lg:text-base">
@@ -53,7 +53,7 @@ export default function PortfolioSection() {
           </p>
         </div>
         {/* Portfolio slider */}
-        <PortfolioSlider projects={projects} />
+        <PortfolioSlider projects={projects} en={language === 'en'} />
         {/* Know more button */}
         <div className="w-full flex justify-center mt-20 lg:mt-28">
           <button

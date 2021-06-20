@@ -14,7 +14,7 @@ export default function useLanguage() {
       console.warn(`No text was found for language '${language}'`);
     }
 
-    return word || getNestedProperty(dictionary['es'], key) || '';
+    return word || '';
   };
 
   const getCurrentLanguage = () => {
