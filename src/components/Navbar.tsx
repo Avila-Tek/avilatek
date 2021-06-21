@@ -13,14 +13,16 @@ interface NavItemProps {
 
 function NavItem({ title, href }: NavItemProps) {
   const location = useLocation();
+  // A way to determine we are in blog post, includes won't work since home would be active in all routes, so it can't be general
+  const isBlog = location.pathname.includes('blog') && title === 'Blog';
 
   return (
     // ! Link activeClassName doesn't work with anchors
     <Link
       to={href}
       aria-label={title}
-      className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
-        location.pathname + location.hash === href
+      className={`w-max text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
+        location.pathname + location.hash === href || isBlog
           ? 'text-primary-400 dark:text-primary-400 border-b-2 border-primary-400'
           : 'text-font-dark dark:text-font-white'
       }`}
