@@ -21,7 +21,7 @@ function NavItem({ title, href }: NavItemProps) {
     <Link
       to={href}
       aria-label={title}
-      className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
+      className={`w-max text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
         location.pathname + location.hash === href || isBlog
           ? 'text-primary-400 dark:text-primary-400 border-b-2 border-primary-400'
           : 'text-font-dark dark:text-font-white'
