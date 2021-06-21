@@ -72,7 +72,7 @@ export default function PortfolioSlider({ projects, en }: PortfolioSliderProps) 
         </button>
       </div>
 
-      <div className="lg:w-11/12 flex flex-col md:flex-row items-center md:justify-between">
+      <div className="lg:w-11/12 xl:max-w-6xl flex flex-col md:flex-row items-center md:justify-between">
         {/* Project details */}
         <AnimatePresence>
           {projects.map(({ title, categories, description, link }, idx) => (
