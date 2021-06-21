@@ -25,12 +25,12 @@ export default function Banner() {
 
   return (
     <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
-      <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-20 pb-12 px-10 md:px-12 lg:px-16 xl:px-24">
+      <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-20 pb-12 px-10 md:px-12 lg:px-14 xl:px-18">
         {/* Banner details */}
-        <div className="w-10/12 sm:w-8/12 md:w-5/12 pt-4 md:pt-10 lg:pt-12 z-10">
+        <div className="w-10/12 sm:w-8/12 md:w-6/12 pt-4 md:pt-10 lg:pt-12 z-10">
           <Fade triggerOnce cascade>
-            <div className="h-auto lg:h-24">
-              <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold relative">
+            <div className="h-auto">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold relative">
                 {translation(language, 'homeBanner.title')}{' '}
                 {/* Changing words animation */}
                 <AnimatePresence exitBeforeEnter>
@@ -53,7 +53,7 @@ export default function Banner() {
                 </AnimatePresence>
               </h1>
             </div>
-            <p className="mt-5 lg:mt-12 mb-6 text-2sm lg:text-2base">
+            <p className="mt-6 xl:mt-10 mb-6 text-2sm lg:text-2base">
               {translation(language, 'homeBanner.description')}
             </p>
             <Link
@@ -66,7 +66,7 @@ export default function Banner() {
           </Fade>
         </div>
         {/* Animated Illustration */}
-        <div className="w-10/12 sm:w-8/12 md:w-6/12 mx-0 md:ml-8 xl:-mr-20 z-10">
+        <div className="w-10/12 sm:w-8/12 md:w-5/12 mx-0 md:ml-8 xl:-mr-6 z-10">
           <Fade triggerOnce>
             <AtTheOffice />
           </Fade>
@@ -81,7 +81,7 @@ export default function Banner() {
         <Line className="bottom-0 right-2/12 md:right-1/12 w-12" />
       </div>
       {/* Waves */}
-      <div className="w-full mt-8">
+      <div className="w-full mt-16 md:mt-8">
         <Waves className="w-full h-full -mb-2" />
       </div>
     </div>
