@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import LongArrow from '../icons/LongArrow';
 import LeftArrow from '../icons/LeftArrow';
 import RightArrow from '../icons/RightArrow';
+import useLanguage from '../../hooks/useLanguage';
 
 export type Product = {
   name: string;
@@ -19,6 +20,9 @@ interface ProductCardProps {
 }
 
 function ProductCard({ product, className, direction }: ProductCardProps) {
+  const [, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
+
   const variants = {
     initial: { opacity: 0.2, x: direction === 1 ? 3 : -3 },
     animate: { opacity: 1, x: 0 },
@@ -50,7 +54,8 @@ function ProductCard({ product, className, direction }: ProductCardProps) {
       {/* this button or anchor will take you the contact section */}
       <Link
         className="flex items-center text-secondary-500 dark:text-font-white hover:text-primary-300 duration-150 transition-all ease-in-out"
-        to="#contact"
+        to={`/${language === 'es' ? '' : language + '/'}#contact`}
+        aria-label={`Ir a cotizar el producto ${product.name}`}
       >
         <p className="text-xs md:text-sm mr-3">{product.btnTxt}</p>
         <LongArrow className="h-3" />

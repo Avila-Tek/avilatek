@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import DefaultBanner from '../components/common/DefaultBanner';
-import SEO from '../components/SEO';
-import BlogPost from '../components/icons/BlogPost';
-import { Post } from '../components/blog/PostCard';
-import PostList from '../components/blog/PostList';
+import DefaultBanner from '../../components/common/DefaultBanner';
+import SEO from '../../components/SEO';
+import BlogPost from '../../components/icons/BlogPost';
+import { Post } from '../../components/blog/PostCard';
+import PostList from '../../components/blog/PostList';
 
 export default function BlogPage({ data }) {
   const posts: Array<Post> = data?.allMarkdownRemark?.edges.map(
@@ -31,7 +31,7 @@ export default function BlogPage({ data }) {
       </>
     ),
     description:
-      'Noticias, articulos y experiencias sobre cómo desarrollamos tecnologías que cambian al mundo, recuerda suscríbirte ',
+      'News, articles and experiences on how we develop technologies that change the world, remember to subscribe to keep up with us.',
     illustration: <BlogPost />,
   };
 
@@ -39,13 +39,13 @@ export default function BlogPage({ data }) {
     <>
       <SEO title="Blog" />
       <DefaultBanner {...banner} />
-      <PostList posts={posts} pagination filters />
+      <PostList posts={posts} pagination filters en />
     </>
   );
 }
 
 export const getAllPosts = graphql`
-  query getAllPosts {
+  query getAllEnPosts {
     allMarkdownRemark {
       edges {
         node {

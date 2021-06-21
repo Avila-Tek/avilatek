@@ -5,8 +5,12 @@ import LightningIcon from './icons/LightningIcon';
 import MessageIcon from './icons/MessageIcon';
 import SettingsIcon from './icons/SettingsIcon';
 import CallCenter from './icons/CallCenter';
+import useLanguage from '../hooks/useLanguage';
 
 export default function ContactSection() {
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
+
   return (
     <section
       id="contact"
@@ -16,13 +20,16 @@ export default function ContactSection() {
         {/* Section details */}
         <div className="w-11/12 sm:w-10/12 md:w-9/12 xl:w-6/12 mb-16 mx-auto md:mx-0">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-            <span className="text-primary-400">Cuéntanos </span> de tu{' '}
+            <span className="text-primary-400">
+              {translation(language, 'contactUs.span')}{' '}
+            </span>{' '}
+            {translation(language, 'contactUs.first')}{' '}
             <mark className="text-font0-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-              idea
+              {translation(language, 'contactUs.mark')}
             </mark>
           </h1>
           <p className="w-full mt-6 lg:mt-7 text-sm lg:text-base">
-            Luego de que recibamos tu información te estaremos contactando.
+            {translation(language, 'contactUs.text')}
           </p>
         </div>
 
@@ -40,10 +47,10 @@ export default function ContactSection() {
                 <LightningIcon className="h-6 w-6 mr-6 text-primary-400" />
                 <div>
                   <h2 className="font-bold text-primary-400 text-sm lg:text-base">
-                    Respuesta rápida
+                    {translation(language, 'contactUs.quickResponse')}
                   </h2>
                   <p className="mt-1 text-xsm lg:text-sm">
-                    Te estaremos contactando en menos de 24 horas
+                    {translation(language, 'contactUs.quickResponseText')}
                   </p>
                 </div>
               </div>
@@ -52,11 +59,10 @@ export default function ContactSection() {
                 <MessageIcon className="h-12 w-12 mr-6 text-primary-400" />
                 <div>
                   <h2 className="font-bold text-primary-400 text-sm lg:text-base">
-                    Consultoría incluida
+                    {translation(language, 'contactUs.consulting')}
                   </h2>
                   <p className="mt-1 text-xsm lg:text-sm">
-                    Antes de hacer un presupuesto debemos pautar una reunion de
-                    levantamiento de requerimientos
+                    {translation(language, 'contactUs.consultingText')}
                   </p>
                 </div>
               </div>
@@ -65,11 +71,10 @@ export default function ContactSection() {
                 <SettingsIcon className="h-12 w-12 mr-7 text-primary-400" />
                 <div>
                   <h2 className="font-bold text-primary-400 text-sm lg:text-base">
-                    Proyectos a la medida
+                    {translation(language, 'contactUs.tailorMade')}
                   </h2>
                   <p className="mt-1 text-xsm lg:text-sm">
-                    Cada proyecto tiene sus especificaciones que trabajamos de
-                    cero para cumplir las necesidades de cada cliente
+                    {translation(language, 'contactUs.tailorMadeText')}
                   </p>
                 </div>
               </div>

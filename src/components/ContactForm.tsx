@@ -3,8 +3,11 @@ import Input from './common/Input';
 import Select from './common/Select';
 import Textarea from './common/Textarea';
 import Button from './common/Button';
+import useLanguage from '../hooks/useLanguage';
 
 export default function ContactForm() {
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const [name, setName] = React.useState<string>('');
   const [email, setEmail] = React.useState<string>('');
   const [message, setMessage] = React.useState<string>('');
@@ -21,8 +24,8 @@ export default function ContactForm() {
         name="name"
         type="text"
         value={name}
-        placeholder="Nombre"
-        label="Nombre"
+        placeholder={translation(language, 'contactForm.name')}
+        label={translation(language, 'contactForm.name')}
         onChange={(e) => {
           e.preventDefault();
           setName(e.target.value);
@@ -30,30 +33,24 @@ export default function ContactForm() {
         required
         maxLength={127}
         pattern="^[a-zA-Z\u00C0-\u00FF]+\s?[a-zA-Z\u00C0-\u00FF]+$"
-        title="No se admiten carácteres especiales"
-        onKeyPress={(e) => {
-          if (e.key === 'Enter') e.preventDefault();
-        }}
+        title={translation(language, 'contactForm.error')}
       />
       <Input
         name="email"
         type="email"
         value={email}
-        placeholder="Correo"
-        label="Correo electrónico"
+        placeholder={translation(language, 'contactForm.email')}
+        label={translation(language, 'contactForm.email')}
         onChange={(e) => {
           e.preventDefault();
           setEmail(e.target.value);
         }}
         required
         maxLength={127}
-        onKeyPress={(e) => {
-          if (e.key === 'Enter') e.preventDefault();
-        }}
       />
       <Select
         name="service"
-        label="Producto/Servicio que desea"
+        label={translation(language, 'contactForm.service')}
         value={service}
         onChange={(e) => {
           e.preventDefault();
@@ -62,7 +59,7 @@ export default function ContactForm() {
         required
       >
         <option value="" disabled>
-          Seleccione una opción
+          {translation(language, 'contactForm.chooseOption')}
         </option>
         <option value="consultoria">Consultoría</option>
         <option value="marketing">Marketing</option>
@@ -72,11 +69,11 @@ export default function ContactForm() {
         <option value="digital funnel">Digital Funnel</option>
         <option value="digital store">Digital Store</option>
       </Select>
-      
+
       {service !== 'digital funnel' && service !== 'digital store' ? (
         <Select
           name="budget"
-          label="¿Cuál es su presupuesto?"
+          label={translation(language, 'contactForm.budget')}
           value={budget}
           onChange={(e) => {
             e.preventDefault();
@@ -85,7 +82,7 @@ export default function ContactForm() {
           required
         >
           <option value="" disabled>
-            Seleccione una opción
+            {translation(language, 'contactForm.chooseOption')}
           </option>
           <option value="< $5.000">Menos de $5.000</option>
           <option value="$5.000 - $10.000">$5.000 - $10.000</option>
@@ -98,8 +95,8 @@ export default function ContactForm() {
       <Textarea
         name="message"
         value={message}
-        placeholder="Mensaje"
-        label="Describa su proyecto o duda"
+        placeholder={translation(language, 'contactForm.message')}
+        label={translation(language, 'contactForm.message')}
         onChange={(e) => {
           e.preventDefault();
           setMessage(e.target.value);
@@ -107,9 +104,6 @@ export default function ContactForm() {
         required
         rows={5}
         maxLength={1000}
-        onKeyPress={(e) => {
-          if (e.key === 'Enter') e.preventDefault();
-        }}
       />
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_template" value="table" />
@@ -117,14 +111,16 @@ export default function ContactForm() {
       <input
         type="hidden"
         name="_next"
-        value="https://avilatek.dev/successful-submission"
+        value={`https://avilatek.dev/${
+          language === 'es' ? '' : language + '/'
+        }successful-submission`}
       />
       <Button
         type="submit"
         aria-label="Enviar el formulario"
         className="w-full text-sm lg:text-base"
       >
-        Contactar
+        {translation(language, 'contactForm.send')}
       </Button>
     </form>
   );

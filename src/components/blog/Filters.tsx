@@ -3,6 +3,7 @@ import React from 'react';
 interface FilterProps {
   categories?: Array<string>;
   authors?: Array<string>;
+  en?: boolean;
   updateFilter: React.Dispatch<
     React.SetStateAction<{
       category: string;
@@ -15,6 +16,7 @@ interface FilterProps {
 export default function Filters({
   categories,
   authors,
+  en = false,
   updateFilter,
   updateSearch,
 }: FilterProps) {
@@ -48,7 +50,7 @@ export default function Filters({
           }}
           className="bg-medium-blue dark:bg-medium-gray rounded-md w-2/5 sm:w-32 md:w-40 lg:w-48 text-xsm md:text-sm border-0 mr-3 md:mr-5 focus:outline-none focus:ring-0 focus:border-transparent transition-all duration-300 ease-in-out"
         >
-          <option value="">Categorías</option>
+          <option value="">{en ? 'Categories' : 'Categorías'}</option>
           {categories.map((category) => (
             <option key={category} value={category}>
               {category}
@@ -64,7 +66,7 @@ export default function Filters({
           }}
           className="bg-medium-blue dark:bg-medium-gray rounded-md w-2/5 sm:w-32 md:w-40 lg:w-48 text-xsm md:text-sm border-0 mr-2 sm:mr-1.5 md:mr-4 lg:mr-5 focus:outline-none focus:ring-0 focus:border-transparent transition-all duration-300 ease-in-out"
         >
-          <option value="">Autores</option>
+          <option value="">{en ? 'Authors' : 'Autores'}</option>
           {authors.map((author) => (
             <option key={author} value={author}>
               {author}
@@ -77,7 +79,10 @@ export default function Filters({
           onClick={refreshFilters}
           className="focus:outline-none focus:border-transparent text-2sm sm:text-xs md:text-xsm font-medium text-secondary-50 hover:text-secondary-100 active:text-secondary-300 dark:text-neutral-300 dark:hover:text-neutral-200 dark:active:text-neutral-100"
         >
-          &#8634; <span className="hidden sm:inline-block">Reiniciar</span>
+          &#8634;{' '}
+          <span className="hidden sm:inline-block">
+            {en ? 'Reset' : 'Reiniciar'}
+          </span>
         </button>
       </div>
       {/* Search bar */}
@@ -86,7 +91,7 @@ export default function Filters({
           type="text"
           name="search"
           value={search}
-          placeholder="Buscar"
+          placeholder={en ? 'Search' : 'Buscar'}
           onChange={(e) => {
             e.preventDefault();
             setSearch(e.target.value);

@@ -1,52 +1,44 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { globalHistory } from '@reach/router';
+import { globalHistory, useLocation } from '@reach/router';
 import { motion } from 'framer-motion';
-import LightModeIcon from './icons/LightModeIcon';
-import DarkModeIcon from './icons/DarkModeIcon';
-import useTheme from '../hooks/useTheme';
 import useOutsideAlerter from '../hooks/useOutsideAlerter';
+import useLanguage from '../hooks/useLanguage';
 
 interface NavItemProps {
   title: string;
   href: string;
-  activeLink?: string;
-  updateActiveLink?: React.Dispatch<React.SetStateAction<string>>;
 }
 
-function NavItem({ title, href, activeLink, updateActiveLink }: NavItemProps) {
+function NavItem({ title, href }: NavItemProps) {
+  const location = useLocation();
+
   return (
     // ! Link activeClassName doesn't work with anchors
-    <Link to={href}>
-      <button
-        type="button"
-        onClick={() => updateActiveLink(title)}
-        className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
-          activeLink === title
-            ? 'text-primary-400 dark:text-primary-400 border-b border-primary-400'
-            : 'text-font-dark dark:text-font-white'
-        }`}
-      >
-        {title}
-      </button>
+    <Link
+      to={href}
+      aria-label={title}
+      className={`text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
+        location.pathname + location.hash === href
+          ? 'text-primary-400 dark:text-primary-400 border-b-2 border-primary-400'
+          : 'text-font-dark dark:text-font-white'
+      }`}
+    >
+      {title}
     </Link>
   );
 }
 
 export default function Navbar() {
   const wrapper = React.useRef(null);
+  const location = useLocation();
+  const [translation] = useLanguage();
+  const language = location.pathname.includes('en') ? 'en' : 'es';
   const [isOpen, setOpen] = React.useState<boolean>(false);
   const [isFixed, setFixed] = React.useState<boolean>(false);
-  const [activeLink, setActiveLink] = React.useState<string>('Inicio');
-  const updateActiveLink = React.useCallback(setActiveLink, [setActiveLink]);
   const updateOpenState = React.useCallback(setOpen, [setOpen]);
-  const [, setTheme] = useTheme();
   useOutsideAlerter(wrapper, updateOpenState);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
 
   const toggleNav = () => {
     setOpen((prev) => !prev);
@@ -79,19 +71,17 @@ export default function Navbar() {
       }`}
       role="navigation"
     >
-      <Link to="/" className="mr-auto">
-        <button
-          type="button"
-          onClick={() => setActiveLink('Inicio')}
-          className="focus:ring-0 focus:outline-none w-40 lg:w-48 xl:w-56"
-        >
-          <StaticImage
-            src="../assets/images/logo_white.png"
-            alt="Avila Tek logo"
-            placeholder="blurred"
-            layout="fullWidth"
-          />
-        </button>
+      <Link
+        to={`/${language === 'es' ? '' : language + '/'}`}
+        aria-label="Logo"
+        className="mr-auto w-40 lg:w-48 xl:w-56"
+      >
+        <StaticImage
+          src="../assets/images/logo_white.png"
+          alt="Avila Tek logo"
+          placeholder="blurred"
+          layout="fullWidth"
+        />
       </Link>
 
       {/* Hamburger button */}
@@ -118,54 +108,33 @@ export default function Navbar() {
 
       <div className="flex flex-col md:flex-row w-full md:w-auto md:items-center overflow-hidden my-4 md:my-0">
         <NavItem
-          title="Inicio"
-          href="/"
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
+          title={translation(language, 'navbar.home')}
+          href={`/${language === 'es' ? '' : language + '/'}`}
         />
         <NavItem
-          title="Nosotros"
-          href="/#about-us"
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
+          title={translation(language, 'navbar.aboutUs')}
+          href={`/${language === 'es' ? '' : language + '/'}#about-us`}
         />
         <NavItem
-          title="Productos"
-          href="/#products"
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
+          title={translation(language, 'navbar.products')}
+          href={`/${language === 'es' ? '' : language + '/'}#products`}
         />
         <NavItem
-          title="Servicios"
-          href="/#services"
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
+          title={translation(language, 'navbar.services')}
+          href={`/${language === 'es' ? '' : language + '/'}#services`}
         />
         <NavItem
-          title="Portafolio"
-          href="/#portfolio"
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
+          title={translation(language, 'navbar.portfolio')}
+          href={`/${language === 'es' ? '' : language + '/'}portfolio`}
         />
         <NavItem
-          title="Contacto"
-          href="/#contact"
-          activeLink={activeLink}
-          updateActiveLink={updateActiveLink}
+          title={translation(language, 'navbar.blog')}
+          href={`/${language === 'es' ? '' : language + '/'}blog`}
         />
-
-        <label className="relative inline-block w-14 h-7 ml-1.5 mt-4 md:mt-0">
-          <input
-            type="checkbox"
-            className="checkbox focus:outline-none"
-            aria-label="Cambiar de tema"
-            onClick={toggleTheme}
-          />
-          <span className="thumb bg-secondary-300 dark:bg-primary-400">
-            <LightModeIcon className="h-4 w-4" />
-            <DarkModeIcon className="h-4 w-4" />
-          </span>
-        </label>
+        <NavItem
+          title={translation(language, 'navbar.contactUs')}
+          href={`/${language === 'es' ? '' : language + '/'}#contact`}
+        />
       </div>
     </motion.nav>
   );

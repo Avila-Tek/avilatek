@@ -2,29 +2,29 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
 import CardsStack, { Service } from './CardsStack';
+import useLanguage from '../../hooks/useLanguage';
 import DaaS from '../../assets/illustrations/daas.svg';
 import Development from '../../assets/illustrations/development.svg';
 import Consulting from '../../assets/illustrations/consulting.svg';
 
 export default function ServiceSection() {
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const services: Array<Service> = [
     {
       illustration: DaaS,
-      title: 'Tu departamento de tecnología',
-      description:
-        'Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro servicio de Desarrollo como Servicio (DaaS), donde te asignamos un equipo con base a las necesidades para la ejecución y mantenimiento de tu proyecto.',
+      title: translation(language, 'services.department.title'),
+      description: translation(language, 'services.department.description'),
     },
     {
       illustration: Development,
-      title: 'Marketing',
-      description:
-        'Si necesitas ayuda en el desarrollo de una campaña publicitaria de alcance masivo, tenemos el equipo ideal, haciendo análisis de tu cliente ideal para la focalización de publicidad, con técnicas como A/B testing que permiten iterar en publicidad que si funcione.',
+      title: translation(language, 'services.marketing.title'),
+      description: translation(language, 'services.marketing.description'),
     },
     {
       illustration: Consulting,
-      title: 'Consultorías',
-      description:
-        'Ofrecemos estudio de exploración y análisis de datos para mejoras en tu negocio, aumento de ventas, mejorar experiencia de usuario, mejoras en performance y más.',
+      title: translation(language, 'services.consulting.title'),
+      description: translation(language, 'services.consulting.description'),
     },
   ];
 
@@ -37,22 +37,24 @@ export default function ServiceSection() {
       <div className="w-10/12 md:w-4/12 mb-20 md:mb-0 mr-0 md:mr-20 xl:mr-28 -mt-6 sm:-mt-10 md:-mt-14 lg:-mt-20">
         <Fade cascade triggerOnce>
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-            Nuestros <span className="text-primary-400">servicios</span> a la{' '}
+            {translation(language, 'services.first')}{' '}
+            <span className="text-primary-400">
+              {translation(language, 'services.span')}
+            </span>{' '}
+            {translation(language, 'services.second')}{' '}
             <mark className="text-font0-black inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-              medida
-            </mark>{' '}
-            de tu negocio
+              {translation(language, 'services.mark')}
+            </mark>
           </h1>
           <p className="my-6 lg:my-7 text-sm lg:text-base">
-            Te ofrecemos los siguientes servicios para llevar tu negocio al
-            siguiente nivel.
+            {translation(language, 'services.text')}
           </p>
           <Link
-            to="#contact"
+            to={`/${language === 'es' ? '' : language + '/'}#contact`}
             aria-label="Cotiza tu proyecto en servicios"
             className="text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 rounded-full active:bg-primary-500 px-8 md:px-10 lg:px-12 text-sm lg:text-base"
           >
-            Cotiza tu proyecto
+            {translation(language, 'services.button')}
           </Link>
         </Fade>
       </div>

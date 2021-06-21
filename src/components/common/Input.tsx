@@ -32,7 +32,7 @@ export default React.forwardRef<HTMLInputElement, InputProps>(
       className={`block ${notMargin ? 'mb-0' : 'mb-4'} ${className}`}
     >
       <span
-        className={`text-sm lg:text-base text-primary-500 font-bold ${
+        className={`text-sm lg:text-base text-primary-500 dark:text-primary-400 font-bold ${
           labelSrOnly ? 'sr-only' : ''
         }`}
       >

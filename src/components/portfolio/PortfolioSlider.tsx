@@ -15,10 +15,11 @@ export type Project = {
 };
 
 interface PortfolioSliderProps {
-  projects: Array<Project>; // it must be the newest or most important projects, so around 4 is okay
+  projects: Array<Project>; // it must be the newest or most important projects
+  en?: boolean;
 }
 
-export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
+export default function PortfolioSlider({ projects, en }: PortfolioSliderProps) {
   const [active, setActive] = React.useState<number>(0);
   const { length } = projects;
 
@@ -108,7 +109,7 @@ export default function PortfolioSlider({ projects }: PortfolioSliderProps) {
                     aria-label={`Ir a ${title}`}
                     className="text-xsm sm:text-sm lg:text-base px-8 text-font-white bg-primary-400 hover:bg-primary-300 py-1 rounded-full active:bg-primary-500"
                   >
-                    Visitar
+                    {en ? 'Visit' : 'Visitar'}
                   </a>
                 </motion.div>
               ) : null}

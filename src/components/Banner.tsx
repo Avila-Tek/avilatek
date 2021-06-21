@@ -6,51 +6,32 @@ import Waves from './icons/Waves';
 import AtTheOffice from './icons/OnTheOffice';
 import RotatingTriangle from './icons/RotatingTriangle';
 import Line from './icons/Line';
+import useLanguage from '../hooks/useLanguage';
 
 export default function Banner() {
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const [active, setActive] = React.useState<number>(0);
-  const words = [
-    'desarrollamos apps',
-    'desarrollamos sistemas',
-    'hacemos marketing',
-    'hacemos consultorías',
-  ];
-
-  const bracketVariants = {
-    animation: {
-      opacity: [1, 0.4, 1],
-      transition: {
-        duration: 2,
-        repeat: Infinity,
-      },
-    },
-  };
+  const words = [...translation(language, 'homeBanner.words')];
 
   // so that the words change
   React.useEffect(() => {
     const interval = setInterval(
       () => setActive((prev) => (prev + 1) % words.length),
-       7000
-     );
-     return () => clearInterval(interval);
-   }, [active]);
+      7000
+    );
+    return () => clearInterval(interval);
+  }, [active]);
 
   return (
     <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
-      <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-20 pb-12 px-10 md:px-12 lg:px-16 xl:px-20">
+      <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-20 pb-12 px-10 md:px-12 lg:px-16 xl:px-24">
         {/* Banner details */}
-        <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-4/12 pt-4 md:pt-10 lg:pt-12 z-10">
+        <div className="w-10/12 sm:w-8/12 md:w-5/12 pt-4 md:pt-10 lg:pt-12 z-10">
           <Fade triggerOnce cascade>
-            <div className="h-18 sm:h-16 md:h-20 lg:h-24">
-              <h1 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold relative">
-                {/* <motion.span
-                  variants={bracketVariants}
-                  animate="animation"
-                  className="text-primary-400 absolute -top-1 -left-7"
-                >
-                  [
-                </motion.span> */}
-                Lleva tu negocio al mundo digital,{' '}
+            <div className="h-auto lg:h-24">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold relative">
+                {translation(language, 'homeBanner.title')}{' '}
                 {/* Changing words animation */}
                 <AnimatePresence exitBeforeEnter>
                   {words.map((word, idx) => (
@@ -70,29 +51,22 @@ export default function Banner() {
                     </>
                   ))}
                 </AnimatePresence>
-                {/* <motion.span
-                  variants={bracketVariants}
-                  animate="animation"
-                  className="text-primary-400 absolute bottom-0 -right-7 transition-all duration-300 ease-in-out"
-                >
-                  ]
-                </motion.span> */}
               </h1>
             </div>
-            <p className="my-5 lg:my-7 xl:my-8 text-xsm sm:text-sm lg:text-base">
-              Desarrollamos tecnologías innovadoras.{' '}
+            <p className="mt-5 lg:mt-12 mb-6 text-2sm lg:text-2base">
+              {translation(language, 'homeBanner.description')}
             </p>
             <Link
-              to="/#contact"
+              to={`/${language === 'es' ? '' : language + '/'}#contact`}
               aria-label="Boton de cotiza tu proyecto"
-              className="px-6 md:px-8 py-1.5 text-2sm lg:text-base text-font-white font-medium bg-primary-400 hover:bg-primary-300 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer"
+              className="px-6 md:px-8 py-1 sm:py-1.5 text-2sm lg:text-base text-font-white font-medium bg-primary-400 hover:bg-primary-300 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer"
             >
-              Cotizar
+              {translation(language, 'homeBanner.button')}
             </Link>
           </Fade>
         </div>
         {/* Animated Illustration */}
-        <div className="w-10/12 sm:w-8/12 md:w-5/12 ml-0 md:ml-16 lg:ml-20 xl:ml-24 z-10">
+        <div className="w-10/12 sm:w-8/12 md:w-6/12 mx-0 md:ml-8 xl:-mr-20 z-10">
           <Fade triggerOnce>
             <AtTheOffice />
           </Fade>

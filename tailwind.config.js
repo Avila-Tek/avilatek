@@ -86,9 +86,14 @@ module.exports = {
       boxShadow: {
         blue: '3px 4px 12px rgba(45, 156, 219, 0.25)',
         'dark-gray': '3px 4px 12px rgba(73, 73, 73, 0.25)',
+        'yellow': '8px 8px 50px rgba(255, 196, 0, 0.25)',
       },
       spacing: {
+        13: '3.25rem',
         18: '4.5rem',
+        22: '5.5rem',
+        26: '6.5rem',
+        38: '9.5rem',
         50: '12.5rem',
         68: '17rem',
         76: '19rem',
@@ -103,7 +108,7 @@ module.exports = {
       },
       fontSize: {
         xsm: ['0.825rem', { lineHeight: '1.2rem' }],
-        '2xs': ['0.615rem', { lineHeight: '0.75rem' }],
+        '2xs': ['0.675rem', { lineHeight: '0.75rem' }],
         '2sm': ['0.925rem', { lineHeight: '1.25rem' }],
         '2base': ['1.07rem', { lineHeight: '1.5rem' }],
       },
@@ -135,6 +140,9 @@ module.exports = {
         '10/12': '83.333333%',
         '11/12': '91.666667%',
         full: '100%',
+      },
+      borderWidth: {
+        0.5: '0.5px',
       },
     },
   },

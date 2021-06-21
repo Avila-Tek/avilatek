@@ -3,7 +3,6 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 
 export default function Layout({ children }) {
-
   // So that the ascii art appears in every view
   React.useEffect(() => {
     console.log(
