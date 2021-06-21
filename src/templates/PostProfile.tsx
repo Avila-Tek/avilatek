@@ -79,7 +79,6 @@ export default function SinglePostPage({ data }) {
           <hr className="my-12 border border-medium-blue dark:border-dark-gray" />
           {/* Post body */}
           <div className="w-full grid gap-5 text-sm lg:text-base">
-            {/* //! Hard coded just for now */}
             <Image
               filename={image}
               alt={title}

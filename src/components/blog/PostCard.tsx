@@ -12,7 +12,7 @@ export type Post = {
   category?: string;
   title: string;
   subtitle?: string;
-  slug: string; // ? or maybe slug
+  slug: string; // 
   description?: string;
   author?: string;
   date?: Date;
@@ -53,18 +53,7 @@ export default function PostCard({
       >
         {/* Post image */}
         <div className="w-full h-1/2">
-          <Image
-            filename={image}
-            alt={title}
-            className="w-full h-full"
-          />
-          {/* <StaticImage
-            src="../../assets/images/projects/continental.png"
-            alt="random image"
-            placeholder="blurred"
-            layout="fullWidth"
-            className="w-full h-full"
-          /> */}
+          <Image filename={image} alt={title} className="w-full h-full" />
         </div>
         {/* Post details */}
         <div className="absolute bottom-5 left-5 sm:bottom-6 sm:left-6 p-5 flex flex-col items-center justify-between text-center rounded-md w-10/12 h-48 md:h-52 xl:h-56 bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-none transition-all duration-300 ease-in-out">

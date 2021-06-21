@@ -108,11 +108,11 @@ export default function Footer() {
       </div>
       <hr className="w-full mb-1 mt-4 border-medium-blue dark:border-dark-gray dark:border-opacity-50" />
       <div className="w-full my-0 flex items-center justify-between text-xs lg:text-sm">
-        <p>
+        <LanguageToggle />
+        <p className="text-right">
           &copy; {new Date().getFullYear()} Avila Tek.{' '}
           {translation(language, 'footer.copyright')}
         </p>
-        <LanguageToggle />
       </div>
     </footer>
   );
