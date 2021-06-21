@@ -4,9 +4,9 @@ subtitle: 'This is my second post ever'
 slug: 'second-post'
 date: '2020-09-01'
 author: 'John Doe'
-authorImage: 'author image'
+authorImage: 'authors/jhon-doe.jpeg'
 description: 'Short description about the post'
-image: 'this is the image'
+image: 'posts/avila.jpeg'
 authorDescription:
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor,
   nunc augue ut neque amet sed sed laoreet. Vitae egestas sit

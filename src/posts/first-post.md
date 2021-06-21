@@ -4,9 +4,9 @@ subtitle: 'This is my first post ever'
 slug: 'first-post'
 date: '2021-05-01'
 author: 'John Doe'
-authorImage: 'author image'
+authorImage: 'authors/jhon-doe.jpeg'
 description: 'Short description about the post, this can even be the first paragraph or something different'
-image: 'this is the image'
+image: 'posts/avila.jpeg'
 authorDescription:
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor,
   nunc augue ut neque amet sed sed laoreet. Vitae egestas sit
