@@ -27,7 +27,7 @@ export default function Banner() {
     <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
       <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-20 pb-12 px-10 md:px-12 lg:px-14 xl:px-18">
         {/* Banner details */}
-        <div className="w-10/12 sm:w-8/12 md:w-6/12 pt-4 md:pt-10 lg:pt-12 z-10">
+        <div className="w-10/12 sm:w-8/12 md:w-5/12 pt-4 md:pt-10 lg:pt-12 z-10">
           <Fade triggerOnce cascade>
             <div className="h-auto">
               <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold relative">
