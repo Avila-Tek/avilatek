@@ -7,6 +7,7 @@ import RotatingTriangle from '../components/icons/RotatingTriangle';
 import Line from '../components/icons/Line';
 import SEO from '../components/SEO';
 import Subscription from '../components/common/Subscription';
+import Image from '../components/common/Image';
 
 dayjs.locale('es');
 
@@ -56,7 +57,11 @@ export default function SinglePostPage({ data }) {
               {subtitle}
             </h2>
             <div className="flex items-center mt-3">
-              <div className="h-8 w-8 md:h-9 md:w-9 lg:h-10 lg:w-10 bg-primary-400 rounded-full" />
+              <Image
+                filename={authorImage}
+                alt={author}
+                className="h-8 w-8 md:h-9 md:w-9 lg:h-10 lg:w-10 bg-primary-400 rounded-full overflow-hidden"
+              />
               <p className="text-xsm sm:text-sm xl:text-2base  ml-3 text-neutral-400 font-medium">
                 Por{' '}
                 <span className="text-primary-400 dark:text-primary-300 mr-3">
@@ -74,8 +79,11 @@ export default function SinglePostPage({ data }) {
           <hr className="my-12 border border-medium-blue dark:border-dark-gray" />
           {/* Post body */}
           <div className="w-full grid gap-5 text-sm lg:text-base">
-            {/* //! Hard coded just for now */}
-            <div className="w-full h-half lg:h-third bg-secondary-200 mb-4" />
+            <Image
+              filename={image}
+              alt={title}
+              className="w-full h-half lg:h-third mb-4"
+            />
             <div
               className="w-full grid gap-5 text-sm lg:text-base xl:text-2base"
               dangerouslySetInnerHTML={{ __html: html }}
@@ -84,12 +92,18 @@ export default function SinglePostPage({ data }) {
           <hr className="my-12 border border-medium-blue dark:border-dark-gray" />
           {/* Post footer */}
           <div className="flex flex-col md:flex-row">
-            <div className="w-14 h-14 sm:w-16 sm:h-16 lg:h-20 lg:w-20 mr-6 mb-4 bg-primary-400 rounded-full overflow-hidden" />
+            <Image
+              filename={authorImage}
+              alt={author}
+              className="w-14 h-14 sm:w-16 sm:h-16 lg:h-20 lg:w-20 mr-6 mb-4 bg-primary-400 rounded-full overflow-hidden"
+            />
             <div className="w-11/12 md:w-9/12">
               <h3 className="capitalize font-semibold text-primary-400 dark:text-primary-300 text-sm lg:text-base xl:text-2base">
                 {author}
               </h3>
-              <p className="mt-2 text-xsm lg:text-sm xl:text-2sm">{authorDescription}</p>
+              <p className="mt-2 text-xsm lg:text-sm xl:text-2sm">
+                {authorDescription}
+              </p>
             </div>
           </div>
           <hr className="my-12 border border-medium-blue dark:border-dark-gray" />
