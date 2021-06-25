@@ -70,6 +70,33 @@ export default function PortfolioPage() {
       categories: ['Landing Page'],
       link: 'https://jpgassociates.net/',
     },
+    {
+      title: 'Grupo Nueve Once',
+      description: '.',
+      src: 'projects/gno.png',
+      categories: ['POS'],
+    },
+    {
+      title: 'Grupo MRE',
+      description: '.',
+      src: 'projects/grupo-mre.png',
+      categories: ['App Web'],
+      link: 'https://grupomre.com/',
+    },
+    {
+      title: 'Intergraph USA Corp',
+      description: '.',
+      src: 'projects/intergraph-usa-corp.png',
+      categories: ['Landing Page'],
+      link: 'https://www.intergraphusa.com/',
+    },
+    {
+      title: 'Psico Sport Hacks',
+      description: '.',
+      src: 'projects/psh.png',
+      categories: ['Landing Page'],
+      link: 'https://psicosporthacks.com/',
+    },
   ];
 
   const data = {

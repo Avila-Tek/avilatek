@@ -9,7 +9,7 @@ interface ProjectCardProps {
   src: any;
   categories: Array<string>;
   description: string;
-  link: string;
+  link?: string;
   visit: string;
 }
 
@@ -50,16 +50,18 @@ export default function ProjectCard({
             {description}
           </p>
         </div>
-        <a
-          href={link}
-          target="_blank"
-          aria-label={`Visitar ${title}`}
-          rel="noopener"
-          className="flex items-center w-full text-font-white hover:text-primary-300 dark:hover:text-primary-100 duration-150 transition-all ease-in-out"
-        >
-          <p className="font-medium text-sm mr-3">{visit}</p>
-          <LongArrow className="h-3" />
-        </a>
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            aria-label={`Visitar ${title}`}
+            rel="noopener"
+            className="flex items-center w-full text-font-white hover:text-primary-300 dark:hover:text-primary-100 duration-150 transition-all ease-in-out"
+          >
+            <p className="font-medium text-sm mr-3">{visit}</p>
+            <LongArrow className="h-3" />
+          </a>
+        ) : null}
       </div>
     </motion.div>
   );

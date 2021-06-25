@@ -11,7 +11,7 @@ export type Project = {
   src: any;
   categories: Array<string>;
   description: string;
-  link: string;
+  link?: string;
 };
 
 interface PortfolioSliderProps {

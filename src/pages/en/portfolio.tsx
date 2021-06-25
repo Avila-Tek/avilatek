@@ -13,7 +13,7 @@ export default function PortfolioPage() {
       description:
         'Sistema de seguros para empresas aseguradoras, con manejo de cartera de clientes, administración de pólizas, siniestros, recibos, manejo de capital y reportes estadísticos para toma de decisiones.',
       src: 'projects/continental.png',
-      categories: ['App Web'],
+      categories: ['Web App'],
       link: 'https://continentaldeseguros.com.ve/',
     },
     {
@@ -21,7 +21,7 @@ export default function PortfolioPage() {
       description:
         'Sistema de la trasnacional British American Tobacco, es un CRM que brinda indicadores a sus clientes. Cuenta con manejo de estadísticas, plan de fidelidad con canjeo de "experiencias" por buenos resultados en la venta de productos y un sistema de autogestión y evaluación interna de venta de productos.',
       src: 'projects/unidos.png',
-      categories: ['App Web'],
+      categories: ['Web App'],
       link: 'https://plataformaunidos.net/',
     },
     {
@@ -29,7 +29,7 @@ export default function PortfolioPage() {
       description:
         'Plataforma para productora de eventos, es un CRM a la medida, para auto gestionar proyectos, proveedores, clientes y usuarios, y automatizar procesos de la empresa.',
       src: 'projects/bloop.png',
-      categories: ['App Web'],
+      categories: ['Web App'],
       link: 'https://www.probloop.com/',
     },
     {
@@ -37,7 +37,7 @@ export default function PortfolioPage() {
       description:
         'Plataforma de venta y manejo de inventario, es un sistema que ayuda al automercado a manejar sus productos y venderlos de forma online en su plataforma, manejando tracking para delivery o pickup.',
       src: 'pomelos-ss.png',
-      categories: ['App Web'],
+      categories: ['Web App'],
       link: 'https://fruterialospomelos.store/',
     },
     {
@@ -45,7 +45,7 @@ export default function PortfolioPage() {
       description:
         'Plataforma hotelera para manejo de reservas, este CRM permite publicar la disponibilidad de habitaciones, paquetes extras de actividades e incluye un sistema de fidelidad.',
       src: 'projects/village-ss.png',
-      categories: ['App Web'],
+      categories: ['Web App'],
       link: 'https://habitatvillage.com/ ',
     },
     {
@@ -53,7 +53,7 @@ export default function PortfolioPage() {
       description:
         'Plataforma de venta y manejo de inventario, es un sistema que ayuda al automercado a manejar sus productos y venderlos de forma online en su plataforma, manejando tracking para delivery o pickup.',
       src: 'projects/bodebar.png',
-      categories: ['App Web', 'Desktop'],
+      categories: ['Web App', 'Desktop'],
       link: 'https://bodebar.avilatek.dev/',
     },
     {
@@ -69,6 +69,33 @@ export default function PortfolioPage() {
       src: 'projects/jpg.png',
       categories: ['Landing Page'],
       link: 'https://jpgassociates.net/',
+    },
+    {
+      title: 'Grupo Nueve Once',
+      description: '.',
+      src: 'projects/gno.png',
+      categories: ['POS'],
+    },
+    {
+      title: 'Grupo MRE',
+      description: '.',
+      src: 'projects/grupo-mre.png',
+      categories: ['Web App'],
+      link: 'https://grupomre.com/',
+    },
+    {
+      title: 'Intergraph USA Corp',
+      description: '.',
+      src: 'projects/intergraph-usa-corp.png',
+      categories: ['Landing Page'],
+      link: 'https://www.intergraphusa.com/',
+    },
+    {
+      title: 'Psico Sport Hacks',
+      description: '.',
+      src: 'projects/psh.png',
+      categories: ['Landing Page'],
+      link: 'https://psicosporthacks.com/',
     },
   ];
 
