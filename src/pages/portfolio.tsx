@@ -70,33 +70,37 @@ export default function PortfolioPage() {
       categories: ['Landing Page'],
       link: 'https://jpgassociates.net/',
     },
-    // {
-    //   title: 'Grupo Nueve Once',
-    //   description: '.',
-    //   src: 'projects/gno.png',
-    //   categories: ['POS'],
-    // },
-    // {
-    //   title: 'Grupo MRE',
-    //   description: '.',
-    //   src: 'projects/grupo-mre.png',
-    //   categories: ['App Web'],
-    //   link: 'https://grupomre.com/',
-    // },
-    // {
-    //   title: 'Intergraph USA Corp',
-    //   description: '.',
-    //   src: 'projects/intergraph-usa-corp.png',
-    //   categories: ['Landing Page'],
-    //   link: 'https://www.intergraphusa.com/',
-    // },
-    // {
-    //   title: 'Psico Sport Hacks',
-    //   description: '.',
-    //   src: 'projects/psh.png',
-    //   categories: ['Landing Page'],
-    //   link: 'https://psicosporthacks.com/',
-    // },
+    {
+      title: 'Grupo Nueve Once',
+      description:
+        'Ofrecemos servicio de desarrollo a la empresa Grupo Nueve Once en diferentes areas, ayudándolos a innovar y crear productos tecnológicos que ayuden a sus clientes tener una experiencia única en el servicio de tele-medicina y asistencia medica remota.',
+      src: 'projects/gno.png',
+      categories: ['DaaS'],
+    },
+    {
+      title: 'Grupo MRE',
+      description:
+        'Aplicación web para la empresa norteamericana Real State Grupo MRE, esta aplicación les permite listar sus propiedades y sincronizarse con el MLS (Multiple Listing Services) el cual se encuentran registrados, también permite mostrar y promocionar propiedades, manejo de citas y más.',
+      src: 'projects/grupo-mre.png',
+      categories: ['Web App'],
+      link: 'https://grupomre.com/',
+    },
+    {
+      title: 'Intergraph USA Corp',
+      description:
+        'Website para la empresa Intergraph USA Corp con sede en los Estados Unidos, este website funciona como imagen corporativa para la empresa en donde ofrecen sus servicios en aeronáutica civil.',
+      src: 'projects/intergraph-usa-corp.png',
+      categories: ['Landing Page'],
+      link: 'https://www.intergraphusa.com/',
+    },
+    {
+      title: 'Psico Sport Hacks',
+      description:
+        'Website para el emprendimiento Psico Sport Hacks (PSH por sus siglas), que sirve como sitio informativo de sus servicios de psicologia para deportistas de alto rendimiento.',
+      src: 'projects/psh.png',
+      categories: ['Landing Page'],
+      link: 'https://psicosporthacks.com/',
+    },
   ];
 
   const data = {
