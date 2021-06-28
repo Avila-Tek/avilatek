@@ -1,10 +1,12 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { Waypoint } from 'react-waypoint';
 import ProductList, { Product } from './ProductList';
 import useLanguage from '../../hooks/useLanguage';
 import LandingPage from '../../assets/illustrations/landing-page.svg';
 import ECommerce from '../../assets/illustrations/e-commerce.svg';
 import DesignSystems from '../../assets/illustrations/design-systems.svg';
+import updateUrl from '../../lib/updateUrl';
 
 export default function ProductsSection() {
   const [translation, getCurrentLanguage] = useLanguage();
@@ -51,6 +53,11 @@ export default function ProductsSection() {
             {translation(language, 'products.text')}
           </p>
         </div>
+        <Waypoint
+          onEnter={() => {
+            updateUrl(`/${language === 'es' ? '' : language + '/'}#products`);
+          }}
+        />
         <ProductList products={products} />
         <div className="absolute top-16 right-1/3 rounded-third-blob w-7/12 md:w-5/12 h-72 brick bg-medium-blue dark:bg-dark-gray bg-opacity-30 dark:bg-opacity-10" />
       </Fade>

@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
+import { Waypoint } from 'react-waypoint';
 import CardsStack, { Service } from './CardsStack';
 import useLanguage from '../../hooks/useLanguage';
 import DaaS from '../../assets/illustrations/daas.svg';
 import Development from '../../assets/illustrations/development.svg';
 import Consulting from '../../assets/illustrations/consulting.svg';
+import updateUrl from '../../lib/updateUrl';
 
 export default function ServiceSection() {
   const [translation, getCurrentLanguage] = useLanguage();
@@ -29,10 +31,9 @@ export default function ServiceSection() {
   ];
 
   return (
-    // gap-20 xl:gap-28
     <section
       id="services"
-      className="pt-24 md:pt-56 -mt-24 md:-mt-56 w-full pb-48 md:pb-64 flex flex-col md:flex-row px-14 lg:px-24 items-center justify-center relative z-10 overflow-hidden"
+      className="pt-24 md:pt-56 -mt-24 md:-mt-56 w-full pb-48 md:pb-60 flex flex-col md:flex-row px-14 lg:px-24 items-center justify-center relative z-10 overflow-hidden"
     >
       <div className="w-10/12 md:w-4/12 mb-20 md:mb-0 mr-0 md:mr-20 xl:mr-28 -mt-6 sm:-mt-10 md:-mt-14 lg:-mt-20">
         <Fade cascade triggerOnce>
@@ -58,6 +59,11 @@ export default function ServiceSection() {
           </Link>
         </Fade>
       </div>
+      <Waypoint
+        onEnter={() => {
+          updateUrl(`/${language === 'es' ? '' : language + '/'}#services`);
+        }}
+      />
       <Fade triggerOnce>
         <CardsStack services={services} />
       </Fade>

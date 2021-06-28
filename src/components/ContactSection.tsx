@@ -1,11 +1,13 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { Waypoint } from 'react-waypoint';
 import ContactForm from './ContactForm';
 import LightningIcon from './icons/LightningIcon';
 import MessageIcon from './icons/MessageIcon';
 import SettingsIcon from './icons/SettingsIcon';
 import CallCenter from './icons/CallCenter';
 import useLanguage from '../hooks/useLanguage';
+import updateUrl from '../lib/updateUrl';
 
 export default function ContactSection() {
   const [translation, getCurrentLanguage] = useLanguage();
@@ -32,6 +34,12 @@ export default function ContactSection() {
             {translation(language, 'contactUs.text')}
           </p>
         </div>
+
+        <Waypoint
+          onEnter={() => {
+            updateUrl(`/${language === 'es' ? '' : language + '/'}#contact`);
+          }}
+        />
 
         <div className="w-full flex flex-col lg:flex-row items-center justify-between">
           {/* Contact form */}

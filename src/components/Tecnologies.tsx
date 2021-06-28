@@ -56,7 +56,7 @@ function LogoItem({ src, name, className }: LogoItemProps) {
       <Image
         filename={src}
         alt={name}
-        className={`mx-8 xl:mx-9 duration-150 transition-all filter-grayscale dark:filter-grayscale-bright hover:filter-none ease-in-out ${className}`}
+        className={`mx-8 xl:mx-9 duration-150 transition-all filter-grayscale-dark dark:filter-grayscale-bright hover:filter-black dark:hover:filter-white ease-in-out ${className}`}
       />
     </motion.div>
   );

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
+import { Waypoint } from 'react-waypoint';
 import CodeTyping from './icons/CodeTyping';
 import useLanguage from '../hooks/useLanguage';
+import updateUrl from '../lib/updateUrl';
 
 export default function AboutUs() {
   const [translation, getCurrentLanguage] = useLanguage();
@@ -12,7 +14,11 @@ export default function AboutUs() {
       id="about-us"
       className="pt-48 -mt-48 pb-40 md:pb-44 w-full relative z-10 overflow-hidden"
     >
-      {/* gap-6 md:gap-16 xl:gap-20 */}
+      <Waypoint
+        onEnter={() => {
+          updateUrl(`/${language === 'es' ? '' : language + '/'}#about-us`);
+        }}
+      />
       <div className="flex flex-col md:flex-row justify-center items-center px-8 md:px-10 lg:px-20">
         {/* Coding illustation */}
         <div className="w-9/12 sm:w-6/12 md:w-5/12 lg:w-4/12 mb-6 md:mb-0 mr-0 md:mr-16 xl:mr-20">

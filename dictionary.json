@@ -24,7 +24,11 @@
       "message": "Describa su proyecto o duda",
       "send": "Contactar",
       "error": "No se admiten carácteres especiales",
-      "chooseOption": "Seleccione una opción"
+      "chooseOption": "Seleccione una opción",
+      "consulting": "Consultoría",
+      "department": "Departamento de desarrollo",
+      "lessThanFive": "Menos de $5.000",
+      "moreThanFifty": "Más $50.000"
     },
     "contactUs": {
       "span": "Cuéntanos",
@@ -163,7 +167,11 @@
       "message": "Describe your idea",
       "send": "Contact",
       "error": "Special characters are not allowed",
-      "chooseOption": "Choose an option"
+      "chooseOption": "Choose an option",
+      "consulting": "Consulting",
+      "department": "Development department",
+      "lessThanFive": "Less than $5.000",
+      "moreThanFifty": "More than $50.000"
     },
     "contactUs": {
       "span": "Tell us",
