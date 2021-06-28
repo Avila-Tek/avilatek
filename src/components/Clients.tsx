@@ -50,7 +50,7 @@ const logos = [
     size: 'w-24 md:w-28',
   },
   {
-    src: 'logos/hablemos-seguro-logo-1.png',
+    src: 'logos/hablemos-seguros-logo-1.png',
     size: 'w-44 xl:w-48',
   },
   {
