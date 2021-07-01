@@ -47,12 +47,13 @@ export const ThemeProvider = ({
       if (theme === 'auto') {
         const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
         localStorage.removeItem('color-theme');
-        console.log('Now we auto');
+
         if (userMedia.matches) {
           root.classList.add('dark');
         } else {
           root.classList.remove('dark');
         }
+        
       } else {
         root.classList.remove(theme === 'dark' ? 'light' : 'dark');
         root.classList.add(theme);

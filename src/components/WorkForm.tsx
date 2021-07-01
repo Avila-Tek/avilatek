@@ -6,7 +6,7 @@ import useLanguage from '../hooks/useLanguage';
 
 export default function ContactForm() {
   const [translation, getCurrentLanguage] = useLanguage();
-  const language = 'es';
+  const language = getCurrentLanguage();
   const [name, setName] = React.useState<string>('');
   const [email, setEmail] = React.useState<string>('');
   const [fileName, setFileName] = React.useState<string>('');

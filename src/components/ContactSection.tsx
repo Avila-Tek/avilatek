@@ -7,9 +7,10 @@ import MessageIcon from './icons/MessageIcon';
 import SettingsIcon from './icons/SettingsIcon';
 import CallCenter from './icons/CallCenter';
 import useLanguage from '../hooks/useLanguage';
-import updateUrl from '../lib/updateUrl';
+import useActiveLink from '../hooks/useActiveLink';
 
 export default function ContactSection() {
+  const [, setActiveLink] = useActiveLink();
   const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
 
@@ -37,7 +38,7 @@ export default function ContactSection() {
 
         <Waypoint
           onEnter={() => {
-            updateUrl(`/${language === 'es' ? '' : language + '/'}#contact`);
+            setActiveLink(`/${language === 'es' ? '' : language + '/'}#contact`);
           }}
         />
 

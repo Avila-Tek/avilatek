@@ -1,8 +1,12 @@
 import React from 'react';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import useLanguage from '../hooks/useLanguage';
 
 export default function Layout({ children }) {
+  const [, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
+
   // So that the ascii art appears in every view
   React.useEffect(() => {
     console.log(
@@ -17,7 +21,9 @@ export default function Layout({ children }) {
    |    /     \\    ,-.     \\
    |___/_______\\__/___\\_____\\`,
       '\n\n¡Trabaja con nosotros!\n',
-      'https://bit.ly/avila-tek'
+      `https://www.avilatek.dev/${
+        language === 'es' ? '' : language + '/'
+      }work-with-us`
     );
   }, []);
 

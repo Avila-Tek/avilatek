@@ -3,9 +3,10 @@ import { Fade } from 'react-awesome-reveal';
 import { Waypoint } from 'react-waypoint';
 import CodeTyping from './icons/CodeTyping';
 import useLanguage from '../hooks/useLanguage';
-import updateUrl from '../lib/updateUrl';
+import useActiveLink from '../hooks/useActiveLink';
 
 export default function AboutUs() {
+  const [, setActiveLink] = useActiveLink();
   const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
 
@@ -16,7 +17,7 @@ export default function AboutUs() {
     >
       <Waypoint
         onEnter={() => {
-          updateUrl(`/${language === 'es' ? '' : language + '/'}#about-us`);
+          setActiveLink(`/${language === 'es' ? '' : language + '/'}#about-us`);
         }}
       />
       <div className="flex flex-col md:flex-row justify-center items-center px-8 md:px-10 lg:px-20">
