@@ -1,15 +1,18 @@
 import React from 'react';
 import { navigate } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
+import { Waypoint } from 'react-waypoint';
 import { Post } from './PostCard';
 import PostList from './PostList';
 import useLanguage from '../../hooks/useLanguage';
+import useActiveLink from '../../hooks/useActiveLink';
 
 interface BlogSectionProps {
   posts?: Array<Post>;
 }
 
 export default function BlogSection({ posts }: BlogSectionProps) {
+  const [, setActiveLink] = useActiveLink();
   const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
 
@@ -30,6 +33,11 @@ export default function BlogSection({ posts }: BlogSectionProps) {
             {translation(language, 'blog.text')}
           </p>
         </div>
+        <Waypoint
+          onEnter={() => {
+            setActiveLink(`/${language === 'es' ? '' : language + '/'}blog`);
+          }}
+        />
         {posts?.length > 0 ? <PostList posts={posts} /> : null}
         {/* More posts button */}
         <div className="w-full flex justify-center mt-14 lg:mt-16">
@@ -37,9 +45,10 @@ export default function BlogSection({ posts }: BlogSectionProps) {
             type="button"
             aria-label="Ir al blog"
             className="text-sm lg:text-base text-primary-400 bg-transparent border-2 border-primary-400 hover:border-primary-300 hover:text-primary-300 py-1.5 px-6 rounded-full focus:outline-none active:border-primary-500 active:text-primary-500"
-            onClick={() =>
-              navigate(`/${language === 'es' ? '' : language + '/'}blog`)
-            }
+            onClick={() => {
+              navigate(`/${language === 'es' ? '' : language + '/'}blog`);
+              setActiveLink(`/${language === 'es' ? '' : language + '/'}blog`);
+            }}
           >
             {translation(language, 'blog.seeMore')}
           </button>
