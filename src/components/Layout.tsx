@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 import useLanguage from '../hooks/useLanguage';
 
 export default function Layout({ children }) {
-  const [, getCurrentLanguage] = useLanguage();
+  const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
 
   // So that the ascii art appears in every view
@@ -20,7 +20,7 @@ export default function Layout({ children }) {
    |     /-.,\\      /     \\|
    |    /     \\    ,-.     \\
    |___/_______\\__/___\\_____\\`,
-      '\n\n¡Trabaja con nosotros!\n',
+      `\n\n${translation(language, 'consoleLog')}\n`,
       `https://www.avilatek.dev/${
         language === 'es' ? '' : language + '/'
       }work-with-us`
