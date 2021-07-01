@@ -5,6 +5,8 @@ export default function AtTheOffice() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
+      width="510"
+      height="340"
       fill="none"
       viewBox="0 0 510 340"
       className="w-full"
@@ -527,12 +529,6 @@ export default function AtTheOffice() {
             d="M254.062 53.87l-29.703 9.975h67.109l-27.886-9.975h-9.52z"
           ></path>
           <path
-            id="bulb-filling"
-            fill="currentColor"
-            className="text-transparent dark:text-yellow-400 dark:bg-opacity-75 dark:shadow-yellow transition-all duration-300 ease-in-out"
-            d="M256 64c1 3 0 3.5-3 8-1.5 1.5-1 9.5 6 9.5 8-1 6-8.5 5.5-9.5-3-5-2.5-7-2.285-8H256z"
-          ></path>
-          <path
             id="Vector_104"
             fill="currentColor"
             className="text-neutral-300 dark:text-yellow-500 dark:shadow-yellow transition-all duration-300 ease-in-out"
@@ -593,9 +589,9 @@ export default function AtTheOffice() {
           ></path>
         </g>
         <motion.g
-          id="man-in-suit"
           animate={{ rotate: [1.5, 0, 1.5] }}
           transition={{ duration: 2.4, repeat: Infinity }}
+          id="man-in-suit"
         >
           <path
             id="Vector_115"
@@ -1390,12 +1386,12 @@ export default function AtTheOffice() {
           <path
             id="Vector_268"
             fill="#263238"
-            d="M414.871 219.021l-31.726 4.765a15.432 15.432 0 00-10.632 6.806 15.446 15.446 0 00-1.886 12.804l14.607 50.247 16.902-4.458-8.924-45.319L426 241.667V220.11L414.871 218"
+            d="M393.842 220.66l-31.694 4.76a15.446 15.446 0 00-10.622 6.8 15.437 15.437 0 00-1.897 12.75l16.735 53.373 15.116-5.685-9.282-47.178 49.035-3.284V220.66l-27.391-1.02"
           ></path>
           <path
             id="Vector_269"
             fill="#263238"
-            d="M393.842 220.66l-31.694 4.76a15.446 15.446 0 00-10.622 6.8 15.437 15.437 0 00-1.897 12.75l16.735 53.373 15.116-5.685-9.282-47.178 49.035-3.284V220.66l-27.391-1.02"
+            d="M416.16 220.66l-31.695 4.76a15.42 15.42 0 00-10.621 6.8 15.432 15.432 0 00-1.884 12.791l14.593 50.197 16.884-4.454-8.915-45.274 32.756-2.196v-21.536l-11.118-2.108"
           ></path>
           <path
             id="Vector_270"
@@ -1911,9 +1907,9 @@ export default function AtTheOffice() {
           ></path>
         </g>
         <motion.g
-          id="curly-woman"
           animate={{ rotate: [1.1, 0, 1.1] }}
           transition={{ duration: 2.4, repeat: Infinity }}
+          id="curly-woman"
         >
           <path
             id="Vector_369"
