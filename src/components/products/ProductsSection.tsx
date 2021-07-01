@@ -6,9 +6,10 @@ import useLanguage from '../../hooks/useLanguage';
 import LandingPage from '../../assets/illustrations/landing-page.svg';
 import ECommerce from '../../assets/illustrations/e-commerce.svg';
 import DesignSystems from '../../assets/illustrations/design-systems.svg';
-import updateUrl from '../../lib/updateUrl';
+import useActiveLink from '../../hooks/useActiveLink';
 
 export default function ProductsSection() {
+  const [, setActiveLink] = useActiveLink();
   const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
   const products: Array<Product> = [
@@ -55,7 +56,7 @@ export default function ProductsSection() {
         </div>
         <Waypoint
           onEnter={() => {
-            updateUrl(`/${language === 'es' ? '' : language + '/'}#products`);
+            setActiveLink(`/${language === 'es' ? '' : language + '/'}#products`);
           }}
         />
         <ProductList products={products} />

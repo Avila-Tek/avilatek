@@ -8,8 +8,10 @@ import DaaS from '../../assets/illustrations/daas.svg';
 import Development from '../../assets/illustrations/development.svg';
 import Consulting from '../../assets/illustrations/consulting.svg';
 import updateUrl from '../../lib/updateUrl';
+import useActiveLink from '../../hooks/useActiveLink';
 
 export default function ServiceSection() {
+  const [, setActiveLink] = useActiveLink();
   const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
   const services: Array<Service> = [
@@ -61,7 +63,7 @@ export default function ServiceSection() {
       </div>
       <Waypoint
         onEnter={() => {
-          updateUrl(`/${language === 'es' ? '' : language + '/'}#services`);
+          setActiveLink(`/${language === 'es' ? '' : language + '/'}#services`);
         }}
       />
       <Fade triggerOnce>

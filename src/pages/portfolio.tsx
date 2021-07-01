@@ -1,7 +1,7 @@
 import React from 'react';
 import { Project } from '../components/portfolio/PortfolioSlider';
 import SEO from '../components/SEO';
-import Technologies from '../components/Tecnologies';
+import Technologies from '../components/Technologies';
 import ProjectsList from '../components/portfolio/ProjectsList';
 import Documents from '../components/icons/Documents';
 import DefaultBanner from '../components/common/DefaultBanner';

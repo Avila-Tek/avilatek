@@ -5,6 +5,7 @@ import { globalHistory, useLocation } from '@reach/router';
 import { motion } from 'framer-motion';
 import useOutsideAlerter from '../hooks/useOutsideAlerter';
 import useLanguage from '../hooks/useLanguage';
+import useActiveLink from '../hooks/useActiveLink';
 
 interface NavItemProps {
   title: string;
@@ -12,17 +13,18 @@ interface NavItemProps {
 }
 
 function NavItem({ title, href }: NavItemProps) {
+  const [activeLink, setActiveLink] = useActiveLink();
   const location = useLocation();
-  // A way to determine we are in blog post, includes won't work since home would be active in all routes, so it can't be general
+  // A way to determine if we are in a blog post
   const isBlog = location.pathname.includes('blog') && title === 'Blog';
 
   return (
-    // ! Link activeClassName doesn't work with anchors
     <Link
       to={href}
       aria-label={title}
-      className={`w-max text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none transition-all duration-300 ease-in-out ${
-        location.pathname + location.hash === href || isBlog
+      onClick={() => setActiveLink(href)}
+      className={`w-max text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none ${
+        activeLink === href || isBlog
           ? 'text-primary-400 dark:text-primary-400 border-b-2 border-primary-400'
           : 'text-font-dark dark:text-font-white'
       }`}
@@ -34,9 +36,9 @@ function NavItem({ title, href }: NavItemProps) {
 
 export default function Navbar() {
   const wrapper = React.useRef(null);
-  const location = useLocation();
-  const [translation] = useLanguage();
-  const language = location.pathname.includes('en') ? 'en' : 'es';
+  const [, setActiveLink] = useActiveLink();
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const [isOpen, setOpen] = React.useState<boolean>(false);
   const [isFixed, setFixed] = React.useState<boolean>(false);
   const updateOpenState = React.useCallback(setOpen, [setOpen]);
@@ -76,6 +78,9 @@ export default function Navbar() {
       <Link
         to={`/${language === 'es' ? '' : language + '/'}`}
         aria-label="Logo"
+        onClick={() =>
+          setActiveLink(`/${language === 'es' ? '' : language + '/'}`)
+        }
         className="mr-auto w-40 lg:w-48 xl:w-56"
       >
         <StaticImage

@@ -140,7 +140,8 @@
       "mark": "mejores",
       "span": "tecnologías",
       "second": "del mercado"
-    }
+    },
+    "consoleLog": "¡Trabaja con nosotros!"
   },
   "en": {
     "navbar": {
@@ -282,6 +283,7 @@
       "mark": "best",
       "span": "technologies",
       "second": "on the market"
-    }
+    },
+    "consoleLog": "Work with us!"
   }
 }
