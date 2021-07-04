@@ -1,10 +1,13 @@
 import React from 'react';
 import { navigate } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
+import { Waypoint } from 'react-waypoint';
 import PortfolioSlider, { Project } from './PortfolioSlider';
 import useLanguage from '../../hooks/useLanguage';
+import useActiveLink from '../../hooks/useActiveLink';
 
 export default function PortfolioSection() {
+  const [, setActiveLink] = useActiveLink();
   const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
   const projects: Array<Project> = [
@@ -52,6 +55,13 @@ export default function PortfolioSection() {
             {translation(language, 'portfolio.text')}
           </p>
         </div>
+        <Waypoint
+          onEnter={() => {
+            setActiveLink(
+              `/${language === 'es' ? '' : language + '/'}portfolio`
+            );
+          }}
+        />
         {/* Portfolio slider */}
         <PortfolioSlider projects={projects} en={language === 'en'} />
         {/* Know more button */}
@@ -60,9 +70,12 @@ export default function PortfolioSection() {
             type="button"
             aria-label="Ir al portafolio"
             className="text-sm lg:text-base text-primary-400 bg-transparent border-2 border-primary-400 hover:border-primary-300 hover:text-primary-300 py-1.5 px-6 rounded-full focus:outline-none active:border-primary-500 active:text-primary-500"
-            onClick={() =>
-              navigate(`/${language === 'es' ? '' : language + '/'}portfolio`)
-            }
+            onClick={() => {
+              navigate(`/${language === 'es' ? '' : language + '/'}portfolio`);
+              setActiveLink(
+                `/${language === 'es' ? '' : language + '/'}portfolio`
+              );
+            }}
           >
             {translation(language, 'portfolio.seeMore')}
           </button>

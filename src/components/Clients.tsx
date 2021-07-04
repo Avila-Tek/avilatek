@@ -179,6 +179,15 @@ export default function Clients() {
             <RightArrow className="h-6 w-6 md:h-7 md:w-7" />
           </button>
         </div>
+        {/* Slider wrap */}
+        {/* <ul className="h-full w-full flex overflow-hidden">
+          <li className="">
+
+          </li> */}
+        {/* <div className="slider-item">
+              <div className="img-div"></div>
+            </div> */}
+        {/* </ul> */}
       </Fade>
     </section>
   );

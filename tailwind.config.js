@@ -147,7 +147,7 @@ module.exports = {
     },
   },
   variants: {
-    opacity: ({ after }) => after(['disabled']),
+    opacity: ({ after }) => after(['disabled', 'dark']),
     backgroundColor: ({ after }) => after(['disabled', 'active']),
     textColor: ({ after }) => after(['active', 'disabled']),
     cursor: ({ after }) => after(['disabled']),

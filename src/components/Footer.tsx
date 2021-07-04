@@ -9,9 +9,11 @@ import LanguageToggle from './common/LanguageToggle';
 import ThemeToggle from './common/ThemeToggle';
 import Button from './common/Button';
 import useLanguage from '../hooks/useLanguage';
+import useActiveLink from '../hooks/useActiveLink';
 
 export default function Footer() {
   const location = useLocation();
+  const [, setActiveLink] = useActiveLink();
   const [translation] = useLanguage();
   const language = location.pathname.includes('en') ? 'en' : 'es';
 
@@ -82,11 +84,14 @@ export default function Footer() {
           <Button
             type="button"
             aria-label="Trabaja con nosotros"
-            onClick={() =>
+            onClick={() => {
               navigate(
                 `/${language === 'es' ? '' : language + '/'}work-with-us`
-              )
-            }
+              );
+              setActiveLink(
+                `/${language === 'es' ? '' : language + '/'}#contact`
+              );
+            }}
             className="px-6 text-xs md:text-sm"
           >
             {translation(language, 'footer.workWithUs')}

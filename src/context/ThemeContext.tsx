@@ -70,6 +70,15 @@ export const ThemeProvider = ({
   }, []);
 
   React.useEffect(() => {
+    // Each time the user change the SO scheme preference, we have to listen to it
+    const changeSOPreference = () => {
+      rawSetTheme('auto');
+    };
+
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", changeSOPreference);
+  }, []);
+
+  React.useEffect(() => {
     rawSetTheme(theme);
   }, [theme]);
 

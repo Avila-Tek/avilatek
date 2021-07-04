@@ -106,7 +106,7 @@ export default function PortfolioPage() {
   const data = {
     title: (
       <>
-        Conocer parte de nuestros{' '}
+        Conoce parte de nuestros{' '}
         <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
           proyectos
         </mark>
