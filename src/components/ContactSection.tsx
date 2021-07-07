@@ -19,7 +19,7 @@ export default function ContactSection() {
       id="contact"
       className="pt-24 -mt-24 pb-48 w-full px-14 md:px-20 lg:px-28 xl:px-44 relative z-10 overflow-hidden"
     >
-      <Fade cascade triggerOnce>
+      <Fade duration={500} cascade triggerOnce>
         {/* Section details */}
         <div className="w-11/12 sm:w-10/12 md:w-9/12 xl:w-6/12 mb-16 mx-auto md:mx-0">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
