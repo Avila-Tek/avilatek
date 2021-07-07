@@ -80,7 +80,7 @@ export default function PostList({
   }, [filter, search]);
 
   return (
-    <Fade duration={500} triggerOnce>
+    <Fade duration={600} triggerOnce>
       <div className="w-full flex flex-col justify-center px-8">
         {filters ? (
           <Filters

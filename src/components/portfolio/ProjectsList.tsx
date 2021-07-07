@@ -13,7 +13,7 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
   const language = getCurrentLanguage();
 
   return (
-    <Fade duration={500} triggerOnce>
+    <Fade duration={600} triggerOnce>
       <div className="w-full lg:w-11/12 xl:w-10/12 mb-16 sm:mb-20 mx-auto px-16 md:px-20 lg:px-6">
         <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
           {translation(language, 'portfolio.present')}{' '}

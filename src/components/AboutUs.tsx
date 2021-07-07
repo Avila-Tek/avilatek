@@ -23,14 +23,14 @@ export default function AboutUs() {
       <div className="flex flex-col md:flex-row justify-center items-center px-8 md:px-10 lg:px-20">
         {/* Coding illustation */}
         <div className="w-9/12 sm:w-6/12 md:w-5/12 lg:w-4/12 mb-6 md:mb-0 mr-0 md:mr-16 xl:mr-20">
-          <Fade duration={500} triggerOnce>
+          <Fade duration={600} triggerOnce>
             <CodeTyping />
           </Fade>
         </div>
 
         {/* Text */}
         <div className="w-10/12 sm:w-8/12 md:w-5/12 lg:w-6/12">
-          <Fade duration={500} cascade triggerOnce>
+          <Fade duration={600} cascade triggerOnce>
             <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
               {translation(language, 'aboutUs.about')}{' '}
               <span className="text-primary-400">
@@ -46,7 +46,7 @@ export default function AboutUs() {
 
       {/* The phrase */}
       <div className="w-10/12 md:w-9/12 mx-auto mt-56 text-center px-10">
-        <Fade duration={500} triggerOnce className="w-full">
+        <Fade duration={600} triggerOnce className="w-full">
           <h2 className="text-lg lg:text-xl xl:text-2xl font-bold text-primary-500 dark:text-primary-400">
             “Let’s go invent tomorrow instead of worrying about what happened
             yesterday.”

@@ -21,7 +21,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
       id="blog"
       className="pt-0.5 -mt-0.5 pb-48 md:pb-60 w-full relative z-10 overflow-hidden"
     >
-      <Fade duration={500} cascade triggerOnce>
+      <Fade duration={600} cascade triggerOnce>
         <div className="w-full text-center mb-20 mt-32">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-14 sm:px-28">
             <mark className="text-font-black inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">

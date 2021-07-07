@@ -10,7 +10,7 @@ export default function WorkWithUsPage() {
       <SEO title="Work with us" />
       <main className="min-h-screen w-full relative overflow-hidden">
         <section className="pt-44 pb-40 px-14 md:px-20 lg:px-28 xl:px-44">
-          <Fade duration={500} triggerOnce>
+          <Fade duration={600} triggerOnce>
             {/* Section title */}
             <div className="w-11/12 sm:w-10/12 md:w-9/12 xl:w-6/12 mb-10 mx-auto md:mx-0">
               <h1 className="text-lg md:text-xl xl:text-2xl font-bold">

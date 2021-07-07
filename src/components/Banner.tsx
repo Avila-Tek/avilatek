@@ -36,7 +36,7 @@ export default function Banner() {
       <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-20 pb-12 px-10 md:px-12 lg:px-14 xl:px-18">
         {/* Banner details */}
         <div className="w-10/12 sm:w-8/12 md:w-5/12 pt-4 md:pt-10 lg:pt-12 z-10">
-          <Fade duration={500} triggerOnce cascade>
+          <Fade duration={600} triggerOnce cascade>
             <div className="h-auto">
               <h1 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold relative">
                 {translation(language, 'homeBanner.title')}{' '}
@@ -75,7 +75,7 @@ export default function Banner() {
         </div>
         {/* Animated Illustration */}
         <div className="w-10/12 sm:w-8/12 md:w-5/12 mx-0 md:ml-8 xl:-mr-6 z-10">
-          <Fade duration={500} triggerOnce>
+          <Fade duration={600} triggerOnce>
             <AtTheOffice />
           </Fade>
         </div>
