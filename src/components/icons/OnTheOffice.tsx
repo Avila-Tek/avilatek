@@ -529,7 +529,7 @@ export default function AtTheOffice() {
           <path
             id="bulb-filling"
             fill="currentColor"
-            className="text-secondary-300 dark:text-yellow-400 opacity-10 dark:opacity-75 dark:shadow-yellow transition-all duration-300 ease-in-out"
+            className="text-secondary-300 dark:text-yellow-300 opacity-10 dark:opacity-90 dark:shadow-yellow transition-all duration-300 ease-in-out"
             d="M256 64c1 3 0 3.5-3 8-1.5 1.5-1 9.5 6 9.5 8-1 6-8.5 5.5-9.5-3-5-2.5-7-2.285-8H256z"
           ></path>
           <path

@@ -40,7 +40,7 @@ export default function Input({
           name={name}
           defaultValue={value}
           className={`
-          mt-1 block bg-medium-blue text-font-black dark:bg-medium-gray dark:text-font-white rounded-lg px-3 py-1.5 w-full text-sm lg:text-base border-medium-blue dark:border-medium-gray focus:border-2 focus:border-primary-300 transition-all duration-300 ease-in-out
+          mt-1 block bg-medium-blue text-font-black dark:bg-medium-gray dark:text-font-white rounded-lg px-3 py-1.5 w-full text-base border-medium-blue dark:border-medium-gray focus:border-2 focus:border-primary-300 transition-all duration-300 ease-in-out
           ${rest.disabled ? 'opacity-75 cursor-not-allowed' : ''}`}
           onChange={onChange}
           {...rest}

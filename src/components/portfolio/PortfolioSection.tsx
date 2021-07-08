@@ -39,7 +39,7 @@ export default function PortfolioSection() {
       id="portfolio"
       className="pt-24 -mt-24 mb-36 md:mb-40 w-full relative z-10 overflow-hidden"
     >
-      <Fade cascade triggerOnce>
+      <Fade duration={600} cascade triggerOnce>
         <div className="w-full text-center mb-10">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-12">
             {translation(language, 'portfolio.first')}{' '}
