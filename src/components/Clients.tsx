@@ -24,7 +24,7 @@ const logos = [
   },
   {
     src: 'logos/new-habitat-village-logo.png',
-    size: 'w-20 xl:w-24',
+    size: 'w-12 xl:w-14',
   },
   {
     src: 'logos/rockval.png',
