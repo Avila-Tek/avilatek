@@ -23,7 +23,8 @@ const logos = [
     size: 'w-24 md:w-28 xl:w-32',
   },
   {
-    src: 'logos/habitat-village.png',
+    src: 'logos/new-habitat-village-logo.png',
+    size: 'w-20 xl:w-24',
   },
   {
     src: 'logos/rockval.png',
