@@ -30,9 +30,6 @@ const logos = [
     src: 'logos/rockval.png',
   },
   {
-    src: 'logos/the-grint.png',
-  },
-  {
     src: 'logos/bat.png',
     size: 'w-24 lg:w-28 mb-1 pl-2 sm:pl-0',
   },
