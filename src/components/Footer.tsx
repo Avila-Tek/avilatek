@@ -32,6 +32,9 @@ export default function Footer() {
           <p className="my-2">
             <span className="font-medium mr-5">Madrid</span> +34 (682) 35 74 16
           </p>
+          <p className="my-2">
+            <span className="font-medium mr-5">Miami</span> +1 (754) 66 61 727
+          </p>
           <p>info@avilatek.dev</p>
           {/* RRSS icons */}
           <div className="flex mt-4">
@@ -111,12 +114,12 @@ export default function Footer() {
         </svg>
         <ThemeToggle />
       </div>
-      <hr className="w-full mb-1 mt-4 border-medium-blue dark:border-dark-gray dark:border-opacity-50" />
-      <div className="w-full my-0 flex items-center justify-between text-xs lg:text-sm">
+      <hr className="w-full mb-2 sm:mb-1 mt-4 border-medium-blue dark:border-dark-gray dark:border-opacity-50" />
+      <div className="w-full my-3 sm:my-0 flex items-center justify-between text-xs lg:text-sm">
         <LanguageToggle />
         <p className="text-right">
           &copy; {new Date().getFullYear()} Avila Tek.{' '}
-          {translation(language, 'footer.copyright')}
+          {translation(language, 'footer.copyright')}. J-41237249-1
         </p>
       </div>
     </footer>
