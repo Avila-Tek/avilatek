@@ -8,10 +8,6 @@ export default function LanguageToggle() {
     location.pathname.includes('en') ? 'en' : 'es'
   );
 
-  React.useEffect(() => {
-    navigate(`/${language === 'es' ? '' : language}`);
-  }, [language]);
-
   return (
     <label htmlFor="language">
       <select
@@ -20,6 +16,7 @@ export default function LanguageToggle() {
         onChange={(e) => {
           e.preventDefault();
           setLanguage(e.target.value);
+          navigate(`/${e.target.value === 'es' ? '' : e.target.value}`);
         }}
         className="pl-1 pr-8 ml-0 mr-3 sm:mx-0 bg-transparent text-xs lg:text-sm text-primary-500 dark:text-primary-300 font-medium border-0 focus:ring-0 focus:outline-none"
       >

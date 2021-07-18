@@ -107,7 +107,7 @@ export default function PortfolioPage() {
     title: (
       <>
         Meet part of our{' '}
-        <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
+        <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 text-font-black dark:text-font-white">
           projects
         </mark>
       </>

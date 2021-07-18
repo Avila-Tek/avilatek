@@ -16,7 +16,7 @@ export default function WorkWithUsPage() {
               <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
                 <span className="text-primary-400">Únete</span> a la experiencia
                 de{' '}
-                <mark className="text-font0-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
+                <mark className="text-font-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
                   Avila Tek
                 </mark>
               </h1>
