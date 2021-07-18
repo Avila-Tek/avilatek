@@ -16,6 +16,20 @@ export default function Footer() {
   const [, setActiveLink] = useActiveLink();
   const [translation] = useLanguage();
   const language = location.pathname.includes('en') ? 'en' : 'es';
+  const phones: Array<{ city: string; phone: string }> = [
+    {
+      city: 'Caracas',
+      phone: '+58 (424) 27 82 759',
+    },
+    {
+      city: 'Madrid',
+      phone: '+34 (682) 35 74 16',
+    },
+    {
+      city: 'Miami',
+      phone: '+1 (754) 66 61 727',
+    },
+  ];
 
   return (
     <footer className="bg-light-blue dark:bg-medium-gray w-full px-12 lg:px-24 xl:px-26 py-1.5 shadow-blue dark:shadow-dark-gray border-t-2 border-medium-blue dark:border-dark-gray dark:text-font-white transition-all duration-300 ease-in-out">
@@ -25,16 +39,14 @@ export default function Footer() {
           <h2 className="text-primary-400 font-semibold text-sm md:text-base">
             {translation(language, 'footer.contact')}
           </h2>
-          <p className="mt-4">
-            <span className="font-medium mr-4">Caracas</span> +58 (424) 27 82
-            759
-          </p>
-          <p className="my-2">
-            <span className="font-medium mr-5">Madrid</span> +34 (682) 35 74 16
-          </p>
-          <p className="my-2">
-            <span className="font-medium mr-5">Miami</span> +1 (754) 66 61 727
-          </p>
+          <div className="max-w-xs grid grid-cols-12 gap-y-2 gap-x-1 sm:gap-x-5 lg:gap-x-2 mt-4 mb-2">
+            {phones.map(({ city, phone }) => (
+              <>
+                <p className="font-medium col-span-3">{city}</p>
+                <p className="col-span-9">{phone}</p>
+              </>
+            ))}
+          </div>
           <p>info@avilatek.dev</p>
           {/* RRSS icons */}
           <div className="flex mt-4">
