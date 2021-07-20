@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
 import { globalHistory, useLocation } from '@reach/router';
 import { motion } from 'framer-motion';
 import useOutsideAlerter from '../hooks/useOutsideAlerter';
 import useLanguage from '../hooks/useLanguage';
 import useActiveLink from '../hooks/useActiveLink';
+import useTheme from '../hooks/useTheme';
+import Image from './common/Image';
 
 interface NavItemProps {
   title: string;
@@ -36,6 +37,7 @@ function NavItem({ title, href }: NavItemProps) {
 
 export default function Navbar() {
   const wrapper = React.useRef(null);
+  const [theme] = useTheme();
   const [, setActiveLink] = useActiveLink();
   const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
@@ -83,11 +85,15 @@ export default function Navbar() {
         }
         className="mr-auto w-40 lg:w-48 xl:w-56"
       >
-        <StaticImage
-          src="../assets/images/logo_white.png"
+        <Image
+          filename={
+            theme === 'dark' ||
+            (theme === 'auto' &&
+              window?.matchMedia('(prefers-color-scheme: dark)').matches)
+              ? 'logo-black.png'
+              : 'logo_white.png'
+          }
           alt="Avila Tek logo"
-          placeholder="blurred"
-          layout="fullWidth"
         />
       </Link>
 

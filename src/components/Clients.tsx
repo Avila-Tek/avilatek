@@ -1,8 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
-import LeftArrow from './icons/LeftArrow';
-import RightArrow from './icons/RightArrow';
 import Image from './common/Image';
 import useLanguage from '../hooks/useLanguage';
 
@@ -13,29 +10,29 @@ const logos = [
   },
   {
     src: 'logos/continental-logo.png',
-    size: 'w-48 md:w-52 xl:w-60',
+    size: 'w-48 md:w-52',
   },
   {
     src: 'logos/gno-logo.png',
   },
   {
     src: 'logos/bloop-logo.png',
-    size: 'w-24 md:w-28 xl:w-32',
+    size: 'w-28 md:w-32',
   },
   {
     src: 'logos/new-habitat-village-logo.png',
-    size: 'w-12 xl:w-14',
+    size: 'w-16',
   },
   {
     src: 'logos/rockval.png',
   },
   {
     src: 'logos/bat.png',
-    size: 'w-24 lg:w-28 mb-1 pl-2 sm:pl-0',
+    size: 'w-28 mb-1',
   },
   {
     src: 'logos/ptck-logo.png',
-    size: 'w-40 md:w-44 xl:w-48',
+    size: 'w-44 xl:w-48',
   },
   {
     src: 'logos/intergraph-logo.png',
@@ -45,7 +42,7 @@ const logos = [
   },
   {
     src: 'logos/bloopex.png',
-    size: 'w-24 md:w-28',
+    size: 'w-24 md:w-26',
   },
   {
     src: 'logos/hablemos-seguros-logo-1.png',
@@ -56,6 +53,7 @@ const logos = [
   },
   {
     src: 'logos/new-pomelos-logo.png',
+    size: 'w-40 xl:w-44',
   },
   {
     src: 'logos/psh-logo.png',
@@ -66,60 +64,38 @@ const logos = [
   },
   {
     src: 'logos/bodebar-logo.png',
-    size: 'w-20 xl:w-24',
+    size: 'w-24',
   },
 ];
 
 interface LogoItemProps {
   src: any;
   size?: string;
-  className?: string;
 }
 
-function LogoItem({ src, className, size }: LogoItemProps) {
+function LogoItem({ src, size }: LogoItemProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0.2 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0.2 }}
-      transition={{ duration: 0.3 }}
-    >
+    <div className="flex items-center justify-center h-14 w-60 px-4">
       <Image
         filename={src}
         alt={src}
-        className={`mx-7 md:mx-8 xl:mx-9 duration-200 transition-all filter-grayscale-dark dark:filter-grayscale-bright hover:filter-black dark:hover:filter-white ease-in-out ${className} ${
-          size ?? 'w-32 md:w-36 xl:w-40'
+        className={`duration-200 transition-all filter-grayscale-dark dark:filter-grayscale-bright hover:filter-black dark:hover:filter-white ease-in-out ${
+          size ?? 'w-36 xl:w-40'
         }`}
       />
-    </motion.div>
+    </div>
   );
 }
 
 export default function Clients() {
   const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
-  const [clients, setClients] = React.useState([...logos]);
-
-  const rotate = (change: number) => {
-    const { length } = clients;
-
-    setClients((prev) => {
-      if (change === -1) {
-        return prev.map((_, idx) => prev[(idx + change + length) % length]);
-      }
-      return prev.map((_, idx) => prev[(idx + change) % length]);
-    });
-  };
-
-  React.useEffect(() => {
-    const interval = setInterval(() => rotate(1), 6000);
-    return () => clearInterval(interval);
-  }, [clients]);
+  const [clients, setClients] = React.useState([...logos, ...logos]);
 
   return (
-    <section className="pt-28 md:pt-18 mb-52 lg:mb-72 -mt-12">
+    <section className="pt-28 md:pt-18 mb-48 lg:mb-56 -mt-12">
       <Fade duration={600} triggerOnce>
-        <div className="w-full mb-16 sm:mb-20 px-16 md:px-36">
+        <div className="w-full mb-12 sm:mb-14 px-16 md:px-36">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
             {translation(language, 'clients.first')}{' '}
             <mark className="text-font-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
@@ -131,61 +107,17 @@ export default function Clients() {
             </span>
           </h1>
         </div>
-        <div className="w-full flex justify-center items-center text-dark-blue dark:text-medium-gray px-16 md:px-28">
-          {/* Left arrow btn */}
-          <button
-            type="button"
-            className="focus:ring-0 focus:outline-none hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
-            onClick={() => rotate(-1)}
-            aria-label="Retroceder en clientes"
-          >
-            <LeftArrow className="h-6 w-6 lg:h-7 lg:w-7" />
-          </button>
 
-          {/* Carousel, gap-14 xl:gap-16 */}
-          <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-30 dark:bg-opacity-10 rounded-full duration-500 transition-all h-36 w-full md:w-11/12 xl:w-9/12 flex items-center justify-center mx-8 lg:mx-12">
-            <AnimatePresence>
-              {clients.map(({ src, size }, idx) => (
-                <div key={src}>
-                  {0 === idx ? <LogoItem src={src} size={size} /> : null}
-                  {1 === idx ? (
-                    <LogoItem
-                      src={src}
-                      size={size}
-                      className="hidden sm:block"
-                    />
-                  ) : null}
-                  {2 === idx ? (
-                    <LogoItem
-                      src={src}
-                      size={size}
-                      className="hidden lg:block"
-                    />
-                  ) : null}
-                </div>
-              ))}
-            </AnimatePresence>
+        {/* slider */}
+        {/* bg-medium-blue dark:bg-medium-gray bg-opacity-30 dark:bg-opacity-10 */}
+        <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-10 rounded-full flex h-40 mx-auto w-10/12 sm:w-9/12 overflow-hidden">
+          {/* First slide track */}
+          <div className="slide-track flex items-center">
+            {clients.map(({ src, size }) => (
+              <LogoItem key={src} src={src} size={size} />
+            ))}
           </div>
-
-          {/* Right arrow btn */}
-          <button
-            type="button"
-            className="focus:ring-0 focus:outline-none hover:text-primary-300 active:text-primary-500 duration-150 transition-all ease-in-out"
-            onClick={() => rotate(1)}
-            aria-label="Avanzar en clientes"
-          >
-            <RightArrow className="h-6 w-6 md:h-7 md:w-7" />
-          </button>
         </div>
-        {/* Slider wrap */}
-        {/* <ul className="h-full w-full flex overflow-hidden">
-          <li className="">
-
-          </li> */}
-        {/* <div className="slider-item">
-              <div className="img-div"></div>
-            </div> */}
-        {/* </ul> */}
       </Fade>
     </section>
   );

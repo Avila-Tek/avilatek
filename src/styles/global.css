@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 /* purgecss start ignore */
-
 @layer utilities {
   @variants dark, hover {
     .filter-none {
@@ -205,6 +204,24 @@ body {
     #38e18c80 65%
   );
   @apply text-font-black dark:text-font-white;
+}
+
+.slide-track {
+  width: calc(240px * 34);
+  animation: scroll 80s linear infinite;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-240px * 17));
+  }
 }
 
 /* purgecss end ignore */
