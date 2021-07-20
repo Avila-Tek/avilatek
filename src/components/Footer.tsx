@@ -42,8 +42,12 @@ export default function Footer() {
           <div className="max-w-xs grid grid-cols-12 gap-y-2 gap-x-1 sm:gap-x-5 lg:gap-x-2 mt-4 mb-2">
             {phones.map(({ city, phone }) => (
               <>
-                <p className="font-medium col-span-3">{city}</p>
-                <p className="col-span-9">{phone}</p>
+                <p className="font-medium col-span-3" key={city}>
+                  {city}
+                </p>
+                <p className="col-span-9" key={phone}>
+                  {phone}
+                </p>
               </>
             ))}
           </div>

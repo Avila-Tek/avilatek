@@ -6,6 +6,7 @@ import useLanguage from '../hooks/useLanguage';
 const logos = [
   {
     src: 'logos/bigott.png',
+    size: 'w-32 md:w-36 xl:w-40 mb-1',
   },
   {
     src: 'logos/continental-logo.png',
@@ -16,11 +17,11 @@ const logos = [
   },
   {
     src: 'logos/bloop-logo.png',
-    size: 'w-24 md:w-28',
+    size: 'w-28 md:w-32',
   },
   {
     src: 'logos/new-habitat-village-logo.png',
-    size: 'w-16 xl:w-18',
+    size: 'w-14 xl:w-16',
   },
   {
     src: 'logos/rockval.png',
@@ -52,6 +53,7 @@ const logos = [
   },
   {
     src: 'logos/new-pomelos-logo.png',
+    size: 'w-36 md:w-40 xl:w-44',
   },
   {
     src: 'logos/psh-logo.png',
@@ -107,7 +109,8 @@ export default function Clients() {
         </div>
 
         {/* slider */}
-        <div className="flex h-32 mx-auto w-full sm:w-10/12 lg:w-9/12 overflow-hidden">
+        {/* bg-medium-blue dark:bg-medium-gray bg-opacity-30 dark:bg-opacity-10 */}
+        <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-10 sm:rounded-full flex h-40 mx-auto w-full sm:w-9/12 overflow-hidden">
           {/* First slide track */}
           <div className="slide-track flex items-center">
             {clients.map(({ src, size }) => (
