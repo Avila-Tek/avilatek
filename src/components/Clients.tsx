@@ -21,18 +21,18 @@ const logos = [
   },
   {
     src: 'logos/new-habitat-village-logo.png',
-    size: 'w-14 xl:w-16',
+    size: 'w-16',
   },
   {
     src: 'logos/rockval.png',
   },
   {
     src: 'logos/bat.png',
-    size: 'w-24 lg:w-28 mb-1',
+    size: 'w-28 mb-1',
   },
   {
     src: 'logos/ptck-logo.png',
-    size: 'w-40 md:w-44 xl:w-48',
+    size: 'w-44 xl:w-48',
   },
   {
     src: 'logos/intergraph-logo.png',
@@ -53,7 +53,7 @@ const logos = [
   },
   {
     src: 'logos/new-pomelos-logo.png',
-    size: 'w-36 md:w-40 xl:w-44',
+    size: 'w-40 xl:w-44',
   },
   {
     src: 'logos/psh-logo.png',
@@ -64,7 +64,7 @@ const logos = [
   },
   {
     src: 'logos/bodebar-logo.png',
-    size: 'w-20 xl:w-24',
+    size: 'w-24',
   },
 ];
 
@@ -80,7 +80,7 @@ function LogoItem({ src, size }: LogoItemProps) {
         filename={src}
         alt={src}
         className={`duration-200 transition-all filter-grayscale-dark dark:filter-grayscale-bright hover:filter-black dark:hover:filter-white ease-in-out ${
-          size ?? 'w-32 md:w-36 xl:w-40'
+          size ?? 'w-36 xl:w-40'
         }`}
       />
     </div>
@@ -110,7 +110,7 @@ export default function Clients() {
 
         {/* slider */}
         {/* bg-medium-blue dark:bg-medium-gray bg-opacity-30 dark:bg-opacity-10 */}
-        <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-10 sm:rounded-full flex h-40 mx-auto w-full sm:w-9/12 overflow-hidden">
+        <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-10 rounded-full flex h-40 mx-auto w-10/12 sm:w-9/12 overflow-hidden">
           {/* First slide track */}
           <div className="slide-track flex items-center">
             {clients.map(({ src, size }) => (
