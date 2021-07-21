@@ -110,7 +110,7 @@ export default function Clients() {
 
         {/* slider */}
         {/* bg-medium-blue dark:bg-medium-gray bg-opacity-30 dark:bg-opacity-10 */}
-        <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-10 rounded-full flex h-40 mx-auto w-10/12 sm:w-9/12 overflow-hidden">
+        <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-10 rounded-full flex h-40 mx-auto w-10/12 overflow-hidden">
           {/* First slide track */}
           <div className="slide-track flex items-center">
             {clients.map(({ src, size }) => (
