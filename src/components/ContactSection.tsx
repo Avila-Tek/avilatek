@@ -27,7 +27,7 @@ export default function ContactSection() {
               {translation(language, 'contactUs.span')}{' '}
             </span>{' '}
             {translation(language, 'contactUs.first')}{' '}
-            <mark className="text-font0-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
+            <mark className="text-font-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
               {translation(language, 'contactUs.mark')}
             </mark>
           </h1>
@@ -38,7 +38,9 @@ export default function ContactSection() {
 
         <Waypoint
           onEnter={() => {
-            setActiveLink(`/${language === 'es' ? '' : language + '/'}#contact`);
+            setActiveLink(
+              `/${language === 'es' ? '' : `${language}/`}#contact`
+            );
           }}
         />
 

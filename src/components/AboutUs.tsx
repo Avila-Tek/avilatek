@@ -17,7 +17,7 @@ export default function AboutUs() {
     >
       <Waypoint
         onEnter={() => {
-          setActiveLink(`/${language === 'es' ? '' : language + '/'}#about-us`);
+          setActiveLink(`/${language === 'es' ? '' : `${language}/`}#about-us`);
         }}
       />
       <div className="flex flex-col md:flex-row justify-center items-center px-8 md:px-10 lg:px-20">

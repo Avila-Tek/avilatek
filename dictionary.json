@@ -141,7 +141,17 @@
       "span": "tecnologías",
       "second": "del mercado"
     },
-    "consoleLog": "¡Trabaja con nosotros!"
+    "consoleLog": "¡Trabaja con nosotros!",
+    "sdaas": {
+      "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra ultrices faucibus tellus in lacinia at id. Vitae ultrices faucibus cras iaculis facilisis dolor, tristique in nec. Adipiscing fusce lectus arcu vulputate ut aenean in ipsum tempor. Purus suspendisse natoque risus aliquam varius non. Rhoncus faucibus faucibus tincidunt vulputate non cras at phasellus nunc. Dictum egestas neque mauris lacinia volutpat vulputate. Eu, nibh ultricies eget mi sed lorem. Iaculis risus, sed elementum risus eget tellus. Duis nunc urna ornare massa bibendum. Dapibus egestas fames aenean dui, ut suspendisse in eget bibendum.",
+      "benefits": {
+        "span": "Conoce",
+        "first": "gran parte de sus",
+        "mark": "beneficios",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.",
+        "cta": "CTA Button regarding SDaaS"
+      }
+    }
   },
   "en": {
     "navbar": {
