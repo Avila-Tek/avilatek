@@ -25,7 +25,7 @@ export default function Definition() {
       </div>
 
       <Fade duration={600} triggerOnce>
-        <div className="w-9/12 mx-auto mt-36">
+        <div className="w-full md:w-9/12 mx-auto mt-24 lg:mt-36">
           <Rocket />
         </div>
       </Fade>

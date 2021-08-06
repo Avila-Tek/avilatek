@@ -143,13 +143,43 @@
     },
     "consoleLog": "¡Trabaja con nosotros!",
     "sdaas": {
-      "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra ultrices faucibus tellus in lacinia at id. Vitae ultrices faucibus cras iaculis facilisis dolor, tristique in nec. Adipiscing fusce lectus arcu vulputate ut aenean in ipsum tempor. Purus suspendisse natoque risus aliquam varius non. Rhoncus faucibus faucibus tincidunt vulputate non cras at phasellus nunc. Dictum egestas neque mauris lacinia volutpat vulputate. Eu, nibh ultricies eget mi sed lorem. Iaculis risus, sed elementum risus eget tellus. Duis nunc urna ornare massa bibendum. Dapibus egestas fames aenean dui, ut suspendisse in eget bibendum.",
+      "definition": "SDaaS es un servicio de tercerización de un equipo de tecnología dedicado a llevar a cabo el desarrollo y mantenimiento de un proyecto dentro de tu negocio. Este servicio permite cubrir necesidades a la medida, a empresas que requieran recortar los costos y tiempo que precisa construir un equipo interno de tecnología.",
       "benefits": {
         "span": "Conoce",
         "first": "gran parte de sus",
         "mark": "beneficios",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.",
-        "cta": "CTA Button regarding SDaaS"
+        "cta": "CTA Button regarding SDaaS",
+        "business": {
+          "title": "Enfoque en el negocio principal",
+          "text": "Permite a las empresas enfocarse en los requerimientos y mejoras internas que deseen llevar a cabo"
+        },
+        "time": {
+          "title": "Reducción de tiempo",
+          "text": "La integración de un equipo interno de tecnología puede requerir más tiempo en construir, por lo que permite reducir los tiempos"
+        },
+        "scalability": {
+          "title": "Capacidad y escalabilidad flexibles",
+          "text": "De no poseer un alcance claro, tiempo de ejecución y requerimientos, SDaaS permite que el proyecto crezca a medida que surjan las necesidades, acortando así tiempos de entrega y mejorando la respuesta ante los cambios"
+        },
+        "fullTime": {
+          "title": "Benefit",
+          "text": "Si se desea desarrollo y experiencia en una tecnología específica, pero no se requiere de un recurso full time dentro de la organización"
+        },
+        "pricing": {
+          "title": "Results-based pricing",
+          "text": "Garantía de productos de alta calidad, en donde el precio es acorde al resultado obtenido gracias al acceso a profesionales con mayor experiencia en el área"
+        },
+        "cost": {
+          "title": "Reducción de gastos",
+          "text": "Permite la reducción de los gastos asociados a contratación, entrenamiento, adecuación del espacio laboral y adquisición de recursos necesarios para llevar a cabo el proyecto"
+        }
+      },
+      "testimonies": {
+        "span": "Escucha",
+        "first": "la experiencia de",
+        "mark": "nuestros clientes",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac."
       }
     }
   },

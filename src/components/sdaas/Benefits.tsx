@@ -1,60 +1,54 @@
-import { Link } from 'gatsby';
 import React from 'react';
+import { Link } from 'gatsby';
 import { Fade } from 'react-awesome-reveal';
 import useLanguage from '../../hooks/useLanguage';
 import StartUp from '../icons/StartUp';
 import BenefitCard, { Benefit } from './BenefitCard';
-
-const benefits: Array<Benefit> = [
-  {
-    name: 'Enfoque en el negocio principal',
-    description:
-      'Permite a las empresas enfocarse en los requerimientos y mejoras internas que deseen llevar a cabo',
-    icon: <StartUp />,
-  },
-  {
-    name: 'Reducción de tiempo',
-    description:
-      'La integración de un equipo interno de tecnología puede requerir más tiempo en construir, por lo que permite reducir los tiempos',
-    icon: <StartUp />,
-  },
-  {
-    name: 'Capacidad y escalabilidad flexibles',
-    description:
-      'De no poseer un alcance claro, tiempo de ejecución y requerimientos, SDaaS permite que el proyecto crezca a medida que surjan las necesidades, acortando así tiempos de entrega y mejorando la respuesta ante los cambios',
-    icon: <StartUp />,
-  },
-  {
-    name: 'Benefit',
-    description:
-      'Si se desea desarrollo y experiencia en una tecnología específica, pero no se requiere de un recurso full time dentro de la organización',
-    icon: <StartUp />,
-  },
-  {
-    name: 'Results-based pricing',
-    description:
-      'Garantía de productos de alta calidad, en donde el precio es acorde al resultado obtenido gracias al acceso a profesionales con mayor experiencia en el área',
-    icon: <StartUp />,
-  },
-  {
-    name: 'Reducción de gastos',
-    description:
-      'Permite la reducción de los gastos asociados a contratación, entrenamiento, adecuación del espacio laboral y adquisición de recursos necesarios para llevar a cabo el proyecto',
-    icon: <StartUp />,
-  },
-];
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function Benefits() {
   const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
 
+  const benefits: Array<Benefit> = [
+    {
+      name: translation(language, 'sdaas.benefits.business.title'),
+      description: translation(language, 'sdaas.benefits.business.text'),
+      icon: <StartUp />,
+    },
+    {
+      name: translation(language, 'sdaas.benefits.time.title'),
+      description: translation(language, 'sdaas.benefits.time.text'),
+      icon: <StartUp />,
+    },
+    {
+      name: translation(language, 'sdaas.benefits.scalability.title'),
+      description: translation(language, 'sdaas.benefits.scalability.text'),
+      icon: <StartUp />,
+    },
+    {
+      name: translation(language, 'sdaas.benefits.fullTime.title'),
+      description: translation(language, 'sdaas.benefits.fullTime.text'),
+      icon: <StartUp />,
+    },
+    {
+      name: translation(language, 'sdaas.benefits.pricing.title'),
+      description: translation(language, 'sdaas.benefits.pricing.text'),
+      icon: <StartUp />,
+    },
+    {
+      name: translation(language, 'sdaas.benefits.cost.title'),
+      description: translation(language, 'sdaas.benefits.cost.text'),
+      icon: <StartUp />,
+    },
+  ];
+
   return (
     <section className="pb-40 md:pb-44 px-14 md:px-20 lg:px-28 xl:px-36 relative z-10 overflow-hidden">
       <Fade duration={600} cascade triggerOnce>
         {/* Section title */}
-        <div className="w-full text-center mb-20 mt-32">
-          <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-14 sm:px-28">
+        <div className="w-full text-center mb-20 mt-20 md:mt-24">
+          <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-8 sm:px-28">
             <span className="text-primary-400">
               {translation(language, 'sdaas.benefits.span')}
             </span>{' '}
@@ -63,7 +57,7 @@ export default function Benefits() {
               {translation(language, 'sdaas.benefits.mark')}
             </mark>
           </h1>
-          <p className="w-9/12 md:w-6/12 mx-auto mt-6 lg:mt-7 text-sm lg:text-base">
+          <p className="w-11/12 md:w-8/12 mx-auto mt-6 lg:mt-7 text-sm lg:text-base">
             {translation(language, 'sdaas.benefits.text')}
           </p>
         </div>

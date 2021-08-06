@@ -29,8 +29,8 @@ export default function SDaaSPage() {
       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <DefaultBanner {...banner} />
       <Definition />
-      <Testimonies />
       <Benefits />
+      <Testimonies />
     </>
   );
 }

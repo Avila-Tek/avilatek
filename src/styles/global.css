@@ -211,8 +211,23 @@ body {
   animation: scroll 80s linear infinite;
 }
 
-.slide-track:hover {
+.testimonies-track {
+  width: calc(448px * 6);
+  animation: roll 80s linear infinite;
+}
+
+.slide-track:hover,
+.testimonies-track:hover {
   animation-play-state: paused;
+}
+
+@keyframes roll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-448px * 3));
+  }
 }
 
 @keyframes scroll {
