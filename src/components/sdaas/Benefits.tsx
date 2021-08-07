@@ -14,40 +14,40 @@ export default function Benefits() {
     {
       name: translation(language, 'sdaas.benefits.business.title'),
       description: translation(language, 'sdaas.benefits.business.text'),
-      icon: <StartUp />,
+      icon: <StartUp className="h-8 md:h-10 w-8 md:w-10" />,
     },
     {
       name: translation(language, 'sdaas.benefits.time.title'),
       description: translation(language, 'sdaas.benefits.time.text'),
-      icon: <StartUp />,
+      icon: <StartUp className="h-8 md:h-10 w-8 md:w-10" />,
     },
     {
       name: translation(language, 'sdaas.benefits.scalability.title'),
       description: translation(language, 'sdaas.benefits.scalability.text'),
-      icon: <StartUp />,
+      icon: <StartUp className="h-8 md:h-10 w-8 md:w-10" />,
     },
     {
       name: translation(language, 'sdaas.benefits.fullTime.title'),
       description: translation(language, 'sdaas.benefits.fullTime.text'),
-      icon: <StartUp />,
+      icon: <StartUp className="h-8 md:h-10 w-8 md:w-10" />,
     },
     {
       name: translation(language, 'sdaas.benefits.pricing.title'),
       description: translation(language, 'sdaas.benefits.pricing.text'),
-      icon: <StartUp />,
+      icon: <StartUp className="h-8 md:h-10 w-8 md:w-10" />,
     },
     {
       name: translation(language, 'sdaas.benefits.cost.title'),
       description: translation(language, 'sdaas.benefits.cost.text'),
-      icon: <StartUp />,
+      icon: <StartUp className="h-8 md:h-10 w-8 md:w-10" />,
     },
   ];
 
   return (
-    <section className="pb-40 md:pb-44 px-14 md:px-20 lg:px-28 xl:px-36 relative z-10 overflow-hidden">
+    <section className="pb-40 md:pb-44 relative z-10 overflow-hidden">
       <Fade duration={600} cascade triggerOnce>
         {/* Section title */}
-        <div className="w-full text-center mb-20 mt-20 md:mt-24">
+        <div className="w-full px-14 md:px-20 lg:px-28 xl:px-36 text-center mb-20 mt-20 md:mt-24">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold px-8 sm:px-28">
             <span className="text-primary-400">
               {translation(language, 'sdaas.benefits.span')}
@@ -63,7 +63,7 @@ export default function Benefits() {
         </div>
 
         {/* Benefits list */}
-        <ul className="w-full max-w-7xl grid grid-cols-1 xl:grid-cols-2 gap-10 mx-auto">
+        <ul className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-9 mx-auto px-10 md:px-16 lg:px-18 xl:px-28">
           {benefits.map(({ name, description, icon }) => (
             <BenefitCard
               key={name}
