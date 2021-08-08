@@ -5,6 +5,7 @@ import PairProgramming from '../components/icons/PairProgramming';
 import Definition from '../components/sdaas/Definition';
 import Testimonies from '../components/sdaas/Testimonies';
 import Benefits from '../components/sdaas/Benefits';
+import ByTheNumbers from '../components/sdaas/ByTheNumbers';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function SDaaSPage() {
@@ -30,6 +31,7 @@ export default function SDaaSPage() {
       <DefaultBanner {...banner} />
       <Definition />
       <Benefits />
+      <ByTheNumbers />
       <Testimonies />
     </>
   );
