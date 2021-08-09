@@ -163,7 +163,7 @@
           "text": "Permite que el proyecto crezca a medida que surjan los requerimientos y defina el alcance, lo que acorta tiempos de entrega y mejora la respuesta ante los cambios"
         },
         "fullTime": {
-          "title": "Benefit",
+          "title": "Recursos",
           "text": "Si se desea desarrollo y experiencia en una tecnología específica, pero no se requiere de un recurso full time dentro de la organización"
         },
         "pricing": {
@@ -176,7 +176,11 @@
         }
       },
       "byTheNumbers": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac. "
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac. ",
+        "outsourcingPercentage": "Líderes TI subcontrataron",
+        "satisfaction": "Compañías satisfechas",
+        "capacity": "Compañías tercerizan por falta de capacidad",
+        "globalMarket": "Valor de mercado global (USD)"
       },
       "testimonies": {
         "span": "Escucha",
@@ -327,6 +331,53 @@
       "span": "technologies",
       "second": "on the market"
     },
-    "consoleLog": "Work with us!"
+    "consoleLog": "Work with us!",
+    "sdaas": {
+      "definition": "SDaaS is an outsourcing service where a technology team is in charge of the development and maintenance of a project within your business. This service allows tailored needs to be met by companies that need to cut costs and the time required to build an internal technology team.",
+      "benefits": {
+        "span": "Get to know",
+        "first": "its",
+        "mark": "benefits",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.",
+        "cta": "CTA Button regarding SDaaS",
+        "business": {
+          "title": "Focus on your core business",
+          "text": "Allows companies to focus on the requirements and internal improvements they wish to carry out for the core business"
+        },
+        "time": {
+          "title": "Saves time",
+          "text": "The integration of an internal technology team may require more time to build, thus reducing time"
+        },
+        "scalability": {
+          "title": "Flexibility and scalability",
+          "text": "It allows the project to grow as requirements arise and the scope is defined, which shortens delivery times and improves response to changes"
+        },
+        "fullTime": {
+          "title": "Resources",
+          "text": "If development and experience in a specific technology are desired, but a full time resource is not required within the organization"
+        },
+        "pricing": {
+          "title": "Results-based pricing",
+          "text": "Guarantee of high quality products, where the price is in line with the result obtained thanks to the access to professionals with more experience in the area"
+        },
+        "cost": {
+          "title": "Cost savings",
+          "text": "Reduce or avoid expenses associated with hiring, training, adequacy of space and acquisition of resources necessary to carry out the project"
+        }
+      },
+      "byTheNumbers": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac. ",
+        "outsourcingPercentage": "IT leaders outsourced",
+        "satisfaction": "Satisfied companies",
+        "capacity": "Companies outsource for lack capacity",
+        "globalMarket": "Global market value (USD)"
+      },
+      "testimonies": {
+        "span": "See",
+        "first": "what our clients",
+        "mark": "are saying",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac."
+      }
+    }
   }
 }

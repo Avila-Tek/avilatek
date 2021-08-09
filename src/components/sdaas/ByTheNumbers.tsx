@@ -35,7 +35,10 @@ export default function ByTheNumbers() {
       },
       number: '64',
       symbol: '%',
-      feature: 'Outsource by IT leaders',
+      feature: translation(
+        language,
+        'sdaas.byTheNumbers.outsourcingPercentage'
+      ),
     },
     {
       data: {
@@ -48,7 +51,7 @@ export default function ByTheNumbers() {
       },
       number: '65',
       symbol: '%',
-      feature: 'Level of satisfaction',
+      feature: translation(language, 'sdaas.byTheNumbers.satisfaction'),
     },
     {
       data: {
@@ -61,20 +64,20 @@ export default function ByTheNumbers() {
       },
       number: '23',
       symbol: '%',
-      feature: 'Capacity',
+      feature: translation(language, 'sdaas.byTheNumbers.capacity'),
     },
     {
       data: {
         datasets: [
           {
-            label: 'Global market value (USD)',
+            label: 'Global market value',
             data: [70, 30],
           },
         ],
       },
       number: '342.9',
       symbol: 'B',
-      feature: 'Global market value',
+      feature: translation(language, 'sdaas.byTheNumbers.globalMarket'),
     },
   ];
 
@@ -169,7 +172,7 @@ export default function ByTheNumbers() {
               </div>
               {/* Feature name */}
               <div className="w-full mt-5 text-center">
-                <h4 className="font-medium text-2sm md:text-base xl:text-lg">
+                <h4 className="font-medium text-2sm md:text-base xl:text-2base leading-snug md:leading-snug xl:leading-snug">
                   {feature}
                 </h4>
               </div>
