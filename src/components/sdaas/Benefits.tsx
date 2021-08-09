@@ -44,7 +44,7 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="pb-40 md:pb-44 relative z-10 overflow-hidden">
+    <section className="pb-52 md:pb-60 relative z-10 overflow-hidden">
       <Fade duration={600} cascade triggerOnce>
         {/* Section title */}
         <div className="w-full px-14 md:px-20 lg:px-28 xl:px-36 text-center mb-20 mt-20 md:mt-24">
