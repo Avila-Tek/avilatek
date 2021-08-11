@@ -18,6 +18,7 @@ export default function ServiceSection() {
       illustration: DaaS,
       title: translation(language, 'services.department.title'),
       description: translation(language, 'services.department.description'),
+      link: 'sdaas',
     },
     {
       illustration: Development,

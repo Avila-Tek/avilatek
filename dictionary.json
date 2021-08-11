@@ -109,7 +109,7 @@
       "button": "Cotiza tu proyecto",
       "department": {
         "title": "Tu departamento de tecnología",
-        "description": "Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro servicio de Desarrollo como Servicio (DaaS), donde te asignamos un equipo con base a las necesidades para la ejecución y mantenimiento de tu proyecto."
+        "description": "Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro servicio de Desarrollo de Software como Servicio (SDaaS), donde te asignamos un equipo con base a las necesidades para la ejecución y mantenimiento de tu proyecto."
       },
       "marketing": {
         "title": "Marketing",
@@ -143,13 +143,13 @@
     },
     "consoleLog": "¡Trabaja con nosotros!",
     "sdaas": {
-      "definition": "SDaaS es un servicio de tercerización de un equipo de tecnología dedicado a llevar a cabo el desarrollo y mantenimiento de un proyecto dentro de tu negocio. Este servicio permite cubrir necesidades a la medida, a empresas que requieran recortar los costos y tiempo que precisa construir un equipo interno de tecnología.",
+      "definition": "SDaaS es un servicio de tercerización de un equipo de tecnología, dedicado a llevar a cabo el desarrollo y mantenimiento de un proyecto dentro de tu negocio. Este servicio permite cubrir necesidades a la medida, a empresas que requieran recortar los costos y tiempo que precisa construir un equipo interno de tecnología.",
       "benefits": {
         "span": "Conoce",
         "first": "gran parte de sus",
         "mark": "beneficios",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.",
-        "cta": "CTA Button regarding SDaaS",
+        "text": "Cómo podemos ayudar a tu empresa.",
+        "cta": "Impulsa tu negocio con nosotros",
         "business": {
           "title": "Enfoque en el negocio principal",
           "text": "Permite a las empresas enfocarse en los requerimientos y mejoras internas que deseen llevar a cabo"
@@ -164,7 +164,7 @@
         },
         "fullTime": {
           "title": "Recursos",
-          "text": "Si se desea desarrollo y experiencia en una tecnología específica, pero no se requiere de un recurso full time dentro de la organización"
+          "text": "Si se desea desarrollo y experiencia en una tecnología específica, pero no se requiere de un recurso tiempo completo dentro de la organización"
         },
         "pricing": {
           "title": "Results-based pricing",
@@ -176,7 +176,7 @@
         }
       },
       "byTheNumbers": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac. ",
+        "text": "Los hechos hablan por sí mismos.",
         "outsourcingPercentage": "Líderes TI subcontrataron",
         "satisfaction": "Compañías satisfechas",
         "capacity": "Compañías tercerizan por falta de capacidad",
@@ -298,8 +298,8 @@
       "text": "We offer you the following services to take your business to the next level.",
       "button": "Quote your project",
       "department": {
-        "title": "Development department",
-        "description": "If you have an ambitious project and require a professional team, we offer you our Development as a Service (DaaS), where we assign you a team based on the needs for the execution and maintenance of your project."
+        "title": "Technology department",
+        "description": "If you have an ambitious project and require a professional team, we offer you our Software Development as a Service (SDaaS), where we assign you a team based on the needs for the execution and maintenance of your project."
       },
       "marketing": {
         "title": "Marketing",
@@ -338,8 +338,8 @@
         "span": "Get to know",
         "first": "its",
         "mark": "benefits",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac.",
-        "cta": "CTA Button regarding SDaaS",
+        "text": "How we can help your company.",
+        "cta": "Boost your business with us",
         "business": {
           "title": "Focus on your core business",
           "text": "Allows companies to focus on the requirements and internal improvements they wish to carry out for the core business"
@@ -366,7 +366,7 @@
         }
       },
       "byTheNumbers": {
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac. ",
+        "text": "The facts speak for themselves.",
         "outsourcingPercentage": "IT leaders outsourced",
         "satisfaction": "Satisfied companies",
         "capacity": "Companies outsource for lack capacity",

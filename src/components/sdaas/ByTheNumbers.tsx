@@ -118,7 +118,7 @@ export default function ByTheNumbers() {
               </div>
               {/* Feature name */}
               <div className="w-full mt-5 text-center">
-                <h4 className="font-medium text-2sm md:text-base xl:text-2base leading-snug md:leading-snug xl:leading-snug">
+                <h4 className="font-medium text-sm md:text-2sm xl:text-base leading-snug md:leading-snug xl:leading-snug">
                   {feature}
                 </h4>
               </div>

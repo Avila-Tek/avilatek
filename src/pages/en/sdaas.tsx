@@ -12,15 +12,14 @@ export default function SDaaSPage() {
   const banner = {
     title: (
       <>
-        Phrase related to the{' '}
         <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 text-font-dark dark:text-font-white">
-          SDaaS
+          SDaaS:
         </mark>{' '}
-        shown here
+        Your technology department
       </>
     ),
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. ',
+      'If you have an ambitious project and require a professional team, we offer you our Software Development as a Service',
     illustration: <PairProgramming />,
   };
 
@@ -32,7 +31,7 @@ export default function SDaaSPage() {
       <Definition />
       <Benefits />
       <ByTheNumbers />
-      <Testimonies />
+      {/* <Testimonies /> */}
     </>
   );
 }
