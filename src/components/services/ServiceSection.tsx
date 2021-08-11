@@ -7,7 +7,6 @@ import useLanguage from '../../hooks/useLanguage';
 import DaaS from '../../assets/illustrations/daas.svg';
 import Development from '../../assets/illustrations/development.svg';
 import Consulting from '../../assets/illustrations/consulting.svg';
-import updateUrl from '../../lib/updateUrl';
 import useActiveLink from '../../hooks/useActiveLink';
 
 export default function ServiceSection() {
@@ -19,6 +18,7 @@ export default function ServiceSection() {
       illustration: DaaS,
       title: translation(language, 'services.department.title'),
       description: translation(language, 'services.department.description'),
+      link: 'sdaas',
     },
     {
       illustration: Development,
@@ -53,7 +53,7 @@ export default function ServiceSection() {
             {translation(language, 'services.text')}
           </p>
           <Link
-            to={`/${language === 'es' ? '' : language + '/'}#contact`}
+            to={`/${language === 'es' ? '' : `${language}/`}#contact`}
             aria-label="Cotiza tu proyecto en servicios"
             className="text-font-white bg-primary-400 hover:bg-primary-300 py-1.5 rounded-full active:bg-primary-500 px-8 md:px-10 lg:px-12 text-sm lg:text-base"
           >
@@ -63,7 +63,7 @@ export default function ServiceSection() {
       </div>
       <Waypoint
         onEnter={() => {
-          setActiveLink(`/${language === 'es' ? '' : language + '/'}#services`);
+          setActiveLink(`/${language === 'es' ? '' : `${language}/`}#services`);
         }}
       />
       <Fade duration={600} triggerOnce>

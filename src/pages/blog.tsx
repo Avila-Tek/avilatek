@@ -38,6 +38,7 @@ export default function BlogPage({ data }) {
   return (
     <>
       <SEO title="Blog" />
+      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <DefaultBanner {...banner} />
       <PostList posts={posts} pagination filters />
     </>

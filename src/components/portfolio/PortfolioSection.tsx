@@ -71,9 +71,9 @@ export default function PortfolioSection() {
             aria-label="Ir al portafolio"
             className="text-sm lg:text-base text-primary-400 bg-transparent border-2 border-primary-400 hover:border-primary-300 hover:text-primary-300 py-1.5 px-6 rounded-full focus:outline-none active:border-primary-500 active:text-primary-500"
             onClick={() => {
-              navigate(`/${language === 'es' ? '' : language + '/'}portfolio`);
+              navigate(`/${language === 'es' ? '' : `${language}/`}portfolio`);
               setActiveLink(
-                `/${language === 'es' ? '' : language + '/'}portfolio`
+                `/${language === 'es' ? '' : `${language}/`}portfolio`
               );
             }}
           >

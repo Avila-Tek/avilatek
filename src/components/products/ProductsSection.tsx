@@ -56,7 +56,9 @@ export default function ProductsSection() {
         </div>
         <Waypoint
           onEnter={() => {
-            setActiveLink(`/${language === 'es' ? '' : language + '/'}#products`);
+            setActiveLink(
+              `/${language === 'es' ? '' : `${language}/`}#products`
+            );
           }}
         />
         <ProductList products={products} />

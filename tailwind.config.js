@@ -1,6 +1,5 @@
 /* eslint-disable global-require */
 /* eslint-disable import/no-extraneous-dependencies */
-// const bricks = require('./src/assets/images/brick-wall.svg');
 
 module.exports = {
   purge: {
@@ -29,9 +28,12 @@ module.exports = {
         'mb-1',
         'mb-2',
         'pl-2',
+        'rotate-3',
+        'rotate-6',
+        'rotate-1',
+        '-rotate-2',
       ],
     },
-    // defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
   },
   darkMode: 'class', // 'media' or 'class'
   theme: {
@@ -87,7 +89,7 @@ module.exports = {
       boxShadow: {
         blue: '3px 4px 12px rgba(45, 156, 219, 0.25)',
         'dark-gray': '3px 4px 12px rgba(73, 73, 73, 0.25)',
-        'yellow': '8px 8px 50px rgba(255, 196, 0, 0.25)',
+        yellow: '8px 8px 50px rgba(255, 196, 0, 0.25)',
       },
       spacing: {
         13: '3.25rem',

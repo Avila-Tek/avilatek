@@ -109,7 +109,7 @@
       "button": "Cotiza tu proyecto",
       "department": {
         "title": "Tu departamento de tecnología",
-        "description": "Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro servicio de Desarrollo como Servicio (DaaS), donde te asignamos un equipo con base a las necesidades para la ejecución y mantenimiento de tu proyecto."
+        "description": "Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro servicio de Desarrollo de Software como Servicio (SDaaS), donde te asignamos un equipo con base a las necesidades para la ejecución y mantenimiento de tu proyecto."
       },
       "marketing": {
         "title": "Marketing",
@@ -141,7 +141,54 @@
       "span": "tecnologías",
       "second": "del mercado"
     },
-    "consoleLog": "¡Trabaja con nosotros!"
+    "consoleLog": "¡Trabaja con nosotros!",
+    "sdaas": {
+      "definition": "SDaaS es un servicio de tercerización de un equipo de tecnología, dedicado a llevar a cabo el desarrollo y mantenimiento de un proyecto dentro de tu negocio. Este servicio permite cubrir necesidades a la medida, a empresas que requieran recortar los costos y tiempo que precisa construir un equipo interno de tecnología.",
+      "benefits": {
+        "span": "Conoce",
+        "first": "gran parte de sus",
+        "mark": "beneficios",
+        "text": "Cómo podemos ayudar a tu empresa.",
+        "cta": "Impulsa tu negocio con nosotros",
+        "business": {
+          "title": "Enfoque en el negocio principal",
+          "text": "Permite a las empresas enfocarse en los requerimientos y mejoras internas que deseen llevar a cabo"
+        },
+        "time": {
+          "title": "Reducción de tiempo",
+          "text": "La integración de un equipo interno de tecnología puede requerir más tiempo en construir, por lo que permite reducir los tiempos"
+        },
+        "scalability": {
+          "title": "Flexibilidad y escalabilidad",
+          "text": "Permite que el proyecto crezca a medida que surjan los requerimientos y defina el alcance, lo que acorta tiempos de entrega y mejora la respuesta ante los cambios"
+        },
+        "fullTime": {
+          "title": "Recursos",
+          "text": "Si se desea desarrollo y experiencia en una tecnología específica, pero no se requiere de un recurso tiempo completo dentro de la organización"
+        },
+        "pricing": {
+          "title": "Results-based pricing",
+          "text": "Garantía de productos de alta calidad, en donde el precio es acorde al resultado obtenido gracias al acceso a profesionales con mayor experiencia en el área"
+        },
+        "cost": {
+          "title": "Reducción de gastos",
+          "text": "Reduce o evita los gastos asociados a contratación, entrenamiento, adecuación del espacio y adquisición de recursos necesarios para llevar a cabo el proyecto"
+        }
+      },
+      "byTheNumbers": {
+        "text": "Los hechos hablan por sí mismos.",
+        "outsourcingPercentage": "Líderes TI subcontrataron",
+        "satisfaction": "Compañías satisfechas",
+        "capacity": "Compañías tercerizan por falta de capacidad",
+        "globalMarket": "Valor de mercado global (USD)"
+      },
+      "testimonies": {
+        "span": "Escucha",
+        "first": "la experiencia de",
+        "mark": "nuestros clientes",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac."
+      }
+    }
   },
   "en": {
     "navbar": {
@@ -251,8 +298,8 @@
       "text": "We offer you the following services to take your business to the next level.",
       "button": "Quote your project",
       "department": {
-        "title": "Development department",
-        "description": "If you have an ambitious project and require a professional team, we offer you our Development as a Service (DaaS), where we assign you a team based on the needs for the execution and maintenance of your project."
+        "title": "Technology department",
+        "description": "If you have an ambitious project and require a professional team, we offer you our Software Development as a Service (SDaaS), where we assign you a team based on the needs for the execution and maintenance of your project."
       },
       "marketing": {
         "title": "Marketing",
@@ -284,6 +331,53 @@
       "span": "technologies",
       "second": "on the market"
     },
-    "consoleLog": "Work with us!"
+    "consoleLog": "Work with us!",
+    "sdaas": {
+      "definition": "SDaaS is an outsourcing service where a technology team is in charge of the development and maintenance of a project within your business. This service allows tailored needs to be met by companies that need to cut costs and the time required to build an internal technology team.",
+      "benefits": {
+        "span": "Get to know",
+        "first": "its",
+        "mark": "benefits",
+        "text": "How we can help your company.",
+        "cta": "Boost your business with us",
+        "business": {
+          "title": "Focus on your core business",
+          "text": "Allows companies to focus on the requirements and internal improvements they wish to carry out for the core business"
+        },
+        "time": {
+          "title": "Saves time",
+          "text": "The integration of an internal technology team may require more time to build, thus reducing time"
+        },
+        "scalability": {
+          "title": "Flexibility and scalability",
+          "text": "It allows the project to grow as requirements arise and the scope is defined, which shortens delivery times and improves response to changes"
+        },
+        "fullTime": {
+          "title": "Resources",
+          "text": "If development and experience in a specific technology are desired, but a full time resource is not required within the organization"
+        },
+        "pricing": {
+          "title": "Results-based pricing",
+          "text": "Guarantee of high quality products, where the price is in line with the result obtained thanks to the access to professionals with more experience in the area"
+        },
+        "cost": {
+          "title": "Cost savings",
+          "text": "Reduce or avoid expenses associated with hiring, training, adequacy of space and acquisition of resources necessary to carry out the project"
+        }
+      },
+      "byTheNumbers": {
+        "text": "The facts speak for themselves.",
+        "outsourcingPercentage": "IT leaders outsourced",
+        "satisfaction": "Satisfied companies",
+        "capacity": "Companies outsource for lack capacity",
+        "globalMarket": "Global market value (USD)"
+      },
+      "testimonies": {
+        "span": "See",
+        "first": "what our clients",
+        "mark": "are saying",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna in sit id hac. Consectetur adipiscing elit. Urna in sit id hac."
+      }
+    }
   }
 }

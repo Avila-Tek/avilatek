@@ -7,6 +7,7 @@ export type Service = {
   illustration: any;
   title: string;
   description: string;
+  link?: string;
 };
 
 interface CardsStackProps {
@@ -32,7 +33,7 @@ export default function CardsStack({ services: _services }: CardsStackProps) {
   return (
     <>
       <div className="relative w-60 h-72 lg:w-64 lg:h-80 mt-10 md:mt-0">
-        {services.map(({ illustration, title, description }, idx) => (
+        {services.map(({ illustration, title, description, link }, idx) => (
           <ServiceCard
             key={title}
             illustration={illustration}
@@ -40,6 +41,7 @@ export default function CardsStack({ services: _services }: CardsStackProps) {
             description={description}
             cardClass={stackStyles[idx]}
             idx={idx}
+            link={link}
             rotate={rotate}
           />
         ))}
