@@ -19,7 +19,7 @@ export default function SDaaSPage() {
       </>
     ),
     description:
-      'Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro servicio de Desarrollo de Software como Servicio',
+      'Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro Desarrollo de Software como Servicio',
     illustration: <PairProgramming />,
   };
 

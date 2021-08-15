@@ -109,7 +109,7 @@
       "button": "Cotiza tu proyecto",
       "department": {
         "title": "Tu departamento de tecnología",
-        "description": "Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro servicio de Desarrollo de Software como Servicio (SDaaS), donde te asignamos un equipo con base a las necesidades para la ejecución y mantenimiento de tu proyecto."
+        "description": "Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro Desarrollo de Software como Servicio (SDaaS), donde te asignamos un equipo con base a las necesidades para la ejecución y mantenimiento de tu proyecto."
       },
       "marketing": {
         "title": "Marketing",
@@ -156,7 +156,7 @@
         },
         "time": {
           "title": "Reducción de tiempo",
-          "text": "La integración de un equipo interno de tecnología puede requerir más tiempo en construir, por lo que permite reducir los tiempos"
+          "text": "La integración de un equipo interno de tecnología es un proceso tardado, por lo que permite reducir los tiempos"
         },
         "scalability": {
           "title": "Flexibilidad y escalabilidad",
@@ -177,9 +177,9 @@
       },
       "byTheNumbers": {
         "text": "Los hechos hablan por sí mismos.",
-        "outsourcingPercentage": "Líderes TI subcontrataron",
-        "satisfaction": "Compañías satisfechas",
-        "capacity": "Compañías tercerizan por falta de capacidad",
+        "outsourcingPercentage": "Compañías que deciden tercerizar",
+        "savings": "Reducción de costos en recursos",
+        "shortage": "Compañías sufren escasez de personal cualificado",
         "globalMarket": "Valor de mercado global (USD)"
       },
       "testimonies": {
@@ -346,7 +346,7 @@
         },
         "time": {
           "title": "Saves time",
-          "text": "The integration of an internal technology team may require more time to build, thus reducing time"
+          "text": "The integration of an internal technology team is a slow process, thus reducing time"
         },
         "scalability": {
           "title": "Flexibility and scalability",
@@ -367,9 +367,9 @@
       },
       "byTheNumbers": {
         "text": "The facts speak for themselves.",
-        "outsourcingPercentage": "IT leaders outsourced",
-        "satisfaction": "Satisfied companies",
-        "capacity": "Companies outsource for lack capacity",
+        "outsourcingPercentage": "Companies that choose to outsource",
+        "savings": "Cost reduction in resources",
+        "shortage": "Companies suffer skills shortage",
         "globalMarket": "Global market value (USD)"
       },
       "testimonies": {

@@ -29,42 +29,46 @@ export default function ByTheNumbers() {
         datasets: [
           {
             label: 'Outsourcing percentage',
-            data: [64, 36],
+            data: [65, 35],
           },
         ],
       },
-      number: '64',
+      plus: '+',
+      number: '65',
       symbol: '%',
       feature: translation(
         language,
         'sdaas.byTheNumbers.outsourcingPercentage'
       ),
+      source: 'State of Software Development',
     },
     {
       data: {
         datasets: [
           {
-            label: 'Satisfaction',
-            data: [65, 35],
+            label: 'Savings',
+            data: [67.2, 32.8],
           },
         ],
       },
-      number: '65',
+      number: '67',
       symbol: '%',
-      feature: translation(language, 'sdaas.byTheNumbers.satisfaction'),
+      feature: translation(language, 'sdaas.byTheNumbers.savings'),
+      source: 'Digital Skynet',
     },
     {
       data: {
         datasets: [
           {
-            label: 'Capacity',
-            data: [23, 77],
+            label: 'Skills Shortage',
+            data: [87, 13],
           },
         ],
       },
-      number: '23',
+      number: '87',
       symbol: '%',
-      feature: translation(language, 'sdaas.byTheNumbers.capacity'),
+      feature: translation(language, 'sdaas.byTheNumbers.shortage'),
+      source: 'McKinsey',
     },
     {
       data: {
@@ -78,6 +82,7 @@ export default function ByTheNumbers() {
       number: '342.9',
       symbol: 'B',
       feature: translation(language, 'sdaas.byTheNumbers.globalMarket'),
+      source: 'Business Wire',
     },
   ];
 
@@ -98,7 +103,7 @@ export default function ByTheNumbers() {
         </div>
         {/* Numbers */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-8 xl:gap-10 mt-20">
-          {statistics.map(({ data, feature, number, symbol }) => (
+          {statistics.map(({ data, feature, number, symbol, source, plus }) => (
             <div className="w-44 sm:w-48 xl:w-52 mx-auto">
               <div className="w-full relative">
                 <Doughnut
@@ -111,16 +116,22 @@ export default function ByTheNumbers() {
                 {/* Number at the center */}
                 <div className="chart-inner absolute top-0 left-0 h-full w-full p-1 flex items-center justify-center rounded-full z-minus">
                   <h3 className="text-4xl xl:text-5xl font-semibold">
+                    {plus ? (
+                      <span className="text-2xl xl:text-3xl">{plus}</span>
+                    ) : null}
                     {number}
                     <span className="text-xl xl:text-2xl">{symbol}</span>
                   </h3>
                 </div>
               </div>
-              {/* Feature name */}
+              {/* Feature name and source */}
               <div className="w-full mt-5 text-center">
                 <h4 className="font-medium text-sm md:text-2sm xl:text-base leading-snug md:leading-snug xl:leading-snug">
                   {feature}
                 </h4>
+                <p className="text-2xs opacity-25  mt-2">
+                  {language === 'es' ? 'Fuente' : 'Source'}: {source}
+                </p>
               </div>
             </div>
           ))}
