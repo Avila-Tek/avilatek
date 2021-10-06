@@ -148,7 +148,7 @@
         "span": "Conoce",
         "first": "gran parte de sus",
         "mark": "beneficios",
-        "text": "Cómo podemos ayudar a tu empresa.",
+        "text": "Cómo podemos ayudar a tu empresa",
         "cta": "Impulsa tu negocio con nosotros",
         "business": {
           "title": "Enfoque en el negocio principal",
@@ -167,7 +167,7 @@
           "text": "Si se desea desarrollo y experiencia en una tecnología específica, pero no se requiere de un recurso tiempo completo dentro de la organización"
         },
         "pricing": {
-          "title": "Results-based pricing",
+          "title": "Precios basados en resultados",
           "text": "Garantía de productos de alta calidad, en donde el precio es acorde al resultado obtenido gracias al acceso a profesionales con mayor experiencia en el área"
         },
         "cost": {
@@ -176,10 +176,10 @@
         }
       },
       "byTheNumbers": {
-        "text": "Los hechos hablan por sí mismos.",
+        "text": "Los hechos hablan por sí mismos",
         "outsourcingPercentage": "Compañías que deciden tercerizar",
         "savings": "Reducción de costos en recursos",
-        "shortage": "Compañías sufren escasez de personal cualificado",
+        "shortage": "Compañías sufren escasez de personal calificado",
         "globalMarket": "Valor de mercado global (USD)"
       },
       "testimonies": {
