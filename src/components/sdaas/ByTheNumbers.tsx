@@ -129,7 +129,7 @@ export default function ByTheNumbers() {
                 <h4 className="font-medium text-sm md:text-2sm xl:text-base leading-snug md:leading-snug xl:leading-snug">
                   {feature}
                 </h4>
-                <p className="text-2xs opacity-25  mt-2">
+                <p className="text-2xs opacity-25 dark:opacity-50  mt-2">
                   {language === 'es' ? 'Fuente' : 'Source'}: {source}
                 </p>
               </div>
