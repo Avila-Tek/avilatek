@@ -59,7 +59,7 @@ export default function Footer() {
               target="_blank"
               className="hover:text-primary-300 cursor-pointer mr-4"
               aria-label="Instagram"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <InstagramIcon />
             </a>
@@ -68,7 +68,7 @@ export default function Footer() {
               target="_blank"
               className="hover:text-primary-300 cursor-pointer mr-4"
               aria-label="Twitter"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <TwitterIcon />
             </a>
@@ -77,7 +77,7 @@ export default function Footer() {
               target="_blank"
               className="hover:text-primary-300 cursor-pointer mr-4"
               aria-label="Facebook"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <FacebookIcon />
             </a>
@@ -86,7 +86,7 @@ export default function Footer() {
               target="_blank"
               className="hover:text-primary-300 cursor-pointer"
               aria-label="LinkedIn"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <LinkedIn />
             </a>
@@ -105,10 +105,10 @@ export default function Footer() {
             aria-label="Trabaja con nosotros"
             onClick={() => {
               navigate(
-                `/${language === 'es' ? '' : language + '/'}work-with-us`
+                `/${language === 'es' ? '' : `${language}/`}work-with-us`
               );
               setActiveLink(
-                `/${language === 'es' ? '' : language + '/'}#contact`
+                `/${language === 'es' ? '' : `${language}/`}#contact`
               );
             }}
             className="px-6 text-xs md:text-sm"

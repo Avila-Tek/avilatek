@@ -22,6 +22,7 @@
       "service": "Producto/Servicio que desea",
       "budget": "¿Cuál es su presupuesto?",
       "message": "Describa su proyecto o duda",
+      "message2": "Mensaje",
       "send": "Contactar",
       "error": "No se admiten carácteres especiales",
       "chooseOption": "Seleccione una opción",
@@ -31,6 +32,7 @@
       "moreThanFifty": "Más $50.000"
     },
     "contactUs": {
+      "span2": "Contáctanos",
       "span": "Cuéntanos",
       "first": "de tu",
       "mark": "idea",
@@ -213,6 +215,7 @@
       "service": "Product/Service",
       "budget": "Budget",
       "message": "Describe your idea",
+      "message2": "Message",
       "send": "Contact",
       "error": "Special characters are not allowed",
       "chooseOption": "Choose an option",
@@ -222,6 +225,7 @@
       "moreThanFifty": "More than $50.000"
     },
     "contactUs": {
+      "span2": "Contact us",
       "span": "Tell us",
       "first": "about your",
       "mark": "idea",

@@ -5,7 +5,11 @@ import Textarea from './common/Textarea';
 import Button from './common/Button';
 import useLanguage from '../hooks/useLanguage';
 
-export default function ContactForm() {
+interface ContactFormProps {
+  sdaas?: boolean;
+}
+
+export default function ContactForm({ sdaas = false }: ContactFormProps) {
   const [translation, getCurrentLanguage] = useLanguage();
   const language = getCurrentLanguage();
   const [name, setName] = React.useState<string>('');
@@ -48,29 +52,33 @@ export default function ContactForm() {
         required
         maxLength={127}
       />
-      <Select
-        name="service"
-        label={translation(language, 'contactForm.service')}
-        value={service}
-        onChange={(e) => {
-          e.preventDefault();
-          setService(e.target.value);
-        }}
-        required
-      >
-        <option value="" disabled>
-          {translation(language, 'contactForm.chooseOption')}
-        </option>
-        <option value="consultoria">{translation(language, 'contactForm.consulting')}</option>
-        <option value="marketing">Marketing</option>
-        <option value="departamento de desarrollo">
-          {translation(language, 'contactForm.department')}
-        </option>
-        <option value="digital funnel">Digital Funnel</option>
-        <option value="digital store">Digital Store</option>
-      </Select>
+      {!sdaas ? (
+        <Select
+          name="service"
+          label={translation(language, 'contactForm.service')}
+          value={service}
+          onChange={(e) => {
+            e.preventDefault();
+            setService(e.target.value);
+          }}
+          required
+        >
+          <option value="" disabled>
+            {translation(language, 'contactForm.chooseOption')}
+          </option>
+          <option value="consultoria">
+            {translation(language, 'contactForm.consulting')}
+          </option>
+          <option value="marketing">Marketing</option>
+          <option value="departamento de desarrollo">
+            {translation(language, 'contactForm.department')}
+          </option>
+          <option value="digital funnel">Digital Funnel</option>
+          <option value="digital store">Digital Store</option>
+        </Select>
+      ) : null}
 
-      {service !== 'digital funnel' && service !== 'digital store' ? (
+      {!sdaas && service !== 'digital funnel' && service !== 'digital store' ? (
         <Select
           name="budget"
           label={translation(language, 'contactForm.budget')}
@@ -84,19 +92,31 @@ export default function ContactForm() {
           <option value="" disabled>
             {translation(language, 'contactForm.chooseOption')}
           </option>
-          <option value="< $5.000">{translation(language, 'contactForm.lessThanFive')}</option>
+          <option value="< $5.000">
+            {translation(language, 'contactForm.lessThanFive')}
+          </option>
           <option value="$5.000 - $10.000">$5.000 - $10.000</option>
           <option value="$10.000 - $20.000">$10.000 - $20.000</option>
           <option value="$30.000 - $50.000">$30.000 - $50.000</option>
-          <option value="$50.000+">{translation(language, 'contactForm.moreThanFifty')}</option>
+          <option value="$50.000+">
+            {translation(language, 'contactForm.moreThanFifty')}
+          </option>
         </Select>
       ) : null}
 
       <Textarea
         name="message"
         value={message}
-        placeholder={translation(language, 'contactForm.message')}
-        label={translation(language, 'contactForm.message')}
+        placeholder={
+          sdaas
+            ? translation(language, 'contactForm.message2')
+            : translation(language, 'contactForm.message')
+        }
+        label={
+          sdaas
+            ? translation(language, 'contactForm.message2')
+            : translation(language, 'contactForm.message')
+        }
         onChange={(e) => {
           e.preventDefault();
           setMessage(e.target.value);
@@ -112,7 +132,7 @@ export default function ContactForm() {
         type="hidden"
         name="_next"
         value={`https://avilatek.dev/${
-          language === 'es' ? '' : language + '/'
+          language === 'es' ? '' : `${language}/`
         }successful-submission`}
       />
       <Button

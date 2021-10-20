@@ -7,6 +7,7 @@ import Testimonies from '../components/sdaas/Testimonies';
 import Benefits from '../components/sdaas/Benefits';
 import ByTheNumbers from '../components/sdaas/ByTheNumbers';
 import ContactSection from '../components/ContactSection';
+import Clients from '../components/Clients';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function SDaaSPage() {
@@ -20,19 +21,19 @@ export default function SDaaSPage() {
       </>
     ),
     description:
-      'Si tienes un proyecto ambicioso y requieres de un equipo profesional, te ofrecemos nuestro Desarrollo de Software como Servicio',
+      'Si necesitas de un equipo de profesionales en desarrollo, llegaste al lugar indicado',
     illustration: <PairProgramming />,
   };
 
   return (
     <>
       <SEO title="SDaaS" />
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <DefaultBanner {...banner} />
+      <Clients />
       <Definition />
       <Benefits />
       <ByTheNumbers />
-      <ContactSection />
+      <ContactSection sdaas />
       {/* <Testimonies /> */}
     </>
   );
