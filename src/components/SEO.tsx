@@ -38,7 +38,7 @@ export default function SEO({ children, title }: SEOProps) {
         }
       />
       {/* Open Graph / Facebook */}
-      <meta property="og:url" content="https://avilatek.dev/" />
+      <meta property="og:url" content="https://avilatek.com/" />
       <meta property="og:type" content="website" />
       <meta property="og:image" content={icon} />
       <meta property="og:title" content="Avila Tek" key="ogtitle" />
@@ -51,7 +51,7 @@ export default function SEO({ children, title }: SEOProps) {
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://avilatek.dev/" />
+      <meta property="twitter:url" content="https://avilatek.com/" />
       <meta property="twitter:image" content={icon} />
       <meta property="twitter:title" content="Avila Tek" />
       <meta

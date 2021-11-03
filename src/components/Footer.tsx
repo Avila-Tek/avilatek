@@ -51,7 +51,7 @@ export default function Footer() {
               </>
             ))}
           </div>
-          <p>info@avilatek.dev</p>
+          <p>info@avilatek.com</p>
           {/* RRSS icons */}
           <div className="flex mt-4">
             <a
@@ -73,7 +73,7 @@ export default function Footer() {
               <TwitterIcon />
             </a>
             <a
-              href="https://www.facebook.com/pg/avilatek.dev/about/"
+              href="https://www.facebook.com/pg/avilatek.com/about/"
               target="_blank"
               className="hover:text-primary-300 cursor-pointer mr-4"
               aria-label="Facebook"

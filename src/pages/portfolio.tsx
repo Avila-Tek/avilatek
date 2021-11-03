@@ -54,7 +54,7 @@ export default function PortfolioPage() {
         'Plataforma de venta y manejo de inventario, es un sistema que ayuda al automercado a manejar sus productos y venderlos de forma online en su plataforma, manejando tracking para delivery o pickup.',
       src: 'projects/bodebar.png',
       categories: ['App Web', 'Desktop'],
-      link: 'https://bodebar.avilatek.dev/',
+      link: 'https://bodebar.com.ve/',
     },
     {
       title: 'PTCK',

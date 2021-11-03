@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Avila Tek',
-    siteUrl: 'https://avilatek.dev',
+    siteUrl: 'https://avilatek.com',
     description: 'Desarrollamos tecnologías que innovan para ti',
   },
   plugins: [

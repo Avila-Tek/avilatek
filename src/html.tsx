@@ -21,6 +21,10 @@ export default function HTML({ ...props }: HTMLProps) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta
+          name="facebook-domain-verification"
+          content="rvb0oqje6jp5ghn0126rs6hkgbohqo"
+        />
         {props.headComponents}
 
         <script

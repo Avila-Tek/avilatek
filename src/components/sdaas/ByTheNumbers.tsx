@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
+// import { Fade } from 'react-awesome-reveal';
 import { Doughnut, Chart } from 'react-chartjs-2';
 import useLanguage from '../../hooks/useLanguage';
 import useTheme from '../../hooks/useTheme';
@@ -88,7 +88,7 @@ export default function ByTheNumbers() {
 
   return (
     <section className="pb-36 px-14 md:px-20 lg:px-28 xl:px-44 relative z-10 overflow-hidden">
-      <Fade duration={600} cascade triggerOnce>
+      {/* <Fade duration={600} cascade triggerOnce> */}
         {/* Section title and text */}
         <div className="w-full md:w-7/12">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
@@ -136,7 +136,7 @@ export default function ByTheNumbers() {
             </div>
           ))}
         </div>
-      </Fade>
+      {/* </Fade> */}
       <div className="absolute top-16 right-1/3 rounded-third-blob w-7/12 md:w-5/12 h-72 brick bg-medium-blue dark:bg-dark-gray bg-opacity-30 dark:bg-opacity-10" />
     </section>
   );

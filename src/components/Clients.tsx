@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
+// import { Fade } from 'react-awesome-reveal';
 import Image from './common/Image';
 import useLanguage from '../hooks/useLanguage';
 
@@ -94,7 +94,7 @@ export default function Clients() {
 
   return (
     <section className="pt-28 md:pt-18 mb-48 lg:mb-56 -mt-12">
-      <Fade duration={600} triggerOnce>
+      {/* <Fade duration={600} triggerOnce> */}
         <div className="w-full mb-12 sm:mb-14 px-16 md:px-36">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
             {translation(language, 'clients.first')}{' '}
@@ -118,7 +118,7 @@ export default function Clients() {
             ))}
           </div>
         </div>
-      </Fade>
+      {/* </Fade> */}
     </section>
   );
 }

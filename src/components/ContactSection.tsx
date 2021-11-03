@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
+// import { Fade } from 'react-awesome-reveal';
 import { Waypoint } from 'react-waypoint';
 import ContactForm from './ContactForm';
 import LightningIcon from './icons/LightningIcon';
@@ -23,7 +23,7 @@ export default function ContactSection({ sdaas = false }: ContactSectionProps) {
       id="contact"
       className="pt-24 -mt-24 pb-48 w-full px-14 md:px-20 lg:px-28 xl:px-44 relative z-10 overflow-hidden"
     >
-      <Fade duration={600} cascade triggerOnce>
+      {/* <Fade duration={600} cascade triggerOnce> */}
         {/* Section details */}
         <div className="w-11/12 sm:w-10/12 md:w-9/12 xl:w-6/12 mb-16 mx-auto md:mx-0">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
@@ -104,7 +104,7 @@ export default function ContactSection({ sdaas = false }: ContactSectionProps) {
             </div>
           </div>
         </div>
-      </Fade>
+      {/* </Fade> */}
       <div className="absolute top-8 left-1/3 rounded-second-blob w-96 md:w-6/12 h-72 md:h-96 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90 dark:bg-opacity-25" />
     </section>
   );

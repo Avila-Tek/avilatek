@@ -21,7 +21,7 @@ export default function ContactForm({ sdaas = false }: ContactFormProps) {
   return (
     <form
       method="POST"
-      action="https://formsubmit.co/info@avilatek.dev"
+      action="https://formsubmit.co/info@avilatek.com"
       className="bg-light-blue dark:bg-dark-gray shadow-blue dark:shadow-dark-gray rounded-md p-7 max-w-md w-full lg:w-6/12 mx-auto md:mx-0 transition-all duration-300 ease-in-out"
     >
       <Input
@@ -131,7 +131,7 @@ export default function ContactForm({ sdaas = false }: ContactFormProps) {
       <input
         type="hidden"
         name="_next"
-        value={`https://avilatek.dev/${
+        value={`https://avilatek.com/${
           language === 'es' ? '' : `${language}/`
         }successful-submission`}
       />
