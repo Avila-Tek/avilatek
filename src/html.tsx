@@ -28,6 +28,7 @@ export default function HTML({ ...props }: HTMLProps) {
         {props.headComponents}
 
         <script
+          async
           dangerouslySetInnerHTML={{
             __html: `(function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -40,6 +41,7 @@ export default function HTML({ ...props }: HTMLProps) {
           }}
         />
         <script
+          async
           dangerouslySetInnerHTML={{
             __html: `
           !function(f,b,e,v,n,t,s)
