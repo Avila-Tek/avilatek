@@ -53,18 +53,20 @@ export default function Navbar() {
   React.useEffect(() => {
     // Set fixed true when the scroll height is greater than 400px
     const changeColor = () => {
-      let screenOffset = 280;
+      const screenOffset = 280;
       setFixed(window.scrollY >= screenOffset);
     };
 
     window.addEventListener('scroll', changeColor);
   }, []);
 
-  React.useEffect(() => {
-    return globalHistory.listen(({ action }) => {
-      if (action === 'PUSH') setOpen(false);
-    });
-  }, [setOpen]);
+  React.useEffect(
+    () =>
+      globalHistory.listen(({ action }) => {
+        if (action === 'PUSH') setOpen(false);
+      }),
+    [setOpen]
+  );
 
   return (
     <motion.nav
@@ -78,10 +80,10 @@ export default function Navbar() {
       role="navigation"
     >
       <Link
-        to={`/${language === 'es' ? '' : language + '/'}`}
+        to={`/${language === 'es' ? '' : `${language}/`}`}
         aria-label="Logo"
         onClick={() =>
-          setActiveLink(`/${language === 'es' ? '' : language + '/'}`)
+          setActiveLink(`/${language === 'es' ? '' : `${language}/`}`)
         }
         className="mr-auto w-40 lg:w-48 xl:w-56"
       >
@@ -103,6 +105,7 @@ export default function Navbar() {
           className="text-font-black dark:text-font-white hover:text-primary-300 focus:outline-none"
           type="button"
           onClick={toggleNav}
+          aria-label="Menu button"
         >
           <svg
             className="h-4 w-4"
@@ -122,23 +125,23 @@ export default function Navbar() {
       <div className="flex flex-col md:flex-row w-full md:w-auto md:items-center overflow-hidden my-4 md:my-0">
         <NavItem
           title={translation(language, 'navbar.home')}
-          href={`/${language === 'es' ? '' : language + '/'}`}
+          href={`/${language === 'es' ? '' : `${language}/`}`}
         />
         <NavItem
           title={translation(language, 'navbar.aboutUs')}
-          href={`/${language === 'es' ? '' : language + '/'}#about-us`}
+          href={`/${language === 'es' ? '' : `${language}/`}#about-us`}
         />
         <NavItem
           title={translation(language, 'navbar.products')}
-          href={`/${language === 'es' ? '' : language + '/'}#products`}
+          href={`/${language === 'es' ? '' : `${language}/`}#products`}
         />
         <NavItem
           title={translation(language, 'navbar.services')}
-          href={`/${language === 'es' ? '' : language + '/'}#services`}
+          href={`/${language === 'es' ? '' : `${language}/`}#services`}
         />
         <NavItem
           title={translation(language, 'navbar.portfolio')}
-          href={`/${language === 'es' ? '' : language + '/'}portfolio`}
+          href={`/${language === 'es' ? '' : `${language}/`}portfolio`}
         />
         {/* <NavItem
           title={translation(language, 'navbar.blog')}
@@ -146,7 +149,7 @@ export default function Navbar() {
         /> */}
         <NavItem
           title={translation(language, 'navbar.contactUs')}
-          href={`/${language === 'es' ? '' : language + '/'}#contact`}
+          href={`/${language === 'es' ? '' : `${language}/`}#contact`}
         />
       </div>
     </motion.nav>

@@ -30,7 +30,7 @@ export default function Banner() {
     <div className="min-h-screen bg-light-blue dark:bg-dark-gray flex flex-col justify-between pt-12 transition duration-300 ease-in-out">
       <Waypoint
         onEnter={() => {
-          setActiveLink(`/${language === 'es' ? '' : language + '/'}`);
+          setActiveLink(`/${language === 'es' ? '' : `${language}/`}`);
         }}
       />
       <div className="relative h-third flex flex-col-reverse md:flex-row justify-center items-center pt-16 md:pt-20 pb-12 px-10 md:px-12 lg:px-14 xl:px-18">
@@ -65,7 +65,7 @@ export default function Banner() {
               {translation(language, 'homeBanner.description')}
             </p>
             <Link
-              to={`/${language === 'es' ? '' : language + '/'}#contact`}
+              to={`/${language === 'es' ? '' : `${language}/`}#contact`}
               aria-label="Boton de cotiza tu proyecto"
               className="px-6 md:px-8 py-1 sm:py-1.5 text-2sm lg:text-base text-font-white font-medium bg-primary-400 hover:bg-primary-300 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 cursor-pointer"
             >
