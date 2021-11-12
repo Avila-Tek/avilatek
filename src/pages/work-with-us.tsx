@@ -29,7 +29,7 @@ export default function WorkWithUsPage() {
               {/* Work form */}
               <WorkForm />
 
-              <div className="w-10/12 sm:w-6/12 lg:w-4/12 xl:w-5/12 max-w-xs sm:max-w-none xl:max-w-2xl pt-8 lg:pt-0 mt-12 lg:mt-0 mx-auto lg:mx-0">
+              <div className="w-10/12 sm:w-6/12 lg:w-5/12 xl:w-6/12 max-w-xs sm:max-w-none xl:max-w-2xl pt-8 lg:pt-0 mt-12 lg:mt-0 mx-auto lg:mx-0">
                 <WorkWithUs />
               </div>
             </div>
