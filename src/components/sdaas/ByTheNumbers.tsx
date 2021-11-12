@@ -115,20 +115,20 @@ export default function ByTheNumbers() {
                 />
                 {/* Number at the center */}
                 <div className="chart-inner absolute top-0 left-0 h-full w-full p-1 flex items-center justify-center rounded-full z-minus">
-                  <h3 className="text-4xl xl:text-5xl font-semibold">
+                  <h2 className="text-4xl xl:text-5xl font-semibold">
                     {plus ? (
                       <span className="text-2xl xl:text-3xl">{plus}</span>
                     ) : null}
                     {number}
                     <span className="text-xl xl:text-2xl">{symbol}</span>
-                  </h3>
+                  </h2>
                 </div>
               </div>
               {/* Feature name and source */}
               <div className="w-full mt-5 text-center">
-                <h4 className="font-medium text-sm md:text-2sm xl:text-base leading-snug md:leading-snug xl:leading-snug">
+                <h3 className="font-medium text-sm md:text-2sm xl:text-base leading-snug md:leading-snug xl:leading-snug">
                   {feature}
-                </h4>
+                </h3>
                 <p className="text-2xs opacity-25 dark:opacity-50  mt-2">
                   {language === 'es' ? 'Fuente' : 'Source'}: {source}
                 </p>
