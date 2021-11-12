@@ -113,24 +113,24 @@ export default function Technologies() {
             <AnimatePresence>
               {technologies.map(({ src, name, className }, idx) => (
                 <div key={name}>
-                  {0 === idx ? (
+                  {idx === 0 ? (
                     <LogoItem src={src} name={name} className={className} />
                   ) : null}
-                  {1 === idx ? (
+                  {idx === 1 ? (
                     <LogoItem
                       src={src}
                       name={name}
                       className={`hidden sm:block ${className}`}
                     />
                   ) : null}
-                  {2 === idx ? (
+                  {idx === 2 ? (
                     <LogoItem
                       src={src}
                       name={name}
                       className={`hidden lg:block ${className}`}
                     />
                   ) : null}
-                  {3 === idx ? (
+                  {idx === 3 ? (
                     <LogoItem
                       src={src}
                       name={name}
