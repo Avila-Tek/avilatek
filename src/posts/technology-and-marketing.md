@@ -25,7 +25,7 @@ Si nos vamos un poco más atrás, el verdadero inicio del marketing digital ocur
 
 Nada de esto sería posible sin los usuarios, ya que al formarse una multitud de personas, se generan las condiciones ideales para atraer a las empresas cuando buscan ser relevantes.
 
-<strong>La velocidad de navegación:</strong> No muchas personas recuerdan cómo eran las páginas web en los inicios de internet, consistían en una acumulación de información en forma de HTML (El lenguaje de maquetado en el que está hecho la estructura de las páginas web) con algunos enlaces y alguna que otra imagen. Como dato curioso te dejo el enlace de la primera página web de la historia, la cual aun esta online: <a src="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">Visita la página aquí</a>[Visita la página aquí](http://info.cern.ch/hypertext/WWW/TheProject.html)
+<strong>La velocidad de navegación:</strong> No muchas personas recuerdan cómo eran las páginas web en los inicios de internet, consistían en una acumulación de información en forma de HTML (El lenguaje de maquetado en el que está hecho la estructura de las páginas web) con algunos enlaces y alguna que otra imagen. Como dato curioso te dejo el enlace de la primera página web de la historia, la cual aun esta online: [Visita la página aquí](http://info.cern.ch/hypertext/WWW/TheProject.html)
 
 Con el aumento en la velocidad de transferencia de datos, se dio paso a la “revolución multimedia”. Las páginas web se llenaron cada vez más de imágenes, videos y audios, lo que abrió paso a publicidades más creativas y efectivas en el mundo online.
 
