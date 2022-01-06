@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 import { motion } from 'framer-motion';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
@@ -12,7 +12,7 @@ export type Post = {
   category?: string;
   title: string;
   subtitle?: string;
-  slug: string; // 
+  slug: string; //
   description?: string;
   author?: string;
   date?: Date;
@@ -43,6 +43,7 @@ export default function PostCard({
   image,
   authorImage,
 }: PostCardProps) {
+  const cover = image;
   return (
     <Link to={`/blog/${slug}`}>
       <motion.div
@@ -53,7 +54,14 @@ export default function PostCard({
       >
         {/* Post image */}
         <div className="w-full h-1/2">
-          <Image filename={image} alt={title} className="w-full h-full" />
+          {/* TODO fix this with Gatsby Image */}
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover object-center"
+          />
+          {/* <StaticImage src={cover} alt={title} /> */}
+          {/* <Image filename={image} alt={title} className="w-full h-full" /> */}
         </div>
         {/* Post details */}
         <div className="absolute bottom-5 left-5 sm:bottom-6 sm:left-6 p-5 flex flex-col items-center justify-between text-center rounded-md w-10/12 h-48 md:h-52 xl:h-56 bg-light-blue dark:bg-medium-gray shadow-blue dark:shadow-none transition-all duration-300 ease-in-out">

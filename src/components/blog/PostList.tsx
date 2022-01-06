@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import PostCard, { Post } from './PostCard';
@@ -60,8 +61,8 @@ export default function PostList({
   );
 
   React.useEffect(() => {
-    const filteredPosts = unfilteredPosts.filter((post) => {
-      return (
+    const filteredPosts = unfilteredPosts.filter(
+      (post) =>
         (search === ''
           ? post
           : post.title.toLowerCase().includes(search.toLowerCase()) ||
@@ -73,8 +74,7 @@ export default function PostList({
         (filter.author === ''
           ? post
           : post.author.toLowerCase() === filter.author.toLowerCase())
-      );
-    });
+    );
     setPosts(filteredPosts);
     setPage(1);
   }, [filter, search]);
