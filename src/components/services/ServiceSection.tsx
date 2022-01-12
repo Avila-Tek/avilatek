@@ -69,7 +69,7 @@ export default function ServiceSection() {
       <Fade duration={600} triggerOnce>
         <CardsStack services={services} />
       </Fade>
-      <div className="absolute top-32 right-1/2 rounded-blob w-80 md:w-3/12 h-104 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90 dark:bg-opacity-25" />
+      <div className="absolute top-32 right-1/2 rounded-blob w-80 md:w-3/12 h-104 brick bg-medium-blue dark:bg-dark-gray opacity-50 dark:opacity-25" />
     </section>
   );
 }

@@ -90,6 +90,7 @@ export default function SinglePostPage({ data }) {
             ) : null} */}
             <div
               className="w-full grid gap-5 text-2sm lg:text-base break-words text-justify leading-normal lg:leading-normal"
+              // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </div>

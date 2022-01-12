@@ -187,8 +187,10 @@ body {
 }
 
 .brick {
-  -webkit-mask-image: url('../assets/images/brick-wall.svg');
   mask-image: url('../assets/images/brick-wall.svg');
+  -webkit-mask-image: url('../assets/images/brick-wall.svg');
+  -webkit-mask-repeat: repeat;
+  -webkit-mask-size: 30px;
   z-index: -1;
 }
 
