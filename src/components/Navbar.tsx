@@ -143,10 +143,10 @@ export default function Navbar() {
           title={translation(language, 'navbar.portfolio')}
           href={`/${language === 'es' ? '' : `${language}/`}portfolio`}
         />
-        {/* <NavItem
+        <NavItem
           title={translation(language, 'navbar.blog')}
-          href={`/${language === 'es' ? '' : language + '/'}blog`}
-        /> */}
+          href={`/${language === 'es' ? '' : `${language}/`}blog`}
+        />
         <NavItem
           title={translation(language, 'navbar.contactUs')}
           href={`/${language === 'es' ? '' : `${language}/`}#contact`}

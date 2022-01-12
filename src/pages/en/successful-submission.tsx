@@ -24,7 +24,7 @@ export default function MessageSentPage() {
           >
             Back to home
           </Link>
-          <div className="absolute -top-14 -left-10 rounded-blob w-72 h-64 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90 dark:bg-opacity-25" />
+          <div className="absolute -top-14 -left-10 rounded-blob w-72 h-64 brick bg-medium-blue dark:bg-dark-gray opacity-50 dark:opacity-25" />
         </div>
       </div>
     </main>

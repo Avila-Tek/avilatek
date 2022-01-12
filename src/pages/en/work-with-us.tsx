@@ -36,7 +36,7 @@ export default function WorkWithUsPage() {
             </div>
           </Fade>
         </section>
-        <div className="absolute top-10 left-1/3 rounded-second-blob w-96 md:w-6/12 h-72 md:h-96 brick bg-medium-blue dark:bg-dark-gray bg-opacity-90 dark:bg-opacity-25" />
+        <div className="absolute top-10 left-1/3 rounded-second-blob w-96 md:w-6/12 h-72 md:h-96 brick bg-medium-blue dark:bg-dark-gray opacity-50 dark:opacity-25" />
       </main>
     </>
   );

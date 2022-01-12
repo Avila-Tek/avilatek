@@ -35,7 +35,7 @@ export default function HomePage({ data }) {
       <ProductsSection />
       <ServiceSection />
       <PortfolioSection />
-      {/* <BlogSection posts={posts} /> */}
+      <BlogSection posts={posts} />
       <ContactSection />
     </main>
   );
