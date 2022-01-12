@@ -24,7 +24,7 @@ export default function BlogPage({ data }) {
   const banner = {
     title: (
       <>
-        Avila Tek Beyond The{' '}
+        Beyond The{' '}
         <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 text-font-dark dark:text-font-white">
           Blog
         </mark>{' '}
