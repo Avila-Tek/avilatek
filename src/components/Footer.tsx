@@ -14,8 +14,8 @@ import useActiveLink from '../hooks/useActiveLink';
 export default function Footer() {
   const location = useLocation();
   const [, setActiveLink] = useActiveLink();
-  const [translation] = useLanguage();
-  const language = location.pathname.includes('en') ? 'en' : 'es';
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const phones: Array<{ city: string; phone: string }> = [
     {
       city: 'Caracas',

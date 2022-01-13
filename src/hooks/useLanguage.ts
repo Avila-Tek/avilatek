@@ -18,7 +18,8 @@ export default function useLanguage() {
   };
 
   const getCurrentLanguage = () => {
-    return location.pathname.includes('en') ? 'en' : 'es';
+    console.log(location.pathname);
+    return location.pathname.includes('/en') ? 'en' : 'es';
   };
 
   return [translation, getCurrentLanguage] as const;
