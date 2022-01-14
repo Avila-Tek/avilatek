@@ -49,7 +49,7 @@ export default function PostCard({
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         whileHover={{ scale: 1.04, transition: { duration: 0.3 } }}
-        className="relative h-76 w-68 md:h-80 md:w-68 xl:h-88 xl:w-76 rounded-md shadow-blue dark:shadow-none bg-medium-blue dark:bg-dark-gray my-3 lg:my-4 mx-auto sm:mx-3 lg:mx-4 overflow-hidden transition-all duration-300 ease-in-out"
+        className="relative h-80 w-72 sm:h-76 sm:w-68 md:h-80 md:w-68 xl:h-88 xl:w-76 rounded-md shadow-blue dark:shadow-none bg-medium-blue dark:bg-dark-gray my-3 lg:my-4 mx-auto sm:mx-3 lg:mx-4 overflow-hidden transition-all duration-300 ease-in-out"
       >
         {/* Post image */}
         <div className="w-full h-1/2">
@@ -75,12 +75,12 @@ export default function PostCard({
             {description}
           </p>
           {/* Author and date */}
-          <div className="text-xs xl:text-xsm flex items-center text-secondary-50 dark:text-neutral-400 transition-all duration-300 ease-in-out">
+          <div className="text-xs sm:text-2xs xl:text-xs 2xl:text-xsm flex items-center text-secondary-50 dark:text-neutral-400 transition-all duration-300 ease-in-out">
             <div>
               <h3>{author}</h3>
               {/* {coauthor ? <h3 className="text-xs">& {coauthor}</h3> : null} */}
             </div>
-            <p className="mx-1 lg:mx-1.5 xl:mx-2">•</p>
+            <p className="mx-1 lg:mx-1.5 2xl:mx-2">•</p>
             <h4>
               {dayjs(new Date(date).toISOString().split('T')[0]).format(
                 'DD MMM, YYYY'
