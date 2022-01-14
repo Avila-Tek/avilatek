@@ -70,7 +70,10 @@ export default function PostList({
           ? post
           : post.title.toLowerCase().includes(search.toLowerCase()) ||
             post.description.toLowerCase().includes(search.toLowerCase()) ||
-            post.subtitle.toLowerCase().includes(search.toLowerCase())) &&
+            post.subtitle.toLowerCase().includes(search.toLowerCase()) ||
+            post.author.toLowerCase().includes(search.toLowerCase()) ||
+            post.category.toLowerCase().includes(search.toLowerCase()) ||
+            post?.coauthor.toLowerCase().includes(search.toLowerCase())) &&
         (filter.category === ''
           ? post
           : post.category.toLowerCase() === filter.category.toLowerCase()) &&
