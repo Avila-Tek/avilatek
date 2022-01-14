@@ -42,9 +42,12 @@ export default function PostList({
   });
 
   const authors = [];
-  unfilteredPosts?.map(({ author }) => {
+  unfilteredPosts?.map(({ author, coauthor }) => {
     if (!authors.includes(author)) {
       authors.push(author);
+    }
+    if (coauthor && !authors.includes(coauthor)) {
+      authors.push(coauthor);
     }
   });
 
@@ -71,9 +74,12 @@ export default function PostList({
         (filter.category === ''
           ? post
           : post.category.toLowerCase() === filter.category.toLowerCase()) &&
-        (filter.author === ''
+        ((filter.author === ''
           ? post
-          : post.author.toLowerCase() === filter.author.toLowerCase())
+          : post.author.toLowerCase() === filter.author.toLowerCase()) ||
+          (filter.author === ''
+            ? post
+            : post.coauthor.toLowerCase() === filter.author.toLowerCase()))
     );
     setPosts(filteredPosts);
     setPage(1);
@@ -102,7 +108,7 @@ export default function PostList({
           <div
             className={`${
               pagination
-                ? 'mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1'
+                ? 'mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-6 gap-1'
                 : 'w-full flex flex-wrap justify-center'
             }`}
           >
