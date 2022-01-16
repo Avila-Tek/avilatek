@@ -11,6 +11,7 @@ export default function BlogPage({ data }) {
     (n) =>
       ({
         author: n.node.frontmatter.author,
+        coauthor: n.node.frontmatter.coauthor ?? '',
         date: new Date(n.node.frontmatter.date),
         slug: n.node.frontmatter.slug,
         title: n.node.frontmatter.title,
@@ -52,6 +53,7 @@ export const getAllPosts = graphql`
         node {
           frontmatter {
             author
+            coauthor
             date
             slug
             subtitle
