@@ -32,7 +32,7 @@ export default function BlogPage({ data }) {
       </>
     ),
     description:
-      'Noticias, articulos y experiencias sobre cómo desarrollamos tecnologías que cambian al mundo, recuerda suscríbirte ',
+      'Noticias, articulos y experiencias sobre cómo desarrollamos tecnologías que cambian al mundo ¡Recuerda suscribirte! ',
     illustration: <BlogPost />,
   };
 
@@ -59,7 +59,11 @@ export const getAllPosts = graphql`
             subtitle
             title
             description
-            image
+            image {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
+              }
+            }
             category
           }
           html

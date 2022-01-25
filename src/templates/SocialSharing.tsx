@@ -3,6 +3,7 @@ import FacebookIcon from '../components/icons/FacebookIcon';
 import LinkedInIcon from '../components/icons/LinkedIn';
 import TwitterIcon from '../components/icons/TwitterIcon';
 import LinkIcon from '../components/icons/LinkIcon';
+import useNotify from '../hooks/useNotify';
 
 interface SocialSharingProps {
   SITE_URL: string;
@@ -16,10 +17,12 @@ export default function SocialSharing({
   title,
   footer = false,
 }: SocialSharingProps) {
+  const notify = useNotify();
+
   return (
     <div
       className={`w-full flex items-center lg:justify-end ${
-        footer ? 'mt-10' : 'mt-0.5 sm:mt-2 lg:-mt-6'
+        footer ? 'mt-10' : 'mt-0.5 sm:mt-2 lg:-mt-4'
       }`}
     >
       <a
@@ -55,6 +58,7 @@ export default function SocialSharing({
         aria-label="Copy link"
         onClick={() => {
           navigator.clipboard.writeText(`${SITE_URL}blog/${slug}`);
+          notify('URL copiado en el portapapeles', 'success');
         }}
       >
         <LinkIcon className="h-3 w-3" />

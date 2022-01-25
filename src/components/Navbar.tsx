@@ -24,7 +24,7 @@ function NavItem({ title, href }: NavItemProps) {
       to={href}
       aria-label={title}
       onClick={() => setActiveLink(href)}
-      className={`w-max text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none ${
+      className={`w-max text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none font-medium ${
         activeLink === href || isBlog
           ? 'text-primary-400 dark:text-primary-400 border-b-2 border-primary-400'
           : 'text-font-dark dark:text-font-white'
@@ -53,7 +53,7 @@ export default function Navbar() {
   React.useEffect(() => {
     // Set fixed true when the scroll height is greater than 400px
     const changeColor = () => {
-      const screenOffset = 280;
+      const screenOffset = 40;
       setFixed(window.scrollY >= screenOffset);
     };
 
@@ -74,8 +74,10 @@ export default function Navbar() {
       initial={{ height: '4.2rem' }}
       animate={{ height: isOpen ? 'auto' : '4.2rem' }}
       transition={{ type: 'spring', damping: 25 }}
-      className={`fixed z-50 h-screen md:h-auto bg-light-blue dark:bg-dark-gray flex flex-wrap justify-between items-center w-full px-6 lg:px-16 xl:px-20 py-4 md:py-1 transition duration-300 ease-in-out overflow-hidden ${
-        isFixed || isOpen ? 'shadow-blue dark:shadow-dark-gray' : ''
+      className={`fixed z-70 h-screen md:h-auto flex flex-wrap justify-between items-center w-full px-6 lg:px-16 xl:px-20 py-4 md:py-1 transition duration-300 ease-in-out overflow-hidden bg-light-blue dark:bg-dark-gray ${
+        isFixed || isOpen
+          ? 'shadow-blue dark:shadow-dark-gray'
+          : 'bg-opacity-0 dark:bg-opacity-0'
       }`}
       role="navigation"
     >

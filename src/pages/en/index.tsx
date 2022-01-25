@@ -54,7 +54,11 @@ export const getEnPosts = graphql`
             date
             category
             description
-            image
+            image {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+              }
+            }
             slug
             title
           }
