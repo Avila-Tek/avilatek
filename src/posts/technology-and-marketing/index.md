@@ -7,7 +7,7 @@ author: 'Reinaldo Wallis'
 description: 'Estamos en una época donde es difícil encontrar algún aspecto de la vida que no esté estrechamente relacionado con la tecnología, ese es el caso del Marketing'
 authorDescription: 'Ingeniero y Marketer venezolano, director de marketing de Avila Tek'
 category: 'Marketing'
-image: './hero.jpeg'
+image: './technology-and-marketing.jpeg'
 # image: 'https://images.unsplash.com/photo-1533750516457-a7f992034fec?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3006&q=80'
 ---
 Estamos en una época donde es difícil encontrar algún aspecto de la vida que no esté estrechamente relacionado con la tecnología, ese es el caso del Marketing.
