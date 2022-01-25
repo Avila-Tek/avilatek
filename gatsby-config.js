@@ -10,6 +10,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',
     'gatsby-transformer-remark',
+    'gatsby-plugin-mdx',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
@@ -46,6 +47,20 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/icon.png',
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            },
+          },
+        ],
       },
     },
   ],
