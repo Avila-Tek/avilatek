@@ -95,29 +95,29 @@ export default function Clients() {
   return (
     <section className="pt-28 md:pt-18 mb-48 lg:mb-56 -mt-12">
       {/* <Fade duration={600} triggerOnce> */}
-        <div className="w-full mb-12 sm:mb-14 px-16 md:px-36">
-          <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
-            {translation(language, 'clients.first')}{' '}
-            <mark className="text-font-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
-              {translation(language, 'clients.mark')}
-            </mark>{' '}
-            {translation(language, 'clients.second')}{' '}
-            <span className="text-primary-400">
-              {translation(language, 'clients.span')}
-            </span>
-          </h1>
-        </div>
+      <div className="w-full mb-12 sm:mb-14 px-16 md:px-36">
+        <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
+          {translation(language, 'clients.first')}{' '}
+          <mark className="text-font-black inline-block bg-primary-400 bg-opacity-50 pb-3 leading-0 dark:text-font-white">
+            {translation(language, 'clients.mark')}
+          </mark>{' '}
+          {translation(language, 'clients.second')}{' '}
+          <span className="text-primary-400">
+            {translation(language, 'clients.span')}
+          </span>
+        </h1>
+      </div>
 
-        {/* slider */}
-        {/* bg-medium-blue dark:bg-medium-gray bg-opacity-30 dark:bg-opacity-10 */}
-        <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-10 rounded-full flex h-40 mx-auto w-10/12 overflow-hidden">
-          {/* First slide track */}
-          <div className="slide-track flex items-center">
-            {clients.map(({ src, size }) => (
-              <LogoItem key={src} src={src} size={size} />
-            ))}
-          </div>
+      {/* slider */}
+      {/* bg-medium-blue dark:bg-medium-gray bg-opacity-30 dark:bg-opacity-10 */}
+      <div className="bg-medium-blue dark:bg-medium-gray bg-opacity-40 dark:bg-opacity-10 rounded-full flex h-40 mx-auto w-10/12 overflow-hidden">
+        {/* First slide track */}
+        <div className="slide-track flex items-center">
+          {clients.map(({ src, size }) => (
+            <LogoItem key={src} src={src} size={size} />
+          ))}
         </div>
+      </div>
       {/* </Fade> */}
     </section>
   );

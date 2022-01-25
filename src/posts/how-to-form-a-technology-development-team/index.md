@@ -8,7 +8,8 @@ coauthor: 'Ivanna Padrón'
 description: 'La tecnología vino a cambiar el mundo y se hizo no solo con la codicia de las compañías en búsqueda de seguir creciendo, sino necesaria para que estas puedan cumplir sus objetivos'
 authorDescription: 'Ingeniero y Marketer venezolano, director de marketing de Avila Tek'
 category: 'Negocios'
-image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
+image: './hero.jpeg'
+# image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80'
 ---
 
 La tecnología vino a cambiar el mundo y se hizo no solo con la codicia de las compañías en búsqueda de seguir creciendo, sino necesaria para que estas puedan cumplir sus objetivos. La idea de poder expandir nuestros negocios hacia nuevas fronteras y de automatizar tareas que, para ser realizadas se necesitaba un número considerable de mano de obra, es algo con lo que toda compañía sueña, pero implementar estás tecnologías no es el cuento de hadas que se cree.

@@ -31,7 +31,7 @@ export default function BlogPage({ data }) {
       </>
     ),
     description:
-      'News, articles and experiences on how we develop technologies that change the world, remember to subscribe to keep up with us.',
+      'News, articles and experiences on how we develop technologies that change the world, remember to subscribe to keep up with us!',
     illustration: <BlogPost />,
   };
 
@@ -56,7 +56,11 @@ export const getAllPosts = graphql`
             subtitle
             title
             description
-            image
+            image {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+              }
+            }
             category
           }
           html

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { motion, AnimatePresence } from 'framer-motion';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { motion } from 'framer-motion';
 import dayjs from 'dayjs';
 import 'dayjs/locale/es';
-import Image from '../common/Image';
 
 dayjs.locale('es');
 
@@ -16,7 +16,7 @@ export type Post = {
   author?: string;
   coauthor?: string;
   date?: Date;
-  image?: string;
+  image?: any;
   authorDescription?: string;
   html?: any;
 };
@@ -29,7 +29,7 @@ interface PostCardProps {
   author?: string;
   coauthor?: string;
   date?: Date;
-  image?: string;
+  image?: any;
 }
 
 export default function PostCard({
@@ -53,9 +53,8 @@ export default function PostCard({
       >
         {/* Post image */}
         <div className="w-full h-1/2">
-          {/* TODO fix this with Gatsby Image */}
-          <img
-            src={image}
+          <GatsbyImage
+            image={getImage(image)}
             alt={title}
             className="w-full h-full object-cover object-center"
           />
