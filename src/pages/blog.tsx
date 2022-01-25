@@ -32,7 +32,7 @@ export default function BlogPage({ data }) {
       </>
     ),
     description:
-      'Noticias, articulos y experiencias sobre cómo desarrollamos tecnologías que cambian al mundo ¡Recuerda suscríbirte! ',
+      'Noticias, articulos y experiencias sobre cómo desarrollamos tecnologías que cambian al mundo ¡Recuerda suscribirte! ',
     illustration: <BlogPost />,
   };
 
