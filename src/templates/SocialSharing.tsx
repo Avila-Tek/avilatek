@@ -58,7 +58,7 @@ export default function SocialSharing({
         aria-label="Copy link"
         onClick={() => {
           navigator.clipboard.writeText(`${SITE_URL}blog/${slug}`);
-          notify('Copiado en el portapapeles exitosamente', 'success');
+          notify('URL copiado en el portapapeles', 'success');
         }}
       >
         <LinkIcon className="h-3 w-3" />

@@ -48,7 +48,7 @@ export const ToastContextProvider = ({
   return (
     <ToastContext.Provider value={{ notify, alerts }}>
       <div
-        className="fixed py-4 bottom-0 right-0 w-2/3 md:w-1/4 mb-1/12"
+        className="fixed py-4 bottom-0 right-4 w-2/3 md:w-1/4 mb-1/12"
         style={{ zIndex: 100 }}
       >
         <AnimatePresence>
