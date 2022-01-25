@@ -22,7 +22,7 @@ export default function Layout({ children }) {
    |___/_______\\__/___\\_____\\`,
       `\n\n${translation(language, 'consoleLog')}\n`,
       `https://www.avilatek.com/${
-        language === 'es' ? '' : language + '/'
+        language === 'es' ? '' : `${language}/`
       }work-with-us`
     );
   }, []);
