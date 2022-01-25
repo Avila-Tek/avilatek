@@ -66,7 +66,7 @@ export default function SinglePostPage({ data }) {
         </section>
 
         {/* Post */}
-        <section className="w-10/12 sm:w-9/12 md:w-7/12 mx-auto mt-8 md:mt-6 mb-40">
+        <section className="w-10/12 sm:w-9/12 md:w-7/12 mx-auto mt-6 md:mt-0 mb-40">
           {/* Post header */}
           <div>
             <h2 className="font-semibold text-2base md:text-lg xl:text-xl text-secondary-100 dark:text-neutral-100">

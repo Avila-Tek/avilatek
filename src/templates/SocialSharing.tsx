@@ -22,7 +22,7 @@ export default function SocialSharing({
   return (
     <div
       className={`w-full flex items-center lg:justify-end ${
-        footer ? 'mt-10' : 'mt-0.5 sm:mt-2 lg:-mt-6'
+        footer ? 'mt-10' : 'mt-0.5 sm:mt-2 lg:-mt-4'
       }`}
     >
       <a

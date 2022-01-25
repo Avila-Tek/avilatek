@@ -53,7 +53,7 @@ export default function Navbar() {
   React.useEffect(() => {
     // Set fixed true when the scroll height is greater than 400px
     const changeColor = () => {
-      const screenOffset = 280;
+      const screenOffset = 40;
       setFixed(window.scrollY >= screenOffset);
     };
 
@@ -77,7 +77,7 @@ export default function Navbar() {
       className={`fixed z-70 h-screen md:h-auto flex flex-wrap justify-between items-center w-full px-6 lg:px-16 xl:px-20 py-4 md:py-1 transition duration-300 ease-in-out overflow-hidden bg-light-blue dark:bg-dark-gray ${
         isFixed || isOpen
           ? 'shadow-blue dark:shadow-dark-gray'
-          : 'bg-opacity-0 dark:bg-opacity-40'
+          : 'bg-opacity-0 dark:bg-opacity-0'
       }`}
       role="navigation"
     >
