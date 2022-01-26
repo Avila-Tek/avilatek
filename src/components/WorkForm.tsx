@@ -15,7 +15,7 @@ export default function ContactForm() {
   return (
     <form
       method="POST"
-      action="https://formsubmit.co/rrhh@avilatek.com"
+      action="https://formsubmit.co/info@avilatek.com"
       encType="multipart/form-data"
       className="bg-light-blue dark:bg-dark-gray shadow-blue dark:shadow-dark-gray rounded-md p-8 max-w-md w-full lg:w-6/12 mx-auto md:mx-0 transition-all duration-300 ease-in-out"
     >
@@ -72,7 +72,7 @@ export default function ContactForm() {
         type="hidden"
         name="_next"
         value={`https://avilatek.com/${
-          language === 'es' ? '' : language + '/'
+          language === 'es' ? '' : `${language}/`
         }successful-submission`}
       />
       <Button
