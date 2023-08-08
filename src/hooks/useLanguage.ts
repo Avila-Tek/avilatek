@@ -17,9 +17,8 @@ export default function useLanguage() {
     return word || '';
   };
 
-  const getCurrentLanguage = () => {
-    return location.pathname.includes('en') ? 'en' : 'es';
-  };
+  const getCurrentLanguage = () =>
+    location.pathname.includes('/en') ? 'en' : 'es';
 
   return [translation, getCurrentLanguage] as const;
 }

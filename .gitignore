@@ -3,3 +3,7 @@ node_modules/
 public
 
 .vercel
+
+# misc
+.DS_Store
+.vscode

@@ -54,7 +54,7 @@ export default function PortfolioPage() {
         'Plataforma de venta y manejo de inventario, es un sistema que ayuda al automercado a manejar sus productos y venderlos de forma online en su plataforma, manejando tracking para delivery o pickup.',
       src: 'projects/bodebar.png',
       categories: ['Web App', 'Desktop'],
-      link: 'https://bodebar.avilatek.dev/',
+      link: 'https://bodebar.com.ve/',
     },
     {
       title: 'PTCK',
@@ -84,14 +84,6 @@ export default function PortfolioPage() {
       src: 'projects/grupo-mre.png',
       categories: ['Web App'],
       link: 'https://grupomre.com/',
-    },
-    {
-      title: 'Intergraph USA Corp',
-      description:
-        'Website para la empresa Intergraph USA Corp con sede en los Estados Unidos, este website funciona como imagen corporativa para la empresa en donde ofrecen sus servicios en aeronáutica civil.',
-      src: 'projects/intergraph-usa-corp.png',
-      categories: ['Landing Page'],
-      link: 'https://www.intergraphusa.com/',
     },
     {
       title: 'Psico Sport Hacks',

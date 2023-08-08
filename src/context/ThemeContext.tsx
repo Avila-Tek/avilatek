@@ -40,10 +40,11 @@ export const ThemeProvider = ({
 }: ThemeProviderProps) => {
   const [theme, setTheme] = React.useState(getInitialTheme);
 
+  // eslint-disable-next-line no-shadow
   const rawSetTheme = (theme) => {
     if (typeof window !== 'undefined') {
       const root = window.document.documentElement;
-      
+
       if (theme === 'auto') {
         const userMedia = window.matchMedia('(prefers-color-scheme: dark)');
         localStorage.removeItem('color-theme');
@@ -53,13 +54,11 @@ export const ThemeProvider = ({
         } else {
           root.classList.remove('dark');
         }
-        
       } else {
         root.classList.remove(theme === 'dark' ? 'light' : 'dark');
         root.classList.add(theme);
         localStorage.setItem('color-theme', theme);
       }
-
     }
   };
 
@@ -75,7 +74,9 @@ export const ThemeProvider = ({
       rawSetTheme('auto');
     };
 
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", changeSOPreference);
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', changeSOPreference);
   }, []);
 
   React.useEffect(() => {

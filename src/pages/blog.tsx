@@ -11,6 +11,7 @@ export default function BlogPage({ data }) {
     (n) =>
       ({
         author: n.node.frontmatter.author,
+        coauthor: n.node.frontmatter.coauthor ?? '',
         date: new Date(n.node.frontmatter.date),
         slug: n.node.frontmatter.slug,
         title: n.node.frontmatter.title,
@@ -24,14 +25,14 @@ export default function BlogPage({ data }) {
   const banner = {
     title: (
       <>
-        Avila Tek Beyond The{' '}
+        Beyond The{' '}
         <mark className="inline-block bg-primary-200 bg-opacity-50 pb-3 leading-0 text-font-dark dark:text-font-white">
           Blog
         </mark>{' '}
       </>
     ),
     description:
-      'Noticias, articulos y experiencias sobre cómo desarrollamos tecnologías que cambian al mundo, recuerda suscríbirte ',
+      'Noticias, articulos y experiencias sobre cómo desarrollamos tecnologías que cambian al mundo ¡Recuerda suscribirte! ',
     illustration: <BlogPost />,
   };
 
@@ -52,12 +53,17 @@ export const getAllPosts = graphql`
         node {
           frontmatter {
             author
+            coauthor
             date
             slug
             subtitle
             title
             description
-            image
+            image {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
+              }
+            }
             category
           }
           html

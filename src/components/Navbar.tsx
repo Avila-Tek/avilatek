@@ -24,7 +24,7 @@ function NavItem({ title, href }: NavItemProps) {
       to={href}
       aria-label={title}
       onClick={() => setActiveLink(href)}
-      className={`w-max text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none ${
+      className={`w-max text-sm lg:text-base tracking-wide mx-2 lg:mx-3 cursor-pointer my-1.5 md:my-2 hover:text-primary-400 dark:hover:text-primary-400 focus:ring-0 focus:outline-none font-medium ${
         activeLink === href || isBlog
           ? 'text-primary-400 dark:text-primary-400 border-b-2 border-primary-400'
           : 'text-font-dark dark:text-font-white'
@@ -53,18 +53,20 @@ export default function Navbar() {
   React.useEffect(() => {
     // Set fixed true when the scroll height is greater than 400px
     const changeColor = () => {
-      let screenOffset = 280;
+      const screenOffset = 40;
       setFixed(window.scrollY >= screenOffset);
     };
 
     window.addEventListener('scroll', changeColor);
   }, []);
 
-  React.useEffect(() => {
-    return globalHistory.listen(({ action }) => {
-      if (action === 'PUSH') setOpen(false);
-    });
-  }, [setOpen]);
+  React.useEffect(
+    () =>
+      globalHistory.listen(({ action }) => {
+        if (action === 'PUSH') setOpen(false);
+      }),
+    [setOpen]
+  );
 
   return (
     <motion.nav
@@ -72,16 +74,18 @@ export default function Navbar() {
       initial={{ height: '4.2rem' }}
       animate={{ height: isOpen ? 'auto' : '4.2rem' }}
       transition={{ type: 'spring', damping: 25 }}
-      className={`fixed z-50 h-screen md:h-auto bg-light-blue dark:bg-dark-gray flex flex-wrap justify-between items-center w-full px-6 lg:px-16 xl:px-20 py-4 md:py-1 transition duration-300 ease-in-out overflow-hidden ${
-        isFixed || isOpen ? 'shadow-blue dark:shadow-dark-gray' : ''
+      className={`fixed z-70 h-screen md:h-auto flex flex-wrap justify-between items-center w-full px-6 lg:px-16 xl:px-20 py-4 md:py-1 transition duration-300 ease-in-out overflow-hidden bg-light-blue dark:bg-dark-gray ${
+        isFixed || isOpen
+          ? 'shadow-blue dark:shadow-dark-gray'
+          : 'bg-opacity-0 dark:bg-opacity-0'
       }`}
       role="navigation"
     >
       <Link
-        to={`/${language === 'es' ? '' : language + '/'}`}
+        to={`/${language === 'es' ? '' : `${language}/`}`}
         aria-label="Logo"
         onClick={() =>
-          setActiveLink(`/${language === 'es' ? '' : language + '/'}`)
+          setActiveLink(`/${language === 'es' ? '' : `${language}/`}`)
         }
         className="mr-auto w-40 lg:w-48 xl:w-56"
       >
@@ -103,6 +107,7 @@ export default function Navbar() {
           className="text-font-black dark:text-font-white hover:text-primary-300 focus:outline-none"
           type="button"
           onClick={toggleNav}
+          aria-label="Menu button"
         >
           <svg
             className="h-4 w-4"
@@ -122,31 +127,31 @@ export default function Navbar() {
       <div className="flex flex-col md:flex-row w-full md:w-auto md:items-center overflow-hidden my-4 md:my-0">
         <NavItem
           title={translation(language, 'navbar.home')}
-          href={`/${language === 'es' ? '' : language + '/'}`}
+          href={`/${language === 'es' ? '' : `${language}/`}`}
         />
         <NavItem
           title={translation(language, 'navbar.aboutUs')}
-          href={`/${language === 'es' ? '' : language + '/'}#about-us`}
+          href={`/${language === 'es' ? '' : `${language}/`}#about-us`}
         />
         <NavItem
           title={translation(language, 'navbar.products')}
-          href={`/${language === 'es' ? '' : language + '/'}#products`}
+          href={`/${language === 'es' ? '' : `${language}/`}#products`}
         />
         <NavItem
           title={translation(language, 'navbar.services')}
-          href={`/${language === 'es' ? '' : language + '/'}#services`}
+          href={`/${language === 'es' ? '' : `${language}/`}#services`}
         />
         <NavItem
           title={translation(language, 'navbar.portfolio')}
-          href={`/${language === 'es' ? '' : language + '/'}portfolio`}
+          href={`/${language === 'es' ? '' : `${language}/`}portfolio`}
         />
-        {/* <NavItem
+        <NavItem
           title={translation(language, 'navbar.blog')}
-          href={`/${language === 'es' ? '' : language + '/'}blog`}
-        /> */}
+          href={`/${language === 'es' ? '' : `${language}/`}blog`}
+        />
         <NavItem
           title={translation(language, 'navbar.contactUs')}
-          href={`/${language === 'es' ? '' : language + '/'}#contact`}
+          href={`/${language === 'es' ? '' : `${language}/`}#contact`}
         />
       </div>
     </motion.nav>

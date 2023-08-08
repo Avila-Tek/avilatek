@@ -1,5 +1,5 @@
 import React from 'react';
-import { Fade } from 'react-awesome-reveal';
+// import { Fade } from 'react-awesome-reveal';
 import { Doughnut, Chart } from 'react-chartjs-2';
 import useLanguage from '../../hooks/useLanguage';
 import useTheme from '../../hooks/useTheme';
@@ -88,7 +88,7 @@ export default function ByTheNumbers() {
 
   return (
     <section className="pb-36 px-14 md:px-20 lg:px-28 xl:px-44 relative z-10 overflow-hidden">
-      <Fade duration={600} cascade triggerOnce>
+      {/* <Fade duration={600} cascade triggerOnce> */}
         {/* Section title and text */}
         <div className="w-full md:w-7/12">
           <h1 className="text-lg md:text-xl xl:text-2xl font-bold">
@@ -115,28 +115,28 @@ export default function ByTheNumbers() {
                 />
                 {/* Number at the center */}
                 <div className="chart-inner absolute top-0 left-0 h-full w-full p-1 flex items-center justify-center rounded-full z-minus">
-                  <h3 className="text-4xl xl:text-5xl font-semibold">
+                  <h2 className="text-4xl xl:text-5xl font-semibold">
                     {plus ? (
                       <span className="text-2xl xl:text-3xl">{plus}</span>
                     ) : null}
                     {number}
                     <span className="text-xl xl:text-2xl">{symbol}</span>
-                  </h3>
+                  </h2>
                 </div>
               </div>
               {/* Feature name and source */}
               <div className="w-full mt-5 text-center">
-                <h4 className="font-medium text-sm md:text-2sm xl:text-base leading-snug md:leading-snug xl:leading-snug">
+                <h3 className="font-medium text-sm md:text-2sm xl:text-base leading-snug md:leading-snug xl:leading-snug">
                   {feature}
-                </h4>
-                <p className="text-2xs opacity-25  mt-2">
+                </h3>
+                <p className="text-2xs opacity-25 dark:opacity-50  mt-2">
                   {language === 'es' ? 'Fuente' : 'Source'}: {source}
                 </p>
               </div>
             </div>
           ))}
         </div>
-      </Fade>
+      {/* </Fade> */}
       <div className="absolute top-16 right-1/3 rounded-third-blob w-7/12 md:w-5/12 h-72 brick bg-medium-blue dark:bg-dark-gray bg-opacity-30 dark:bg-opacity-10" />
     </section>
   );

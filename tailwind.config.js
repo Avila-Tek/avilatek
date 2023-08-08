@@ -42,6 +42,8 @@ module.exports = {
       md: '768px',
       lg: '1024px',
       xl: '1280px',
+      '2xl': '1880px',
+      '3xl': '2560px',
     },
     extend: {
       colors: {
@@ -122,12 +124,16 @@ module.exports = {
       },
       height: {
         half: '50vh',
+        six: '60vh',
         third: '75vh',
+        eight: '80vh',
+        ninth: '90vh',
       },
       zIndex: {
         minus: '-10',
         60: '60',
         70: '70',
+        100: '100',
       },
       inset: {
         26: '-6.5rem',

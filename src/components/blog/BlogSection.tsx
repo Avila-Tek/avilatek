@@ -35,7 +35,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
         </div>
         <Waypoint
           onEnter={() => {
-            setActiveLink(`/${language === 'es' ? '' : language + '/'}blog`);
+            setActiveLink(`/${language === 'es' ? '' : `${language}/`}blog`);
           }}
         />
         {posts?.length > 0 ? <PostList posts={posts} /> : null}
@@ -46,8 +46,8 @@ export default function BlogSection({ posts }: BlogSectionProps) {
             aria-label="Ir al blog"
             className="text-sm lg:text-base text-primary-400 bg-transparent border-2 border-primary-400 hover:border-primary-300 hover:text-primary-300 py-1.5 px-6 rounded-full focus:outline-none active:border-primary-500 active:text-primary-500"
             onClick={() => {
-              navigate(`/${language === 'es' ? '' : language + '/'}blog`);
-              setActiveLink(`/${language === 'es' ? '' : language + '/'}blog`);
+              navigate(`/${language === 'es' ? '' : `${language}/`}blog`);
+              setActiveLink(`/${language === 'es' ? '' : `${language}/`}blog`);
             }}
           >
             {translation(language, 'blog.seeMore')}

@@ -6,13 +6,22 @@ import icon from '../assets/images/logo-with-bg.png';
 interface SEOProps {
   children?: React.ReactChild | Array<React.ReactChild>;
   title?: string;
+  name?: string;
+  description?: string;
+  link?: string;
 }
 
-export default function SEO({ children, title }: SEOProps) {
+export default function SEO({
+  children,
+  title,
+  name = 'Avila Tek',
+  description = 'Desarrollamos tecnologías que innovan para ti',
+  link = 'https://avilatek.com/',
+}: SEOProps) {
   const [theme] = useTheme();
 
   return (
-    <Helmet titleTemplate={`%s | Avila Tek`}>
+    <Helmet titleTemplate="%s | Avila Tek">
       <html lang="en" />
       <title>{title}</title>
       {/* Fav Icons */}
@@ -21,11 +30,8 @@ export default function SEO({ children, title }: SEOProps) {
       {/* Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta charSet="utf-8" />
-      <meta name="title" content="Avila Tek" />
-      <meta
-        name="description"
-        content="Desarrollamos tecnologías que innovan para ti"
-      />
+      <meta name="title" content={name} />
+      <meta name="description" content={description} />
       {/* The famous theme color */}
       <meta
         name="theme-color"
@@ -38,26 +44,19 @@ export default function SEO({ children, title }: SEOProps) {
         }
       />
       {/* Open Graph / Facebook */}
-      <meta property="og:url" content="https://avilatek.dev/" />
+      <meta property="og:url" content={link} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content={icon} />
-      <meta property="og:title" content="Avila Tek" key="ogtitle" />
+      <meta property="og:image" content="https://imgur.com/a/Lr22sOv" />
+      <meta property="og:title" content={name} key="ogtitle" />
       <meta property="og:site_name" content="Avila Tek" key="ogsitename" />
-      <meta
-        property="og:description"
-        content="Desarrollamos tecnologías que innovan para ti"
-        key="ogdesc"
-      />
+      <meta property="og:description" content={description} key="ogdesc" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://avilatek.dev/" />
-      <meta property="twitter:image" content={icon} />
-      <meta property="twitter:title" content="Avila Tek" />
-      <meta
-        property="twitter:description"
-        content="Desarrollamos tecnologías que innovan para ti"
-      />
+      <meta property="twitter:url" content={link} />
+      <meta property="twitter:image" content="https://imgur.com/a/Lr22sOv" />
+      <meta property="twitter:title" content={name} />
+      <meta property="twitter:description" content={description} />
       {children}
     </Helmet>
   );

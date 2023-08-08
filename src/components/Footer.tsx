@@ -14,8 +14,8 @@ import useActiveLink from '../hooks/useActiveLink';
 export default function Footer() {
   const location = useLocation();
   const [, setActiveLink] = useActiveLink();
-  const [translation] = useLanguage();
-  const language = location.pathname.includes('en') ? 'en' : 'es';
+  const [translation, getCurrentLanguage] = useLanguage();
+  const language = getCurrentLanguage();
   const phones: Array<{ city: string; phone: string }> = [
     {
       city: 'Caracas',
@@ -51,7 +51,7 @@ export default function Footer() {
               </>
             ))}
           </div>
-          <p>info@avilatek.dev</p>
+          <p>info@avilatek.com</p>
           {/* RRSS icons */}
           <div className="flex mt-4">
             <a
@@ -59,7 +59,7 @@ export default function Footer() {
               target="_blank"
               className="hover:text-primary-300 cursor-pointer mr-4"
               aria-label="Instagram"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <InstagramIcon />
             </a>
@@ -68,16 +68,16 @@ export default function Footer() {
               target="_blank"
               className="hover:text-primary-300 cursor-pointer mr-4"
               aria-label="Twitter"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <TwitterIcon />
             </a>
             <a
-              href="https://www.facebook.com/pg/avilatek.dev/about/"
+              href="https://www.facebook.com/pg/avilatek.com/about/"
               target="_blank"
               className="hover:text-primary-300 cursor-pointer mr-4"
               aria-label="Facebook"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <FacebookIcon />
             </a>
@@ -86,7 +86,7 @@ export default function Footer() {
               target="_blank"
               className="hover:text-primary-300 cursor-pointer"
               aria-label="LinkedIn"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <LinkedIn />
             </a>
@@ -105,10 +105,10 @@ export default function Footer() {
             aria-label="Trabaja con nosotros"
             onClick={() => {
               navigate(
-                `/${language === 'es' ? '' : language + '/'}work-with-us`
+                `/${language === 'es' ? '' : `${language}/`}work-with-us`
               );
               setActiveLink(
-                `/${language === 'es' ? '' : language + '/'}#contact`
+                `/${language === 'es' ? '' : `${language}/`}#contact`
               );
             }}
             className="px-6 text-xs md:text-sm"

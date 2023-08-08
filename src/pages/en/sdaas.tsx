@@ -7,6 +7,7 @@ import Testimonies from '../../components/sdaas/Testimonies';
 import Benefits from '../../components/sdaas/Benefits';
 import ByTheNumbers from '../../components/sdaas/ByTheNumbers';
 import ContactSection from '../../components/ContactSection';
+import Clients from '../../components/Clients';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function SDaaSPage() {
@@ -20,15 +21,15 @@ export default function SDaaSPage() {
       </>
     ),
     description:
-      'If you have an ambitious project and require a professional team, we offer you our Software Development as a Service',
+      "If you need a professional team in software development, you've come to the right place",
     illustration: <PairProgramming />,
   };
 
   return (
     <>
       <SEO title="SDaaS" />
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
       <DefaultBanner {...banner} />
+      <Clients />
       <Definition />
       <Benefits />
       <ByTheNumbers />

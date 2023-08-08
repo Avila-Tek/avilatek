@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Avila Tek',
-    siteUrl: 'https://avilatek.dev',
+    siteUrl: 'https://avilatek.com',
     description: 'Desarrollamos tecnologías que innovan para ti',
   },
   plugins: [
@@ -47,6 +47,20 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         icon: 'src/images/icon.png',
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'noopener noreferrer',
+            },
+          },
+        ],
       },
     },
   ],
