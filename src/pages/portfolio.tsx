@@ -86,14 +86,6 @@ export default function PortfolioPage() {
       link: 'https://grupomre.com/',
     },
     {
-      title: 'Intergraph USA Corp',
-      description:
-        'Website para la empresa Intergraph USA Corp con sede en los Estados Unidos, este website funciona como imagen corporativa para la empresa en donde ofrecen sus servicios en aeronáutica civil.',
-      src: 'projects/intergraph-usa-corp.png',
-      categories: ['Landing Page'],
-      link: 'https://www.intergraphusa.com/',
-    },
-    {
       title: 'Psico Sport Hacks',
       description:
         'Website para el emprendimiento Psico Sport Hacks (PSH por sus siglas), que sirve como sitio informativo de sus servicios de psicologia para deportistas de alto rendimiento.',

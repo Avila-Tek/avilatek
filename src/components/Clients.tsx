@@ -35,9 +35,6 @@ const logos = [
     size: 'w-44 xl:w-48',
   },
   {
-    src: 'logos/intergraph-logo.png',
-  },
-  {
     src: 'logos/habitat-venezuela.png',
   },
   {
