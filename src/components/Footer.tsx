@@ -100,21 +100,14 @@ export default function Footer() {
           <p className="mt-4 mb-5">
             {translation(language, 'footer.joinText')}
           </p>
-          <Button
-            type="button"
-            aria-label="Trabaja con nosotros"
-            onClick={() => {
-              navigate(
-                `/${language === 'es' ? '' : `${language}/`}work-with-us`
-              );
-              setActiveLink(
-                `/${language === 'es' ? '' : `${language}/`}#contact`
-              );
-            }}
-            className="px-6 text-xs md:text-sm"
+          <a
+            href="https://avilatek.sg.larksuite.com/share/base/form/shrusngwY7i49v2HkUrJR5r523d"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-font-white bg-primary-400 hover:bg-primary-300 py-1 px-6 rounded-full focus:outline-none active:bg-primary-500 disabled:opacity-50 disabled:bg-primary-500 text-xs md:text-sm"
           >
             {translation(language, 'footer.workWithUs')}
-          </Button>
+          </a>
         </div>
       </div>
       {/* Copyright info */}
