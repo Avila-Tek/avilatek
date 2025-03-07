@@ -43,7 +43,7 @@ export default function Banner() {
                 {/* Changing words animation */}
                 <AnimatePresence exitBeforeEnter>
                   {words.map((word, idx) => (
-                    <>
+                    <React.Fragment key={word}>
                       {active === idx ? (
                         <motion.span
                           key={word}
@@ -56,7 +56,7 @@ export default function Banner() {
                           {word}
                         </motion.span>
                       ) : null}
-                    </>
+                    </React.Fragment>
                   ))}
                 </AnimatePresence>
               </h1>

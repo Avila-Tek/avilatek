@@ -42,7 +42,11 @@
       "consulting": "Consultoría incluida",
       "consultingText": "Antes de hacer un presupuesto debemos pautar una reunion de levantamiento de requerimientos",
       "tailorMade": "Proyectos a la medida",
-      "tailorMadeText": "Cada proyecto tiene sus especificaciones que trabajamos de cero para cumplir las necesidades de cada cliente"
+      "tailorMadeText": "Cada proyecto tiene sus especificaciones que trabajamos de cero para cumplir las necesidades de cada cliente",
+      "work": {
+        "text": "Si estas interesado en formar parte de nuestro equipo, por favor llena ",
+        "form": "este formulario."
+      }
     },
     "blog": {
       "text": "Conoce más de Avila Tek, con artículos y noticias relacionados al mundo de la tecnología, desarrollo, marketing y más",
@@ -235,7 +239,11 @@
       "consulting": "Consulting included",
       "consultingText": "Before making a budget we must schedule a meeting to raise requirements",
       "tailorMade": "Tailor-made projects",
-      "tailorMadeText": "Each project has its specifications that we work from scratch to meet the needs of each client"
+      "tailorMadeText": "Each project has its specifications that we work from scratch to meet the needs of each client",
+      "work": {
+        "text": "If you want to be part of our team, please fill out ",
+        "form": "this form."
+      }
     },
     "blog": {
       "text": "Learn more about Avila Tek with the articles and news related to the world of technology, development, marketing and more",
